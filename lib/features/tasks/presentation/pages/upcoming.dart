@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:productive/main.dart';
 
 class UpcomingPage extends StatelessWidget {
   const UpcomingPage({super.key});
@@ -6,7 +7,7 @@ class UpcomingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text("Upcoming"),
+      child: Text(authUser.user.toString()),
     );
   }
 }
