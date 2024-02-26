@@ -7,13 +7,37 @@ environment:
   sdk: '>=3.2.3 <4.0.0'
 
 dependencies:
+  device_preview: ^1.1.0
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  keyboard_dismisser: ^3.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logo/logo.png"
+  min_sdk_android: 21
+  remove_alpha_ios: true
 
 flutter:
   uses-material-design: true
+
+assets:
+  - assets/
+  - assets/logo/
+
+flutter_intl:
+  enabled: true
+  class_name: AppLocalization
+  arb-dir: lib/l10n
+  preferred-supported-locales:
+    - en
+  use-deferred-loading: true
