@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:productive/assets/colors.dart';
 import 'package:productive/assets/fonts.dart';
@@ -39,6 +40,24 @@ class AppTheme {
           fontSize14Weight400: TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.w400,
+            color: colors.whiteLabel,
+          ),
+          fontSize24Weight700: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.w700,
+              color: colors.whiteLabel),
+          fontSize14Weight500: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w500,
+              color: colors.clearButton),
+          fontSize12Weight500: TextStyle(
+            fontSize: 12,
+            fontWeight: FontWeight.w500,
+            color: colors.whiteLabel,overflow: TextOverflow.fade
+          ), fontSize8Weight400: TextStyle(fontSize: 8,fontWeight: FontWeight.w400,color: colors.greyDate),
+          fontSize20Weight500:TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.w500,
             color: colors.whiteLabel,
           ),
         ),
