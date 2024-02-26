@@ -12,6 +12,7 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  flutter_svg: ^2.0.10+1
   keyboard_dismisser: ^3.0.0
 
 dev_dependencies:
@@ -33,6 +34,7 @@ flutter:
 assets:
   - assets/
   - assets/logo/
+  - assets/icons/
 
 flutter_intl:
   enabled: true
