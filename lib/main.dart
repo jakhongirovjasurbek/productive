@@ -5,6 +5,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:keyboard_dismisser/keyboard_dismisser.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/routes/app_route.dart';
+import 'package:productive/features/home/home.dart';
 
 import 'generated/l10n.dart';
 
@@ -51,6 +52,7 @@ class MainApp extends StatelessWidget {
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
         ],
+        home: HomePage(),
       ),
     );
   }
