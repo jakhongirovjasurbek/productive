@@ -1,4 +1,7 @@
 {
   "productive": "Productive",
-  "easy_time_management": "Easy Time Management"
+  "easy_time_management": "Easy Time Management",
+  "notification": "Notifications",
+  "clear": "Clear",
+  "no_notifications": "NO NOTIFICATION YET"
 }
