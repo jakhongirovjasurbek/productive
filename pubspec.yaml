@@ -12,8 +12,8 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  flutter_svg: ^2.0.10+1
   keyboard_dismisser: ^3.0.0
-  svg_flutter: ^0.0.1
 
 dev_dependencies:
   flutter_test:
@@ -31,10 +31,10 @@ flutter_launcher_icons:
 flutter:
   uses-material-design: true
 
-assets:
-  - assets/
-  - assets/logo/
-  - assets/svg/
+  assets:
+    - assets/
+    - assets/logo/
+    - assets/icons/
 
 flutter_intl:
   enabled: true
@@ -43,3 +43,23 @@ flutter_intl:
   preferred-supported-locales:
     - en
   use-deferred-loading: true
+
+  fonts:
+    - family: Barlow
+      fonts:
+        - asset: assets/fonts/Barlow-Light.ttf
+        - asset: assets/fonts/Barlow-LightItalic.ttf
+        - asset: assets/fonts/Barlow-Thin.ttf
+        - asset: assets/fonts/Barlow-ThinItalic.ttf
+        - asset: assets/fonts/Barlow-Regular.ttf
+        - asset: assets/fonts/Barlow-Italic.ttf
+        - asset: assets/fonts/Barlow-Medium.ttf
+        - asset: assets/fonts/Barlow-MediumItalic.ttf
+        - asset: assets/fonts/Barlow-SemiBold.ttf
+        - asset: assets/fonts/Barlow-SemiBoldItalic.ttf
+        - asset: assets/fonts/Barlow-Bold.ttf
+        - asset: assets/fonts/Barlow-BoldItalic.ttf
+        - asset: assets/fonts/Barlow-ExtraBold.ttf
+        - asset: assets/fonts/Barlow-ExtraBoldItalic.ttf
+        - asset: assets/fonts/Barlow-Black.ttf
+        - asset: assets/fonts/Barlow-BlackItalic.ttf

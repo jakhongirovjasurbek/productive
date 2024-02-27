@@ -1,8 +1,3 @@
 class AppIcons {
-  // Icons goes here...
-
-
-  static const deleteSingleNotification = 'assets/svg/delete.svg';
-
-
+  static const logo = "assets/icons/logo.svg";
 }

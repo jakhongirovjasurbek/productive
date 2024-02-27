@@ -1,8 +1,10 @@
 import 'dart:async';
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:productive/assets/app_route_names.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:productive/core/extensions/extensions.dart';
+import '../../assets/app_route_names.dart';
+import '../../assets/icons.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -14,20 +16,33 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
-    Timer(const Duration(seconds: 3),
-        () => Navigator.pushReplacementNamed(context, AppRouteNames.notification));
+    Timer(const Duration(seconds: 3), () {
+      Navigator.of(context)
+          .pushNamedAndRemoveUntil(AppRouteNames.home, (_) => false);
+    });
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text(
+      bottomNavigationBar: Container(
+        padding: const EdgeInsets.all(40),
+        child: const CupertinoActivityIndicator(
+          radius: 16,
+        ),
+      ),
+      body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        const SizedBox(height: 80),
+        Center(
+          child: SvgPicture.asset(AppIcons.logo),
+        ),
+        const SizedBox(height: 12),
+        Text(
           context.localization.productive,
           style: context.style.fontSize40Weight700,
         ),
-      ),
+      ]),
     );
   }
 }
