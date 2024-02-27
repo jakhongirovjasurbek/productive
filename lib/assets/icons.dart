@@ -1,3 +1,3 @@
 class AppIcons {
-  // Icons goes here...
+  static const logo = "assets/icons/logo.svg";
 }
