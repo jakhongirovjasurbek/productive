@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
@@ -38,8 +40,15 @@ class _VerificationPageState extends State<VerificationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Color(0xFF131524),
-        title:  Text(context.localization.email_verification),
+        title:  Row(
+          children: [
+            SvgPicture.asset(context.icons.back),
+            Gap(10),
+            Text(context.localization.email_verification,style: context.style.fontSize24Weight600,),
+          ],
+        ),
       ),
       body: SizedBox(
         width: double.infinity,
@@ -53,11 +62,7 @@ class _VerificationPageState extends State<VerificationPage> {
             ),
              Text(
               context.localization.password,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-              ),
+              style: context.style.fontSize16Weight600,
               textAlign: TextAlign.center,
             ),
             const Gap(12),
@@ -101,7 +106,7 @@ class _VerificationPageState extends State<VerificationPage> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const SizedBox()));
+                          builder: (context) => const Scaffold()));
                 }
               },
             ),
@@ -113,20 +118,13 @@ class _VerificationPageState extends State<VerificationPage> {
               children: [
                  Text(
                   context.localization.receive_code,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 14,
-                    color: Color(0xFF979797),
-                  ),
+                  style: context.style.fontSize14Weight600,
                 ),
                 GestureDetector(
                   onTap: () {},
-                  child: const Text(
+                  child:  Text(
                     "Resent",
-                    style: TextStyle(
-                      color: Color(0xFF407BFF),
-                      fontSize: 14,
-                    ),
+                    style: context.style.fontSize14Weight600,
                   ),
                 ),
               ],

@@ -99,7 +99,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             Gap(10),
             Text(
               context.localization.forgot_password,
-              style: TextStyle(color: Colors.white),
+              style:context.style.fontSize24Weight600,
             ),
           ],
         ),
@@ -174,7 +174,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             child: Center(
               child: Text(
                 context.localization.recover_password,
-                style: TextStyle(color: Colors.white),
+                style: context.style.fontSize16Weight600,
               ),
             ),
           ),
