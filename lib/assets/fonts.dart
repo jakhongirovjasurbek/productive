@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 class AppFonts extends ThemeExtension<AppFonts> {
   final TextStyle fontSize40Weight700;
 
+  final TextStyle fontSize30Weight700;
+
   final TextStyle fontSize24Weight700;
   final TextStyle fontSize24Weight600;
 
@@ -36,6 +38,7 @@ class AppFonts extends ThemeExtension<AppFonts> {
 
   final TextStyle fontSize8Weight400;
   AppFonts({
+    required this.fontSize30Weight700,
     required this.fontSize40Weight700,
     required this.fontSize24Weight700,
     required this.fontSize24Weight600,
