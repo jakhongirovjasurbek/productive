@@ -22,8 +22,26 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "confirm_password":
+            MessageLookupByLibrary.simpleMessage("Confirm password"),
+        "create_new_password":
+            MessageLookupByLibrary.simpleMessage("Create new password"),
         "easy_time_management":
             MessageLookupByLibrary.simpleMessage("Easy Time Management"),
-        "productive": MessageLookupByLibrary.simpleMessage("Productive")
+        "enter_new_password":
+            MessageLookupByLibrary.simpleMessage("Enter new password"),
+        "iltimos_yangi_parolni_kiriting_kiriting":
+            MessageLookupByLibrary.simpleMessage(
+                "Iltimos, yangi parolni kiriting kiriting"),
+        "kiritgan_parolingiz_tepadagisi_bilan_mos_kelmadi":
+            MessageLookupByLibrary.simpleMessage(
+                "Kiritgan parolingiz tepadagisi bilan mos kelmadi"),
+        "parol_kamida_8_belgidan_iborat_bolsin":
+            MessageLookupByLibrary.simpleMessage(
+                "Parol kamida 8 belgidan iborat bo\'lsin"),
+        "productive": MessageLookupByLibrary.simpleMessage("Productive"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
+        "xatolik_qayta_urining":
+            MessageLookupByLibrary.simpleMessage("Xatolik qayta urining")
       };
 }

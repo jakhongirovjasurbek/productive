@@ -69,6 +69,86 @@ class AppLocalization {
       args: [],
     );
   }
+
+  /// `Create new password`
+  String get create_new_password {
+    return Intl.message(
+      'Create new password',
+      name: 'create_new_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter new password`
+  String get enter_new_password {
+    return Intl.message(
+      'Enter new password',
+      name: 'enter_new_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Iltimos, yangi parolni kiriting kiriting`
+  String get iltimos_yangi_parolni_kiriting_kiriting {
+    return Intl.message(
+      'Iltimos, yangi parolni kiriting kiriting',
+      name: 'iltimos_yangi_parolni_kiriting_kiriting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Parol kamida 8 belgidan iborat bo'lsin`
+  String get parol_kamida_8_belgidan_iborat_bolsin {
+    return Intl.message(
+      'Parol kamida 8 belgidan iborat bo\'lsin',
+      name: 'parol_kamida_8_belgidan_iborat_bolsin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm password`
+  String get confirm_password {
+    return Intl.message(
+      'Confirm password',
+      name: 'confirm_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Kiritgan parolingiz tepadagisi bilan mos kelmadi`
+  String get kiritgan_parolingiz_tepadagisi_bilan_mos_kelmadi {
+    return Intl.message(
+      'Kiritgan parolingiz tepadagisi bilan mos kelmadi',
+      name: 'kiritgan_parolingiz_tepadagisi_bilan_mos_kelmadi',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Xatolik qayta urining`
+  String get xatolik_qayta_urining {
+    return Intl.message(
+      'Xatolik qayta urining',
+      name: 'xatolik_qayta_urining',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {

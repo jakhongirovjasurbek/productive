@@ -74,7 +74,7 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              "Create new password",
+              context.localization.create_new_password,
               style: context.style.fontSize24Weight600,
             ),
             const SizedBox(
@@ -96,7 +96,7 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                       inpCurrected();
                     },
                     controller: firstInp,
-                    decoration: decoration(hintText: "Enter new password"),
+                    decoration: decoration(hintText: context.localization.enter_new_password),
                     style: TextStyle(
                       color: colors.whiteLabel,
                     ),
@@ -105,9 +105,9 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                     keyboardType: TextInputType.text,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'Iltimos, yangi parolni kiriting kiriting!';
+                        return '${context.localization.iltimos_yangi_parolni_kiriting_kiriting}!';
                       } else if (value.length < 8) {
-                        return "Parol kamida 8 belgidan iborat bo'lsin";
+                        return context.localization.parol_kamida_8_belgidan_iborat_bolsin;
                       }
                       return null;
                     },
@@ -123,7 +123,7 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                     },
                     controller: secondInp,
                     decoration: decoration(
-                        hintText: "Confirm password",
+                        hintText: context.localization.confirm_password,
                         icon: Padding(
                           padding: const EdgeInsets.all(10),
                           child: isDisabled
@@ -144,9 +144,9 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                     keyboardType: TextInputType.text,
                     validator: (passwodt2) {
                       if (firstInp.text == null || secondInp.text.isEmpty) {
-                        return "Kiritgan parolingiz tepadagisi bilan mos kelmadi!";
+                        return "${context.localization.kiritgan_parolingiz_tepadagisi_bilan_mos_kelmadi}!";
                       } else if (firstInp.text != secondInp.text) {
-                        return "Xatolik qayta urining";
+                        return context.localization.xatolik_qayta_urining;
                       }
                       return null;
                     },
@@ -199,7 +199,7 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                     ? colors.buttonDisabledColor
                     : colors.buttonDisabledColor.withOpacity(0.3)),
             child: Text(
-              "Save",
+              context.localization.save,
               style: context.style.fontSize16Weight600.copyWith(
                 color: isDisabled
                     ? colors.whiteLabel
