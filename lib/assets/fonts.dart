@@ -7,6 +7,7 @@ class AppFonts extends ThemeExtension<AppFonts> {
   final TextStyle fontSize16Weight600;
   final TextStyle fontSize16Weight700;
   final TextStyle fontSize14Weight400;
+  final TextStyle fontSize24Weight600;
 
   AppFonts({
     required this.fontSize40Weight700,
@@ -15,6 +16,7 @@ class AppFonts extends ThemeExtension<AppFonts> {
     required this.fontSize16Weight600,
     required this.fontSize16Weight700,
     required this.fontSize14Weight400,
+    required this.fontSize24Weight600
   });
 
   @override
