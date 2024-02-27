@@ -31,10 +31,10 @@ flutter_launcher_icons:
 flutter:
   uses-material-design: true
 
-assets:
-  - assets/
-  - assets/logo/
-  - assets/icons/
+  assets:
+    - assets/
+    - assets/logo/
+    - assets/icons/
 
 flutter_intl:
   enabled: true
