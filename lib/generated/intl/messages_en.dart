@@ -24,6 +24,18 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "easy_time_management":
             MessageLookupByLibrary.simpleMessage("Easy Time Management"),
-        "productive": MessageLookupByLibrary.simpleMessage("Productive")
+        "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "email_verification":
+            MessageLookupByLibrary.simpleMessage("Email verification"),
+        "forgot_password":
+            MessageLookupByLibrary.simpleMessage("Forgot password"),
+        "password": MessageLookupByLibrary.simpleMessage(
+            " Please enter the 4 digital code that send to your email address"),
+        "productive": MessageLookupByLibrary.simpleMessage("Productive"),
+        "receive_code":
+            MessageLookupByLibrary.simpleMessage("If you don’t receive code. "),
+        "recover_password":
+            MessageLookupByLibrary.simpleMessage("Recover password"),
+        "resend": MessageLookupByLibrary.simpleMessage("Resend")
       };
 }

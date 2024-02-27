@@ -14,6 +14,8 @@ dependencies:
     sdk: flutter
   flutter_svg: ^2.0.10+1
   keyboard_dismisser: ^3.0.0
+  gap: any
+  pinput: any
 
 dev_dependencies:
   flutter_test:
@@ -35,6 +37,8 @@ flutter:
     - assets/
     - assets/logo/
     - assets/icons/
+    - assets/icons/forgot_password/
+    - assets/images/
 
 flutter_intl:
   enabled: true
