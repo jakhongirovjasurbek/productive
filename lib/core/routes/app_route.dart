@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:productive/core/functions/app_functions.dart';
+import 'package:productive/core/pages/onboarding.dart';
 import 'package:productive/core/pages/splash.dart';
 import 'package:productive/core/route_names/app_route_name.dart';
 
@@ -10,6 +11,8 @@ class AppRoute {
         return fade(const SplashPage());
       case AppRouteNames.home:
         return fade(const Scaffold());
+      case AppRouteNames.onboarding:
+        return fade(const OnBoarding());
       default:
         return fade(const Scaffold());
     }

@@ -1,5 +1,3 @@
-
-
 import 'dart:ui';
 
 class AppColors {
@@ -69,4 +67,87 @@ class AppColors {
   final locationColor = const Color(0xFFBF360C);
   final startDate = const Color(0xFF18B797);
   final endDate = const Color(0xFFF3737E);
+  final onBoardingColor = const Color(0xFF131524);
+  final onBordingSkip = const Color(0xFF4B7FD6);
+  final onBoardTextColor = const Color(0xFFFEFEFE).withOpacity(0.5);
+final onBoarding = const Color(0xFF4B7FD6).withOpacity(0.32);
+final onBordingComponet= Color(0xFF4B7FD6);
+// var disabledButtonColor = _c4B7FD6.withOpacity(.3);
+
+// final  white = _white;
+// final  black = _black;
+// final  navigationBarBackgroundColor = _dark;
+// final  activeColor = _accentBlue;
+// final  inactiveColor = _whitish;
+// final  scaffoldBackgroundColor = _darkish;
+// final  appBarColor = _darkish;
+// final  onPrimaryColor = _whitish;
+// final  secondaryColor = _tuna;
+// final  errorColor = _pinkishRed;
+// final  textFieldBackgroundColor = _c2B304A;
+// final  cursorColor = _c4B7FD6;
+// final  textFieldBackgroundColor2 = _c1C233A;
+// final  textFieldBorderColor = _cfromRGBO;
+// final  hintTextColor = _whitish;
+// final  textButtonColor = _c4B7FD6;
+// final  wButtonColor = _c4B7FD6;
+// final  socialMediaButtonColor = _c272C38;
+// final  pinPutBorderColor = _c006EE9;
+// final  green = Colors.green;
+// final  verificationTextColor = _c979797;
+// final  verificationResentColor = _c407BFF;
+// final  newPasswordColor = _whitish;
+// final  iconColor = _c44DB4A;
+// final  singUpTextColor = _c4B7FD6;
+// final  onBoardingColor = _darkish;
+// final  onBordingSkip = _c4B7FD6;
+// final onnBoardTextColor = _whitish.withOpacity(0.5);
+// var onBoarding = _c4B7FD6.withOpacity(0.32);
+// final onBordingComponet = _c4B7FD6;
+// final splashColor = _darkish;
+// final upcomingTextColor = _cABABAB;
+// final upcomingMeetColor = _c22B07D;
+// final upcomingLinkBolt = _c272C38;
+// final gymColor = _cFF8700;
+// final upComingBorderSolid = Color.fromRGBO(255, 255, 255, 0.02);
+// final studyIconColor = _cDD8491;
+// final upComingLink = _c4B7FD6;
+// final allCreateNavigation = _c525298;
+// final allPageTextColor = _cABABAB;
+// final englishStudy  = _cDD8491;
+// final cleaningRoom = _c4B7FD6;
+// final greyish = _8E8E8E;
+// final redPriorty = _pinkishRed;
+// final yellowPriority = _cF6A845;
+// final greenPriority = _c44DB4A;
+// final selectIconWork = _c525298;
+// final createSearchColor = _createSearch;
+// var modalBottomSheetTop = Color(0xFFF8FFFF).withOpacity(0.4);
+// //
+
+// final _white = Color(0xFFFFFFFF);
+// final _black = Color(0xFF000000);
+// final _dark = Color(0XFF1C1E2D);
+// final _accentBlue = Color(0xFF4B7FD6);
+// final _whitish = Color(0xFFFEFEFE);
+// final _darkish = Color(0xFF131524);
+// final _tuna = Color(0xFF2B304A);
+// final _pinkishRed = Color(0xFFFF2752);
+// final _c2B304A = Color(0xFF2B304A);
+// final _c4B7FD6 = Color(0xFF4B7FD6);
+// final _c1C233A = Color(0xFF1C233A);
+// final _cfromRGBO = Color.fromRGBO(0, 110, 233, 0.10);
+// final _c272C38 = Color(0xFF272C38);
+// final _c006EE9 = Color(0xFF006EE9);
+// final _c979797 = Color(0xFF979797);
+// final _c407BFF = Color(0xFF407BFF);
+// final _c44DB4A = Color(0xFF44DB4A);
+// final _cABABAB = Color(0xFFABABAB);
+// final _c22B07D = Color(0xFF22B07D);
+// final _cFF8700 = Color(0xFFFF8700);
+// final _cDD8491 = Color(0xFFDD8491);
+// final _c525298 = Color(0xFF525298);
+// final _8E8E8E = Color(0xFF8E8E8E);
+// final _cF6A845 = Color(0xFFF6A845);
+// final _createSearch = Color(0xFF303644);
 }
