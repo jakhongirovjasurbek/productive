@@ -22,8 +22,23 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "add_note": MessageLookupByLibrary.simpleMessage("Add note..."),
+        "all_day": MessageLookupByLibrary.simpleMessage("All Day"),
+        "birthday": MessageLookupByLibrary.simpleMessage("Birthday"),
+        "create_event": MessageLookupByLibrary.simpleMessage("Create Event"),
+        "date": MessageLookupByLibrary.simpleMessage("28 Nov,2022 10:00 AM"),
         "easy_time_management":
             MessageLookupByLibrary.simpleMessage("Easy Time Management"),
-        "productive": MessageLookupByLibrary.simpleMessage("Productive")
+        "end_date": MessageLookupByLibrary.simpleMessage("End Date"),
+        "event_title": MessageLookupByLibrary.simpleMessage("Event title"),
+        "meet": MessageLookupByLibrary.simpleMessage("Meet"),
+        "once": MessageLookupByLibrary.simpleMessage("Once"),
+        "online": MessageLookupByLibrary.simpleMessage("Online"),
+        "other": MessageLookupByLibrary.simpleMessage("Other"),
+        "productive": MessageLookupByLibrary.simpleMessage("Productive"),
+        "repeat": MessageLookupByLibrary.simpleMessage("Repeat"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
+        "start_date": MessageLookupByLibrary.simpleMessage("Start Date"),
+        "title": MessageLookupByLibrary.simpleMessage("Enter title")
       };
 }

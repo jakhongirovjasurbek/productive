@@ -69,6 +69,156 @@ class AppLocalization {
       args: [],
     );
   }
+
+  /// `Create Event`
+  String get create_event {
+    return Intl.message(
+      'Create Event',
+      name: 'create_event',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Meet`
+  String get meet {
+    return Intl.message(
+      'Meet',
+      name: 'meet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Birthday`
+  String get birthday {
+    return Intl.message(
+      'Birthday',
+      name: 'birthday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Online`
+  String get online {
+    return Intl.message(
+      'Online',
+      name: 'online',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Other`
+  String get other {
+    return Intl.message(
+      'Other',
+      name: 'other',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Event title`
+  String get event_title {
+    return Intl.message(
+      'Event title',
+      name: 'event_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start Date`
+  String get start_date {
+    return Intl.message(
+      'Start Date',
+      name: 'start_date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `End Date`
+  String get end_date {
+    return Intl.message(
+      'End Date',
+      name: 'end_date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `28 Nov,2022 10:00 AM`
+  String get date {
+    return Intl.message(
+      '28 Nov,2022 10:00 AM',
+      name: 'date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All Day`
+  String get all_day {
+    return Intl.message(
+      'All Day',
+      name: 'all_day',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Repeat`
+  String get repeat {
+    return Intl.message(
+      'Repeat',
+      name: 'repeat',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Once`
+  String get once {
+    return Intl.message(
+      'Once',
+      name: 'once',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add note...`
+  String get add_note {
+    return Intl.message(
+      'Add note...',
+      name: 'add_note',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter title`
+  String get title {
+    return Intl.message(
+      'Enter title',
+      name: 'title',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {

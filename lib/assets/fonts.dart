@@ -15,27 +15,31 @@ class AppFonts extends ThemeExtension<AppFonts> {
   final TextStyle fontSize18Weight600;
   final TextStyle fontSize18Weight500;
   final TextStyle fontSize18Weight400;
+  final TextStyle fontSize18Weight500Grey;
 
   final TextStyle fontSize16Weight700;
   final TextStyle fontSize16Weight600;
+  final TextStyle fontSize16Weight500Blue;
   final TextStyle fontSize16Weight500;
   final TextStyle fontSize16Weight400;
 
   final TextStyle fontSize15Weight400;
-
+  final TextStyle fontSize16Weight500Grey;
   final TextStyle fontSize14Weight700;
   final TextStyle fontSize14Weight600;
   final TextStyle fontSize14Weight500;
   final TextStyle fontSize14Weight400;
-
+  final TextStyle fontSize14Weight500Grey;
   final TextStyle fontSize12Weight500;
   final TextStyle fontSize12Weight400;
 
   final TextStyle fontSize10Weight400;
-
+  final TextStyle fontSize14Weight400Grey;
 
   final TextStyle fontSize8Weight400;
-  AppFonts({
+  AppFonts( {
+
+    required this.fontSize16Weight500Grey,
     required this.fontSize40Weight700,
     required this.fontSize24Weight700,
     required this.fontSize24Weight600,
@@ -45,20 +49,24 @@ class AppFonts extends ThemeExtension<AppFonts> {
     required this.fontSize18Weight700,
     required this.fontSize18Weight600,
     required this.fontSize18Weight500,
+    required this.fontSize18Weight500Grey,
     required this.fontSize18Weight400,
     required this.fontSize16Weight700,
     required this.fontSize16Weight600,
     required this.fontSize16Weight500,
+    required this.fontSize16Weight500Blue,
     required this.fontSize16Weight400,
     required this.fontSize15Weight400,
     required this.fontSize14Weight700,
     required this.fontSize14Weight600,
     required this.fontSize14Weight500,
+    required this.fontSize14Weight500Grey,
     required this.fontSize14Weight400,
     required this.fontSize12Weight500,
     required this.fontSize12Weight400,
     required this.fontSize10Weight400,
     required this.fontSize8Weight400,
+    required this.fontSize14Weight400Grey,
   });
   
 

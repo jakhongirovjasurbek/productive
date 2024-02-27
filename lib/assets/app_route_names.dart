@@ -1,4 +1,4 @@
 abstract class AppRouteNames {
   static const splash = '/';
-  static const home = '/home';
+  static const create_event = '/create_event';
 }
