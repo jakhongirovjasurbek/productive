@@ -1,16 +1,16 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:productive/core/functions/app_functions.dart';
-import 'package:productive/core/pages/splash.dart';
-import 'package:productive/core/route_names/app_route_name.dart';
+import 'package:productive/core/route_names/expanse_name.dart';
+import 'package:productive/core/route_names/stats_name.dart';
 
-class AppRoute {
+class StatsRoute {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case AppRouteNames.splash:
-        return fade(const SplashPage());
-      case AppRouteNames.home:
+      case StatsRouteNames.stats:
         return fade(const Scaffold());
-    
+      
+       
     }
   }
 }
