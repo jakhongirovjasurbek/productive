@@ -35,6 +35,7 @@ flutter:
     - assets/
     - assets/logo/
     - assets/icons/
+    - assets/icons/expanse/
 
 flutter_intl:
   enabled: true
