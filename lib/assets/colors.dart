@@ -6,6 +6,7 @@ class AppColors {
   final white = const Color(0xFFFFFFFF);
   final black = const Color(0xFF000000);
   final mainDark = const Color(0xFF131524);
+  final bnbColor = const Color(0XFF1C1E2D);
   final whiteLabel = const Color(0xFFFEFEFE);
   final skipButtonColor = const Color(0xFF4B7FD6);
   final loginTextFieldBackgroundColor = const Color(0xFF272C38);

@@ -69,6 +69,56 @@ class AppLocalization {
       args: [],
     );
   }
+
+  /// `Tasks`
+  String get tasks {
+    return Intl.message(
+      'Tasks',
+      name: 'tasks',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Expense`
+  String get expense {
+    return Intl.message(
+      'Expense',
+      name: 'expense',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create`
+  String get create {
+    return Intl.message(
+      'Create',
+      name: 'create',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Calendar`
+  String get calendar {
+    return Intl.message(
+      'Calendar',
+      name: 'calendar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stats`
+  String get stats {
+    return Intl.message(
+      'Stats',
+      name: 'stats',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {
