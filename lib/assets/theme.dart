@@ -11,6 +11,7 @@ class AppTheme {
       scaffoldBackgroundColor: colors.mainDark,
       extensions: [
         AppFonts(
+          
           fontSize40Weight700: TextStyle(
             fontSize: 40,
             fontWeight: FontWeight.w700,
