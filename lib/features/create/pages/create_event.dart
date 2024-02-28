@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:productive/assets/colors.dart';
+import 'package:gap/gap.dart';
 import 'package:productive/assets/icons.dart';
 import 'package:productive/core/extensions/extensions.dart';
+import 'package:productive/features/create/presentation/widgets/all_day.dart';
+import 'package:productive/features/create/presentation/widgets/repeat.dart';
+import 'package:productive/features/create/presentation/widgets/save_button.dart';
 
 class CreateEvent extends StatefulWidget {
   const CreateEvent({Key? key}) : super(key: key);
@@ -18,244 +21,185 @@ class _CreateEventState extends State<CreateEvent> {
       appBar: AppBar(
         leading: Padding(
           padding: const EdgeInsets.all(16.0),
-          child: SvgPicture.asset(AppIcons.bold),
+          child: GestureDetector(
+            onTap: (){
+              Navigator.pop(context);
+            },
+              child: SvgPicture.asset(AppIcons.bold)),
         ),
         title: Padding(
           padding: const EdgeInsets.all(50.0),
           child: Text(context.localization.create_event,
               style: context.style.fontSize24Weight700),
         ),
-        backgroundColor: AppColors.mainDark,
+        backgroundColor: context.colors.mainDark,
       ),
-
-      body: Column(
-        children: [
-          Row(
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: SingleChildScrollView(
+          child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.fromLTRB(40, 20, 20, 27),
-                child: Column(
+                padding: const EdgeInsets.symmetric(horizontal: 19),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    SvgPicture.asset(AppIcons.meet),
-                    SizedBox(height: 8),
-                    Text(context.localization.meet,
-                        style: context.style.fontSize14Weight400),
+                    Column(
+                      children: [
+                        SvgPicture.asset(AppIcons.meet),
+                        SizedBox(height: 8),
+                        Text(context.localization.meet,
+                            style: context.style.fontSize14Weight400),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SvgPicture.asset(AppIcons.birthday),
+                        SizedBox(height: 8),
+                        Text(context.localization.birthday,
+                            style: context.style.fontSize14Weight400),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SvgPicture.asset(AppIcons.online),
+                        SizedBox(height: 8),
+                        Text(context.localization.online,
+                            style: context.style.fontSize14Weight400),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SvgPicture.asset(AppIcons.other),
+                        SizedBox(height: 8),
+                        Text(context.localization.other,
+                            style: context.style.fontSize14Weight400),
+                      ],
+                    ),
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(30, 20, 20, 27),
-                child: Column(
-                  children: [
-                    SvgPicture.asset(AppIcons.birthday),
-                    SizedBox(height: 8),
-                    Text(context.localization.birthday,
-                        style: context.style.fontSize14Weight400),
-                  ],
+              const Gap(27),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: context.colors.backgroundColor,
+                  border: Border.all(
+                      color: context.colors.unactivatedColor, width: 0.38),
+                ),
+                child: TextField(
+                  style: TextStyle(color: context.colors.whiteLabel),
+                  decoration: InputDecoration(
+                    contentPadding: EdgeInsets.fromLTRB(16, 12, 0, 12),
+                    hintText: context.localization.event_title,
+                    hintStyle: context.style.fontSize18Weight500Grey,
+                    border: InputBorder.none,
+                  ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(30, 20, 20, 27),
-                child: Column(
-                  children: [
-                    SvgPicture.asset(AppIcons.online),
-                    SizedBox(height: 8),
-                    Text(context.localization.online,
-                        style: context.style.fontSize14Weight400),
-                  ],
+              const Gap(20),
+              Divider(
+                color: context.colors.whiteLabel.withOpacity(0.2),
+                thickness: 0.5,
+              ),
+              const Gap(20),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(context.localization.start_date,
+                    style: context.style.fontSize16Weight500Blue),
+              ),
+              const Gap(12),
+              Container(
+                height: 42,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: context.colors.backgroundColor,
+                  border: Border.all(
+                      color: context.colors.unactivatedColor, width: 0.38),
+                ),
+                child: TextField(
+                  style: TextStyle(color: context.colors.whiteLabel),
+                  decoration: InputDecoration(
+                    contentPadding: EdgeInsets.fromLTRB(16, 13, 0, 12),
+                    hintText: context.localization.date,
+                    hintStyle: context.style.fontSize14Weight400Grey,
+                    border: InputBorder.none,
+                    prefixIcon: Padding(
+                      padding: const EdgeInsets.fromLTRB(16, 13, 8, 13),
+                      child: SvgPicture.asset(AppIcons.start),
+                    ),
+                  ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(35, 20, 20, 27),
-                child: Column(
-                  children: [
-                    SvgPicture.asset(AppIcons.other),
-                    SizedBox(height: 8),
-                    Text(context.localization.other,
-                        style: context.style.fontSize14Weight400),
-                  ],
+              const Gap(16),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(context.localization.end_date,
+                    style: context.style.fontSize16Weight500Blue),
+              ),
+              const Gap(12),
+              Container(
+                height: 42,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: context.colors.backgroundColor,
+                  border: Border.all(
+                      color: context.colors.unactivatedColor, width: 0.38),
+                ),
+                child: TextField(
+                  style: TextStyle(color: context.colors.whiteLabel),
+                  decoration: InputDecoration(
+                    contentPadding: EdgeInsets.fromLTRB(16, 13, 0, 12),
+                    hintText: context.localization.date,
+                    hintStyle: context.style.fontSize14Weight400Grey,
+                    border: InputBorder.none,
+                    prefixIcon: Padding(
+                      padding: const EdgeInsets.fromLTRB(16, 13, 8, 13),
+                      child: SvgPicture.asset(AppIcons.end),
+                    ),
+                  ),
+                ),
+              ),
+              const Gap(28),
+              Row(
+                children: [
+                  AllDayWidget(),
+                  Gap(40),
+                  RepeatWidget(),
+                ],
+              ),
+              const Gap(20),
+              Divider(
+                color: context.colors.whiteLabel.withOpacity(0.2),
+                thickness: 0.5,
+              ),
+              const Gap(20),
+              Container(
+                height: 147,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: context.colors.backgroundColor,
+                  border: Border.all(
+                      color: context.colors.unactivatedColor, width: 0.38),
+                ),
+                child: TextField(
+                  style: context.style.fontSize8Weight400
+                      .copyWith(color: context.colors.whiteLabel),
+                  decoration: InputDecoration(
+                    contentPadding: EdgeInsets.fromLTRB(16, 12, 0, 12),
+                    hintText: context.localization.add_note,
+                    hintStyle: context.style.fontSize14Weight500Grey,
+                    border: InputBorder.none,
+                  ),
                 ),
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(16, 0, 16, 20),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                color: AppColors.loginTextFieldBackgroundColor,
-                border:
-                    Border.all(color: AppColors.unactivatedColor, width: 0.38),
-              ),
-              child: TextField(
-                decoration: InputDecoration(
-                  contentPadding: EdgeInsets.fromLTRB(16, 12, 0, 12),
-                  hintText: context.localization.event_title,
-                  hintStyle: context.style.fontSize18Weight500Grey,
-                  border: InputBorder.none,
-                ),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(16, 0, 16, 20),
-            child: Divider(
-              color: AppColors.whiteLabel.withOpacity(0.2),
-              thickness: 0.5,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0, 0, 300, 12),
-            child: Text(context.localization.start_date,
-                style: context.style.fontSize16Weight500Blue),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(16, 0, 16, 20),
-            child: Container(
-              height: 42,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                color: AppColors.loginTextFieldBackgroundColor,
-                border:
-                    Border.all(color: AppColors.unactivatedColor, width: 0.38),
-              ),
-              child: TextField(
-                decoration: InputDecoration(
-                  contentPadding: EdgeInsets.fromLTRB(16, 13, 0, 12),
-                  hintText: context.localization.date,
-                  hintStyle: context.style.fontSize14Weight400Grey,
-                  border: InputBorder.none,
-                  prefixIcon: Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 13, 8, 13),
-                    child: SvgPicture.asset(AppIcons.start),
-                  ),
-                ),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0, 0, 308, 12),
-            child: Text(context.localization.end_date,
-                style: context.style.fontSize16Weight500Blue),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-            child: Container(
-              height: 42,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                color: AppColors.loginTextFieldBackgroundColor,
-                border:
-                    Border.all(color: AppColors.unactivatedColor, width: 0.38),
-              ),
-              child: TextField(
-                decoration: InputDecoration(
-                  contentPadding: EdgeInsets.fromLTRB(16, 13, 0, 12),
-                  hintText: context.localization.date,
-                  hintStyle: context.style.fontSize14Weight400Grey,
-                  border: InputBorder.none,
-                  prefixIcon: Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 13, 8, 13),
-                    child: SvgPicture.asset(AppIcons.end),
-                  ),
-                ),
-              ),
-            ),
-          ),
-          Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(12, 28, 60, 0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: AppColors.loginTextFieldBackgroundColor,
-                  ),
-                  height: 42,
-                  width: 129,
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(16, 11, 15, 12),
-                        child: Text(context.localization.all_day,
-                            style: context.style.fontSize16Weight500Blue),
-                      ),
-                      SvgPicture.asset(AppIcons.switch_),
-                    ],
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 28, 0, 0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: AppColors.loginTextFieldBackgroundColor,
-                  ),
-                  height: 42,
-                  width: 194,
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(16, 11, 15, 12),
-                        child: Text(context.localization.repeat,
-                            style: context.style.fontSize16Weight500Blue),
-                      ),
-                      SizedBox(width: 24),
-                      Text(context.localization.once,
-                          style: context.style.fontSize16Weight500Grey),
-                      SizedBox(width: 8),
-                      SvgPicture.asset(AppIcons.down),
-                    ],
-                  ),
-                ),
-              )
-            ],
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(16, 20, 16, 20),
-            child: Divider(
-              color: AppColors.whiteLabel.withOpacity(0.2),
-              thickness: 0.5,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(16, 0, 16, 20),
-            child: Container(
-              height: 147,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                color: AppColors.loginTextFieldBackgroundColor,
-                border:
-                    Border.all(color: AppColors.unactivatedColor, width: 0.38),
-              ),
-              child: TextField(
-                decoration: InputDecoration(
-                  contentPadding: EdgeInsets.fromLTRB(16, 12, 0, 12),
-                  hintText: context.localization.add_note,
-                  hintStyle: context.style.fontSize14Weight500Grey,
-                  border: InputBorder.none,
-                ),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                color: AppColors.skipButtonColor,
-              ),
-              child: Center(
-                  child: Text(
-                context.localization.save,
-                style: context.style.fontSize16Weight500,
-              )),
-              height: 40,
-              width: 380,
-            ),
-          )
-        ],
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: SaveButton(),
       ),
     );
   }
