@@ -82,27 +82,32 @@ class WCalendarWidget extends StatelessWidget {
                   await launchUrlString(link!);
                 }
               },
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(4),
-                  color: context.colors.linkColorBackground,
-                ),
-                width: linkWidth ??
-                    (MediaQuery.of(context).size.width / 100) * 32.27,
-                child: Row(
-                  children: [
-                    SvgPicture.asset(AppIcons.link),
-                    const Gap(8),
-                    Text(
+              child: Row(
+                children: [
+                  SvgPicture.asset(
+                    AppIcons.link,
+                  ),
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 8,
+                      vertical: 4,
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: const BorderRadius.horizontal(
+                        right: Radius.circular(4),
+                      ),
+                      color: context.colors.linkColorBackground,
+                    ),
+                    child: Text(
                       context.localization.link,
                       style: linkStyle ?? context.style.fontSize12Weight400,
                     ),
-                    const Gap(8),
-                  ],
-                ),
+                  ),
+                  const Gap(8),
+                ],
               ),
             )
-          } ,
+          },
           const Gap(8),
           Row(
             children: [
