@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:productive/assets/colors.dart';
 import 'package:productive/assets/fonts.dart';
+import 'package:productive/assets/icons.dart';
+import 'package:productive/assets/images.dart';
 import 'package:productive/assets/theme.dart';
 import 'package:productive/generated/l10n.dart';
 
@@ -19,5 +21,12 @@ extension BuildContextGeneral on BuildContext {
 
   AppLocalization get localization {
     return AppLocalization();
+  }
+
+  AppIcons get icons {
+    return AppIcons();
+  }
+  AppImages get images {
+    return AppImages();
   }
 }

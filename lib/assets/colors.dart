@@ -3,12 +3,13 @@
 import 'dart:ui';
 
 class AppColors {
+  final border_textfield= Color.fromRGBO(0, 110, 233, 0.10);
   final white = const Color(0xFFFFFFFF);
   final black = const Color(0xFF000000);
   final mainDark = const Color(0xFF131524);
   final whiteLabel = const Color(0xFFFEFEFE);
   final skipButtonColor = const Color(0xFF4B7FD6);
-  final loginTextFieldBackgroundColor = const Color(0xFF272C38);
+  final loginTextFieldBackgroundColor = const Color(0xFF1C233A);
   final pinputBorderColor = const Color(0xFF0062FF);
   final emailVerification = const Color(0xFF979797);
   final tasksTimeColor = const Color(0xFFABABAB);

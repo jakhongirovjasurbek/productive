@@ -1,4 +1,11 @@
 {
   "productive": "Productive",
-  "easy_time_management": "Easy Time Management"
+  "easy_time_management": "Easy Time Management",
+  "forgot_password" : "Forgot password",
+  "email" : "Email",
+  "recover_password" : "Recover password",
+  "receive_code" : "If you don’t receive code. ",
+  "password":" Please enter the 4 digital code that send to your email address",
+  "email_verification" : "Email verification",
+  "resend" : "Resend"
 }

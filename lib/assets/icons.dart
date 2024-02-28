@@ -1,3 +1,6 @@
+const path="assets/icons/forgot_password/";
+
 class AppIcons {
-  static const logo = "assets/icons/logo.svg";
+  final back="${path}back.svg";
+
 }

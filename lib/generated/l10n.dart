@@ -69,6 +69,76 @@ class AppLocalization {
       args: [],
     );
   }
+
+  /// `Forgot password`
+  String get forgot_password {
+    return Intl.message(
+      'Forgot password',
+      name: 'forgot_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Recover password`
+  String get recover_password {
+    return Intl.message(
+      'Recover password',
+      name: 'recover_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If you don’t receive code. `
+  String get receive_code {
+    return Intl.message(
+      'If you don’t receive code. ',
+      name: 'receive_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` Please enter the 4 digital code that send to your email address`
+  String get password {
+    return Intl.message(
+      ' Please enter the 4 digital code that send to your email address',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email verification`
+  String get email_verification {
+    return Intl.message(
+      'Email verification',
+      name: 'email_verification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resend`
+  String get resend {
+    return Intl.message(
+      'Resend',
+      name: 'resend',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {
