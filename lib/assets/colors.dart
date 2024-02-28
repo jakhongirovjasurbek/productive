@@ -3,6 +3,7 @@
 import 'dart:ui';
 
 class AppColors {
+  final linkColorBackground = Color(0xFF2B304A);
   final white = const Color(0xFFFFFFFF);
   final black = const Color(0xFF000000);
   final mainDark = const Color(0xFF131524);

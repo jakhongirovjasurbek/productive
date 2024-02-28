@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:intl/intl.dart';
 
 CupertinoPageRoute fade(Widget widget) {
   return CupertinoPageRoute(
@@ -19,4 +20,10 @@ CupertinoPageRoute fade(Widget widget) {
   //     return widget;
   //   },
   // );
+}
+
+
+String formatTime(DateTime dateTime) {
+  String formattedTime = DateFormat('hh:mm a').format(dateTime);
+  return formattedTime.toUpperCase();
 }

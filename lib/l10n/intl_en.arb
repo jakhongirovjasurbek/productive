@@ -1,5 +1,8 @@
 {
   "productive": "Productive",
   "easy_time_management": "Easy Time Management",
-  "calendar":"Calendar"
+  "calendar":"Calendar", 
+  "gym_time":"Gym time", 
+  "PM": "PM", 
+  "link":"Link to meeting"
 }
