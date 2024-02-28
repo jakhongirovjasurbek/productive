@@ -91,32 +91,34 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                     context,
                     decoration(
                         hintText: context.localization.enter_new_password),
-                    context.colors.whiteLabel,(s) {
-                      inpCurrected();
-                    }),
+                    context.colors.whiteLabel, (s) {
+                  inpCurrected();
+                }),
                 const SizedBox(
                   height: 16,
                 ),
                 WTextField(
-                    secondInp,
-                    context,
-                    decoration(
-                      hintText: context.localization.confirm_password,
-                      icon: Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: isDisabled
-                            ? SvgPicture.asset(
-                                AppIcons.isCheck,
-                                color: context.colors.isCheckGreenColor,
-                              )
-                            : SvgPicture.asset(
-                                AppIcons.isCheck,
-                              ),
-                      ),
+                  secondInp,
+                  context,
+                  decoration(
+                    hintText: context.localization.confirm_password,
+                    icon: Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: isDisabled
+                          ? SvgPicture.asset(
+                              AppIcons.isCheck,
+                              color: context.colors.isCheckGreenColor,
+                            )
+                          : SvgPicture.asset(
+                              AppIcons.isCheck,
+                            ),
                     ),
-                    context.colors.whiteLabel,(s) {
-                      inpCurrected();
-                    },)
+                  ),
+                  context.colors.whiteLabel,
+                  (s) {
+                    inpCurrected();
+                  },
+                )
               ],
             ),
           ],
@@ -128,33 +130,7 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
             right: 16,
             bottom: MediaQuery.of(context).padding.bottom + 24),
         child: GestureDetector(
-          onTap: () {
-            if (isDisabled) {
-              showDialog(
-                context: context,
-                builder: (context) {
-                  return Center(
-                    child: Container(
-                      padding: EdgeInsets.all(40),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(8),
-                        boxShadow: List.filled(
-                          2,
-                          const BoxShadow(
-                            color: Colors.black45,
-                          ),
-                        ),
-                      ),
-                      child: Text(
-                        "Success",
-                      ),
-                    ),
-                  );
-                },
-              );
-            }
-          },
+          onTap: () {},
           child: Container(
             height: 48,
             alignment: Alignment.center,
