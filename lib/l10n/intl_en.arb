@@ -27,5 +27,10 @@
   "confirm_password": "Confirm password",
   "kiritgan_parolingiz_tepadagisi_bilan_mos_kelmadi": "Kiritgan parolingiz tepadagisi bilan mos kelmadi",
   "xatolik_qayta_urining": "Xatolik qayta urining",
-  "save": "Save"
+  "save": "Save",
+  "easy_time_management": "Easy Time Management",
+  "calendar":"Calendar",
+  "gym_time":"Gym time",
+  "PM": "PM",
+  "link":"Link to meeting"
 }

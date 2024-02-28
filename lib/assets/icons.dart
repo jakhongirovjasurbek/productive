@@ -16,5 +16,7 @@ class AppIcons {
   static const create = "${_bnb}create.svg";
   static const calendar = "${_bnb}calendar.svg";
   static const stats = "${_bnb}stats.svg";
+  static const calendarGymIcon = "assets/icons/calendar/calendar_gym_icon.svg";
+  static const link = "assets/icons/calendar/link.svg";
 }
 
