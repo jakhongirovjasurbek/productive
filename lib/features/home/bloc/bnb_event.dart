@@ -1,9 +1,9 @@
-part of 'nbn_bloc.dart';
+part of 'bnb_bloc.dart';
 
 @immutable
-sealed class NbnEvent {}
+sealed class BnbEvent {}
 
-class IsActiveColor extends NbnEvent {
+class IsActiveColor extends BnbEvent {
   final int index;
   final bool isActive;
 

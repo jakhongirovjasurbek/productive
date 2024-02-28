@@ -1,14 +1,14 @@
-part of 'nbn_bloc.dart';
+part of 'bnb_bloc.dart';
 
-class NbnState {
+class BnbState {
 
   final int activeIndex;
-  NbnState({required this.activeIndex});
+  BnbState({required this.activeIndex});
 
-  NbnState copyWith({
+  BnbState copyWith({
     int? activeIndex,
   }) {
-    return NbnState(
+    return BnbState(
       activeIndex: activeIndex ?? this.activeIndex,
     );
   }
@@ -19,7 +19,7 @@ class NbnState {
   }
 
   @override
-  bool operator ==(covariant NbnState other) {
+  bool operator ==(covariant BnbState other) {
     if (identical(this, other)) return true;
 
     return
