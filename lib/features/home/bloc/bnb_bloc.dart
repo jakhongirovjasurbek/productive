@@ -1,11 +1,11 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
-part 'nbn_event.dart';
-part 'nbn_state.dart';
+part 'bnb_event.dart';
+part 'bnb_state.dart';
 
-class NbnBloc extends Bloc<NbnEvent, NbnState> {
-  NbnBloc() : super(NbnState(activeIndex: 0)) {
+class BnbBloc extends Bloc<BnbEvent, BnbState> {
+  BnbBloc() : super(BnbState(activeIndex: 0)) {
     on<IsActiveColor>((event, emit) {
       emit(state.copyWith(activeIndex: event.index));
     });

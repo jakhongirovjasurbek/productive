@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:productive/core/extensions/extensions.dart';
+import 'package:productive/features/home/bloc/bnb_bloc.dart';
 import 'package:productive/features/home/widgets/bnb_item.dart';
 
 import '../../assets/icons.dart';
-import 'bloc/nbn_bloc.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -27,8 +27,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => NbnBloc(),
-      child: BlocBuilder<NbnBloc, NbnState>(
+      create: (context) => BnbBloc(),
+      child: BlocBuilder<BnbBloc, BnbState>(
         builder: (context, state) {
           return Scaffold(
             body: Column(
@@ -55,45 +55,45 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children:
                         [
-                          NbnItem(
+                          BnbItem(
                               index: 0,
                               icon: AppIcons.tasks,
                               title: context.localization.tasks,
                               onTap: () {
                                 index = 0;
-                                context.read<NbnBloc>().add(IsActiveColor(index: 0, isActive: true));
+                                context.read<BnbBloc>().add(IsActiveColor(index: 0, isActive: true));
                               }),
-                          NbnItem(
+                          BnbItem(
                               index: 1,
                               icon: AppIcons.expense,
                               title: context.localization.expense,
                               onTap: () {
                                 index = 1;
-                                context.read<NbnBloc>().add(IsActiveColor(index: 1, isActive: true));
+                                context.read<BnbBloc>().add(IsActiveColor(index: 1, isActive: true));
                               }),
-                          NbnItem(
+                          BnbItem(
                               index: 2,
                               icon: AppIcons.expense,
                               title: context.localization.create,
                               onTap: () {
                                 index = 2;
-                                context.read<NbnBloc>().add(IsActiveColor(index: 2, isActive: true));
+                                context.read<BnbBloc>().add(IsActiveColor(index: 2, isActive: true));
                               }),
-                          NbnItem(
+                          BnbItem(
                               index: 3,
                               icon: AppIcons.calendar,
                               title: context.localization.calendar,
                               onTap: () {
                                 index = 3;
-                                context.read<NbnBloc>().add(IsActiveColor(index: 3, isActive: true));
+                                context.read<BnbBloc>().add(IsActiveColor(index: 3, isActive: true));
                               }),
-                          NbnItem(
+                          BnbItem(
                               index: 4,
                               icon: AppIcons.stats,
                               title: context.localization.stats,
                               onTap: () {
                                 index = 4;
-                                context.read<NbnBloc>().add(IsActiveColor(index: 4, isActive: true));
+                                context.read<BnbBloc>().add(IsActiveColor(index: 4, isActive: true));
                               }),
                         ]
                     ),
