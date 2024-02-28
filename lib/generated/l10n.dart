@@ -319,6 +319,36 @@ class AppLocalization {
       args: [],
     );
   }
+
+  /// `Gym time`
+  String get gym_time {
+    return Intl.message(
+      'Gym time',
+      name: 'gym_time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `PM`
+  String get PM {
+    return Intl.message(
+      'PM',
+      name: 'PM',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Link to meeting`
+  String get link {
+    return Intl.message(
+      'Link to meeting',
+      name: 'link',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {

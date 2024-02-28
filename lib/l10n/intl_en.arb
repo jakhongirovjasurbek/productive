@@ -13,13 +13,11 @@
   "help": "We help you stay organized and\n manage your day",
   "trackYourExpense": "Track Your Expense",
   "helpOrganize": "We help you organize your expenses\n easily and safely",
-
   "tasks" : "Tasks",
   "expense" : "Expense",
   "create" : "Create",
   "calendar" : "Calendar",
   "stats" : "Stats",
-  "easy_time_management": "Easy Time Management",
   "create_new_password": "Create new password",
   "enter_new_password": "Enter new password",
   "iltimos_yangi_parolni_kiriting_kiriting": "Iltimos, yangi parolni kiriting kiriting",
@@ -28,8 +26,6 @@
   "kiritgan_parolingiz_tepadagisi_bilan_mos_kelmadi": "Kiritgan parolingiz tepadagisi bilan mos kelmadi",
   "xatolik_qayta_urining": "Xatolik qayta urining",
   "save": "Save",
-  "easy_time_management": "Easy Time Management",
-  "calendar":"Calendar",
   "gym_time":"Gym time",
   "PM": "PM",
   "link":"Link to meeting"

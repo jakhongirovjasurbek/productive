@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "PM": MessageLookupByLibrary.simpleMessage("PM"),
         "calendar": MessageLookupByLibrary.simpleMessage("Calendar"),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm password"),
@@ -40,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "expense": MessageLookupByLibrary.simpleMessage("Expense"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot password"),
+        "gym_time": MessageLookupByLibrary.simpleMessage("Gym time"),
         "help": MessageLookupByLibrary.simpleMessage(
             "We help you stay organized and\n manage your day"),
         "helpOrganize": MessageLookupByLibrary.simpleMessage(
@@ -50,6 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "kiritgan_parolingiz_tepadagisi_bilan_mos_kelmadi":
             MessageLookupByLibrary.simpleMessage(
                 "Kiritgan parolingiz tepadagisi bilan mos kelmadi"),
+        "link": MessageLookupByLibrary.simpleMessage("Link to meeting"),
         "parol_kamida_8_belgidan_iborat_bolsin":
             MessageLookupByLibrary.simpleMessage(
                 "Parol kamida 8 belgidan iborat bo\'lsin"),
