@@ -69,6 +69,16 @@ class AppLocalization {
       args: [],
     );
   }
+
+  /// `Categories`
+  String get categories_appbar {
+    return Intl.message(
+      'Categories',
+      name: 'categories_appbar',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {

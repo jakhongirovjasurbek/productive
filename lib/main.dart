@@ -6,6 +6,7 @@ import 'package:keyboard_dismisser/keyboard_dismisser.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/routes/app_route.dart';
 
+import 'features/expanse/presintation/pages/categories.dart';
 import 'generated/l10n.dart';
 
 void main() {
@@ -34,6 +35,7 @@ class MainApp extends StatelessWidget {
     return KeyboardDismisser(
       gestures: const [GestureType.onTap],
       child: MaterialApp(
+        home: CategoryPage(),
         theme: context.theme.lightTheme(),
         themeMode: ThemeMode.dark,
         themeAnimationDuration: const Duration(milliseconds: 250),
@@ -42,7 +44,7 @@ class MainApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         useInheritedMediaQuery: true,
         builder: DevicePreview.appBuilder,
-        onGenerateRoute: AppRoute.onGenerateRoute,
+        // onGenerateRoute: AppRoute.onGenerateRoute,
         locale: const Locale.fromSubtags(languageCode: 'en'),
         supportedLocales: AppLocalization.delegate.supportedLocales,
         localizationsDelegates: const [
