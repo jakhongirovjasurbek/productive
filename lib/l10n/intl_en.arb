@@ -18,5 +18,14 @@
   "expense" : "Expense",
   "create" : "Create",
   "calendar" : "Calendar",
-  "stats" : "Stats"
+  "stats" : "Stats",
+  "easy_time_management": "Easy Time Management",
+  "create_new_password": "Create new password",
+  "enter_new_password": "Enter new password",
+  "iltimos_yangi_parolni_kiriting_kiriting": "Iltimos, yangi parolni kiriting kiriting",
+  "parol_kamida_8_belgidan_iborat_bolsin": "Parol kamida 8 belgidan iborat bo'lsin",
+  "confirm_password": "Confirm password",
+  "kiritgan_parolingiz_tepadagisi_bilan_mos_kelmadi": "Kiritgan parolingiz tepadagisi bilan mos kelmadi",
+  "xatolik_qayta_urining": "Xatolik qayta urining",
+  "save": "Save"
 }

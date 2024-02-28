@@ -36,7 +36,6 @@ class AppFonts extends ThemeExtension<AppFonts> {
   AppFonts({
     required this.fontSize40Weight700,
     required this.fontSize24Weight700,
-    required this.fontSize24Weight600,
     required this.fontSize20Weight700,
     required this.fontSize20Weight500,
     required this.fontSize20Weight400,
@@ -53,6 +52,7 @@ class AppFonts extends ThemeExtension<AppFonts> {
     required this.fontSize14Weight600,
     required this.fontSize14Weight500,
     required this.fontSize14Weight400,
+    required this.fontSize24Weight600,
     required this.fontSize12Weight500,
     required this.fontSize12Weight400,
     required this.fontSize10Weight400,

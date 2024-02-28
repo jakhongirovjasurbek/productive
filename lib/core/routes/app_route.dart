@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:productive/core/functions/app_functions.dart';
 import 'package:productive/core/pages/onboarding.dart';
 import 'package:productive/core/pages/splash.dart';
+import 'package:productive/features/authentication/presentation/pages/create_new_password.dart';
 import 'package:productive/core/route_names/app_route_name.dart';
 import 'package:productive/features/home/home.dart';
 
@@ -14,6 +15,8 @@ class AppRoute {
         return fade(const HomePage());
       case AppRouteNames.onboarding:
         return fade(const OnBoarding());
+      case AppRouteNames.createNewPassword:
+        return fade(const CreateNewPassword());
       default:
         return fade(const Scaffold());
     }

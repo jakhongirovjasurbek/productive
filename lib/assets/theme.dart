@@ -12,51 +12,44 @@ class AppTheme {
       extensions: [
         AppFonts(
           fontSize40Weight700: TextStyle(
-            fontFamily: "Barlow",
             fontSize: 40,
             fontWeight: FontWeight.w700,
             color: colors.whiteLabel,
           ),
           fontSize16Weight400: TextStyle(
-            fontFamily: "Barlow",
             fontSize: 16,
             fontWeight: FontWeight.w400,
             color: colors.whiteLabel,
           ),
           fontSize16Weight500: TextStyle(
-            fontFamily: "Barlow",
             fontSize: 16,
             fontWeight: FontWeight.w500,
             color: colors.whiteLabel,
           ),
           fontSize16Weight600: TextStyle(
-            fontFamily: "Barlow",
             fontSize: 16,
             fontWeight: FontWeight.w600,
             color: colors.whiteLabel,
           ),
           fontSize16Weight700: TextStyle(
-            fontFamily: "Barlow",
             fontSize: 16,
             fontWeight: FontWeight.w700,
             color: colors.whiteLabel,
           ),
           fontSize14Weight400: TextStyle(
-            fontFamily: "Barlow",
             fontSize: 14,
             fontWeight: FontWeight.w400,
             color: colors.whiteLabel,
+          ),
+          fontSize24Weight600: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.w600,
+            color: colors.whiteLabel.withOpacity(0.8),
           ),
           fontSize24Weight700: TextStyle(
             fontFamily: "Barlow",
             fontSize: 24,
             fontWeight: FontWeight.w700,
-            color: colors.whiteLabel,
-          ),
-          fontSize24Weight600: TextStyle(
-            fontFamily: "Barlow",
-            fontSize: 24,
-            fontWeight: FontWeight.w600,
             color: colors.whiteLabel,
           ),
           fontSize20Weight700: TextStyle(

@@ -39,6 +39,7 @@ flutter:
   assets:
     - assets/
     - assets/logo/
+    - assets/create_new_password/
     - assets/icons/
     - assets/icons/bnb/
     - assets/icons/forgot_password/
