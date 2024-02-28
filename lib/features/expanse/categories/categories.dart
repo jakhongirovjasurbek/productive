@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:productive/core/extensions/extensions.dart';
 
 import '../../../assets/icons.dart';
 
@@ -18,18 +19,18 @@ class _CategoryState extends State<Category> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Scaffold(
-      backgroundColor: Colors.white30,
+      backgroundColor: context.colors.mainDark,
       appBar: AppBar(
-        backgroundColor: Colors.white30,
+        backgroundColor: context.colors.mainDark,
         title: const Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Text("Categories"),
+              Text("Categories",style: TextStyle(color: Colors.white),),
               SizedBox(width: 90),
               Padding(
                 padding: EdgeInsets.only(right: 16),
-                child: Icon(Icons.add),
+                child: Icon(Icons.add,color: Colors.white,),
               ),
             ],
           ),
@@ -71,7 +72,7 @@ class _CategoryState extends State<Category> {
                       height: 111,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
-                        color: Colors.black,
+                        color: context.colors.loginTextFieldBackgroundColor,
                       ),
                     ),
                   ),
@@ -90,13 +91,13 @@ class _CategoryState extends State<Category> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text('\$', style: TextStyle(color: Colors.white)),
-                            Text(money[index], style: theme.textTheme.bodyText1),
+                            Text(money[index], style: TextStyle(color: Colors.white)),
                           ],
                         ),
                         SizedBox(height: 1),
                         SvgPicture.asset(
                           icons2[index],
-                          height: 51,
+                          height: 30,
                         ),
                       ],
                     ),
