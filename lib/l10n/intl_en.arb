@@ -12,5 +12,11 @@
   "easyManage": "Easy Time Management",
   "help": "We help you stay organized and\n manage your day",
   "trackYourExpense": "Track Your Expense",
-  "helpOrganize": "We help you organize your expenses\n easily and safely"
+  "helpOrganize": "We help you organize your expenses\n easily and safely",
+
+  "tasks" : "Tasks",
+  "expense" : "Expense",
+  "create" : "Create",
+  "calendar" : "Calendar",
+  "stats" : "Stats"
 }
