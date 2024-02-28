@@ -8,20 +8,20 @@ import '../bloc/bloc_categories_bloc.dart';
 
 
 
-class CategoryPage extends StatefulWidget {
-  const CategoryPage({Key? key}) : super(key: key);
+class CategoriesPage extends StatefulWidget {
+  const CategoriesPage({Key? key}) : super(key: key);
 
   @override
-  State<CategoryPage> createState() => _CategoryState();
+  State<CategoriesPage> createState() => _CategoryState();
 }
 
 
-class _CategoryState extends State<CategoryPage> {
-  late final CategoryBloc _categoryBloc = CategoryBloc()..add(LoadCategories());
+class _CategoryState extends State<CategoriesPage> {
+  late final CategoriesBloc _categoryBloc = CategoriesBloc()..add(LoadCategories());
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<CategoryBloc, CategoryState>(
+    return BlocBuilder<CategoriesBloc, CategoriesState>(
       bloc: _categoryBloc,
       builder: (context, state) {
         if (state is CategoryLoaded) {

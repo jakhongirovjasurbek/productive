@@ -1,9 +1,9 @@
 part of 'bloc_categories_bloc.dart';
 
 
-abstract class CategoryState {}
+abstract class CategoriesState {}
 
-class CategoryLoaded extends CategoryState {
+class CategoryLoaded extends CategoriesState {
   final List<Category> categories;
   CategoryLoaded(this.categories);
 }

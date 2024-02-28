@@ -5,8 +5,6 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:keyboard_dismisser/keyboard_dismisser.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/routes/app_route.dart';
-
-import 'features/expanse/presintation/pages/categories.dart';
 import 'generated/l10n.dart';
 
 void main() {
