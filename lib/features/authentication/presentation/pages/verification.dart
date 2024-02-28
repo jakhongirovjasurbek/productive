@@ -16,32 +16,29 @@ class VerificationPage extends StatefulWidget {
 }
 
 class _VerificationPageState extends State<VerificationPage> {
-  PinTheme defaultPinTheme = PinTheme(
-    width: 51,
-    height: 55,
-    textStyle: const TextStyle(
-      color: Colors.white,
-      fontSize: 24,
-      fontWeight: FontWeight.w600,
-    ),
-    decoration: BoxDecoration(
-      color: Color(0xFF1C233A),
-      border: Border.all(
-        color: Color(0xFF006EE9).withOpacity(0.1),
-      ),
-      borderRadius: BorderRadius.circular(8),
-    ),
-  );
-  final TextEditingController pinPutController = TextEditingController();
-  bool isPinPutValid = false;
-  bool isError = false;
 
   @override
   Widget build(BuildContext context) {
+    PinTheme defaultPinTheme = PinTheme(
+      width: 51,
+      height: 55,
+      textStyle: context.style.fontSize24Weight600,
+      decoration: BoxDecoration(
+        color: context.colors.loginTextFieldBackgroundColor,
+        border: Border.all(
+          color:context.colors.pinputBorderColor.withOpacity(0.1),
+        ),
+        borderRadius: BorderRadius.circular(8),
+      ),
+    );
+    final TextEditingController pinPutController = TextEditingController();
+    bool isPinPutValid = false;
+    bool isError = false;
+
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: Color(0xFF131524),
+        backgroundColor: context.colors.mainDark.withOpacity(0.3),
         title:  Row(
           children: [
             SvgPicture.asset(context.icons.back),
@@ -74,17 +71,17 @@ class _VerificationPageState extends State<VerificationPage> {
               defaultPinTheme: isPinPutValid
                   ? defaultPinTheme.copyBorderWith(
                       border: Border.all(
-                      color: Colors.green,
+                      color: context.colors.calendarGreen,
                     ))
                   : defaultPinTheme,
               focusedPinTheme: defaultPinTheme.copyBorderWith(
                 border: Border.all(
-                  color: Color(0xFF006EE9),
+                  color:context.colors.pinputBorderColor,
                 ),
               ),
               errorPinTheme: defaultPinTheme.copyBorderWith(
                 border: Border.all(
-                  color: !isPinPutValid ? Color(0xFFFF2752) : Colors.green,
+                  color: !isPinPutValid ? context.colors.pinputBorderColor : context.colors.calendarGreen,
                 ),
               ),
               onChanged: (value) {

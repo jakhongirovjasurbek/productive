@@ -13,11 +13,7 @@ class ForgotPassword extends StatefulWidget {
 }
 
 class _ForgotPasswordState extends State<ForgotPassword> {
-  final textFieldContentStyle = const TextStyle(
-    color: Color(0xFFFEFEFE),
-    fontSize: 14,
-    fontWeight: FontWeight.w400,
-  );
+
   final TextEditingController emailController = TextEditingController();
   final formKey = GlobalKey<FormState>();
   final mailFocusNode = FocusNode();
@@ -34,17 +30,17 @@ class _ForgotPasswordState extends State<ForgotPassword> {
         contentPadding:
             const EdgeInsets.symmetric(horizontal: 12, vertical: 13.5),
         hintStyle: TextStyle(
-          color: Color(0xFFFEFEFE).withOpacity(.6),
+          color:context.colors.whiteLabel.withOpacity(.6),
           fontSize: 14,
           fontWeight: FontWeight.w400,
         ),
-        fillColor: Color(0xFF1C233A),
+        fillColor: context.colors.loginTextFieldBackgroundColor.withOpacity(0.5),
         filled: true,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(
             width: 1,
-            color: Color.fromRGBO(0, 110, 233, 0.10).withOpacity(.1),
+            color:context.colors.whiteLabel.withOpacity(.1),
             style: BorderStyle.solid,
           ),
         ),
@@ -52,7 +48,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(
             width: 1,
-            color: Color.fromRGBO(0, 110, 233, 0.10).withOpacity(.1),
+            color: context.colors.loginTextFieldBackgroundColor.withOpacity(.1),
             style: BorderStyle.solid,
           ),
         ),
@@ -60,7 +56,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(
             width: 1,
-            color: Color.fromRGBO(0, 110, 233, 0.10).withOpacity(.1),
+            color: context.colors.whiteLabel.withOpacity(.1),
             style: BorderStyle.solid,
           ),
         ),
@@ -91,7 +87,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF131524),
+        backgroundColor:context.colors.mainDark,
         automaticallyImplyLeading: false,
         title: Row(
           children: [
@@ -124,8 +120,8 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 key: formKey,
                 child: TextFormField(
                   focusNode: mailFocusNode,
-                  style: textFieldContentStyle,
-                  cursorColor: Color(0xFF4B7FD6),
+                  style: context.style.fontSize14Weight400,
+                  cursorColor: context.colors.statsGradient1,
                   controller: emailController,
                   decoration: decoration(hintText: context.localization.email),
                   textInputAction: TextInputAction.next,
@@ -170,7 +166,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             height: 48,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
-                color: Color(0xFF4B7FD6)),
+                color:context.colors.statsGradient1),
             child: Center(
               child: Text(
                 context.localization.recover_password,
