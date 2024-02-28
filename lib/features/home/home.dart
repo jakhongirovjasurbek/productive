@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
                   children: const [],
                 ),
               ),
-              if (isLoading == false) AdWidget(ad: bannerAd),
+              if (isLoading == false) SizedBox(height: 50, child: AdWidget(ad: bannerAd)),
               Container(
                 padding: EdgeInsets.only(
                     bottom: MediaQuery.of(context).padding.bottom),
