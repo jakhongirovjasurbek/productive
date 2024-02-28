@@ -7,5 +7,10 @@
   "receive_code" : "If you don’t receive code. ",
   "password":" Please enter the 4 digital code that send to your email address",
   "email_verification" : "Email verification",
-  "resend" : "Resend"
+  "resend" : "Resend",
+  "skip": "SKIP",
+  "easyManage": "Easy Time Management",
+  "help": "We help you stay organized and\n manage your day",
+  "trackYourExpense": "Track Your Expense",
+  "helpOrganize": "We help you organize your expenses\n easily and safely"
 }
