@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
@@ -28,6 +26,8 @@ class _OnBoardingState extends State<OnBoarding> {
 
   @override
   Widget build(BuildContext context) {
+    final localization=
+    context.localization;
     return SafeArea(
       child: Scaffold(
         backgroundColor: context.colors.onBoardingColor,
@@ -51,7 +51,7 @@ class _OnBoardingState extends State<OnBoarding> {
                           // Navigator.of(context).pushNamed("/login");
                         },
                         child: Text(
-                          "SKIP",
+                          localization.skip,
                           style: TextStyle(
                             fontSize: 20,
                             color: context.colors.onBordingSkip,
@@ -68,7 +68,7 @@ class _OnBoardingState extends State<OnBoarding> {
                 const Gap(40),
                 Center(
                   child: Text(
-                    "Easy Time Management",
+                    localization.easyManage,
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.w600,
@@ -79,7 +79,7 @@ class _OnBoardingState extends State<OnBoarding> {
                 const Gap(6),
                 Center(
                   child: Text(
-                    "We help you stay organized and\n manage your day",
+                    localization.help,
                     style: TextStyle(
                         fontSize: 18, color: context.colors.onBoardTextColor),
                     textAlign: TextAlign.center,
@@ -94,14 +94,13 @@ class _OnBoardingState extends State<OnBoarding> {
                   children: [
                     Padding(
                       padding: EdgeInsets.only(
-                          top: MediaQuery.of(context).padding.top + 24,
-                          right: 24),
+                        top: MediaQuery.of(context).padding.top + 24,
+                        right: 24,
+                      ),
                       child: GestureDetector(
-                        onTap: () {
-                
-                        },
+                        onTap: () {},
                         child: Text(
-                          "SKIP",
+                          localization.skip,
                           style: TextStyle(
                             fontSize: 20,
                             color: context.colors.onBordingSkip,
@@ -119,7 +118,7 @@ class _OnBoardingState extends State<OnBoarding> {
                 const Gap(40),
                 Center(
                   child: Text(
-                    "Track Your Expense",
+                   localization.trackYourExpense,
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.w600,
@@ -130,7 +129,7 @@ class _OnBoardingState extends State<OnBoarding> {
                 const Gap(6),
                 Center(
                   child: Text(
-                    "We help you organize your expenses\n easily and safely",
+                    localization.helpOrganize,
                     style: TextStyle(
                         fontSize: 18, color: context.colors.onBoardTextColor),
                     textAlign: TextAlign.center,
@@ -178,7 +177,7 @@ class _OnBoardingState extends State<OnBoarding> {
               decoration: BoxDecoration(
                 color: thisPage == 0
                     ? context.colors.onBordingComponet
-                    :context.colors. onBoarding,
+                    : context.colors.onBoarding,
                 borderRadius: BorderRadius.circular(12),
               ),
             ),
@@ -192,7 +191,7 @@ class _OnBoardingState extends State<OnBoarding> {
               decoration: BoxDecoration(
                 color: thisPage == 1
                     ? context.colors.onBordingComponet
-                    :context.colors. onBoarding,
+                    : context.colors.onBoarding,
                 borderRadius: BorderRadius.circular(12),
               ),
             ),
@@ -216,8 +215,7 @@ class _OnBoardingState extends State<OnBoarding> {
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
-                  color:context.colors.onBordingComponet
-               ,
+                  color: context.colors.onBordingComponet,
                 ),
                 child: SvgPicture.asset(AppIcons.right),
               ),

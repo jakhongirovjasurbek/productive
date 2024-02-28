@@ -69,6 +69,56 @@ class AppLocalization {
       args: [],
     );
   }
+
+  /// `SKIP`
+  String get skip {
+    return Intl.message(
+      'SKIP',
+      name: 'skip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Easy Time Management`
+  String get easyManage {
+    return Intl.message(
+      'Easy Time Management',
+      name: 'easyManage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We help you stay organized and\n manage your day`
+  String get help {
+    return Intl.message(
+      'We help you stay organized and\n manage your day',
+      name: 'help',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Track Your Expense`
+  String get trackYourExpense {
+    return Intl.message(
+      'Track Your Expense',
+      name: 'trackYourExpense',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We help you organize your expenses\n easily and safely`
+  String get helpOrganize {
+    return Intl.message(
+      'We help you organize your expenses\n easily and safely',
+      name: 'helpOrganize',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {
