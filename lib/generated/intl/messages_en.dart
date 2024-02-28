@@ -22,13 +22,37 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "calendar": MessageLookupByLibrary.simpleMessage("Calendar"),
+        "confirm_password":
+            MessageLookupByLibrary.simpleMessage("Confirm password"),
+        "create": MessageLookupByLibrary.simpleMessage("Create"),
+        "create_new_password":
+            MessageLookupByLibrary.simpleMessage("Create new password"),
+        "easyManage":
+            MessageLookupByLibrary.simpleMessage("Easy Time Management"),
         "easy_time_management":
             MessageLookupByLibrary.simpleMessage("Easy Time Management"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "email_verification":
             MessageLookupByLibrary.simpleMessage("Email verification"),
+        "enter_new_password":
+            MessageLookupByLibrary.simpleMessage("Enter new password"),
+        "expense": MessageLookupByLibrary.simpleMessage("Expense"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot password"),
+        "help": MessageLookupByLibrary.simpleMessage(
+            "We help you stay organized and\n manage your day"),
+        "helpOrganize": MessageLookupByLibrary.simpleMessage(
+            "We help you organize your expenses\n easily and safely"),
+        "iltimos_yangi_parolni_kiriting_kiriting":
+            MessageLookupByLibrary.simpleMessage(
+                "Iltimos, yangi parolni kiriting kiriting"),
+        "kiritgan_parolingiz_tepadagisi_bilan_mos_kelmadi":
+            MessageLookupByLibrary.simpleMessage(
+                "Kiritgan parolingiz tepadagisi bilan mos kelmadi"),
+        "parol_kamida_8_belgidan_iborat_bolsin":
+            MessageLookupByLibrary.simpleMessage(
+                "Parol kamida 8 belgidan iborat bo\'lsin"),
         "password": MessageLookupByLibrary.simpleMessage(
             " Please enter the 4 digital code that send to your email address"),
         "productive": MessageLookupByLibrary.simpleMessage("Productive"),
@@ -36,6 +60,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("If you don’t receive code. "),
         "recover_password":
             MessageLookupByLibrary.simpleMessage("Recover password"),
-        "resend": MessageLookupByLibrary.simpleMessage("Resend")
+        "resend": MessageLookupByLibrary.simpleMessage("Resend"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
+        "skip": MessageLookupByLibrary.simpleMessage("SKIP"),
+        "stats": MessageLookupByLibrary.simpleMessage("Stats"),
+        "tasks": MessageLookupByLibrary.simpleMessage("Tasks"),
+        "trackYourExpense":
+            MessageLookupByLibrary.simpleMessage("Track Your Expense"),
+        "xatolik_qayta_urining":
+            MessageLookupByLibrary.simpleMessage("Xatolik qayta urining")
       };
 }

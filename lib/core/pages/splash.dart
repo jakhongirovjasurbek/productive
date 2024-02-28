@@ -2,10 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/route_names/app_route_name.dart';
 import '../../assets/icons.dart';
-import 'package:productive/features/authentication/presentation/pages/forgot_password.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
