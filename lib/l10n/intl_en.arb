@@ -1,4 +1,9 @@
 {
   "productive": "Productive",
-  "easy_time_management": "Easy Time Management"
+  "easy_time_management": "Easy Time Management",
+  "skip": "SKIP",
+  "easyManage": "Easy Time Management",
+  "help": "We help you stay organized and\n manage your day",
+  "trackYourExpense": "Track Your Expense",
+  "helpOrganize": "We help you organize your expenses\n easily and safely"
 }

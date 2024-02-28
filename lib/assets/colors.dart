@@ -1,5 +1,3 @@
-
-
 import 'dart:ui';
 
 class AppColors {
@@ -69,4 +67,10 @@ class AppColors {
   final locationColor = const Color(0xFFBF360C);
   final startDate = const Color(0xFF18B797);
   final endDate = const Color(0xFFF3737E);
+
+  final onBoardingColor = const Color(0xFF131524);
+  final onBordingSkip = const Color(0xFF4B7FD6);
+  final onBoardTextColor = const Color(0xFFFEFEFE).withOpacity(0.5);
+  final onBoarding = const Color(0xFF4B7FD6).withOpacity(0.32);
+  final onBordingComponet =const Color(0xFF4B7FD6);
 }
