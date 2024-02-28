@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:productive/assets/app_route_names.dart';
 import 'package:productive/core/functions/app_functions.dart';
 import 'package:productive/core/pages/splash.dart';
-import 'package:productive/features/authentication/presentation/pages/create_new_password/presentation/pages/main_page.dart';
-
+import 'package:productive/features/authentication/presentation/pages/create_new_password.dart';
 class AppRoute {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {

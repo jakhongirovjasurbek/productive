@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:productive/assets/colors.dart';
 import 'package:productive/assets/icons.dart';
 import 'package:productive/core/extensions/extensions.dart';
+import 'package:productive/features/authentication/presentation/widgets/wTextField.dart';
 
 class CreateNewPassword extends StatefulWidget {
   const CreateNewPassword({super.key});
@@ -13,10 +14,9 @@ class CreateNewPassword extends StatefulWidget {
 
 class _CreateNewPasswordState extends State<CreateNewPassword> {
   bool isDisabled = false;
-  final formKey = GlobalKey<FormState>();
   TextEditingController firstInp = TextEditingController();
   TextEditingController secondInp = TextEditingController();
-  final colors = AppColors();
+
   InputDecoration decoration({
     required String hintText,
     Widget? icon,
@@ -24,16 +24,16 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
       InputDecoration(
         hintText: hintText,
         hintStyle: context.style.fontSize14Weight400.copyWith(
-          color: colors.whiteLabel.withOpacity(0.5),
+          color: context.colors.whiteLabel.withOpacity(0.5),
         ),
         border: OutlineInputBorder(
-          borderSide: BorderSide(width: 1, color: colors.rgbInpBorder),
+          borderSide: BorderSide(width: 1, color: context.colors.rgbInpBorder),
           borderRadius: BorderRadius.circular(8),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(
-            color: colors.rgbInpBorder,
+            color: context.colors.rgbInpBorder,
             width: 1,
             style: BorderStyle.solid,
           ),
@@ -42,17 +42,17 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
           borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(
             width: 1,
-            color: colors.rgbInpBorder,
+            color: context.colors.rgbInpBorder,
             style: BorderStyle.solid,
           ),
         ),
         suffixIcon: icon,
-        fillColor: colors.inpBackgroundColor,
+        fillColor: context.colors.inpBackgroundColor,
         filled: true,
       );
 
   void inpCurrected() {
-    if (formKey.currentState!.validate()) {
+    if (firstInp.text == secondInp.text) {
       isDisabled = true;
       setState(() {});
     } else {
@@ -84,75 +84,40 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
             const SizedBox(
               height: 48,
             ),
-            Form(
-              key: formKey,
-              child: Column(
-                children: [
-                  TextFormField(
-                    focusNode: FocusNode(),
-                    onChanged: (value) {
-                      firstInp.text = value;
-                      setState(() {});
+            Column(
+              children: [
+                WTextField(
+                    firstInp,
+                    context,
+                    decoration(
+                        hintText: context.localization.enter_new_password),
+                    context.colors.whiteLabel,(s) {
                       inpCurrected();
-                    },
-                    controller: firstInp,
-                    decoration: decoration(hintText: context.localization.enter_new_password),
-                    style: TextStyle(
-                      color: colors.whiteLabel,
+                    }),
+                const SizedBox(
+                  height: 16,
+                ),
+                WTextField(
+                    secondInp,
+                    context,
+                    decoration(
+                      hintText: context.localization.confirm_password,
+                      icon: Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: isDisabled
+                            ? SvgPicture.asset(
+                                AppIcons.isCheck,
+                                color: context.colors.isCheckGreenColor,
+                              )
+                            : SvgPicture.asset(
+                                AppIcons.isCheck,
+                              ),
+                      ),
                     ),
-                    textInputAction: TextInputAction.next,
-                    obscureText: true,
-                    keyboardType: TextInputType.text,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return '${context.localization.iltimos_yangi_parolni_kiriting_kiriting}!';
-                      } else if (value.length < 8) {
-                        return context.localization.parol_kamida_8_belgidan_iborat_bolsin;
-                      }
-                      return null;
-                    },
-                  ),
-                  const SizedBox(
-                    height: 16,
-                  ),
-                  TextFormField(
-                    onChanged: (value) {
-                      secondInp.text = value;
-                      setState(() {});
+                    context.colors.whiteLabel,(s) {
                       inpCurrected();
-                    },
-                    controller: secondInp,
-                    decoration: decoration(
-                        hintText: context.localization.confirm_password,
-                        icon: Padding(
-                          padding: const EdgeInsets.all(10),
-                          child: isDisabled
-                              ? SvgPicture.asset(
-                                  AppIcons.isCheck,
-                                  color: colors.isCheckGreenColor,
-                                )
-                              : SvgPicture.asset(
-                                  AppIcons.isCheck,
-                                ),
-                        )),
-                    style: TextStyle(
-                      color: colors.whiteLabel,
-                    ),
-                    focusNode: FocusNode(),
-                    textInputAction: TextInputAction.next,
-                    obscureText: true,
-                    keyboardType: TextInputType.text,
-                    validator: (passwodt2) {
-                      if (firstInp.text == null || secondInp.text.isEmpty) {
-                        return "${context.localization.kiritgan_parolingiz_tepadagisi_bilan_mos_kelmadi}!";
-                      } else if (firstInp.text != secondInp.text) {
-                        return context.localization.xatolik_qayta_urining;
-                      }
-                      return null;
-                    },
-                  )
-                ],
-              ),
+                    },)
+              ],
             ),
           ],
         ),
@@ -164,7 +129,7 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
             bottom: MediaQuery.of(context).padding.bottom + 24),
         child: GestureDetector(
           onTap: () {
-            if (!isDisabled) {
+            if (isDisabled) {
               showDialog(
                 context: context,
                 builder: (context) {
@@ -196,14 +161,14 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
                 color: isDisabled
-                    ? colors.buttonDisabledColor
-                    : colors.buttonDisabledColor.withOpacity(0.3)),
+                    ? context.colors.buttonDisabledColor
+                    : context.colors.buttonDisabledColor.withOpacity(0.3)),
             child: Text(
               context.localization.save,
               style: context.style.fontSize16Weight600.copyWith(
                 color: isDisabled
-                    ? colors.whiteLabel
-                    : colors.whiteLabel.withOpacity(0.3),
+                    ? context.colors.whiteLabel
+                    : context.colors.whiteLabel.withOpacity(0.3),
               ),
             ),
           ),
