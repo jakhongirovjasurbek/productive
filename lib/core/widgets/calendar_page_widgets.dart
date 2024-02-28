@@ -44,6 +44,7 @@ class WCalendarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(
+        right: 16,
         left: 16,
         top: 8,
         bottom: 8,
@@ -61,7 +62,7 @@ class WCalendarWidget extends StatelessWidget {
             title,
             style: titleStyle ?? context.style.fontSize16Weight600,
           ),
-          if (description != null)...{
+          if (description != null) ...{
             const Gap(4),
             Text(
               description!,
@@ -69,43 +70,42 @@ class WCalendarWidget extends StatelessWidget {
                   context.style.fontSize14Weight400.copyWith(
                     color: AppColors().tasksTimeColor,
                   ),
-                  maxLines: 3, 
-                  overflow: TextOverflow.ellipsis,
+              maxLines: 3,
+              overflow: TextOverflow.ellipsis,
             ),
           },
           if (link != null) ...{
             const Gap(12),
             GestureDetector(
-              onTap: () async{
-                if(await canLaunchUrlString(link!)){
+              onTap: () async {
+                if (await canLaunchUrlString(link!)) {
                   await launchUrlString(link!);
                 }
               },
-          child:  Container( 
-            decoration: BoxDecoration( 
-                borderRadius: BorderRadius.circular(4), 
-                color: context.colors.linkColorBackground, 
-            ),
-
-              width: linkWidth ??
-                  (MediaQuery.of(context).size.width / 100) * 32.27,
-              child: Row(
-                children: [
-                  SvgPicture.asset(AppIcons.link),
-                  const Gap(8),
-                  Text(
-                    context.localization.link,
-                    style: linkStyle ?? context.style.fontSize12Weight400,
-                  ),
-                  const Gap(8),
-                ],
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(4),
+                  color: context.colors.linkColorBackground,
+                ),
+                width: linkWidth ??
+                    (MediaQuery.of(context).size.width / 100) * 32.27,
+                child: Row(
+                  children: [
+                    SvgPicture.asset(AppIcons.link),
+                    const Gap(8),
+                    Text(
+                      context.localization.link,
+                      style: linkStyle ?? context.style.fontSize12Weight400,
+                    ),
+                    const Gap(8),
+                  ],
+                ),
               ),
-            ),
             )
           } else ...{
             const Gap(12),
           },
-              const Gap(8),
+          const Gap(8),
           Row(
             children: [
               SvgPicture.asset(
@@ -113,7 +113,7 @@ class WCalendarWidget extends StatelessWidget {
               ),
               const Gap(7),
               Text(
-                "$startTime $endTime",
+                "$startTime - $endTime",
                 style: dateTimeStyle ??
                     context.style.fontSize14Weight400.copyWith(
                       color: AppColors().tasksTimeColor,
