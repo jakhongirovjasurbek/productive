@@ -102,9 +102,7 @@ class WCalendarWidget extends StatelessWidget {
                 ),
               ),
             )
-          } else ...{
-            const Gap(12),
-          },
+          } ,
           const Gap(8),
           Row(
             children: [

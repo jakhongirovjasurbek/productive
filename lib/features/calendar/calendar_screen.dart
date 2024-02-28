@@ -31,22 +31,23 @@ class _CalendarScreenState extends State<CalendarScreen> {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(
+          vertical: 20,
           horizontal: 16,
         ),
-        child: ListView(
-
-          children: [
-            WCalendarWidget(
+        child: ListView.builder( 
+          itemCount: 1,
+          itemBuilder: (context, index) {
+            return WCalendarWidget(
               
-              link: "https://www.figma.com/file/4lp5DD321AzkmDRYBhus7h/Productive?node-id=1618%3A6968&mode=dev",
+             link: "https://www.figma.com/file/4lp5DD321AzkmDRYBhus7h/Productive?node-id=1618%3A6968&mode=dev",
               title: "Gym time",
               startTime: formatTime(DateTime.now()),
               endTime: formatTime(DateTime.now()),
-              description:
-                  "We will discuss the new Tasks of the calendar pages",
-            ),
-            
-          ],
+               description:
+                   "We will discuss the new Tasks of the calendar pages",
+            );
+          },
+
         ),
       ),
     );
