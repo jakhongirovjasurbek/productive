@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:productive/core/extensions/extensions.dart';
+import '../../../../../assets/icons.dart';
 
-import '../../../assets/icons.dart';
 
 
 class Category extends StatefulWidget {
@@ -30,7 +30,7 @@ class _CategoryState extends State<Category> {
               SizedBox(width: 90),
               Padding(
                 padding: EdgeInsets.only(right: 16),
-                child: Icon(Icons.add,color: Colors.white,),
+                child: Icon(Icons.search,color: Colors.white,),
               ),
             ],
           ),
