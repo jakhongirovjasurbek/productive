@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 class AppColors {
-  final border_textfield= Color.fromRGBO(0, 110, 233, 0.10);
+  final border_textfield = const Color.fromRGBO(0, 110, 233, 0.10);
   final white = const Color(0xFFFFFFFF);
   final black = const Color(0xFF000000);
   final mainDark = const Color(0xFF131524);
@@ -15,9 +15,7 @@ class AppColors {
   final loginTextFieldBackgroundColor = const Color(0xFF1C233A);
   final pinputBorderColor = const Color(0xFF0062FF);
   final emailVerification = const Color(0xFF979797);
-  final tasksTimeColor = const Color(0xFFABABAB);
   final notificationsClear = const Color(0xFFFF2752);
-  final expensesFood = const Color(0xFFFF8700);
   final expensesShopping = const Color(0xFF32A7E2);
   final expensesGift = const Color(0xFFB548C6);
   final expensesGreen = const Color(0xFF44DB4A);
@@ -78,5 +76,17 @@ class AppColors {
   final onBordingSkip = const Color(0xFF4B7FD6);
   final onBoardTextColor = const Color(0xFFFEFEFE).withOpacity(0.5);
   final onBoarding = const Color(0xFF4B7FD6).withOpacity(0.32);
-  final onBordingComponet =const Color(0xFF4B7FD6);
+  final onBordingComponet = const Color(0xFF4B7FD6);
+
+// single container uchun
+  final  Color whiteA700 = const Color(0XFFFDFDFD);
+  final  Color expensesFood = const Color(0xFFFF8700);
+  final  Color bacgroundColor = const Color(0xFF131524);
+  final  Color tasksTimeColor = const Color(0xFFABABAB);
+  static Color timeContainerOne = const Color(0xFFFF2752);
+  static Color blueGray300 = const Color(0XFF8C97AB);
+  static Color blueGray900 = const Color(0XFF272C38);
+  static Color blueGray90090 = const Color(0X901C233A);
+  static Color blueGray90099 = const Color(0X99303744);
+
 }

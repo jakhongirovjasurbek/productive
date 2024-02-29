@@ -61,14 +61,12 @@ class AppFonts extends ThemeExtension<AppFonts> {
 
   @override
   ThemeExtension<AppFonts> copyWith() {
-    // TODO: implement copyWith
     throw UnimplementedError();
   }
 
   @override
   ThemeExtension<AppFonts> lerp(
       covariant ThemeExtension<AppFonts>? other, double t) {
-    // TODO: implement lerp
     throw UnimplementedError();
   }
 }
