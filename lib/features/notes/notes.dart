@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:productive/assets/icons.dart';
+import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/features/notes/list_item.dart';
 
 class NotesPage extends StatefulWidget {
@@ -39,15 +40,12 @@ class _NotesPageState extends State<NotesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Color(0xFF131524),
-        elevation: 0,
+        // elevation: 0,
         centerTitle: true,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
+        leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back_ios, color: context.colors.white
+          ,)),
         title: const Text(
           'Notes',
           style: TextStyle(
