@@ -80,4 +80,5 @@ class AppColors {
   final onBoardTextColor = const Color(0xFFFEFEFE).withOpacity(0.5);
   final onBoarding = const Color(0xFF4B7FD6).withOpacity(0.32);
   final onBordingComponet =const Color(0xFF4B7FD6);
+  final blue = const Color(0xFF006EE9);
 }

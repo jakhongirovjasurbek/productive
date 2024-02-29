@@ -3,6 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:productive/core/data/ad_helper.dart';
 import 'package:productive/core/extensions/extensions.dart';
+import 'package:productive/core/widgets/shimmer_container.dart';
+import 'package:productive/core/widgets/w_button.dart';
+import 'package:productive/core/widgets/w_scale.dart';
+import 'package:productive/core/widgets/w_textfield.dart';
 import 'package:productive/features/home/bloc/bnb_bloc.dart';
 import 'package:productive/features/home/widgets/bnb_item.dart';
 
@@ -29,13 +33,11 @@ class _HomePageState extends State<HomePage> {
       adUnitId: AdHelper.bannerAdUnitId,
       listener: BannerAdListener(
         onAdLoaded: (_) {
-          print('Loaded');
           setState(() {
             isLoading = false;
           });
         },
         onAdFailedToLoad: (ad, err) {
-          print('$err, $ad');
           ad.dispose();
         },
       ),
@@ -50,7 +52,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    print('Rebuild');
     return BlocProvider(
       create: (context) => BnbBloc(),
       child: BlocBuilder<BnbBloc, BnbState>(
@@ -60,10 +61,13 @@ class _HomePageState extends State<HomePage> {
               Expanded(
                 child: IndexedStack(
                   index: index,
-                  children: const [],
+                  children: [
+
+                  ],
                 ),
               ),
-              if (isLoading == false) SizedBox(height: 50, child: AdWidget(ad: bannerAd)),
+              if (isLoading == false)
+                SizedBox(height: 50, child: AdWidget(ad: bannerAd)),
               Container(
                 padding: EdgeInsets.only(
                     bottom: MediaQuery.of(context).padding.bottom),
