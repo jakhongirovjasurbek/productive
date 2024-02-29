@@ -3,10 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:productive/core/data/ad_helper.dart';
 import 'package:productive/core/extensions/extensions.dart';
-import 'package:productive/core/widgets/shimmer_container.dart';
-import 'package:productive/core/widgets/w_button.dart';
-import 'package:productive/core/widgets/w_scale.dart';
-import 'package:productive/core/widgets/w_textfield.dart';
 import 'package:productive/features/home/bloc/bnb_bloc.dart';
 import 'package:productive/features/home/widgets/bnb_item.dart';
 
@@ -22,7 +18,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   late PageController homePageController;
   late BannerAd bannerAd;
-  var index = 1;
+  late InterstitialAd interstitialAd;
+  var index = 0;
 
   @override
   void initState() {
@@ -44,6 +41,19 @@ class _HomePageState extends State<HomePage> {
       request: const AdRequest(),
     );
 
+    InterstitialAd.load(
+      adUnitId: AdHelper.interstitialAdUnitId,
+      request: const AdRequest(),
+      adLoadCallback: InterstitialAdLoadCallback(
+        onAdLoaded: (ad) {
+          ad.show();
+        },
+        onAdFailedToLoad: (err) {},
+      ),
+    ).then((value) {
+
+    });
+
     bannerAd.load();
     super.initState();
   }
@@ -61,13 +71,9 @@ class _HomePageState extends State<HomePage> {
               Expanded(
                 child: IndexedStack(
                   index: index,
-                  children: [
-
-                  ],
+                  children: [],
                 ),
               ),
-              if (isLoading == false)
-                SizedBox(height: 50, child: AdWidget(ad: bannerAd)),
               Container(
                 padding: EdgeInsets.only(
                     bottom: MediaQuery.of(context).padding.bottom),
@@ -78,50 +84,52 @@ class _HomePageState extends State<HomePage> {
                     topRight: Radius.circular(24),
                   ),
                 ),
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      BnbItem(
-                          index: 0,
-                          icon: AppIcons.tasks,
-                          title: context.localization.tasks,
-                          onTap: () {
-                            index = 0;
-                            context
-                                .read<BnbBloc>()
-                                .add(IsActiveColor(index: 0, isActive: true));
-                          }),
-                      BnbItem(
-                          index: 1,
-                          icon: AppIcons.expense,
-                          title: context.localization.expense,
-                          onTap: () {
-                            index = 1;
-                            context
-                                .read<BnbBloc>()
-                                .add(IsActiveColor(index: 1, isActive: true));
-                          }),
-                      BnbItem(
-                          index: 2,
-                          icon: AppIcons.expense,
-                          title: context.localization.create,
-                          onTap: () {
-                            index = 2;
-                            context
-                                .read<BnbBloc>()
-                                .add(IsActiveColor(index: 2, isActive: true));
-                          }),
-                      BnbItem(
-                          index: 3,
-                          icon: AppIcons.calendar,
-                          title: context.localization.calendar,
-                          onTap: () {
-                            index = 3;
-                            context
-                                .read<BnbBloc>()
-                                .add(IsActiveColor(index: 3, isActive: true));
-                          }),
-                      BnbItem(
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        BnbItem(
+                            index: 0,
+                            icon: AppIcons.tasks,
+                            title: context.localization.tasks,
+                            onTap: () {
+                              index = 0;
+                              context
+                                  .read<BnbBloc>()
+                                  .add(IsActiveColor(index: 0, isActive: true));
+                            }),
+                        BnbItem(
+                            index: 1,
+                            icon: AppIcons.expense,
+                            title: context.localization.expense,
+                            onTap: () {
+                              index = 1;
+                              context
+                                  .read<BnbBloc>()
+                                  .add(IsActiveColor(index: 1, isActive: true));
+                            }),
+                        BnbItem(
+                            index: 2,
+                            icon: AppIcons.expense,
+                            title: context.localization.create,
+                            onTap: () {
+                              index = 2;
+                              context
+                                  .read<BnbBloc>()
+                                  .add(IsActiveColor(index: 2, isActive: true));
+                            }),
+                        BnbItem(
+                            index: 3,
+                            icon: AppIcons.calendar,
+                            title: context.localization.calendar,
+                            onTap: () {
+                              index = 3;
+                              context
+                                  .read<BnbBloc>()
+                                  .add(IsActiveColor(index: 3, isActive: true));
+                            }),
+                        BnbItem(
                           index: 4,
                           icon: AppIcons.stats,
                           title: context.localization.stats,
@@ -130,8 +138,17 @@ class _HomePageState extends State<HomePage> {
                             context
                                 .read<BnbBloc>()
                                 .add(IsActiveColor(index: 4, isActive: true));
-                          }),
-                    ]),
+                          },
+                        ),
+                      ],
+                    ),
+                    if (isLoading == false)
+                      SizedBox(
+                        height: bannerAd.size.height.toDouble(),
+                        child: AdWidget(ad: bannerAd),
+                      ),
+                  ],
+                ),
               ),
             ]),
           );
