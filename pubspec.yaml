@@ -23,6 +23,8 @@ dependencies:
   url_launcher: ^6.2.5
   cached_network_image: ^3.3.1
   shimmer: ^3.0.0
+  flutter_bloc: any
+  equatable: any
 
 dev_dependencies:
   flutter_test:
@@ -50,6 +52,7 @@ flutter:
     - assets/icons/bnb/
     - assets/icons/forgot_password/
     - assets/images/
+    - assets/icons/expanse/
 
 flutter_intl:
   enabled: true

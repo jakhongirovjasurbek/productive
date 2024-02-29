@@ -28,5 +28,6 @@
   "save": "Save",
   "gym_time":"Gym time",
   "PM": "PM",
-  "link":"Link to meeting"
+  "link":"Link to meeting",
+  "categories_appbar": "Categories"
 }
