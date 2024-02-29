@@ -32,11 +32,13 @@ flutter_launcher_icons:
 flutter:
   uses-material-design: true
 
-assets:
-  - assets/
-  - assets/logo/
-  - assets/icons/
-  - assets/images/
+  assets:
+    - assets/
+    - assets/logo/
+    - assets/icons/
+    - assets/icons/tasks/
+    - assets/images/
+    - assets/svg/
 
 flutter_intl:
   enabled: true

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:productive/core/extensions/extensions.dart';
 
 class ListItem extends StatelessWidget {
   final String title;
@@ -44,7 +45,7 @@ class ListItem extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
           width: double.infinity,
           decoration: BoxDecoration(
-              color:Colors.white,
+              color:Color(0xFF2B304A),
               borderRadius: BorderRadius.circular(12)),
           child: Row(
             children: [

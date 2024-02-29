@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:productive/assets/icons.dart';
 import 'package:productive/features/notes/list_item.dart';
 
 class NotesPage extends StatefulWidget {
@@ -25,12 +27,19 @@ class _NotesPageState extends State<NotesPage> {
     "Allahuma aeni ealaa dikrika wa shukrika wa husn e..",
   ];
   List<bool> audio = [false, false, true, false, false];
-  List<String?> images = [null, null, "assets/images/node_picture.png", null, null];
+  List<String?> images = [
+    null,
+    null,
+    "assets/images/node_picture.png",
+    null,
+    null
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xFF131524),
         elevation: 0,
         centerTitle: true,
         leading: IconButton(
@@ -65,29 +74,34 @@ class _NotesPageState extends State<NotesPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                _buildBookColumn(
-                  "assets/icons/tasks/green_book.svg",
-                  "Password",
+                Container(
+                  child: Image.asset("assets/svg/book3.png"),
+                  height: 100,
+                  width: 100,
                 ),
-                _buildBookColumn(
-                  "assets/icons/tasks/red_book.svg",
-                  "Memories",
+                Container(
+                  child: Image.asset("assets/svg/book2.png"),
+                  height: 100,
+                  width: 100,
                 ),
-                Column(
-                  children: [
-                    SvgPicture.asset(
-                      "assets/icons/tasks/add_book.svg",
-                      height: 91,
-                    ),
-                  ],
-                ),
+                Container(
+                  child: Image.asset("assets/svg/plus-book.png"),
+                  height: 100,
+                  width: 100,
+                )
+                // SvgPicture.asset(
+                //   AppIcons.greenbook,
+                //   height: 100,
+                //   width: 100,
+                //   color: Colors.white,
+                // ),
               ],
             ),
             Row(
               children: [
                 const Expanded(
                   child: Padding(
-                    padding: EdgeInsets.only(top :16.0),
+                    padding: EdgeInsets.only(top: 16.0),
                     child: Text(
                       "Quick Notes",
                       style: TextStyle(
@@ -99,9 +113,8 @@ class _NotesPageState extends State<NotesPage> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top:16.0),
+                  padding: const EdgeInsets.only(top: 16.0),
                   child: Container(
-                  
                     decoration: const BoxDecoration(
                       color: Colors.blue,
                       shape: BoxShape.circle,
@@ -132,7 +145,7 @@ class _NotesPageState extends State<NotesPage> {
           style: const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w500,
-            color: Colors.white,
+            color: Colors.black,
           ),
         ),
       ],

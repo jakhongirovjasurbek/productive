@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:productive/assets/app_route_names.dart';
 import 'package:productive/core/functions/app_functions.dart';
 import 'package:productive/core/pages/splash.dart';
+import 'package:productive/features/notes/notes.dart';
 
 class AppRoute {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case AppRouteNames.splash:
-        return fade(const SplashPage());
+        return fade(const NotesPage());
     }
   }
-}
+} 

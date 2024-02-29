@@ -92,4 +92,4 @@ sealed class AppIcons {
   static const bag = '${_all}bag.svg';
   static const english_corner = '${_all}english_corner.svg';
   static const nike = '${_all}nike.svg';
-}
+ }
