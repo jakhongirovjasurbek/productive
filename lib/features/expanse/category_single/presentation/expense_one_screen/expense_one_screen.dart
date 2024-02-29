@@ -17,8 +17,11 @@ class ExpenseOneScreen extends StatelessWidget {
 
   GlobalKey<NavigatorState> navigatorKey = GlobalKey();
 
-  static Widget builder(BuildContext context) {
-    return BlocProvider<ExpenseOneBloc>(
+
+  @override
+  Widget build(BuildContext context) {
+
+ return BlocProvider<ExpenseOneBloc>(
       create: (context) => ExpenseOneBloc(
         ExpenseOneState(
           expenseOneModelObj: ExpenseOneModel(),
@@ -26,123 +29,126 @@ class ExpenseOneScreen extends StatelessWidget {
       )..add(
           ExpenseOneInitialEvent(context),
         ),
-      child: ExpenseOneScreen(),
-    );
-  }
+      child: 
 
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: SizedBox(
-          width: double.maxFinite,
-          child: Column(
-            children: [
-              _buildAppBar(context),
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: Column(
-                  children: [
-                    _buildFrame1(context),
-                    const SizedBox(height: 34),
-                    _buildElementsData(context),
-                    const SizedBox(height: 11),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 43, right: 8),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Text(
-                              context.localization.lbl_2,
+     Scaffold(
+      body: SizedBox(
+        width: double.maxFinite,
+        child: Column(
+          children: [
+            _buildAppBar(context),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Column(
+                children: [
+                  _buildFrame1(context),
+                  const SizedBox(height: 34),
+                  _buildElementsData(context),
+                  const SizedBox(height: 11),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 43, right: 8),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            '2',
+                            style: context.style.fontSize14Weight500,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 13),
+                            child: Text(  '4',
+                                style: context.style.fontSize14Weight500),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 13),
+                            child: Text('6',
+                                style: context.style.fontSize14Weight500),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 13),
+                            child: Text('8',
+                                style: context.style.fontSize14Weight500),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 13),
+                            child: Text('12',
+                                style: context.style.fontSize14Weight500),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 13),
+                            child: Text('14',
+                                style: context.style.fontSize14Weight500),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 13),
+                            child: Text('18',
+                                style: context.style.fontSize14Weight500),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 13),
+                            child: Text('20',
+                                style: context.style.fontSize14Weight500),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 13),
+                            child: Text('22',
+                                style: context.style.fontSize14Weight500),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 13),
+                            child: Text(
+                              '26',
                               style: context.style.fontSize14Weight500,
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 13),
-                              child: Text(context.localization.lbl_4,
-                                  style: context.style.fontSize14Weight500),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 13),
+                            child: Text(
+                              '28',
+                              style: context.style.fontSize14Weight500,
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 13),
-                              child: Text(context.localization.lbl_6,
-                                  style: context.style.fontSize14Weight500),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 13),
+                            child: Text(
+                               '30',
+                              style: context.style.fontSize14Weight500,
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 13),
-                              child: Text(context.localization.lbl_8,
-                                  style: context.style.fontSize14Weight500),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 13),
-                              child: Text(context.localization.lbl_12,
-                                  style: context.style.fontSize14Weight500),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 13),
-                              child: Text(context.localization.lbl_14,
-                                  style: context.style.fontSize14Weight500),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 13),
-                              child: Text(context.localization.lbl_18,
-                                  style: context.style.fontSize14Weight500),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 13),
-                              child: Text(context.localization.lbl_20,
-                                  style: context.style.fontSize14Weight500),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 13),
-                              child: Text(context.localization.lbl_22,
-                                  style: context.style.fontSize14Weight500),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 13),
-                              child: Text(
-                                context.localization.lbl_26,
-                                style: context.style.fontSize14Weight500,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 13),
-                              child: Text(
-                                context.localization.lbl_28,
-                                style: context.style.fontSize14Weight500,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 13),
-                              child: Text(
-                                context.localization.lbl_30,
-                                style: context.style.fontSize14Weight500,
-                              ),
-                            ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
-                    const SizedBox(height: 42),
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        context.localization.transactions,
-                        style: context.style.fontSize18Weight600.copyWith(
-                          color: context.colors.whiteA700,
-                        ),
+                  ),
+                  const SizedBox(height: 42),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      context.localization.transactions,
+                      style: context.style.fontSize18Weight600.copyWith(
+                        color: context.colors.whiteA700,
                       ),
                     ),
-                    const SizedBox(height: 12),
-                    _buildExpenseOne(context)
-                  ],
-                ),
+                  ),
+                  const SizedBox(height: 12),
+                  _buildExpenseOne(context)
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
+    ),
+  
+  
+  
+  
+  
     );
+
+  
+  
   }
 
   Widget _buildAppBar(BuildContext context) {
@@ -229,10 +235,10 @@ class ExpenseOneScreen extends StatelessWidget {
               text: TextSpan(
                 children: [
                   TextSpan(
-                      text: context.localization.lbl_5d,
+                      // text: context.localization.lbl_5d,
                       style: context.style.fontSize24Weight600),
                   TextSpan(
-                      text: context.localization.lbl_0_00,
+                      // text: context.localization.lbl_0_00,
                       style: context.style.fontSize24Weight600),
                 ],
               ),
@@ -249,12 +255,12 @@ class ExpenseOneScreen extends StatelessWidget {
       child: Stack(alignment: Alignment.center, children: [
         Padding(
           padding: const EdgeInsets.only(top: 40),
-          child: _buildFrame(context, price: context.localization.lbl_150),
+          // child: _buildFrame(context, price: context.localization.lbl_150),
         ),
-        _buildFrame(context, price: context.localization.lbl_100),
+        // _buildFrame(context, price: context.localization.lbl_100),
         Padding(
           padding: const EdgeInsets.only(bottom: 40),
-          child: _buildFrame(context, price: context.localization.lbl_50),
+          // child: _buildFrame(context, price: context.localization.lbl_50),
         ),
         Align(
           alignment: Alignment.bottomCenter,
@@ -262,7 +268,7 @@ class ExpenseOneScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                context.localization.lbl_0,
+                '0',
                 style: context.style.fontSize18Weight600.copyWith(
                   color: context.colors.tasksTimeColor,
                 ),
@@ -281,7 +287,7 @@ class ExpenseOneScreen extends StatelessWidget {
             ],
           ),
         ),
-        _buildFrame(context, price: context.localization.lbl_200),
+        _buildFrame(context, price: '200'),
         Align(
           alignment: Alignment.bottomLeft,
           child: Padding(

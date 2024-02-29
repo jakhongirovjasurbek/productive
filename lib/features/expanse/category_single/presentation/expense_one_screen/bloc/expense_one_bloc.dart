@@ -27,12 +27,12 @@ class ExpenseOneBloc extends Bloc<ExpenseOneEvent, ExpenseOneState> {
       ExpenseoneItemModel(
         eyeDoctorReview: context.localization.eye_doctor_review,
         iThoughtRozan: context.localization.eyes_doctor_review_red_description,
-        time: context.localization.time_container_one, context: context,
+         context: context,
       ),
       ExpenseoneItemModel(
         eyeDoctorReview: context.localization.eye_doctor_review,
         iThoughtRozan: context.localization.eyes_doctor_review_green_description,
-        time: context.localization.time_container_three, context: context,
+         context: context,
       ),
     ];
     }

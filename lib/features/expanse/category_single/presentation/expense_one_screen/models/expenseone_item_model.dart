@@ -12,7 +12,6 @@ class ExpenseoneItemModel {
     eyeDoctorReview = eyeDoctorReview ?? context.localization.eye_doctor_review;
     iThoughtRozan = iThoughtRozan ??
         context.localization.eyes_doctor_review_red_description;
-    time = time ?? context.localization.time_container_one;
     id = id ?? "";
   }
 

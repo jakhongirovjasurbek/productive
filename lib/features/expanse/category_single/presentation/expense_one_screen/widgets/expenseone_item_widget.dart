@@ -61,11 +61,11 @@ class ExpenseoneItemWidget extends StatelessWidget {
                         text: " ",
                       ),
                       TextSpan(
-                        text: context.localization.lbl,
+                        text: '\$',
                         style: context.style.fontSize18Weight500,
                       ),
                       TextSpan(
-                        text: context.localization.lbl_20,
+                        text: '20',
                         style: context.style.fontSize18Weight500,
                       ),
                     ],
