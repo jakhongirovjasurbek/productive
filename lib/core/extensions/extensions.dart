@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:productive/assets/colors.dart';
 import 'package:productive/assets/fonts.dart';
 import 'package:productive/assets/theme.dart';
+import 'package:productive/features/calendar/data/models/model.dart';
+import 'package:productive/features/calendar/domain/entities/entities.dart';
 import 'package:productive/generated/l10n.dart';
 
 extension BuildContextGeneral on BuildContext {
@@ -19,5 +21,17 @@ extension BuildContextGeneral on BuildContext {
 
   AppLocalization get localization {
     return AppLocalization();
+  }
+}
+
+extension CalendarToCalendarEntities on CalendarModel {
+  CalendarEntities get toEntities {
+    return CalendarEntities(
+      description: description?? '',
+      title: title,
+      icon: icon,
+      startTime: startTime,
+      endTime: endTime,
+    );
   }
 }

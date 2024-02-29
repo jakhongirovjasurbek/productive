@@ -10,10 +10,12 @@ dependencies:
   device_preview: ^1.1.0
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.4
   flutter_localizations:
     sdk: flutter
   flutter_svg: ^2.0.10+1
   gap: ^3.0.1
+  get_it: ^7.6.7
   intl: ^0.18.1
   keyboard_dismisser: ^3.0.0
   url_launcher: ^6.2.5
