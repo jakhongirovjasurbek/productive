@@ -1,4 +1,4 @@
 class ExpenseRouteNames{
-  static const expense ='/';
+  static const expense ='/expense';
   static const createexpense = '/createexpense';
 }

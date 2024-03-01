@@ -11,8 +11,6 @@ class AppTheme {
       scaffoldBackgroundColor: colors.mainDark,
       extensions: [
         AppFonts(
-
-
           fontSize40Weight700: TextStyle(
             fontSize: 40,
             fontWeight: FontWeight.w700,
@@ -90,6 +88,17 @@ class AppTheme {
             fontWeight: FontWeight.w500,
             color: colors.whiteLabel,
           ),
+          fontSize18Weight500red: TextStyle(
+            fontFamily: "Barlow",
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+            color: colors.notificationsClear),
+          fontSize18Weight500green: TextStyle(
+            fontFamily: "Barlow",
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+            color: colors.expensesGreen,
+          ),
           fontSize18Weight400: TextStyle(
             fontFamily: "Barlow",
             fontSize: 18,
@@ -108,17 +117,53 @@ class AppTheme {
             fontWeight: FontWeight.w700,
             color: colors.whiteLabel,
           ),
+          fontSize16Weight500orange: TextStyle(
+            fontFamily: "Barlow",
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+            color: colors.expensesFood,
+          ),
+          fontSize16Weight500blue: TextStyle(
+            fontFamily: "Barlow",
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+            color: colors.expensesShopping,
+          ),
+          fontSize16Weight500purple: TextStyle(
+            fontFamily: "Barlow",
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+            color: colors.expensesGift,
+          ),
+          fontSize16Weight400blue: TextStyle(
+            fontFamily: "Barlow",
+            fontSize: 16,
+            fontWeight: FontWeight.w400,
+            color: colors.addButtonLinear1,
+          ),
           fontSize14Weight600: TextStyle(
             fontFamily: "Barlow",
             fontSize: 14,
             fontWeight: FontWeight.w600,
             color: colors.whiteLabel,
           ),
+          fontSize14Weight400grey: TextStyle(
+            fontFamily: "Barlow",
+            fontSize: 14,
+            fontWeight: FontWeight.w400,
+            color: colors.tasksTimeColor,
+          ),
           fontSize14Weight500: TextStyle(
             fontFamily: "Barlow",
             fontSize: 14,
             fontWeight: FontWeight.w500,
             color: colors.whiteLabel,
+          ),
+          fontSize14Weight500whitish: TextStyle(
+            fontFamily: "Barlow",
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
+            color: colors.tasksTimeColor,
           ),
           fontSize12Weight500: TextStyle(
             fontFamily: "Barlow",

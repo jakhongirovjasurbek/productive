@@ -349,6 +349,240 @@ class AppLocalization {
       args: [],
     );
   }
+
+  /// `Expenses`
+  String get expenses {
+    return Intl.message(
+      'Expenses',
+      name: 'expenses',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Income`
+  String get income {
+    return Intl.message(
+      'Income',
+      name: 'income',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Outcome`
+  String get outcome {
+    return Intl.message(
+      'Outcome',
+      name: 'outcome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Categories`
+  String get categories {
+    return Intl.message(
+      'Categories',
+      name: 'categories',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `see all`
+  String get see_all {
+    return Intl.message(
+      'see all',
+      name: 'see_all',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Today’s Transactions`
+  String get today_transactions {
+    return Intl.message(
+      'Today’s Transactions',
+      name: 'today_transactions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Food`
+  String get food {
+    return Intl.message(
+      'Food',
+      name: 'food',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shopping`
+  String get shopping {
+    return Intl.message(
+      'Shopping',
+      name: 'shopping',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gift`
+  String get gift {
+    return Intl.message(
+      'Gift',
+      name: 'gift',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Eye doctor review`
+  String get eye_doctor_review {
+    return Intl.message(
+      'Eye doctor review',
+      name: 'eye_doctor_review',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I thought Rozan had bad designs but the doctor gave me new glasses`
+  String
+      get i_thought_Rozan_had_bad_designs_but_the_doctor_gave_me_new_glasses {
+    return Intl.message(
+      'I thought Rozan had bad designs but the doctor gave me new glasses',
+      name:
+          'i_thought_Rozan_had_bad_designs_but_the_doctor_gave_me_new_glasses',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Saving transportation expenses`
+  String get saving_transportation_expenses {
+    return Intl.message(
+      'Saving transportation expenses',
+      name: 'saving_transportation_expenses',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `$500`
+  String get cost500 {
+    return Intl.message(
+      '\$500',
+      name: 'cost500',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `$700`
+  String get cost700 {
+    return Intl.message(
+      '\$700',
+      name: 'cost700',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `$150`
+  String get cost150 {
+    return Intl.message(
+      '\$150',
+      name: 'cost150',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `$20`
+  String get cost20 {
+    return Intl.message(
+      '\$20',
+      name: 'cost20',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `-$20`
+  String get cost_minus20 {
+    return Intl.message(
+      '-\$20',
+      name: 'cost_minus20',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `9:43 AM`
+  String get time9_43_am {
+    return Intl.message(
+      '9:43 AM',
+      name: 'time9_43_am',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `11:30 PM`
+  String get time11_30_pm {
+    return Intl.message(
+      '11:30 PM',
+      name: 'time11_30_pm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `2:50 PM`
+  String get time2_50_pm {
+    return Intl.message(
+      '2:50 PM',
+      name: 'time2_50_pm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `+$50`
+  String get cost_plus50 {
+    return Intl.message(
+      '+\$50',
+      name: 'cost_plus50',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `+$20`
+  String get cost_plus20 {
+    return Intl.message(
+      '+\$20',
+      name: 'cost_plus20',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The doctor returned my money after I was satisfied with Rozan designs`
+  String
+      get the_doctor_returned_my_money_after_I_was_satisfied_with_Rozan_designs {
+    return Intl.message(
+      'The doctor returned my money after I was satisfied with Rozan designs',
+      name:
+          'the_doctor_returned_my_money_after_I_was_satisfied_with_Rozan_designs',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {
