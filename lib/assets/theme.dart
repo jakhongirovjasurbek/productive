@@ -9,6 +9,9 @@ class AppTheme {
     final colors = AppColors();
     return ThemeData(
       scaffoldBackgroundColor: colors.mainDark,
+      appBarTheme: AppBarTheme(
+        backgroundColor: colors.mainDark,
+      ),
       extensions: [
         AppFonts(
           fontSize40Weight700: TextStyle(
