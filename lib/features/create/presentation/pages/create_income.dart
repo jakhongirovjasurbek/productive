@@ -97,11 +97,11 @@ class _CreateIncomeScreenState extends State<CreateIncomeScreen> {
                       Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: getColor(IncomePrio.expense),
+                          color: context.colors.meetingColor,
                         ),
                         padding: EdgeInsets.all(9),
                         child: SvgPicture.asset(
-                          getSvg(model.priority),
+                          context.icons.moneyFirst,
                         ),
                       ),
                       const Gap(8),
