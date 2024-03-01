@@ -23,11 +23,11 @@ class AppIcons {
 
   // single category
   static const String bag = '${single}bag.svg';
-  static const String imgArrowLeft = '${single}img_arrow_left.svg';
-  static const String imgBxRestaurant = '${single}img_bx_restaurant.svg';
+  final  String imgArrowLeft = '${single}img_arrow_left.svg';
+  final  String imgBxRestaurant = '${single}img_bx_restaurant.svg';
   static const String imgChart = '${single}img_chart.svg';
-  static const String imgFrame = '${single}img_frame.svg';
-  static const String imgThumbsUpWhite = '${single}img_thumbs_up_white.svg';
-  static const String imgThumbsUp = '${single}img_thumbs_up.svg';
+  final  String imgFrame = '${single}img_frame.svg';
+  final  String imgThumbsUpWhite = '${single}img_thumbs_up_white.svg';
+  final  String imgThumbsUp = '${single}img_thumbs_up.svg';
 }
 

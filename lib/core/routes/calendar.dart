@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:productive/core/functions/app_functions.dart';
-import 'package:productive/core/route_names/task_name.dart';
+import 'package:productive/core/route_names/calendar_route_name.dart';
 
-class TaskRoute {
+class CalendarRoute {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case TaskRouteNames.tasks:
+      case CalendarRouteNames.calendar:
         return fade(const Scaffold());
-       case TaskRouteNames.createtasks:
-        return fade(const Scaffold());
-       
+ 
     }
     return null;
   }

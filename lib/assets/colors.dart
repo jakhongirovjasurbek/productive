@@ -80,13 +80,11 @@ class AppColors {
 
 // single container uchun
   final  Color whiteA700 = const Color(0XFFFDFDFD);
-  final  Color expensesFood = const Color(0xFFFF8700);
   final  Color bacgroundColor = const Color(0xFF131524);
   final  Color tasksTimeColor = const Color(0xFFABABAB);
-  static Color timeContainerOne = const Color(0xFFFF2752);
-  static Color blueGray300 = const Color(0XFF8C97AB);
-  static Color blueGray900 = const Color(0XFF272C38);
-  static Color blueGray90090 = const Color(0X901C233A);
-  static Color blueGray90099 = const Color(0X99303744);
+  final Color timeContainerOne = const Color(0xFFFF2752);
+  final Color yashil = const Color.fromRGBO(77, 170, 82, 0.3);
+  static Color expensesFood = const Color(0xFFFF8700);
+
 
 }
