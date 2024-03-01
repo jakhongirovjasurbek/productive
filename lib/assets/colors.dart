@@ -21,6 +21,7 @@ class AppColors {
   final expensesFood = const Color(0xFFFF8700);
   final expensesShopping = const Color(0xFF32A7E2);
   final expensesGift = const Color(0xFFB548C6);
+  final expensesBackground = const Color(0xFF1C233A);
   final expensesGreen = const Color(0xFF44DB4A);
   final expensesTransport = const Color(0xFFF6A845);
   final calendarViolet = const Color(0xFF5B4AD1);
@@ -74,7 +75,7 @@ class AppColors {
   final locationColor = const Color(0xFFBF360C);
   final startDate = const Color(0xFF18B797);
   final endDate = const Color(0xFFF3737E);
-
+  final expensesDivider = const Color(0xFF9B9B9B);
   final onBoardingColor = const Color(0xFF131524);
   final onBordingSkip = const Color(0xFF4B7FD6);
   final onBoardTextColor = const Color(0xFFFEFEFE).withOpacity(0.5);

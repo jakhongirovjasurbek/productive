@@ -56,7 +56,9 @@ class _HomePageState extends State<HomePage> {
         },
         onAdFailedToLoad: (err) {},
       ),
-    ).then((value) {});
+    ).then((value) {
+
+    });
 
     bannerAd.load();
     super.initState();
