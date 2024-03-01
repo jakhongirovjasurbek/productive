@@ -3,8 +3,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:productive/core/data/ad_helper.dart';
 import 'package:productive/core/extensions/extensions.dart';
+import 'package:productive/core/routes/calendar.dart';
+import 'package:productive/core/routes/create.dart';
+import 'package:productive/core/routes/expense.dart';
+import 'package:productive/core/routes/stats.dart';
+import 'package:productive/core/routes/tasks.dart';
 import 'package:productive/features/home/bloc/bnb_bloc.dart';
 import 'package:productive/features/home/widgets/bnb_item.dart';
+import 'package:productive/features/home/widgets/destination_page.dart';
 
 import '../../assets/icons.dart';
 
@@ -50,9 +56,7 @@ class _HomePageState extends State<HomePage> {
         },
         onAdFailedToLoad: (err) {},
       ),
-    ).then((value) {
-
-    });
+    ).then((value) {});
 
     bannerAd.load();
     super.initState();
@@ -71,7 +75,13 @@ class _HomePageState extends State<HomePage> {
               Expanded(
                 child: IndexedStack(
                   index: index,
-                  children: [],
+                  children: const [
+                    DestinationPage(onGenerateRoute: TaskRoute.onGenerateRoute),
+                    DestinationPage(onGenerateRoute: ExpenseRoute.onGenerateRoute),
+                    DestinationPage(onGenerateRoute: CreateRoute.onGenerateRoute),
+                    DestinationPage(onGenerateRoute: CalendarRoute.onGenerateRoute),
+                    DestinationPage(onGenerateRoute: StatsRoute.onGenerateRoute),
+                  ],
                 ),
               ),
               Container(

@@ -12,5 +12,6 @@ class StatsRoute {
       
        
     }
+    return null;
   }
 }

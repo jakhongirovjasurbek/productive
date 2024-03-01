@@ -12,5 +12,6 @@ class TaskRoute {
         return fade(const Scaffold());
        
     }
+    return null;
   }
 }
