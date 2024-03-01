@@ -45,8 +45,9 @@ class ExpenseScreen extends StatelessWidget {
               Container(
                 height: 77,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: context.colors.expensesBackground),
+                  borderRadius: BorderRadius.circular(8),
+                  color: context.colors.expensesBackground,
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

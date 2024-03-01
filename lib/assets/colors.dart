@@ -15,6 +15,7 @@ class AppColors {
   final skipButtonColor = const Color(0xFF4B7FD6);
   final loginTextFieldBackgroundColor = const Color(0xFF1C233A);
   final pinputBorderColor = const Color(0xFF0062FF);
+  final expensesBackground = const Color(0xFF1C233A);
   final emailVerification = const Color(0xFF979797);
   final tasksTimeColor = const Color(0xFFABABAB);
   final notificationsClear = const Color(0xFFFF2752);

@@ -80,7 +80,7 @@ class _CreateIncomeScreenState extends State<CreateIncomeScreen> with CreateInco
                               const Gap(20),
                               Expanded(child: WTextField(
                                 onChange: (a) {
-                                  title_controller!.text = a;
+                                  titleController!.text = a;
                                 },
                               )),
                             ],

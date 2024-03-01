@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "PM": MessageLookupByLibrary.simpleMessage("PM"),
+        "add_note": MessageLookupByLibrary.simpleMessage("Add note ..."),
         "calendar": MessageLookupByLibrary.simpleMessage("Calendar"),
         "categories": MessageLookupByLibrary.simpleMessage("Categories"),
         "categories_appbar": MessageLookupByLibrary.simpleMessage("Categories"),
@@ -36,6 +37,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cost_plus20": MessageLookupByLibrary.simpleMessage("+\$20"),
         "cost_plus50": MessageLookupByLibrary.simpleMessage("+\$50"),
         "create": MessageLookupByLibrary.simpleMessage("Create"),
+        "create_income": MessageLookupByLibrary.simpleMessage("Create Income"),
         "create_new_password":
             MessageLookupByLibrary.simpleMessage("Create new password"),
         "easyManage":
@@ -71,6 +73,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Kiritgan parolingiz tepadagisi bilan mos kelmadi"),
         "link": MessageLookupByLibrary.simpleMessage("Link to meeting"),
+        "new_title": MessageLookupByLibrary.simpleMessage("New title"),
         "outcome": MessageLookupByLibrary.simpleMessage("Outcome"),
         "parol_kamida_8_belgidan_iborat_bolsin":
             MessageLookupByLibrary.simpleMessage(
@@ -83,6 +86,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "recover_password":
             MessageLookupByLibrary.simpleMessage("Recover password"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),
+        "salary": MessageLookupByLibrary.simpleMessage("Salary"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "saving_transportation_expenses": MessageLookupByLibrary.simpleMessage(
             "Saving transportation expenses"),
@@ -101,6 +105,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Today’s Transactions"),
         "trackYourExpense":
             MessageLookupByLibrary.simpleMessage("Track Your Expense"),
+        "usd": MessageLookupByLibrary.simpleMessage("USD"),
         "xatolik_qayta_urining":
             MessageLookupByLibrary.simpleMessage("Xatolik qayta urining")
       };
