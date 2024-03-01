@@ -55,7 +55,7 @@ class _VerificationPageState extends State<VerificationPage> {
               height: 130,
               width: 130,
               margin: const EdgeInsets.only(top: 20, bottom: 20),
-              child: Image.asset(AppImages.person)
+              child: Image.asset(context.images.person)
             ),
              Text(
               context.localization.password,

@@ -1,14 +1,19 @@
 const _bnb = 'assets/icons/bnb/';
 
 const path="assets/icons/forgot_password/";
+const pathNotes="assets/icons/notes_svg/";
 
 class AppIcons {
   static const rectangle = "assets/create_new_password/user.png";
   static const isCheck = "assets/create_new_password/isCheck.svg";
   static const logo = "assets/icons/logo.svg";
-    static const right = "assets/icons/right.svg";
+  static const right = "assets/icons/right.svg";
   static const left = "assets/icons/left.svg";
   final back="${path}back.svg";
+  final greenbook="${pathNotes}green_book.svg";
+  final redbook="${pathNotes}red_book.svg";
+  final plusbook="${pathNotes}plus_book.svg";
+  final plus="${pathNotes}plus.svg";
 
 
   static const tasks = "${_bnb}tasks.svg";

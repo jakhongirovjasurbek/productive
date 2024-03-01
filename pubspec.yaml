@@ -23,6 +23,7 @@ dependencies:
   cached_network_image: ^3.3.1
   shimmer: ^3.0.0
   equatable: any
+  flutter_slidable: ^3.0.1
 
 dev_dependencies:
   flutter_test:
@@ -51,6 +52,7 @@ flutter:
     - assets/icons/forgot_password/
     - assets/images/
     - assets/icons/expanse/
+    - assets/icons/notes_svg/
 
 flutter_intl:
   enabled: true

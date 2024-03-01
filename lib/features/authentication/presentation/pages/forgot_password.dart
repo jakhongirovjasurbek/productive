@@ -113,7 +113,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     BoxDecoration(borderRadius: BorderRadius.circular(50)),
                 width: 130,
                 height: 130,
-                child: Image.asset(AppImages.unknown),
+                child: Image.asset(context.images.unknown),
               ),
               Gap(100),
               Form(
