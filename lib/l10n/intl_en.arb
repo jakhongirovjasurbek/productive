@@ -52,6 +52,12 @@
   "time2_50_pm": "2:50 PM",
   "cost_plus50": "+$50",
   "cost_plus20": "+$20",
-  "the_doctor_returned_my_money_after_I_was_satisfied_with_Rozan_designs": "The doctor returned my money after I was satisfied with Rozan designs"
+  "the_doctor_returned_my_money_after_I_was_satisfied_with_Rozan_designs": "The doctor returned my money after I was satisfied with Rozan designs",
 
+  "link":"Link to meeting",
+  "create_income":"Create Income",
+  "new_title": "New title",
+  "usd": "USD",
+  "add_note": "Add note ...",
+  "salary": "Salary"
 }

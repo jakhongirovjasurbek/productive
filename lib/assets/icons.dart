@@ -9,8 +9,12 @@ class AppIcons {
   static const right = "assets/icons/right.svg";
   static const left = "assets/icons/left.svg";
   final back="${path}back.svg";
-
-
+  final arrow = "assets/icons/arrow.svg";
+  final moneyFirst = "assets/icons/money_first.svg";
+  final moneySecond = "assets/icons/money_second.svg";
+  final plus = "assets/icons/plus.svg";
+  final exit = "assets/icons/exit.svg";
+  final premium = "assets/icons/premium.svg";
   static const tasks = "${_bnb}tasks.svg";
   static const expense = "${_bnb}expense.svg";
   static const create = "${_bnb}create.svg";
