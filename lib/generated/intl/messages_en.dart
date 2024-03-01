@@ -23,10 +23,12 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "PM": MessageLookupByLibrary.simpleMessage("PM"),
+        "add_note": MessageLookupByLibrary.simpleMessage("Add note ..."),
         "calendar": MessageLookupByLibrary.simpleMessage("Calendar"),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm password"),
         "create": MessageLookupByLibrary.simpleMessage("Create"),
+        "create_income": MessageLookupByLibrary.simpleMessage("Create Income"),
         "create_new_password":
             MessageLookupByLibrary.simpleMessage("Create new password"),
         "easyManage":
@@ -53,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Kiritgan parolingiz tepadagisi bilan mos kelmadi"),
         "link": MessageLookupByLibrary.simpleMessage("Link to meeting"),
+        "new_title": MessageLookupByLibrary.simpleMessage("New title"),
         "parol_kamida_8_belgidan_iborat_bolsin":
             MessageLookupByLibrary.simpleMessage(
                 "Parol kamida 8 belgidan iborat bo\'lsin"),
@@ -64,12 +67,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "recover_password":
             MessageLookupByLibrary.simpleMessage("Recover password"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),
+        "salary": MessageLookupByLibrary.simpleMessage("Salary"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "skip": MessageLookupByLibrary.simpleMessage("SKIP"),
         "stats": MessageLookupByLibrary.simpleMessage("Stats"),
         "tasks": MessageLookupByLibrary.simpleMessage("Tasks"),
         "trackYourExpense":
             MessageLookupByLibrary.simpleMessage("Track Your Expense"),
+        "usd": MessageLookupByLibrary.simpleMessage("USD"),
         "xatolik_qayta_urining":
             MessageLookupByLibrary.simpleMessage("Xatolik qayta urining")
       };

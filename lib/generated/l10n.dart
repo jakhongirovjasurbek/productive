@@ -349,6 +349,56 @@ class AppLocalization {
       args: [],
     );
   }
+
+  /// `Create Income`
+  String get create_income {
+    return Intl.message(
+      'Create Income',
+      name: 'create_income',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New title`
+  String get new_title {
+    return Intl.message(
+      'New title',
+      name: 'new_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `USD`
+  String get usd {
+    return Intl.message(
+      'USD',
+      name: 'usd',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add note ...`
+  String get add_note {
+    return Intl.message(
+      'Add note ...',
+      name: 'add_note',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Salary`
+  String get salary {
+    return Intl.message(
+      'Salary',
+      name: 'salary',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {

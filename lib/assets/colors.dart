@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 class AppColors {
-  final border_textfield= Color.fromRGBO(0, 110, 233, 0.10);
+  final border_textfield = Color.fromRGBO(0, 110, 233, 0.10);
   final linkColorBackground = Color(0xFF2B304A);
   final white = const Color(0xFFFFFFFF);
   final black = const Color(0xFF000000);
@@ -74,10 +74,13 @@ class AppColors {
   final locationColor = const Color(0xFFBF360C);
   final startDate = const Color(0xFF18B797);
   final endDate = const Color(0xFFF3737E);
-
+  final btnBorderColor = const Color(0xFF28304B);
+  final bottomSheetBgColor = const Color(0xFF272C38);
+  final dividerBgColor = const Color(0xFF38414E);
+  final btnSecondColor = const Color(0xFF212842);
   final onBoardingColor = const Color(0xFF131524);
   final onBordingSkip = const Color(0xFF4B7FD6);
   final onBoardTextColor = const Color(0xFFFEFEFE).withOpacity(0.5);
   final onBoarding = const Color(0xFF4B7FD6).withOpacity(0.32);
-  final onBordingComponet =const Color(0xFF4B7FD6);
+  final onBordingComponet = const Color(0xFF4B7FD6);
 }

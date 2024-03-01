@@ -28,5 +28,10 @@
   "save": "Save",
   "gym_time":"Gym time",
   "PM": "PM",
-  "link":"Link to meeting"
+  "link":"Link to meeting",
+  "create_income":"Create Income",
+  "new_title": "New title",
+  "usd": "USD",
+  "add_note": "Add note ...",
+  "salary": "Salary"
 }
