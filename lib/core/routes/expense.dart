@@ -9,8 +9,6 @@ class ExpenseRoute {
     switch (settings.name) {
       case ExpenseRouteNames.expense:
         return fade(const ExpenseScreen());
-      case ExpenseRouteNames.createexpense:
-        return fade(const Scaffold());
       default:
         return fade(const Scaffold());
     }
