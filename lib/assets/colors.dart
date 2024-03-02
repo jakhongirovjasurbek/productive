@@ -82,9 +82,10 @@ class AppColors {
   final  Color whiteA700 = const Color(0XFFFDFDFD);
   final  Color bacgroundColor = const Color(0xFF131524);
   final  Color tasksTimeColor = const Color(0xFFABABAB);
-  final Color timeContainerOne = const Color(0xFFFF2752);
-  final Color yashil = const Color.fromRGBO(77, 170, 82, 0.3);
+  final Color timeContainerOne = const Color(0xFFFF2752).withOpacity(0.7);
+  final Color yashil = const Color.fromRGBO(77, 170, 82, 0.7);
   static Color expensesFood = const Color(0xFFFF8700);
+  final Color linegraph = const Color(0xFFFF8700);
 
 
 }

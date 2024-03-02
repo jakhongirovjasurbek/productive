@@ -1,12 +1,8 @@
-<svg width="57" height="24" viewBox="0 0 57 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line x1="40" y1="4.5" x2="40" y2="18.5" stroke="#FEFEFE" stroke-width="2" stroke-linecap="round"/>
-<line x1="44" y1="10.5" x2="44" y2="18.5" stroke="#FEFEFE" stroke-width="2" stroke-linecap="round"/>
-<line x1="48" y1="6.5" x2="48" y2="18.5" stroke="#FEFEFE" stroke-width="2" stroke-linecap="round"/>
-<line x1="52" y1="13.5" x2="52" y2="18.5" stroke="#FEFEFE" stroke-width="2" stroke-linecap="round"/>
-<path d="M7.00022 12.4999L12.0001 15.6148L7.00022 12.4999ZM7.00022 12.4999L2 18L7.00022 12.4999ZM12.0001 15.6148L15.0002 9.5L12.0001 15.6148Z" fill="#4B7FD6"/>
-<path d="M2 18L7.00022 12.4999L12.0001 15.6148L15.0002 9.5" stroke="#4B7FD6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<circle cx="15" cy="8.5" r="2" fill="#4B7FD6"/>
-<circle cx="12" cy="15.5" r="2" fill="#4B7FD6"/>
-<circle cx="7" cy="12.5" r="2" fill="#4B7FD6"/>
-<circle cx="2" cy="17.5" r="2" fill="#4B7FD6"/>
+<svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.00022 5.99994L12.0001 9.1148L7.00022 5.99994ZM7.00022 5.99994L2 11.5L7.00022 5.99994ZM12.0001 9.1148L15.0002 3L12.0001 9.1148Z" fill="#FEFEFE"/>
+<path d="M2 11.5L7.00022 5.99994L12.0001 9.1148L15.0002 3" stroke="#FEFEFE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="15" cy="2" r="2" fill="#FEFEFE"/>
+<circle cx="12" cy="9" r="2" fill="#FEFEFE"/>
+<circle cx="7" cy="6" r="2" fill="#FEFEFE"/>
+<circle cx="2" cy="11" r="2" fill="#FEFEFE"/>
 </svg>

@@ -1,6 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:productive/assets/colors.dart';
+import 'package:productive/core/extensions/extensions.dart';
 
 class BarChartSample2 extends StatefulWidget {
   BarChartSample2({super.key});
@@ -179,7 +180,7 @@ class BarChartSample2State extends State<BarChartSample2> {
   }
 
   Widget bottomTitles(double value, TitleMeta meta) {
-    final titles = <String>['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    final titles = <String>[context.localization.lbl_sun, context.localization.lbl_sun, context.localization.lbl_mon, context.localization.lbl_tue, context.localization.lbl_wed, context.localization.lbl_thu, context.localization.lbl_sat];
     final title_number = <String>['2', '3', '4', '5', '6', '7', '8'];
 
     final Widget text = Text(
@@ -206,6 +207,8 @@ class BarChartSample2State extends State<BarChartSample2> {
       child: Column(
         children: [
           text,
+
+
           // SizedBox(height: 10,),
           textnumber,
         ],

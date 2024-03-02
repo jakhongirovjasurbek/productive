@@ -1,8 +1,12 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:productive/core/extensions/extensions.dart';
-import 'package:productive/features/expanse/category_single/presentation/expense_one_screen/widgets/diagramma.dart';
+import 'package:productive/features/expanse/category_single/presentation/expense_one_screen/widgets/fl_charts/diagramma.dart';
+import 'package:productive/features/expanse/category_single/presentation/expense_one_screen/widgets/fl_charts/line_graph.dart';
+import 'package:productive/features/expanse/category_single/presentation/expense_one_screen/widgets/fl_charts/years_line.dart';
 
 class SingleCategory extends StatefulWidget {
   const SingleCategory({super.key});
@@ -14,6 +18,7 @@ class SingleCategory extends StatefulWidget {
 
 class _SingleCategoryState extends State<SingleCategory>
     with SingleTickerProviderStateMixin {
+  var index = 0;
   late TabController _tabController;
 
   @override
@@ -28,31 +33,42 @@ class _SingleCategoryState extends State<SingleCategory>
       appBar: AppBar(
         title: Row(
           children: [
-            SvgPicture.asset('assets/single_category/img_arrow left.svg'),
-            const Gap(10),
-            // Text(context.localization.email_verification,style: context.style.fontSize24Weight600,),
-             Text(
-              context.localization.food,
-              style:context.style.fontSize12Weight400,
-              
-            ),
-
-            
-            SvgPicture.asset(context.icons.imgBxRestaurant),
             SvgPicture.asset(context.icons.imgArrowLeft),
+            const Spacer(),
+
+            // Text(context.localization.email_verification,style: context.style.fontSize24Weight600,),
+            Text(
+              context.localization.food,
+              style: context.style.fontSize16Weight700,
+            ),
+            const Spacer(),
+
+            GestureDetector(
+                onTap: () {
+                  setState(() {
+                    index = 1;
+                  });
+                },
+                child: SvgPicture.asset(
+                  context.icons.imgThumbsUp,
+                  color: index == 1 ? Colors.white : Colors.blue,
+                )),
+            const Gap(16),
+            GestureDetector(
+                onTap: () {},
+                child: SvgPicture.asset(context.icons.imgThumbsUpWhite)),
           ],
         ),
         backgroundColor: const Color(0xFF131524),
-        
         bottom: TabBar(
           controller: _tabController,
-          tabs: const [
-            Expanded(child: Tab(text: 'Weekly')),
-            Tab(text: 'Monthly'),
-            Tab(text: 'Yearly'),
+          tabs: [
+            Tab(text: context.localization.weekly),
+            Tab(text: context.localization.monthly),
+            Tab(text: context.localization.yearly),
           ],
           indicator: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(8),
             color: Colors.blue,
           ),
           indicatorSize: TabBarIndicatorSize.tab,
@@ -73,102 +89,173 @@ class _SingleCategoryState extends State<SingleCategory>
                   child: Center(child: BarChartSample2()),
                 ),
 
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.start,
-                  // crossAxisAlignment: CrossAxisAlignment.start,
-                  // mainAxisSize: MainAxisSize.min,
                   children: [
-                    // const SizedBox(
-                    //   width: 38,
-                    // ),
-                    Text(
-                      'Transactions',
-                      style: TextStyle(color: Colors.white, fontSize: 22),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        context.localization.transactions,
+                        style: context.style.fontSize20Weight700,
+                      ),
                     ),
                   ],
                 ),
-                // Gap(16),
-                Container(
-                  width: 343,
-                  height: 93,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: context.colors.timeContainerOne,
-                  ),
-                ),
                 const Gap(12),
-                Container(
-                  width: 343,
-                  height: 58,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Colors.green,
+                // konteyner
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    padding: const EdgeInsets.all(12),
+                    width: double.maxFinite,
+                    height: 93,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: context.colors.timeContainerOne,
+                    ),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            const Gap(5),
+                            SvgPicture.asset(context.icons.imgBxRestaurant),
+                            const Gap(10),
+                            Text(
+                              context.localization.eye_doctor_review,
+                              overflow: TextOverflow.clip,
+                            ),
+                            const Gap(180),
+                            const Text('-\$20'),
+                          ],
+                        ),
+                        Gap(10),
+                        Row(
+                          children: [
+                            Text(
+                              context.localization
+                                  .eyes_doctor_review_green_description,
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 2,
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
-                const Gap(12),
-                Container(
-                  width: 343,
-                  height: 93,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Colors.green,
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    // crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      // Padding(padding: EdgeInsets.only(top: 50, left: 15)),
-                      Row(
-                        children: [
-                          SvgPicture.asset(context.icons.imgBxRestaurant),
+                const Gap(10),
 
-                          const Gap(10),
-                      const Text(
-                        'Lorem upv uksebvufkuysebkuybs',
-                        overflow: TextOverflow.clip,
-                      ),
+                // ikkinchi konteyner
 
-
-                      const Gap(60),
-
-                      const Text('\$20'),
-
-                        ],
-                      ),
-
-                      // Column(
-                      //   mainAxisAlignment: MainAxisAlignment.start,
-                      //   children: [
-                      //     Text('\$20'),
-                      //   ],
-                      // ),
-                      // Column(
-                      //   mainAxisAlignment: MainAxisAlignment.end,
-                      //   children: [ 
-                      //     Text('11:30'),
-                      //   ],
-                      // )
-                    ],
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    padding: const EdgeInsets.all(12),
+                    width: double.maxFinite,
+                    height: 58,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: context.colors.yashil,
+                    ),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            const Gap(5),
+                            SvgPicture.asset(context.icons.imgBxRestaurant),
+                            const Gap(10),
+                            Text(
+                              context.localization.eye_doctor_review,
+                              overflow: TextOverflow.visible,
+                            ),
+                            const Gap(180),
+                            const Text('+\$50'),
+                          ],
+                        ),
+                      
+                      ],
+                    ),
                   ),
                 ),
 
-                // Container(
-                //   width: 200,
-                //   height: 400,
-                //   color: Colors.yellow,
-                // ),
+                
+
+                // uchunchi konteyner
+             
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    padding: const EdgeInsets.all(12),
+                    width: double.maxFinite,
+                    height: 93,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: context.colors.yashil,
+                    ),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            const Gap(5),
+                            SvgPicture.asset(context.icons.imgBxRestaurant),
+                            const Gap(10),
+                            Text(
+                              context.localization.eye_doctor_review,
+                            ),
+                            const Gap(180),
+                            const Text('+\$20'),
+                          ],
+                        ),
+                        Gap(20),
+                        Expanded(
+                          child: Row(
+                            children: [
+                              Text(
+                                context.localization
+                                    .eyes_doctor_review_green_description,
+                                overflow:TextOverflow.ellipsis,
+                                maxLines: 2,
+                              ),
+                            ],
+                          ),
+                        ),
+
+
+
+
+
+                      ],
+                    ),
+                  ),
+                ),
+                const Gap(10),
+              
+              
               ],
             ),
           ),
-          Container(
-            child: const Center(
-              child: Text('Tab 2 Content'),
+
+// ikkinchi tab bar
+          SingleChildScrollView(
+            child: Column(
+              children: [
+                Container(
+                  color: const Color(0xFF131524),
+                  child: const Center(child: LineChartSample2()),
+                ),
+              ],
             ),
           ),
-          Container(
-            child: const Center(
-              child: Text('Tab 3 Content'),
+
+// yillik  3 tabbar
+          SingleChildScrollView(
+            child: Column(
+              children: [
+                Container(
+                  color: const Color(0xFF131524),
+                  child: Center(child: YearlyTab()),
+                ),
+              ],
             ),
           ),
         ],

@@ -14,7 +14,7 @@ dependencies:
     sdk: flutter
 
 
-    
+
   flutter_svg: ^2.0.10+1
   gap: ^3.0.1
   keyboard_dismisser: ^3.0.0
@@ -23,6 +23,7 @@ dependencies:
   pinput: any
   equatable: ^2.0.5
   fl_chart: ^0.66.2
+  syncfusion_flutter_charts: ^24.2.8
 
 dev_dependencies:
   flutter_test:
@@ -47,6 +48,7 @@ flutter:
     - assets/create_new_password/
     - assets/icons/
     - assets/icons/bnb/
+    - assets/icons/single_category/
     - assets/icons/forgot_password/
     - assets/images/
 
