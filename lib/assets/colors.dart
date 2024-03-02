@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
+
 class AppColors {
   final border_textfield= Color.fromRGBO(0, 110, 233, 0.10);
   final linkColorBackground = Color(0xFF2B304A);
@@ -74,10 +76,16 @@ class AppColors {
   final locationColor = const Color(0xFFBF360C);
   final startDate = const Color(0xFF18B797);
   final endDate = const Color(0xFFF3737E);
+  final orange =  Colors.orange;
 
   final onBoardingColor = const Color(0xFF131524);
   final onBordingSkip = const Color(0xFF4B7FD6);
   final onBoardTextColor = const Color(0xFFFEFEFE).withOpacity(0.5);
   final onBoarding = const Color(0xFF4B7FD6).withOpacity(0.32);
   final onBordingComponet =const Color(0xFF4B7FD6);
+  final darkBlue =const Color.fromRGBO(43, 48, 74, 1);
+  final blueGradient =const Color.fromRGBO(75, 127, 214, 1);
+  final lightBlueGradient =const Color.fromRGBO(91, 74, 209, 1);
+  final statsTextColor =const Color.fromRGBO(163, 163, 163, 1);
+  final statsTaskBackground =const Color.fromRGBO(61, 64, 85, 1);
 }

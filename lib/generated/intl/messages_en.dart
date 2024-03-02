@@ -29,6 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "create": MessageLookupByLibrary.simpleMessage("Create"),
         "create_new_password":
             MessageLookupByLibrary.simpleMessage("Create new password"),
+        "daily": MessageLookupByLibrary.simpleMessage("Daily"),
         "easyManage":
             MessageLookupByLibrary.simpleMessage("Easy Time Management"),
         "easy_time_management":
@@ -53,9 +54,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Kiritgan parolingiz tepadagisi bilan mos kelmadi"),
         "link": MessageLookupByLibrary.simpleMessage("Link to meeting"),
+        "monthly": MessageLookupByLibrary.simpleMessage("Monthly"),
         "parol_kamida_8_belgidan_iborat_bolsin":
             MessageLookupByLibrary.simpleMessage(
-                "Parol kamida 8 belgidan iborat bo\'lsin"),
+                "Parol kamida 8 belgidan iborat bo’lsin"),
         "password": MessageLookupByLibrary.simpleMessage(
             " Please enter the 4 digital code that send to your email address"),
         "productive": MessageLookupByLibrary.simpleMessage("Productive"),
@@ -70,7 +72,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "tasks": MessageLookupByLibrary.simpleMessage("Tasks"),
         "trackYourExpense":
             MessageLookupByLibrary.simpleMessage("Track Your Expense"),
+        "weekly": MessageLookupByLibrary.simpleMessage("Weekly"),
         "xatolik_qayta_urining":
-            MessageLookupByLibrary.simpleMessage("Xatolik qayta urining")
+            MessageLookupByLibrary.simpleMessage("Xatolik qayta urining"),
+        "yearly": MessageLookupByLibrary.simpleMessage("Yearly")
       };
 }

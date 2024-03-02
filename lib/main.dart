@@ -12,7 +12,6 @@ import 'generated/l10n.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await MobileAds.instance.initialize();
-
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
@@ -27,7 +26,6 @@ Future<void> main() async {
     ),
   );
 }
-
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});

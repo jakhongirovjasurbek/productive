@@ -270,10 +270,10 @@ class AppLocalization {
     );
   }
 
-  /// `Parol kamida 8 belgidan iborat bo'lsin`
+  /// `Parol kamida 8 belgidan iborat bo’lsin`
   String get parol_kamida_8_belgidan_iborat_bolsin {
     return Intl.message(
-      'Parol kamida 8 belgidan iborat bo\'lsin',
+      'Parol kamida 8 belgidan iborat bo’lsin',
       name: 'parol_kamida_8_belgidan_iborat_bolsin',
       desc: '',
       args: [],
@@ -345,6 +345,46 @@ class AppLocalization {
     return Intl.message(
       'Link to meeting',
       name: 'link',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Daily`
+  String get daily {
+    return Intl.message(
+      'Daily',
+      name: 'daily',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Weekly`
+  String get weekly {
+    return Intl.message(
+      'Weekly',
+      name: 'weekly',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monthly`
+  String get monthly {
+    return Intl.message(
+      'Monthly',
+      name: 'monthly',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yearly`
+  String get yearly {
+    return Intl.message(
+      'Yearly',
+      name: 'yearly',
       desc: '',
       args: [],
     );
