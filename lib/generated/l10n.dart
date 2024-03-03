@@ -643,6 +643,16 @@ class AppLocalization {
       args: [],
     );
   }
+
+  /// `Quick Notes`
+  String get quick_notes {
+    return Intl.message(
+      'Quick Notes',
+      name: 'quick_notes',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {

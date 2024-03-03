@@ -57,5 +57,6 @@
   "new_title": "New title",
   "usd": "USD",
   "add_note": "Add note ...",
-  "salary": "Salary"
+  "salary": "Salary",
+  "quick_notes" : "Quick Notes"
 }

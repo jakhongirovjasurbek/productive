@@ -81,6 +81,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage(
             " Please enter the 4 digital code that send to your email address"),
         "productive": MessageLookupByLibrary.simpleMessage("Productive"),
+        "quick_notes": MessageLookupByLibrary.simpleMessage("Quick Notes"),
         "receive_code":
             MessageLookupByLibrary.simpleMessage("If you don’t receive code. "),
         "recover_password":

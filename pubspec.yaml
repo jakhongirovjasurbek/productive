@@ -26,7 +26,9 @@ dependencies:
   cached_network_image: ^3.3.1
   shimmer: ^3.0.0
   equatable: any
-
+  flutter_quill: ^9.3.1
+  image_picker: ^1.0.7
+  cloud_firestore: ^4.15.5
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -52,6 +54,7 @@ flutter:
     - assets/icons/expenses/
     - assets/icons/calendar/
     - assets/icons/bnb/
+    - assets/icons/quick_notes/
     - assets/icons/forgot_password/
     - assets/images/
     - assets/icons/expanse/

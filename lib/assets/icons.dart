@@ -1,4 +1,5 @@
 const _bnb = 'assets/icons/bnb/';
+const _n = 'assets/icons/quick_notes/';
 
 const path="assets/icons/forgot_password/";
 
@@ -20,6 +21,18 @@ class AppIcons {
   static const create = "${_bnb}create.svg";
   static const calendar = "${_bnb}calendar.svg";
   static const stats = "${_bnb}stats.svg";
+
+  static const checkBox = '${_n}check_box.svg';
+  static const checkedBox = '${_n}checked_box.svg';
+  static const picture = '${_n}picture.svg';
+  static const microphone = '${_n}mic.svg';
+  static const play = '${_n}play.svg';
+  static const playing = '${_n}playing.svg';
+  static const tables = '${_n}check_box.svg';
+  static const voiceInRec = '${_n}voice_in_rec.svg';
+  static const voice = '${_n}voice.svg';
+  static const voiceRecDone = '${_n}voice_rec_done.svg';
+
   static const calendarGymIcon = "assets/icons/calendar/calendar_gym_icon.svg";
   static const link = "assets/icons/calendar/link.svg";
 
