@@ -129,7 +129,6 @@ class _QuickNotesState extends State<QuickNotes> {
                     ),
 
 
-
                     QuillToolbarToggleStyleButton(
                       controller: _controller,
                       attribute: Attribute.ul,
