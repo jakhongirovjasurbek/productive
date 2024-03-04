@@ -1,7 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:productive/core/extensions/extensions.dart';
-import '../../../../assets/icons.dart';
 
 class AllDayWidget extends StatefulWidget {
   const AllDayWidget({super.key});
@@ -28,21 +26,23 @@ class _AllDayWidgetState extends State<AllDayWidget> {
             child: Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 11, 15, 12),
+                  padding: const EdgeInsets.fromLTRB(15, 11, 0, 12),
                   child: Text(
                     context.localization.all_day,
                     style: context.style.fontSize16Weight500Blue,
                   ),
                 ),
-                GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      isSwitchOn = !isSwitchOn;
-                    });
-                  },
-                  child: isSwitchOn
-                      ? SvgPicture.asset(AppIcons.switch_on)
-                      : SvgPicture.asset(AppIcons.switch_off),
+                Transform.scale(
+                  scale: 0.8, // Adjust the scale factor as needed
+                  child: CupertinoSwitch(
+                    activeColor: context.colors.skipButtonColor,
+                    value: isSwitchOn,
+                    onChanged: (change) {
+                      setState(() {
+                        isSwitchOn = change;
+                      });
+                    },
+                  ),
                 ),
               ],
             ),

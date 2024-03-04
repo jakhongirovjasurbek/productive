@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:productive/assets/app_route_names.dart';
 import 'package:productive/core/functions/app_functions.dart';
 import 'package:productive/core/pages/splash.dart';
-import 'package:productive/features/create/pages/create_event.dart';
+import '../../features/create/presentation/pages/create_event.dart';
 
 class AppRoute {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {

@@ -10,4 +10,6 @@ class AppIcons {
   static const switch_off = "assets/icons/switch.svg";
   static const down = "assets/icons/down.svg";
   static const bold = "assets/icons/bold.svg";
-}
+  static const exit = "assets/icons/exit.svg";
+  static const radio = "assets/icons/radio.svg";
+      }

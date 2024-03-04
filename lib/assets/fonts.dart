@@ -32,13 +32,13 @@ class AppFonts extends ThemeExtension<AppFonts> {
   final TextStyle fontSize14Weight500Grey;
   final TextStyle fontSize12Weight500;
   final TextStyle fontSize12Weight400;
-
+  final TextStyle fontSize20Weight300;
   final TextStyle fontSize10Weight400;
   final TextStyle fontSize14Weight400Grey;
 
   final TextStyle fontSize8Weight400;
   AppFonts( {
-
+    required this.fontSize20Weight300,
     required this.fontSize16Weight500Grey,
     required this.fontSize40Weight700,
     required this.fontSize24Weight700,

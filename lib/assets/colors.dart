@@ -70,4 +70,5 @@ class AppColors {
   final locationColor = const Color(0xFFBF360C);
   final startDate = const Color(0xFF18B797);
   final endDate = const Color(0xFFF3737E);
+  final innerAlignmentSecond = const Color(0xFFE2EAF9);
 }

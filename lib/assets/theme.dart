@@ -11,6 +11,12 @@ class AppTheme {
       scaffoldBackgroundColor: colors.mainDark,
       extensions: [
         AppFonts(
+          fontSize20Weight300: TextStyle(
+            fontFamily: "Barlow",
+            fontSize: 20,
+            fontWeight: FontWeight.w300,
+            color: colors.white,
+          ),
           fontSize40Weight700: TextStyle(
             fontFamily: "Barlow",
             fontSize: 40,
