@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppFonts extends ThemeExtension<AppFonts> {
+class  AppFonts extends ThemeExtension<AppFonts> {
   final TextStyle fontSize40Weight700;
 
   final TextStyle fontSize30Weight700;

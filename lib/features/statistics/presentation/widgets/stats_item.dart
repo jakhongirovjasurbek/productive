@@ -4,7 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:intl/intl.dart';
 import 'package:productive/core/extensions/extensions.dart';
-import 'package:productive/features/statistics/widgets/stats_info.dart';
+import 'package:productive/features/statistics/presentation/widgets/stats_info.dart';
 
 class StatsItem extends StatelessWidget {
   const StatsItem({
@@ -16,7 +16,8 @@ class StatsItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final today=DateTime.now();
+    final localization=context.localization;
+    final today = DateTime.now();
     final List<String> dayTime = [
       "10:00",
       "11:00",
@@ -31,10 +32,10 @@ class StatsItem extends StatelessWidget {
       "20:00",
     ];
     final List<String> tasks = [
-      "Create navigation bar",
-      "Study for testing",
-      "Room cleaning",
-      "Read Surah Al-Baqarah"
+      localization.createNavigationBar,
+      localization.studyForTesting,
+      localization.roomCleaning,
+      localization.readSurahAlBaqarah,
     ];
     final List<Color> colors = [
       context.colors.notesGreenBook1,
@@ -47,18 +48,18 @@ class StatsItem extends StatelessWidget {
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(14)),
       child: Column(
         children: [
-           Row(
+          Row(
             children: [
               Expanded(
                 child: StatsInfoWidget(
-                  title: 'Today',
+                  title: localization.today,
                   subtitle: '${today.day} ${DateFormat('MMMM').format(today)}',
                 ),
               ),
               const Gap(12),
-              const Expanded(
+               Expanded(
                 child: StatsInfoWidget(
-                  title: 'Focus Time',
+                  title: localization.focusTime,
                   subtitle: '4h 30m',
                 ),
               ),
@@ -130,11 +131,10 @@ class StatsItem extends StatelessWidget {
                 ],
               ),
             ),
-          ),   
+          ),
         ],
-
       ),
-      
     );
   }
 }
+ 

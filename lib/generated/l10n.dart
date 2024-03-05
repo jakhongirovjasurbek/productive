@@ -389,6 +389,66 @@ class AppLocalization {
       args: [],
     );
   }
+
+  /// `Create navigation bar`
+  String get createNavigationBar {
+    return Intl.message(
+      'Create navigation bar',
+      name: 'createNavigationBar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Study for testing`
+  String get studyForTesting {
+    return Intl.message(
+      'Study for testing',
+      name: 'studyForTesting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Room cleaning`
+  String get roomCleaning {
+    return Intl.message(
+      'Room cleaning',
+      name: 'roomCleaning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Read Surah Al-Baqarah`
+  String get readSurahAlBaqarah {
+    return Intl.message(
+      'Read Surah Al-Baqarah',
+      name: 'readSurahAlBaqarah',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Today`
+  String get today {
+    return Intl.message(
+      'Today',
+      name: 'today',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Focus Time`
+  String get focusTime {
+    return Intl.message(
+      'Focus Time',
+      name: 'focusTime',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {

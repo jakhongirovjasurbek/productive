@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm password"),
         "create": MessageLookupByLibrary.simpleMessage("Create"),
+        "createNavigationBar":
+            MessageLookupByLibrary.simpleMessage("Create navigation bar"),
         "create_new_password":
             MessageLookupByLibrary.simpleMessage("Create new password"),
         "daily": MessageLookupByLibrary.simpleMessage("Daily"),
@@ -40,6 +42,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "enter_new_password":
             MessageLookupByLibrary.simpleMessage("Enter new password"),
         "expense": MessageLookupByLibrary.simpleMessage("Expense"),
+        "focusTime": MessageLookupByLibrary.simpleMessage("Focus Time"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot password"),
         "gym_time": MessageLookupByLibrary.simpleMessage("Gym time"),
@@ -61,15 +64,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage(
             " Please enter the 4 digital code that send to your email address"),
         "productive": MessageLookupByLibrary.simpleMessage("Productive"),
+        "readSurahAlBaqarah":
+            MessageLookupByLibrary.simpleMessage("Read Surah Al-Baqarah"),
         "receive_code":
             MessageLookupByLibrary.simpleMessage("If you don’t receive code. "),
         "recover_password":
             MessageLookupByLibrary.simpleMessage("Recover password"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),
+        "roomCleaning": MessageLookupByLibrary.simpleMessage("Room cleaning"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "skip": MessageLookupByLibrary.simpleMessage("SKIP"),
         "stats": MessageLookupByLibrary.simpleMessage("Stats"),
+        "studyForTesting":
+            MessageLookupByLibrary.simpleMessage("Study for testing"),
         "tasks": MessageLookupByLibrary.simpleMessage("Tasks"),
+        "today": MessageLookupByLibrary.simpleMessage("Today"),
         "trackYourExpense":
             MessageLookupByLibrary.simpleMessage("Track Your Expense"),
         "weekly": MessageLookupByLibrary.simpleMessage("Weekly"),

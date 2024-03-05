@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:productive/core/extensions/extensions.dart';
-import 'package:productive/features/statistics/widgets/sliding_segment.dart';
-import 'package:productive/features/statistics/widgets/stats_item.dart';
+import 'package:productive/features/statistics/presentation/widgets/sliding_segment.dart';
+import 'package:productive/features/statistics/presentation/widgets/stats_item.dart';
 
 enum StatsCategory {
-  daily(
-    "Daily",
-  ),
+  daily("Daily"),
   weekly("Weekly"),
   monthly("Monthly"),
   yearly("Yearly");
@@ -33,10 +31,7 @@ class _StatisticsScreenState extends State<StatisticsScreen>
   @override
   void initState() {
     controller = TabController(length: 4, vsync: this);
-    pageController = PageController(
-      initialPage: currentIndex,
-    );
-    // TODO: implement initState
+    pageController = PageController(initialPage: currentIndex);
     super.initState();
   }
 
@@ -65,7 +60,7 @@ class _StatisticsScreenState extends State<StatisticsScreen>
               },
             ),
             const Gap(15),
-             Expanded(
+            Expanded(
               child: PageView(
                 physics: const NeverScrollableScrollPhysics(),
                 controller: pageController,
@@ -77,19 +72,19 @@ class _StatisticsScreenState extends State<StatisticsScreen>
                   StatsItem(currentIndex: currentIndex),
                   Center(
                     child: Text(
-                      "Weekly",
+                      StatsCategory.weekly.message,
                       style: context.style.fontSize16Weight500,
                     ),
                   ),
                   Center(
                     child: Text(
-                      "Monthly",
+                      StatsCategory.monthly.message,
                       style: context.style.fontSize16Weight500,
                     ),
                   ),
                   Center(
                     child: Text(
-                      "Yearly",
+                      StatsCategory.yearly.message,
                       style: context.style.fontSize16Weight500,
                     ),
                   )

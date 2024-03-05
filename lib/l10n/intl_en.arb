@@ -32,5 +32,11 @@
   "daily": "Daily",
   "weekly": "Weekly",
   "monthly": "Monthly",
-  "yearly": "Yearly"
+  "yearly": "Yearly",
+  "createNavigationBar": "Create navigation bar",
+  "studyForTesting": "Study for testing",
+  "roomCleaning": "Room cleaning",
+  "readSurahAlBaqarah": "Read Surah Al-Baqarah",
+  "today": "Today",
+  "focusTime": "Focus Time"
 }

@@ -5,7 +5,7 @@ import 'package:productive/features/authentication/presentation/pages/create_new
 import 'package:productive/core/route_names/app_route_name.dart';
 import 'package:productive/features/home/home.dart';
 import 'package:productive/features/calendar/calendar_screen.dart';
-import 'package:productive/features/statistics/pages/statistics.dart';
+import 'package:productive/features/statistics/presentation/pages/statistics.dart';
 
 class AppRoute {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
