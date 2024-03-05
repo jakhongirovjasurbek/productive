@@ -1,6 +1,4 @@
 import 'dart:math';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:productive/assets/icons.dart';
@@ -55,10 +53,10 @@ class _NotificationPageState extends State<NotificationPage> {
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.24,
           ),
-          Text(
+          title.isNotEmpty?Text(
             context.localization.clear,
             style: context.style.fontSize14Weight500,
-          ),
+          ):const Text(""),
         ],
       ),
       body: title.isNotEmpty
@@ -138,7 +136,7 @@ class _NotificationPageState extends State<NotificationPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Image.asset("assets/logo/no_notifi.png"),
+                      SvgPicture.asset(AppIcons.noNotification),
                       Text(
                         context.localization.no_notifications,
                         style: context.style.fontSize20Weight500,
