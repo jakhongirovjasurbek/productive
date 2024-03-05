@@ -1,17 +1,24 @@
-
-
 import 'dart:ui';
 
 class AppColors {
   final white = const Color(0xFFFFFFFF);
   final black = const Color(0xFF000000);
   final mainDark = const Color(0xFF131524);
+  final border_textfield = Color.fromRGBO(0, 110, 233, 0.10);
+  final linkColorBackground = Color(0xFF2B304A);
+  final bnbColor = const Color(0XFF1C1E2D);
   final whiteLabel = const Color(0xFFFEFEFE);
+  final rgbInpBorder = const Color.fromRGBO(0, 110, 233, 0.10);
+  final inpBackgroundColor = const Color(0xFF1C233A);
+  final isCheckGreenColor = const Color(0xFF44DB4A);
+  final buttonDisabledColor = const Color(0xFF4B7FD6);
   final skipButtonColor = const Color(0xFF4B7FD6);
   final loginTextFieldBackgroundColor = const Color(0xFF272C38);
+  final backgroundColor = const Color(0xFF1C233A);
   final pinputBorderColor = const Color(0xFF0062FF);
+  final expensesBackground = const Color(0xFF1C233A);
   final emailVerification = const Color(0xFF979797);
-  final tasksTimeColor = const Color(0xFFABABAB);
+  final tasksTimeColor = Color(0xFFABABAB);
   final notificationsClear = const Color(0xFFFF2752);
   final expensesFood = const Color(0xFFFF8700);
   final expensesShopping = const Color(0xFF32A7E2);
@@ -69,4 +76,16 @@ class AppColors {
   final locationColor = const Color(0xFFBF360C);
   final startDate = const Color(0xFF18B797);
   final endDate = const Color(0xFFF3737E);
+  final btnBorderColor = const Color(0xFF28304B);
+  final bottomSheetBgColor = const Color(0xFF272C38);
+  final dividerBgColor = const Color(0xFF38414E);
+  final btnSecondColor = const Color(0xFF212842);
+  final expensesDivider = const Color(0xFF9B9B9B);
+  final onBoardingColor = const Color(0xFF131524);
+  final onBordingSkip = const Color(0xFF4B7FD6);
+  final onBoardTextColor = const Color(0xFFFEFEFE).withOpacity(0.5);
+  final onBoarding = const Color(0xFF4B7FD6).withOpacity(0.32);
+  final onBordingComponet = const Color(0xFF4B7FD6);
+  final blue = const Color(0xFF006EE9);
+  final innerAlignmentSecond = const Color(0xFFE2EAF9);
 }

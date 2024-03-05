@@ -10,16 +10,30 @@ dependencies:
   device_preview: ^1.1.0
   flutter:
     sdk: flutter
+  flutter_intl: ^0.0.1
   flutter_localizations:
     sdk: flutter
   flutter_svg: ^2.0.10+1
+  gap: ^3.0.1
+  get_it: ^7.6.7
+  intl: ^0.18.1
   keyboard_dismisser: ^3.0.0
+  flutter_bloc: ^8.1.3
+  flutter_slidable: ^3.0.1
+
+  pinput: any
+  google_mobile_ads: ^4.0.0
+  url_launcher: ^6.2.5
+  cached_network_image: ^3.3.1
+  shimmer: ^3.0.0
+  equatable: any
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
   flutter_launcher_icons: ^0.13.1
+  build_runner: ^2.4.8
 
 flutter_launcher_icons:
   android: "launcher_icon"
@@ -34,8 +48,14 @@ flutter:
   assets:
     - assets/
     - assets/logo/
+    - assets/create_new_password/
     - assets/icons/
-    - assets/svg/
+    - assets/icons/expenses/
+    - assets/icons/calendar/
+    - assets/icons/bnb/
+    - assets/icons/forgot_password/
+    - assets/images/
+    - assets/icons/expanse/
 
 flutter_intl:
   enabled: true

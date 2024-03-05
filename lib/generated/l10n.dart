@@ -70,31 +70,705 @@ class AppLocalization {
     );
   }
 
-  /// `Notifications`
-  String get notification {
+  /// `Forgot password`
+  String get forgot_password {
     return Intl.message(
-      'Notifications',
-      name: 'notification',
+      'Forgot password',
+      name: 'forgot_password',
       desc: '',
       args: [],
     );
   }
 
-  /// `Clear`
-  String get clear {
+  /// `Email`
+  String get email {
     return Intl.message(
-      'Clear',
-      name: 'clear',
+      'Email',
+      name: 'email',
       desc: '',
       args: [],
     );
   }
 
-  /// `NO NOTIFICATION YET`
-  String get no_notifications {
+  /// `Recover password`
+  String get recover_password {
     return Intl.message(
-      'NO NOTIFICATION YET',
-      name: 'no_notifications',
+      'Recover password',
+      name: 'recover_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If you don’t receive code. `
+  String get receive_code {
+    return Intl.message(
+      'If you don’t receive code. ',
+      name: 'receive_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` Please enter the 4 digital code that send to your email address`
+  String get password {
+    return Intl.message(
+      ' Please enter the 4 digital code that send to your email address',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email verification`
+  String get email_verification {
+    return Intl.message(
+      'Email verification',
+      name: 'email_verification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resend`
+  String get resend {
+    return Intl.message(
+      'Resend',
+      name: 'resend',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `SKIP`
+  String get skip {
+    return Intl.message(
+      'SKIP',
+      name: 'skip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Easy Time Management`
+  String get easyManage {
+    return Intl.message(
+      'Easy Time Management',
+      name: 'easyManage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We help you stay organized and\n manage your day`
+  String get help {
+    return Intl.message(
+      'We help you stay organized and\n manage your day',
+      name: 'help',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Track Your Expense`
+  String get trackYourExpense {
+    return Intl.message(
+      'Track Your Expense',
+      name: 'trackYourExpense',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We help you organize your expenses\n easily and safely`
+  String get helpOrganize {
+    return Intl.message(
+      'We help you organize your expenses\n easily and safely',
+      name: 'helpOrganize',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tasks`
+  String get tasks {
+    return Intl.message(
+      'Tasks',
+      name: 'tasks',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Expense`
+  String get expense {
+    return Intl.message(
+      'Expense',
+      name: 'expense',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create`
+  String get create {
+    return Intl.message(
+      'Create',
+      name: 'create',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Calendar`
+  String get calendar {
+    return Intl.message(
+      'Calendar',
+      name: 'calendar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stats`
+  String get stats {
+    return Intl.message(
+      'Stats',
+      name: 'stats',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create new password`
+  String get create_new_password {
+    return Intl.message(
+      'Create new password',
+      name: 'create_new_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter new password`
+  String get enter_new_password {
+    return Intl.message(
+      'Enter new password',
+      name: 'enter_new_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Iltimos, yangi parolni kiriting kiriting`
+  String get iltimos_yangi_parolni_kiriting_kiriting {
+    return Intl.message(
+      'Iltimos, yangi parolni kiriting kiriting',
+      name: 'iltimos_yangi_parolni_kiriting_kiriting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Parol kamida 8 belgidan iborat bo'lsin`
+  String get parol_kamida_8_belgidan_iborat_bolsin {
+    return Intl.message(
+      'Parol kamida 8 belgidan iborat bo\'lsin',
+      name: 'parol_kamida_8_belgidan_iborat_bolsin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm password`
+  String get confirm_password {
+    return Intl.message(
+      'Confirm password',
+      name: 'confirm_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Kiritgan parolingiz tepadagisi bilan mos kelmadi`
+  String get kiritgan_parolingiz_tepadagisi_bilan_mos_kelmadi {
+    return Intl.message(
+      'Kiritgan parolingiz tepadagisi bilan mos kelmadi',
+      name: 'kiritgan_parolingiz_tepadagisi_bilan_mos_kelmadi',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Xatolik qayta urining`
+  String get xatolik_qayta_urining {
+    return Intl.message(
+      'Xatolik qayta urining',
+      name: 'xatolik_qayta_urining',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gym time`
+  String get gym_time {
+    return Intl.message(
+      'Gym time',
+      name: 'gym_time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `PM`
+  String get PM {
+    return Intl.message(
+      'PM',
+      name: 'PM',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Categories`
+  String get categories_appbar {
+    return Intl.message(
+      'Categories',
+      name: 'categories_appbar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Link to meeting`
+  String get link {
+    return Intl.message(
+      'Link to meeting',
+      name: 'link',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Expenses`
+  String get expenses {
+    return Intl.message(
+      'Expenses',
+      name: 'expenses',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Income`
+  String get income {
+    return Intl.message(
+      'Income',
+      name: 'income',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Outcome`
+  String get outcome {
+    return Intl.message(
+      'Outcome',
+      name: 'outcome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Categories`
+  String get categories {
+    return Intl.message(
+      'Categories',
+      name: 'categories',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `see all`
+  String get see_all {
+    return Intl.message(
+      'see all',
+      name: 'see_all',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Today’s Transactions`
+  String get today_transactions {
+    return Intl.message(
+      'Today’s Transactions',
+      name: 'today_transactions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Food`
+  String get food {
+    return Intl.message(
+      'Food',
+      name: 'food',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shopping`
+  String get shopping {
+    return Intl.message(
+      'Shopping',
+      name: 'shopping',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gift`
+  String get gift {
+    return Intl.message(
+      'Gift',
+      name: 'gift',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Eye doctor review`
+  String get eye_doctor_review {
+    return Intl.message(
+      'Eye doctor review',
+      name: 'eye_doctor_review',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I thought Rozan had bad designs but the doctor gave me new glasses`
+  String
+      get i_thought_Rozan_had_bad_designs_but_the_doctor_gave_me_new_glasses {
+    return Intl.message(
+      'I thought Rozan had bad designs but the doctor gave me new glasses',
+      name:
+          'i_thought_Rozan_had_bad_designs_but_the_doctor_gave_me_new_glasses',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Saving transportation expenses`
+  String get saving_transportation_expenses {
+    return Intl.message(
+      'Saving transportation expenses',
+      name: 'saving_transportation_expenses',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `$500`
+  String get cost500 {
+    return Intl.message(
+      '\$500',
+      name: 'cost500',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `$700`
+  String get cost700 {
+    return Intl.message(
+      '\$700',
+      name: 'cost700',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `$150`
+  String get cost150 {
+    return Intl.message(
+      '\$150',
+      name: 'cost150',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `$20`
+  String get cost20 {
+    return Intl.message(
+      '\$20',
+      name: 'cost20',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `-$20`
+  String get cost_minus20 {
+    return Intl.message(
+      '-\$20',
+      name: 'cost_minus20',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `9:43 AM`
+  String get time9_43_am {
+    return Intl.message(
+      '9:43 AM',
+      name: 'time9_43_am',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `11:30 PM`
+  String get time11_30_pm {
+    return Intl.message(
+      '11:30 PM',
+      name: 'time11_30_pm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `2:50 PM`
+  String get time2_50_pm {
+    return Intl.message(
+      '2:50 PM',
+      name: 'time2_50_pm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `+$50`
+  String get cost_plus50 {
+    return Intl.message(
+      '+\$50',
+      name: 'cost_plus50',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `+$20`
+  String get cost_plus20 {
+    return Intl.message(
+      '+\$20',
+      name: 'cost_plus20',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The doctor returned my money after I was satisfied with Rozan designs`
+  String
+      get the_doctor_returned_my_money_after_I_was_satisfied_with_Rozan_designs {
+    return Intl.message(
+      'The doctor returned my money after I was satisfied with Rozan designs',
+      name:
+          'the_doctor_returned_my_money_after_I_was_satisfied_with_Rozan_designs',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create Income`
+  String get create_income {
+    return Intl.message(
+      'Create Income',
+      name: 'create_income',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New title`
+  String get new_title {
+    return Intl.message(
+      'New title',
+      name: 'new_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `USD`
+  String get usd {
+    return Intl.message(
+      'USD',
+      name: 'usd',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add note ...`
+  String get add_note {
+    return Intl.message(
+      'Add note ...',
+      name: 'add_note',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Salary`
+  String get salary {
+    return Intl.message(
+      'Salary',
+      name: 'salary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create Event`
+  String get create_event {
+    return Intl.message(
+      'Create Event',
+      name: 'create_event',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Meet`
+  String get meet {
+    return Intl.message(
+      'Meet',
+      name: 'meet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Birthday`
+  String get birthday {
+    return Intl.message(
+      'Birthday',
+      name: 'birthday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Online`
+  String get online {
+    return Intl.message(
+      'Online',
+      name: 'online',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Other`
+  String get other {
+    return Intl.message(
+      'Other',
+      name: 'other',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Event title`
+  String get event_title {
+    return Intl.message(
+      'Event title',
+      name: 'event_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start Date`
+  String get start_date {
+    return Intl.message(
+      'Start Date',
+      name: 'start_date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `End Date`
+  String get end_date {
+    return Intl.message(
+      'End Date',
+      name: 'end_date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `28 Nov,2022 10:00 AM`
+  String get date {
+    return Intl.message(
+      '28 Nov,2022 10:00 AM',
+      name: 'date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All Day`
+  String get all_day {
+    return Intl.message(
+      'All Day',
+      name: 'all_day',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Repeat`
+  String get repeat {
+    return Intl.message(
+      'Repeat',
+      name: 'repeat',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Once`
+  String get once {
+    return Intl.message(
+      'Once',
+      name: 'once',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter title`
+  String get title {
+    return Intl.message(
+      'Enter title',
+      name: 'title',
       desc: '',
       args: [],
     );

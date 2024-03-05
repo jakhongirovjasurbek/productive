@@ -1,9 +1,10 @@
 import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:productive/core/extensions/extensions.dart';
-import '../../assets/app_route_names.dart';
+import 'package:productive/core/route_names/app_route_name.dart';
 import '../../assets/icons.dart';
 
 class SplashPage extends StatefulWidget {
@@ -16,10 +17,10 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
-    Timer(const Duration(seconds: 3), () {
-      Navigator.of(context)
-          .pushNamedAndRemoveUntil(AppRouteNames.notification, (_) => false);
-    });
+    // Timer(const Duration(seconds: 0), () {
+    //   Navigator.of(context)
+    //       .pushNamedAndRemoveUntil(AppRouteNames.create_event, (_) => false);
+    // });
     super.initState();
   }
 
