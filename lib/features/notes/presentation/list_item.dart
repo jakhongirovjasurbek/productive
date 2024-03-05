@@ -37,7 +37,7 @@ class ListItem extends StatelessWidget {
               backgroundColor: Colors.transparent,
               foregroundColor: context.colors.notesBookSecondColor2,
               icon: Icons.delete,
-              label: 'Delete',
+              label: context.localization.delete,
             ),
           ],
         ),

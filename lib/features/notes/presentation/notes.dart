@@ -47,7 +47,7 @@ class _NotesPageState extends State<NotesPage> {
         leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back_ios, color: context.colors.white
           ,)),
         title: Text(
-          'Notes',
+          context.localization.notes,
           style: context.style.fontSize24Weight700
         ),
       ),
@@ -80,12 +80,6 @@ class _NotesPageState extends State<NotesPage> {
                   width: 100,
                 )
                 
-                // SvgPicture.asset(
-                //   AppIcons.greenbook,
-                //   height: 100,
-                //   width: 100,
-                //   color: Colors.white,
-                // ),
               ],
             ),
             Row(
@@ -102,8 +96,8 @@ class _NotesPageState extends State<NotesPage> {
                 Padding(
                   padding: const EdgeInsets.only(top: 16.0),
                   child: Container(
-                    decoration: const BoxDecoration(
-                      color: Colors.blue,
+                    decoration:  BoxDecoration(
+                      color: context.colors.blue,
                       shape: BoxShape.circle,
                     ),
                     child: const Icon(Icons.add),
@@ -129,11 +123,7 @@ class _NotesPageState extends State<NotesPage> {
         ),
         Text(
           label,
-          style: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w500,
-            color: Colors.black,
-          ),
+          style: context.style.fontSize16Weight500.copyWith(color: context.colors.black),
         ),
       ],
     );
@@ -150,7 +140,7 @@ class _NotesPageState extends State<NotesPage> {
           title: titles[index],
           image: images[index],
           desc: desc[index],
-          date: "15 November",
+          date:context.localization.day3,
           isAudio: audio[index],
           onDelete: () {
             setState(() {
@@ -164,4 +154,4 @@ class _NotesPageState extends State<NotesPage> {
       },
     );
   }
-}
+} 

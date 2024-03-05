@@ -36,6 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "day2": MessageLookupByLibrary.simpleMessage("15 November"),
         "day3": MessageLookupByLibrary.simpleMessage("15 November"),
         "day4": MessageLookupByLibrary.simpleMessage("15 November"),
+        "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "description": MessageLookupByLibrary.simpleMessage(
             "We explained the definition of commitment and it.."),
         "description1": MessageLookupByLibrary.simpleMessage(
@@ -70,6 +71,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Kiritgan parolingiz tepadagisi bilan mos kelmadi"),
         "link": MessageLookupByLibrary.simpleMessage("Link to meeting"),
+        "notes": MessageLookupByLibrary.simpleMessage("Notes"),
         "parol_kamida_8_belgidan_iborat_bolsin":
             MessageLookupByLibrary.simpleMessage(
                 "Parol kamida 8 belgidan iborat bo\'lsin"),
