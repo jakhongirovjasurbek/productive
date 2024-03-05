@@ -220,7 +220,8 @@ class AppTheme {
             fontSize: 8,
             fontWeight: FontWeight.w400,
             color: colors.whiteLabel,
-          ), fontSize30Weight700: TextStyle(
+          ),
+          fontSize30Weight700: TextStyle(
             fontFamily: "Barlow",
             fontSize: 30,
             fontWeight: FontWeight.w700,

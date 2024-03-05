@@ -57,8 +57,7 @@
   "new_title": "New title",
   "usd": "USD",
   "add_note": "Add note ...",
-  "salary": "Salary"
-  "easy_time_management": "Easy Time Management",
+  "salary": "Salary",
   "create_event": "Create Event",
   "meet": "Meet",
   "birthday": "Birthday",
@@ -71,7 +70,5 @@
   "all_day": "All Day",
   "repeat": "Repeat",
   "once": "Once",
-  "add_note": "Add note...",
-  "save": "Save",
   "title": "Enter title"
 }

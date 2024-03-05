@@ -13,6 +13,8 @@ import 'package:productive/features/create/presentation/mixin/create_income_mixi
 import 'package:productive/features/create/presentation/widgets/show_snackbar.dart';
 import 'package:productive/features/create/presentation/widgets/w_text_field.dart';
 
+import '../../../../assets/icons.dart';
+
 class CreateIncomeScreen extends StatefulWidget {
   const CreateIncomeScreen({super.key});
 
@@ -49,7 +51,7 @@ class _CreateIncomeScreenState extends State<CreateIncomeScreen> with CreateInco
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
                               horizontal: 10, vertical: 17),
-                          child: SvgPicture.asset(context.icons.arrow),
+                          child: SvgPicture.asset(AppIcons.arrow),
                         ),
                       ),
                     ),

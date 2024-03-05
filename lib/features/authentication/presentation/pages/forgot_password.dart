@@ -5,6 +5,8 @@ import 'package:productive/assets/images.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/features/authentication/presentation/pages/verification.dart';
 
+import '../../../../assets/icons.dart';
+
 class ForgotPassword extends StatefulWidget {
   const ForgotPassword({super.key});
 
@@ -91,7 +93,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
         automaticallyImplyLeading: false,
         title: Row(
           children: [
-            SvgPicture.asset(context.icons.back),
+            SvgPicture.asset(AppIcons.back),
             Gap(10),
             Text(
               context.localization.forgot_password,

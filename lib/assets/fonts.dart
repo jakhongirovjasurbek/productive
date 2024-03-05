@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 class AppFonts extends ThemeExtension<AppFonts> {
@@ -42,14 +41,16 @@ class AppFonts extends ThemeExtension<AppFonts> {
   final TextStyle fontSize20Weight300;
   final TextStyle fontSize10Weight400;
   final TextStyle fontSize14Weight400Grey;
-
-
+  final TextStyle  fontSize18Weight500red;
+  final TextStyle fontSize18Weight500green;
   final TextStyle fontSize8Weight400;
-  AppFonts( {
-    required this.fontSize20Weight300,
-    required this.fontSize16Weight500Grey,
+  final TextStyle fontSize30Weight700;
   AppFonts({
     required this.fontSize30Weight700,
+    required this.fontSize18Weight500green,
+    required this.fontSize18Weight500red,
+    required this.fontSize20Weight300,
+    required this.fontSize16Weight500Grey,
     required this.fontSize40Weight700,
     required this.fontSize24Weight700,
     required this.fontSize20Weight700,
@@ -58,8 +59,6 @@ class AppFonts extends ThemeExtension<AppFonts> {
     required this.fontSize18Weight700,
     required this.fontSize18Weight600,
     required this.fontSize18Weight500,
-    required this.fontSize18Weight500green,
-    required this.fontSize18Weight500red,
     required this.fontSize18Weight500Grey,
     required this.fontSize18Weight400,
     required this.fontSize16Weight700,
@@ -86,9 +85,6 @@ class AppFonts extends ThemeExtension<AppFonts> {
     required this.fontSize8Weight400,
     required this.fontSize14Weight400Grey,
   });
-  
-
-  
 
   @override
   ThemeExtension<AppFonts> copyWith() {

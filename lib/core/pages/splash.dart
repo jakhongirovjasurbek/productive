@@ -17,10 +17,10 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
-    Timer(const Duration(seconds: 0), () {
-      Navigator.of(context)
-          .pushNamedAndRemoveUntil(AppRouteNames.create_event, (_) => false);
-    });
+    // Timer(const Duration(seconds: 0), () {
+    //   Navigator.of(context)
+    //       .pushNamedAndRemoveUntil(AppRouteNames.create_event, (_) => false);
+    // });
     super.initState();
   }
 

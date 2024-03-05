@@ -3,6 +3,8 @@ import 'package:productive/core/create_status/income_status.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/features/create/presentation/pages/create_income.dart';
 
+import '../../../../assets/icons.dart';
+
 mixin  CreateIncomeMixin on State<CreateIncomeScreen>{
   TextEditingController? titleController;
   int usd = 0;
@@ -10,9 +12,9 @@ mixin  CreateIncomeMixin on State<CreateIncomeScreen>{
   String getSvg(IncomePrio prio) {
     switch (prio) {
       case IncomePrio.salary:
-        return context.icons.moneyFirst;
+        return AppIcons.moneyFirst;
       case IncomePrio.expense:
-        return context.icons.moneySecond;
+        return AppIcons.moneySecond;
     }
   }
 
