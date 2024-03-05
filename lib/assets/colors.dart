@@ -1,6 +1,11 @@
+
+
 import 'dart:ui';
 
 class AppColors {
+  final  white = const Color(0xFFFFFFFF);
+  final  black = const Color(0xFF000000);
+  final  mainDark = const Color(0xFF131524);
   final border_textfield= Color.fromRGBO(0, 110, 233, 0.10);
   final linkColorBackground = Color(0xFF2B304A);
   final white = const Color(0xFFFFFFFF);
@@ -13,11 +18,13 @@ class AppColors {
   final isCheckGreenColor = const Color(0xFF44DB4A);
   final buttonDisabledColor = const Color(0xFF4B7FD6);
   final skipButtonColor = const Color(0xFF4B7FD6);
+  final  loginTextFieldBackgroundColor = const Color(0xFF272C38);
+  final  backgroundColor = const Color(0xFF1C233A);
   final loginTextFieldBackgroundColor = const Color(0xFF1C233A);
   final pinputBorderColor = const Color(0xFF0062FF);
   final expensesBackground = const Color(0xFF1C233A);
   final emailVerification = const Color(0xFF979797);
-  final tasksTimeColor = const Color(0xFFABABAB);
+  final  tasksTimeColor = Color(0xFFABABAB);
   final notificationsClear = const Color(0xFFFF2752);
   final expensesFood = const Color(0xFFFF8700);
   final expensesShopping = const Color(0xFF32A7E2);
@@ -86,4 +93,5 @@ class AppColors {
   final onBoarding = const Color(0xFF4B7FD6).withOpacity(0.32);
   final onBordingComponet = const Color(0xFF4B7FD6);
   final blue = const Color(0xFF006EE9);
+  final innerAlignmentSecond = const Color(0xFFE2EAF9);
 }

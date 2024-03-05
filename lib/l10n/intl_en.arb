@@ -58,4 +58,20 @@
   "usd": "USD",
   "add_note": "Add note ...",
   "salary": "Salary"
+  "easy_time_management": "Easy Time Management",
+  "create_event": "Create Event",
+  "meet": "Meet",
+  "birthday": "Birthday",
+  "online": "Online",
+  "other": "Other",
+  "event_title": "Event title",
+  "start_date": "Start Date",
+  "end_date": "End Date",
+  "date": "28 Nov,2022 10:00 AM",
+  "all_day": "All Day",
+  "repeat": "Repeat",
+  "once": "Once",
+  "add_note": "Add note...",
+  "save": "Save",
+  "title": "Enter title"
 }

@@ -19,7 +19,7 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     Timer(const Duration(seconds: 0), () {
       Navigator.of(context)
-          .pushNamedAndRemoveUntil(AppRouteNames.home, (_) => false);
+          .pushNamedAndRemoveUntil(AppRouteNames.create_event, (_) => false);
     });
     super.initState();
   }
