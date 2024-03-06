@@ -22,9 +22,7 @@ class AppRoute {
       case AppRouteNames.calendar:
         return fade(const CalendarScreen());
       case AppRouteNames.statistics:
-        return fade(
-          const StatisticsScreen(),
-        );
+        return fade(const StatisticsScreen());
       default:
         return fade(const Scaffold());
     }

@@ -16,7 +16,7 @@ class StatsItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final localization=context.localization;
+    final localization = context.localization;
     final today = DateTime.now();
     final List<String> dayTime = [
       "10:00",
@@ -57,7 +57,7 @@ class StatsItem extends StatelessWidget {
                 ),
               ),
               const Gap(12),
-               Expanded(
+              Expanded(
                 child: StatsInfoWidget(
                   title: localization.focusTime,
                   subtitle: '4h 30m',
@@ -137,4 +137,3 @@ class StatsItem extends StatelessWidget {
     );
   }
 }
- 
