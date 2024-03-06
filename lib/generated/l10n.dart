@@ -340,16 +340,6 @@ class AppLocalization {
     );
   }
 
-  /// `Categories`
-  String get categories_appbar {
-    return Intl.message(
-      'Categories',
-      name: 'categories_appbar',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Expenses`
   String get expenses {
     return Intl.message(
@@ -754,26 +744,6 @@ class AppLocalization {
     );
   }
 
-  /// `Enter title`
-  String get title {
-    return Intl.message(
-      'Enter title',
-      name: 'title',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Link to meeting`
-  String get link {
-    return Intl.message(
-      'Link to meeting',
-      name: 'link',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Daily`
   String get daily {
     return Intl.message(
@@ -869,6 +839,26 @@ class AppLocalization {
     return Intl.message(
       'Focus Time',
       name: 'focusTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Link to meeting`
+  String get link {
+    return Intl.message(
+      'Link to meeting',
+      name: 'link',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Categories`
+  String get categories_appbar {
+    return Intl.message(
+      'Categories',
+      name: 'categories_appbar',
       desc: '',
       args: [],
     );

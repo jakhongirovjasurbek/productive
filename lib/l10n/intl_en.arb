@@ -28,7 +28,6 @@
   "save": "Save",
   "gym_time": "Gym time",
   "PM": "PM",
-  "categories_appbar": "Categories",
   "expenses": "Expenses",
   "income": "Income",
   "outcome": "Outcome",
@@ -69,8 +68,6 @@
   "all_day": "All Day",
   "repeat": "Repeat",
   "once": "Once",
-  "title": "Enter title",
-  "link": "Link to meeting",
   "daily": "Daily",
   "weekly": "Weekly",
   "monthly": "Monthly",
@@ -80,7 +77,7 @@
   "roomCleaning": "Room cleaning",
   "readSurahAlBaqarah": "Read Surah Al-Baqarah",
   "today": "Today",
-  "focusTime": "Focus Time"
+  "focusTime": "Focus Time",
   "link":"Link to meeting",
   "categories_appbar": "Categories",
   "title":"Commitment resource lecture",
@@ -102,7 +99,4 @@
   "books":"Books",
   "delete":"Delete",
   "notes":"Notes"
-
-
-
 }

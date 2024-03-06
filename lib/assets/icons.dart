@@ -1,7 +1,6 @@
 const _bnb = 'assets/icons/bnb/';
 
 const path = "assets/icons/forgot_password/";
-const path="assets/icons/forgot_password/";
 const pathNotes="assets/icons/notes_svg/";
 
 class AppIcons {
@@ -17,11 +16,9 @@ class AppIcons {
   static const plus = "assets/icons/plus.svg";
   static const exit = "assets/icons/exit.svg";
   static const premium = "assets/icons/premium.svg";
-  final back="${path}back.svg";
   final greenbook="${pathNotes}green_book.svg";
   final redbook="${pathNotes}red_book.svg";
   final plusbook="${pathNotes}plus_book.svg";
-  final plus="${pathNotes}plus.svg";
 
 
   static const tasks = "${_bnb}tasks.svg";
