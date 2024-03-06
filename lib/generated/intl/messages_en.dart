@@ -30,6 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "calendar": MessageLookupByLibrary.simpleMessage("Calendar"),
         "categories": MessageLookupByLibrary.simpleMessage("Categories"),
         "categories_appbar": MessageLookupByLibrary.simpleMessage("Categories"),
+        "clear": MessageLookupByLibrary.simpleMessage("Clear"),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm password"),
         "cost150": MessageLookupByLibrary.simpleMessage("\$150"),
@@ -127,7 +128,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "meet": MessageLookupByLibrary.simpleMessage("Meet"),
         "monthly": MessageLookupByLibrary.simpleMessage("Monthly"),
         "new_title": MessageLookupByLibrary.simpleMessage("New title"),
+        "no_notifications":
+            MessageLookupByLibrary.simpleMessage("NO NOTIFICATION YET"),
         "notes": MessageLookupByLibrary.simpleMessage("Notes"),
+        "notification": MessageLookupByLibrary.simpleMessage("Notifications"),
         "once": MessageLookupByLibrary.simpleMessage("Once"),
         "online": MessageLookupByLibrary.simpleMessage("Online"),
         "other": MessageLookupByLibrary.simpleMessage("Other"),

@@ -18,10 +18,7 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
-    Timer(const Duration(seconds: 0), () {
-      Navigator.of(context).push(CupertinoPageRoute(builder: (_)=>NotesPage()));
-      // Navigator.of(context)
-      //     .pushNamedAndRemoveUntil(AppRouteNames.home, (_) => false);
+
     super.initState();
   }
 

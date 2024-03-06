@@ -1273,6 +1273,36 @@ class AppLocalization {
       args: [],
     );
   }
+
+  /// `Notifications`
+  String get notification {
+    return Intl.message(
+      'Notifications',
+      name: 'notification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Clear`
+  String get clear {
+    return Intl.message(
+      'Clear',
+      name: 'clear',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `NO NOTIFICATION YET`
+  String get no_notifications {
+    return Intl.message(
+      'NO NOTIFICATION YET',
+      name: 'no_notifications',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {
