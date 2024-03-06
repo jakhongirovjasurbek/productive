@@ -99,4 +99,43 @@
   "books":"Books",
   "delete":"Delete",
   "notes":"Notes"
+  "save": "Save",
+
+
+
+
+
+  "food" :"Food",
+  "shopping" :"Shopping",
+  "weekly":"Weekly",
+  "monthly":"Monthly",
+  "yearly":"Yearly",
+  "transactions":"Transactions",
+  "eye_doctor_review":"Eye doctor review",
+  "eyes_doctor_review_red_description":"I thought Rozan had bad designs but the doctor gave me new glasses",
+  "saving_transportation_expenses":"Saving transportation expenses",
+  "eyes_doctor_review_green_description":"The doctor returned my money after I was satisfied with Rozan designs",
+  "lbl_jan": "Jan",
+  "lbl_feb": "Feb",
+  "lbl_mar": "Mar",
+  "lbl_apr": "Apr",
+  "lbl_may": "May",
+  "lbl_jun": "Jun",
+  "lbl_jul": "Jul",
+  "lbl_aug": "Aug",
+  "lbl_sep": "Sep",
+  "lbl_oct": "Oct",
+  "lbl_nov": "Nov",
+  "lbl_des": "Des",
+
+
+
+  "lbl_mon": "Mon",
+  "lbl_tue": "Tue",
+  "lbl_wed": "Wed",
+  "lbl_thu": "Thu",
+  "lbl_fri": "Fri",
+  "lbl_sat": "Sat",
+  "lbl_sun": "Sun"
+
 }

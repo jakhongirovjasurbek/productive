@@ -3,6 +3,8 @@ const _bnb = 'assets/icons/bnb/';
 const path = "assets/icons/forgot_password/";
 const pathNotes="assets/icons/notes_svg/";
 
+const single = "assets/icons/single_category/";
+
 class AppIcons {
   static const rectangle = "assets/create_new_password/user.png";
   static const isCheck = "assets/create_new_password/isCheck.svg";
@@ -57,6 +59,17 @@ class AppIcons {
   static const purpleVector = "assets/icons/expenses/purpleVector.svg";
   static const settings = "assets/icons/expenses/settings.svg";
   static const shopping = "assets/icons/expenses/shopping.svg";
+
+
+
+  // single category
+  static const String bag = '${single}bag.svg';
+  final  String imgArrowLeft = '${single}img_arrow_left.svg';
+  final  String imgBxRestaurant = '${single}img_bx_restaurant.svg';
+  static const String imgChart = '${single}img_chart.svg';
+  final  String imgFrame = '${single}img_frame.svg';
+  final  String imgThumbsUpWhite = '${single}img_thumbs_up_white.svg';
+  final  String imgThumbsUp = '${single}img_thumbs_up.svg';
 
   static const birthday = "assets/icons/birthday_event.svg";
   static const meet = "assets/icons/meet_event.svg";

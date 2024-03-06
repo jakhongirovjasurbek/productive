@@ -5,7 +5,6 @@ import 'package:productive/assets/icons.dart';
 import 'package:productive/assets/images.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/route_names/app_route_name.dart';
-import 'package:productive/generated/l10n.dart';
 
 class OnBoarding extends StatefulWidget {
   const OnBoarding({super.key});
