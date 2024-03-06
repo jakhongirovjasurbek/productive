@@ -8,12 +8,7 @@ import 'package:productive/core/routes/create.dart';
 import 'package:productive/core/routes/expense.dart';
 import 'package:productive/core/routes/stats.dart';
 import 'package:productive/core/routes/tasks.dart';
-import 'package:productive/core/routes/create.dart';
-import 'package:productive/core/routes/expense.dart';
-import 'package:productive/core/routes/stats.dart';
-import 'package:productive/core/routes/tasks.dart';
 import 'package:productive/features/home/bloc/bnb_bloc.dart';
-import 'package:productive/features/home/destination.dart';
 import 'package:productive/features/home/widgets/bnb_item.dart';
 import 'package:productive/features/home/widgets/destination_page.dart';
 
@@ -82,7 +77,7 @@ class _HomePageState extends State<HomePage> {
               Expanded(
                 child: IndexedStack(
                   index: index,
-                  children: const [
+                  children: [
                     DestinationPage(onGenerateRoute: TaskRoute.onGenerateRoute),
                     DestinationPage(onGenerateRoute: ExpenseRoute.onGenerateRoute),
                     DestinationPage(onGenerateRoute: CreateRoute.onGenerateRoute),

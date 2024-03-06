@@ -149,11 +149,10 @@ class AppTheme {
             fontWeight: FontWeight.w700,
             color: colors.whiteLabel,
           ),
-          fontSize16Weight500orange: TextStyle(
+          fontSize16Weight500orange: const TextStyle(
             fontFamily: "Barlow",
             fontSize: 16,
             fontWeight: FontWeight.w500,
-            color: colors.expensesFood,
           ),
           fontSize16Weight500blue: TextStyle(
             fontFamily: "Barlow",

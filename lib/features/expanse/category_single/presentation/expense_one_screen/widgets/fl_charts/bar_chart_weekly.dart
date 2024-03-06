@@ -5,15 +5,15 @@ import 'package:productive/core/extensions/extensions.dart';
 
 class WeeklyTabPage extends StatefulWidget {
   WeeklyTabPage({super.key});
+
   final Color leftBarColor = AppColors.expensesFood;
-  final Color avgColor = AppColors.blue;
+
   @override
   State<StatefulWidget> createState() => WeeklyTabPageState();
 }
 
 class WeeklyTabPageState extends State<WeeklyTabPage> {
-
-   Color textColor = AppColors.whitee;
+  Color textColor = AppColors.whitee;
   final double width = 10;
 
   late List<BarChartGroupData> rawBarGroups;
@@ -64,7 +64,6 @@ class WeeklyTabPageState extends State<WeeklyTabPage> {
               child: BarChart(
                 BarChartData(
                   maxY: 20,
-                  
                   barTouchData: BarTouchData(
                     touchTooltipData: BarTouchTooltipData(
                       tooltipBgColor: context.colors.tasksTimeColor,
@@ -78,9 +77,9 @@ class WeeklyTabPageState extends State<WeeklyTabPage> {
                         });
                         return;
                       }
-        
+
                       touchedGroupIndex = response.spot!.touchedBarGroupIndex;
-        
+
                       setState(() {
                         if (!event.isInterestedForInteractions) {
                           touchedGroupIndex = -1;
@@ -91,22 +90,23 @@ class WeeklyTabPageState extends State<WeeklyTabPage> {
                         if (touchedGroupIndex != -1) {
                           var sum = 0.0;
                           for (final rod
-                              in showingBarGroups[touchedGroupIndex]
-                                  .barRods) {
+                              in showingBarGroups[touchedGroupIndex].barRods) {
                             sum += rod.toY;
                           }
                           final avg = sum /
                               showingBarGroups[touchedGroupIndex]
                                   .barRods
                                   .length;
-        
+
                           showingBarGroups[touchedGroupIndex] =
                               showingBarGroups[touchedGroupIndex].copyWith(
                             barRods: showingBarGroups[touchedGroupIndex]
                                 .barRods
                                 .map((rod) {
                               return rod.copyWith(
-                                  toY: avg, color: widget.avgColor);
+                                toY: avg,
+                                color: context.colors.blue,
+                              );
                             }).toList(),
                           );
                         }
@@ -137,11 +137,6 @@ class WeeklyTabPageState extends State<WeeklyTabPage> {
                       ),
                     ),
                   ),
-
-
-
-
-                  
                   borderData: FlBorderData(
                     show: false,
                   ),
@@ -160,7 +155,7 @@ class WeeklyTabPageState extends State<WeeklyTabPage> {
   }
 
   Widget leftTitles(double value, TitleMeta meta) {
-    final  style = TextStyle(
+    final style = TextStyle(
       color: context.colors.tasksTimeColor,
       fontWeight: FontWeight.bold,
       fontSize: 14,
@@ -187,20 +182,30 @@ class WeeklyTabPageState extends State<WeeklyTabPage> {
   }
 
   Widget bottomTitles(double value, TitleMeta meta) {
-    final titles = <String>[context.localization.lbl_sun, context.localization.lbl_sun, context.localization.lbl_mon, context.localization.lbl_tue, context.localization.lbl_wed, context.localization.lbl_thu, context.localization.lbl_sat];
+    final titles = <String>[
+      context.localization.lbl_sun,
+      context.localization.lbl_sun,
+      context.localization.lbl_mon,
+      context.localization.lbl_tue,
+      context.localization.lbl_wed,
+      context.localization.lbl_thu,
+      context.localization.lbl_sat
+    ];
     final title_number = <String>['2', '3', '4', '5', '6', '7', '8'];
 
     final Widget text = GestureDetector(
-      onTap: (){
+      onTap: () {
         setState(() {
-         textColor = AppColors.expensesFood;
-           touchedIndex = value.toInt();
+          textColor = AppColors.expensesFood;
+          touchedIndex = value.toInt();
         });
       },
       child: Text(
         titles[value.toInt()],
-        style:  TextStyle(
-          color: touchedIndex == value.toInt() ? AppColors.expensesFood : AppColors.whitee,
+        style: TextStyle(
+          color: touchedIndex == value.toInt()
+              ? AppColors.expensesFood
+              : AppColors.whitee,
           fontWeight: FontWeight.bold,
           fontSize: 14,
         ),
@@ -209,33 +214,28 @@ class WeeklyTabPageState extends State<WeeklyTabPage> {
 
     final Widget textnumber = Text(
       title_number[value.toInt()],
-      style:  TextStyle(
-        color:touchedIndex == value.toInt() ?AppColors.expensesFood : AppColors.whitee,
+      style: TextStyle(
+        color: touchedIndex == value.toInt()
+            ? AppColors.expensesFood
+            : AppColors.whitee,
         fontWeight: FontWeight.bold,
         fontSize: 14,
       ),
-    ); 
+    );
     return SideTitleWidget(
       axisSide: meta.axisSide,
       space: 16,
       child: Column(
         children: [
           text,
-
-
           textnumber,
         ],
       ),
-
     );
   }
 
   BarChartGroupData makeGroupData(int x, double y1, double y2) {
-
-
-
     return BarChartGroupData(
-
       barsSpace: 4,
       x: x,
       barRods: [
@@ -243,9 +243,7 @@ class WeeklyTabPageState extends State<WeeklyTabPage> {
           toY: y1,
           color: widget.leftBarColor,
           width: width,
-
         ),
-       
       ],
     );
   }

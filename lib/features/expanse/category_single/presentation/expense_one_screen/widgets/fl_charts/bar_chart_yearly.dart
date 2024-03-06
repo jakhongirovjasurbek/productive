@@ -5,14 +5,15 @@ import 'package:productive/core/extensions/extensions.dart';
 
 class YearlyTabPage extends StatefulWidget {
   YearlyTabPage({super.key});
+
   final Color leftBarColor = AppColors.expensesFood;
-  final Color avgColor = AppColors.blue;
+
   @override
   State<StatefulWidget> createState() => YearlyTabPageState();
 }
 
 class YearlyTabPageState extends State<YearlyTabPage> {
-   Color textColor = AppColors.whitee;
+  Color textColor = AppColors.whitee;
 
   final double width = 10;
 
@@ -20,6 +21,7 @@ class YearlyTabPageState extends State<YearlyTabPage> {
   late List<BarChartGroupData> showingBarGroups;
 
   int touchedGroupIndex = -1;
+
   // rangi o'zgarishi uchun
   int touchedIndex = -1;
 
@@ -78,7 +80,7 @@ class YearlyTabPageState extends State<YearlyTabPage> {
                     maxY: 20,
                     barTouchData: BarTouchData(
                       touchTooltipData: BarTouchTooltipData(
-                        tooltipBgColor:  context.colors.tasksTimeColor,
+                        tooltipBgColor: context.colors.tasksTimeColor,
                         getTooltipItem: (a, b, c, d) => null,
                       ),
                       touchCallback: (FlTouchEvent event, response) {
@@ -117,7 +119,9 @@ class YearlyTabPageState extends State<YearlyTabPage> {
                                   .barRods
                                   .map((rod) {
                                 return rod.copyWith(
-                                    toY: avg, color: widget.avgColor);
+                                  toY: avg,
+                                  color: context.colors.blue,
+                                );
                               }).toList(),
                             );
                           }
@@ -152,13 +156,16 @@ class YearlyTabPageState extends State<YearlyTabPage> {
                       show: false,
                     ),
                     barGroups: showingBarGroups,
-                    gridData:  FlGridData(show: true, drawVerticalLine: false,
-                    getDrawingHorizontalLine: (value) {
-                      return FlLine(
-                        color: AppColors.conteinerdescriptions,
-                        strokeWidth: 1,
-                      );
-                    },),
+                    gridData: FlGridData(
+                      show: true,
+                      drawVerticalLine: false,
+                      getDrawingHorizontalLine: (value) {
+                        return FlLine(
+                          color: AppColors.conteinerdescriptions,
+                          strokeWidth: 1,
+                        );
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -200,25 +207,38 @@ class YearlyTabPageState extends State<YearlyTabPage> {
   }
 
   Widget bottomTitles(double value, TitleMeta meta) {
-    final titles = <String>[context.localization.lbl_jan, context.localization.lbl_feb, context.localization.lbl_mar,context.localization.lbl_apr,context.localization.lbl_may, context.localization.lbl_jun, context.localization.lbl_jul, context.localization.lbl_aug, context.localization.lbl_sep,context.localization.lbl_oct,context.localization.lbl_nov,context.localization.lbl_des];
+    final titles = <String>[
+      context.localization.lbl_jan,
+      context.localization.lbl_feb,
+      context.localization.lbl_mar,
+      context.localization.lbl_apr,
+      context.localization.lbl_may,
+      context.localization.lbl_jun,
+      context.localization.lbl_jul,
+      context.localization.lbl_aug,
+      context.localization.lbl_sep,
+      context.localization.lbl_oct,
+      context.localization.lbl_nov,
+      context.localization.lbl_des
+    ];
     final Widget text = GestureDetector(
       onTap: () {
-          setState(() {
-         textColor = AppColors.expensesFood;
-           touchedIndex = value.toInt();
+        setState(() {
+          textColor = AppColors.expensesFood;
+          touchedIndex = value.toInt();
         });
       },
       child: Text(
         titles[value.toInt()],
-        style:  TextStyle(
-          color: touchedIndex == value.toInt() ? AppColors.expensesFood : AppColors.whitee,
+        style: TextStyle(
+          color: touchedIndex == value.toInt()
+              ? AppColors.expensesFood
+              : AppColors.whitee,
           fontWeight: FontWeight.bold,
           fontSize: 14,
         ),
       ),
     );
-
-   
 
     return SideTitleWidget(
       axisSide: meta.axisSide,
@@ -241,7 +261,6 @@ class YearlyTabPageState extends State<YearlyTabPage> {
           color: widget.leftBarColor,
           width: width,
         ),
-       
       ],
     );
   }

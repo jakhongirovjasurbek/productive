@@ -310,16 +310,6 @@ class AppLocalization {
     );
   }
 
-  /// `Save`
-  String get save {
-    return Intl.message(
-      'Save',
-      name: 'save',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Gym time`
   String get gym_time {
     return Intl.message(
@@ -400,41 +390,11 @@ class AppLocalization {
     );
   }
 
-  /// `Food`
-  String get food {
-    return Intl.message(
-      'Food',
-      name: 'food',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Shopping`
-  String get shopping {
-    return Intl.message(
-      'Shopping',
-      name: 'shopping',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Gift`
   String get gift {
     return Intl.message(
       'Gift',
       name: 'gift',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Eye doctor review`
-  String get eye_doctor_review {
-    return Intl.message(
-      'Eye doctor review',
-      name: 'eye_doctor_review',
       desc: '',
       args: [],
     );
@@ -447,16 +407,6 @@ class AppLocalization {
       'I thought Rozan had bad designs but the doctor gave me new glasses',
       name:
           'i_thought_Rozan_had_bad_designs_but_the_doctor_gave_me_new_glasses',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Saving transportation expenses`
-  String get saving_transportation_expenses {
-    return Intl.message(
-      'Saving transportation expenses',
-      name: 'saving_transportation_expenses',
       desc: '',
       args: [],
     );
@@ -754,36 +704,6 @@ class AppLocalization {
     );
   }
 
-  /// `Weekly`
-  String get weekly {
-    return Intl.message(
-      'Weekly',
-      name: 'weekly',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Monthly`
-  String get monthly {
-    return Intl.message(
-      'Monthly',
-      name: 'monthly',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Yearly`
-  String get yearly {
-    return Intl.message(
-      'Yearly',
-      name: 'yearly',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Create navigation bar`
   String get createNavigationBar {
     return Intl.message(
@@ -1049,6 +969,306 @@ class AppLocalization {
     return Intl.message(
       'Notes',
       name: 'notes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Food`
+  String get food {
+    return Intl.message(
+      'Food',
+      name: 'food',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shopping`
+  String get shopping {
+    return Intl.message(
+      'Shopping',
+      name: 'shopping',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Weekly`
+  String get weekly {
+    return Intl.message(
+      'Weekly',
+      name: 'weekly',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monthly`
+  String get monthly {
+    return Intl.message(
+      'Monthly',
+      name: 'monthly',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yearly`
+  String get yearly {
+    return Intl.message(
+      'Yearly',
+      name: 'yearly',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Transactions`
+  String get transactions {
+    return Intl.message(
+      'Transactions',
+      name: 'transactions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Eye doctor review`
+  String get eye_doctor_review {
+    return Intl.message(
+      'Eye doctor review',
+      name: 'eye_doctor_review',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I thought Rozan had bad designs but the doctor gave me new glasses`
+  String get eyes_doctor_review_red_description {
+    return Intl.message(
+      'I thought Rozan had bad designs but the doctor gave me new glasses',
+      name: 'eyes_doctor_review_red_description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Saving transportation expenses`
+  String get saving_transportation_expenses {
+    return Intl.message(
+      'Saving transportation expenses',
+      name: 'saving_transportation_expenses',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The doctor returned my money after I was satisfied with Rozan designs`
+  String get eyes_doctor_review_green_description {
+    return Intl.message(
+      'The doctor returned my money after I was satisfied with Rozan designs',
+      name: 'eyes_doctor_review_green_description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Jan`
+  String get lbl_jan {
+    return Intl.message(
+      'Jan',
+      name: 'lbl_jan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Feb`
+  String get lbl_feb {
+    return Intl.message(
+      'Feb',
+      name: 'lbl_feb',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mar`
+  String get lbl_mar {
+    return Intl.message(
+      'Mar',
+      name: 'lbl_mar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apr`
+  String get lbl_apr {
+    return Intl.message(
+      'Apr',
+      name: 'lbl_apr',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `May`
+  String get lbl_may {
+    return Intl.message(
+      'May',
+      name: 'lbl_may',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Jun`
+  String get lbl_jun {
+    return Intl.message(
+      'Jun',
+      name: 'lbl_jun',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Jul`
+  String get lbl_jul {
+    return Intl.message(
+      'Jul',
+      name: 'lbl_jul',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Aug`
+  String get lbl_aug {
+    return Intl.message(
+      'Aug',
+      name: 'lbl_aug',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sep`
+  String get lbl_sep {
+    return Intl.message(
+      'Sep',
+      name: 'lbl_sep',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Oct`
+  String get lbl_oct {
+    return Intl.message(
+      'Oct',
+      name: 'lbl_oct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Nov`
+  String get lbl_nov {
+    return Intl.message(
+      'Nov',
+      name: 'lbl_nov',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Des`
+  String get lbl_des {
+    return Intl.message(
+      'Des',
+      name: 'lbl_des',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mon`
+  String get lbl_mon {
+    return Intl.message(
+      'Mon',
+      name: 'lbl_mon',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tue`
+  String get lbl_tue {
+    return Intl.message(
+      'Tue',
+      name: 'lbl_tue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wed`
+  String get lbl_wed {
+    return Intl.message(
+      'Wed',
+      name: 'lbl_wed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Thu`
+  String get lbl_thu {
+    return Intl.message(
+      'Thu',
+      name: 'lbl_thu',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fri`
+  String get lbl_fri {
+    return Intl.message(
+      'Fri',
+      name: 'lbl_fri',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sat`
+  String get lbl_sat {
+    return Intl.message(
+      'Sat',
+      name: 'lbl_sat',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sun`
+  String get lbl_sun {
+    return Intl.message(
+      'Sun',
+      name: 'lbl_sun',
       desc: '',
       args: [],
     );

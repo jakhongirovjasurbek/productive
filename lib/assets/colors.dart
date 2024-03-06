@@ -96,13 +96,11 @@ class AppColors {
   final lightBlueGradient = const Color.fromRGBO(91, 74, 209, 1);
   final statsTextColor = const Color.fromRGBO(163, 163, 163, 1);
   final statsTaskBackground = const Color.fromRGBO(61, 64, 85, 1);
-  final onBordingComponet = const Color(0xFF4B7FD6);
 
 // single container uchun
   final  Color whiteA700 = const Color(0XFFFDFDFD);
   static  Color whitee = const Color(0XFFFDFDFD);
   final  Color bacgroundColor = const Color(0xFF131524);
-  final  Color tasksTimeColor = const Color(0xFFABABAB);
   final Color timeContainerOne = const Color(0xFFFF2752).withOpacity(0.7);
   final Color greenContainer = const Color.fromRGBO(77, 170, 82, 0.3);
 
@@ -120,7 +118,6 @@ class AppColors {
   static Color conteinerdescriptions = const Color.fromRGBO(171, 171, 171, 0.08);
 
   static Color border = const Color.fromRGBO(28, 35, 58, 1);
-  static Color blue = const Color(0xFF4B7FD6);
 
 
 

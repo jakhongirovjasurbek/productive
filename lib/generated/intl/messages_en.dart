@@ -79,6 +79,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenses": MessageLookupByLibrary.simpleMessage("Expenses"),
         "eye_doctor_review":
             MessageLookupByLibrary.simpleMessage("Eye doctor review"),
+        "eyes_doctor_review_green_description":
+            MessageLookupByLibrary.simpleMessage(
+                "The doctor returned my money after I was satisfied with Rozan designs"),
+        "eyes_doctor_review_red_description": MessageLookupByLibrary.simpleMessage(
+            "I thought Rozan had bad designs but the doctor gave me new glasses"),
         "focusTime": MessageLookupByLibrary.simpleMessage("Focus Time"),
         "food": MessageLookupByLibrary.simpleMessage("Food"),
         "forgot_password":
@@ -99,6 +104,25 @@ class MessageLookup extends MessageLookupByLibrary {
         "kiritgan_parolingiz_tepadagisi_bilan_mos_kelmadi":
             MessageLookupByLibrary.simpleMessage(
                 "Kiritgan parolingiz tepadagisi bilan mos kelmadi"),
+        "lbl_apr": MessageLookupByLibrary.simpleMessage("Apr"),
+        "lbl_aug": MessageLookupByLibrary.simpleMessage("Aug"),
+        "lbl_des": MessageLookupByLibrary.simpleMessage("Des"),
+        "lbl_feb": MessageLookupByLibrary.simpleMessage("Feb"),
+        "lbl_fri": MessageLookupByLibrary.simpleMessage("Fri"),
+        "lbl_jan": MessageLookupByLibrary.simpleMessage("Jan"),
+        "lbl_jul": MessageLookupByLibrary.simpleMessage("Jul"),
+        "lbl_jun": MessageLookupByLibrary.simpleMessage("Jun"),
+        "lbl_mar": MessageLookupByLibrary.simpleMessage("Mar"),
+        "lbl_may": MessageLookupByLibrary.simpleMessage("May"),
+        "lbl_mon": MessageLookupByLibrary.simpleMessage("Mon"),
+        "lbl_nov": MessageLookupByLibrary.simpleMessage("Nov"),
+        "lbl_oct": MessageLookupByLibrary.simpleMessage("Oct"),
+        "lbl_sat": MessageLookupByLibrary.simpleMessage("Sat"),
+        "lbl_sep": MessageLookupByLibrary.simpleMessage("Sep"),
+        "lbl_sun": MessageLookupByLibrary.simpleMessage("Sun"),
+        "lbl_thu": MessageLookupByLibrary.simpleMessage("Thu"),
+        "lbl_tue": MessageLookupByLibrary.simpleMessage("Tue"),
+        "lbl_wed": MessageLookupByLibrary.simpleMessage("Wed"),
         "link": MessageLookupByLibrary.simpleMessage("Link to meeting"),
         "meet": MessageLookupByLibrary.simpleMessage("Meet"),
         "monthly": MessageLookupByLibrary.simpleMessage("Monthly"),
@@ -156,6 +180,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Today’s Transactions"),
         "trackYourExpense":
             MessageLookupByLibrary.simpleMessage("Track Your Expense"),
+        "transactions": MessageLookupByLibrary.simpleMessage("Transactions"),
         "usd": MessageLookupByLibrary.simpleMessage("USD"),
         "weekly": MessageLookupByLibrary.simpleMessage("Weekly"),
         "xatolik_qayta_urining":

@@ -5,6 +5,8 @@ import 'package:productive/assets/icons.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/features/notes/presentation/list_item.dart';
 
+import '../../../assets/colors.dart';
+
 class NotesPage extends StatefulWidget {
   const NotesPage({Key? key}) : super(key: key);
 
