@@ -11,17 +11,10 @@ class ExpenseScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: SvgPicture.asset(AppIcons.bold),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-        title: Center(
-          child: Text(
-            context.localization.expenses,
-            style: context.style.fontSize24Weight700,
-          ),
+        centerTitle: true,
+        title: Text(
+          context.localization.expenses,
+          style: context.style.fontSize24Weight700,
         ),
         actions: [
           IconButton(
@@ -384,160 +377,170 @@ class ExpenseScreen extends StatelessWidget {
                 ],
               ),
               const Gap(16),
-              Stack(children: [
-                Container(
-                  height: 93,
-                  width: double.maxFinite,
-                  margin: const EdgeInsets.only(top: 16),
-                  padding: const EdgeInsets.only(
-                      top: 10, bottom: 6, left: 12, right: 12),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: context.colors.notificationsClear.withOpacity(0.3),
+              Stack(
+                children: [
+                  Container(
+                    height: 93,
+                    width: double.maxFinite,
+                    margin: const EdgeInsets.only(top: 16),
+                    padding: const EdgeInsets.only(
+                        top: 10, bottom: 6, left: 12, right: 12),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: context.colors.notificationsClear.withOpacity(0.3),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  height: 23,
+                                  width: 21,
+                                  child: SvgPicture.asset(AppIcons.heart),
+                                ),
+                                const Gap(6),
+                                Text(
+                                  context.localization.eye_doctor_review,
+                                  style: context.style.fontSize16Weight500,
+                                ),
+                              ],
+                            ),
+                            Text(
+                              context.localization.cost_minus20,
+                              style: context.style.fontSize18Weight500red,
+                            ),
+                          ],
+                        ),
+                        const Gap(8),
+                        Text(
+                          context.localization
+                              .i_thought_Rozan_had_bad_designs_but_the_doctor_gave_me_new_glasses,
+                          style: context.style.fontSize14Weight400grey,
+                        ),
+                      ],
+                    ),
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                height: 23,
-                                width: 21,
-                                child: SvgPicture.asset(AppIcons.heart),
-                              ),
-                              const Gap(6),
-                              Text(
-                                context.localization.eye_doctor_review,
-                                style: context.style.fontSize16Weight500,
-                              ),
-                            ],
-                          ),
-                          Text(
-                            context.localization.cost_minus20,
-                            style: context.style.fontSize18Weight500red,
-                          ),
-                        ],
-                      ),
-                      const Gap(8),
-                      Text(
-                        context.localization
-                            .i_thought_Rozan_had_bad_designs_but_the_doctor_gave_me_new_glasses,
-                        style: context.style.fontSize14Weight400grey,
-                      ),
-                    ],
-                  ),
-                ),
-                Positioned(
+                  Positioned(
                     bottom: 6,
                     right: 12,
                     child: Text(
                       context.localization.time9_43_am,
                       style: context.style.fontSize10Weight400,
-                    ))
-              ]),
+                    ),
+                  )
+                ],
+              ),
               const SizedBox(height: 12),
-              Stack(children: [
-                Container(
-                  height: 58,
-                  width: double.maxFinite,
-                  padding:
-                      const EdgeInsets.only(bottom: 6, left: 12, right: 12),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: context.colors.expensesGreen2.withOpacity(0.3),
+              Stack(
+                children: [
+                  Container(
+                    height: 58,
+                    width: double.maxFinite,
+                    padding:
+                        const EdgeInsets.only(bottom: 6, left: 12, right: 12),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: context.colors.expensesGreen2.withOpacity(0.3),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            SizedBox(
+                              height: 24,
+                              width: 24,
+                              child: SvgPicture.asset(AppIcons.motorcycle),
+                            ),
+                            const Gap(6),
+                            Text(
+                              context
+                                  .localization.saving_transportation_expenses,
+                              style: context.style.fontSize16Weight500,
+                            ),
+                          ],
+                        ),
+                        Text(
+                          context.localization.cost_plus50,
+                          style: context.style.fontSize18Weight500green,
+                        ),
+                      ],
+                    ),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          SizedBox(
-                            height: 24,
-                            width: 24,
-                            child: SvgPicture.asset(AppIcons.motorcycle),
-                          ),
-                          const Gap(6),
-                          Text(
-                            context.localization.saving_transportation_expenses,
-                            style: context.style.fontSize16Weight500,
-                          ),
-                        ],
-                      ),
-                      Text(
-                        context.localization.cost_plus50,
-                        style: context.style.fontSize18Weight500green,
-                      ),
-                    ],
-                  ),
-                ),
-                Positioned(
+                  Positioned(
                     bottom: 6,
                     right: 12,
                     child: Text(
                       context.localization.time11_30_pm,
                       style: context.style.fontSize10Weight400,
-                    ))
-              ]),
-              Stack(children: [
-                Container(
-                  height: 93,
-                  width: double.maxFinite,
-                  margin: const EdgeInsets.only(top: 16),
-                  padding: const EdgeInsets.only(
-                      top: 10, bottom: 6, left: 12, right: 12),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: context.colors.expensesGreen2.withOpacity(0.3),
+                    ),
+                  )
+                ],
+              ),
+              Stack(
+                children: [
+                  Container(
+                    height: 93,
+                    width: double.maxFinite,
+                    margin: const EdgeInsets.only(top: 16),
+                    padding: const EdgeInsets.only(
+                        top: 10, bottom: 6, left: 12, right: 12),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: context.colors.expensesGreen2.withOpacity(0.3),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  height: 23,
+                                  width: 21,
+                                  child: SvgPicture.asset(AppIcons.heart),
+                                ),
+                                const Gap(6),
+                                Text(
+                                  context.localization.eye_doctor_review,
+                                  style: context.style.fontSize16Weight500,
+                                ),
+                              ],
+                            ),
+                            Text(
+                              context.localization.cost_plus20,
+                              style: context.style.fontSize18Weight500green,
+                            ),
+                          ],
+                        ),
+                        const Gap(8),
+                        Text(
+                          context.localization
+                              .the_doctor_returned_my_money_after_I_was_satisfied_with_Rozan_designs,
+                          style: context.style.fontSize14Weight400grey,
+                        ),
+                      ],
+                    ),
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                height: 23,
-                                width: 21,
-                                child: SvgPicture.asset(AppIcons.heart),
-                              ),
-                              const Gap(6),
-                              Text(
-                                context.localization.eye_doctor_review,
-                                style: context.style.fontSize16Weight500,
-                              ),
-                            ],
-                          ),
-                          Text(
-                            context.localization.cost_plus20,
-                            style: context.style.fontSize18Weight500green,
-                          ),
-                        ],
-                      ),
-                      const Gap(8),
-                      Text(
-                        context.localization
-                            .the_doctor_returned_my_money_after_I_was_satisfied_with_Rozan_designs,
-                        style: context.style.fontSize14Weight400grey,
-                      ),
-                    ],
-                  ),
-                ),
-                Positioned(
+                  Positioned(
                     bottom: 6,
                     right: 12,
                     child: Text(
                       context.localization.time2_50_pm,
                       style: context.style.fontSize10Weight400,
-                    ))
-              ]),
+                    ),
+                  )
+                ],
+              ),
             ],
           ),
         ),

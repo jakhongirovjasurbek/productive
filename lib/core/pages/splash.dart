@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/route_names/app_route_name.dart';
-import 'package:productive/features/notes/presentation/notes.dart';
 import '../../assets/icons.dart';
 
 class SplashPage extends StatefulWidget {
@@ -18,7 +17,9 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
-
+    Timer(const Duration(seconds: 1),(){
+      Navigator.of(context).pushNamed(AppRouteNames.home);
+    });
     super.initState();
   }
 
