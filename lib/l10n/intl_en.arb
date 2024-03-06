@@ -120,5 +120,8 @@
   "lbl_thu": "Thu",
   "lbl_fri": "Fri",
   "lbl_sat": "Sat",
-  "lbl_sun": "Sun"
+  "lbl_sun": "Sun",
+  "notification": "Notifications",
+  "clear": "Clear",
+  "no_notifications": "NO NOTIFICATION YET"
 }

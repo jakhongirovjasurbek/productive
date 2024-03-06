@@ -64,6 +64,7 @@ flutter:
     - assets/images/
     - assets/icons/expanse/
     - assets/icons/notes_svg/
+    - assets/svg/
 
 flutter_intl:
   enabled: true

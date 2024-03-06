@@ -22,7 +22,6 @@ class _SplashPageState extends State<SplashPage> {
       Navigator.of(context).push(CupertinoPageRoute(builder: (_)=>NotesPage()));
       // Navigator.of(context)
       //     .pushNamedAndRemoveUntil(AppRouteNames.home, (_) => false);
-    });
     super.initState();
   }
 
