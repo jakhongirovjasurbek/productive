@@ -62,12 +62,12 @@ class _OnBoardingState extends State<OnBoarding> {
                 controller: controller,
                 children: [
                   OnboardingPageItem(
-                    image: AppImages.onboardingFirstImage,
+                    image: context.images.onboardingFirstImage,
                     desciption: localization.help,
                     title: localization.easyManage,
                   ),
                   OnboardingPageItem(
-                    image:AppImages.onboardingSecondImage,
+                    image:context.images.onboardingSecondImage,
                     desciption: localization.helpOrganize,
                     title: localization. trackYourExpense,
                   ),

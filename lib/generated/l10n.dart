@@ -873,6 +873,196 @@ class AppLocalization {
       args: [],
     );
   }
+
+  /// `Commitment resource lecture`
+  String get title {
+    return Intl.message(
+      'Commitment resource lecture',
+      name: 'title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We explained the definition of commitment and it..`
+  String get description {
+    return Intl.message(
+      'We explained the definition of commitment and it..',
+      name: 'description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `15 November`
+  String get day {
+    return Intl.message(
+      '15 November',
+      name: 'day',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Duas`
+  String get title1 {
+    return Intl.message(
+      'Duas',
+      name: 'title1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Allahuma aeni ealaa dikrika wa shukrika wa husn e..`
+  String get description1 {
+    return Intl.message(
+      'Allahuma aeni ealaa dikrika wa shukrika wa husn e..',
+      name: 'description1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `15 November`
+  String get day1 {
+    return Intl.message(
+      '15 November',
+      name: 'day1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Commitment resource lecture`
+  String get title2 {
+    return Intl.message(
+      'Commitment resource lecture',
+      name: 'title2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We explained the definition of commitmen..`
+  String get description2 {
+    return Intl.message(
+      'We explained the definition of commitmen..',
+      name: 'description2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `15 November`
+  String get day2 {
+    return Intl.message(
+      '15 November',
+      name: 'day2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Commitment resource lecture`
+  String get title3 {
+    return Intl.message(
+      'Commitment resource lecture',
+      name: 'title3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We explained the definition of commitment and it..`
+  String get description3 {
+    return Intl.message(
+      'We explained the definition of commitment and it..',
+      name: 'description3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `15 November`
+  String get day3 {
+    return Intl.message(
+      '15 November',
+      name: 'day3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Commitment resource lecture`
+  String get title4 {
+    return Intl.message(
+      'Commitment resource lecture',
+      name: 'title4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We explained the definition of commitment and it..`
+  String get description4 {
+    return Intl.message(
+      'We explained the definition of commitment and it..',
+      name: 'description4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `15 November`
+  String get day4 {
+    return Intl.message(
+      '15 November',
+      name: 'day4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Quick Notes`
+  String get quick_notes {
+    return Intl.message(
+      'Quick Notes',
+      name: 'quick_notes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Books`
+  String get books {
+    return Intl.message(
+      'Books',
+      name: 'books',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete`
+  String get delete {
+    return Intl.message(
+      'Delete',
+      name: 'delete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Notes`
+  String get notes {
+    return Intl.message(
+      'Notes',
+      name: 'notes',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {

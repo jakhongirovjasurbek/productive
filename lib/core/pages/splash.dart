@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/route_names/app_route_name.dart';
+import 'package:productive/features/notes/presentation/notes.dart';
 import '../../assets/icons.dart';
 
 class SplashPage extends StatefulWidget {
@@ -17,10 +18,11 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
-    // Timer(const Duration(seconds: 0), () {
-    //   Navigator.of(context)
-    //       .pushNamedAndRemoveUntil(AppRouteNames.create_event, (_) => false);
-    // });
+    Timer(const Duration(seconds: 0), () {
+      Navigator.of(context).push(CupertinoPageRoute(builder: (_)=>NotesPage()));
+      // Navigator.of(context)
+      //     .pushNamedAndRemoveUntil(AppRouteNames.home, (_) => false);
+    });
     super.initState();
   }
 
