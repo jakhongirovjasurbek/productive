@@ -29,6 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "calendar": MessageLookupByLibrary.simpleMessage("Calendar"),
         "categories": MessageLookupByLibrary.simpleMessage("Categories"),
         "categories_appbar": MessageLookupByLibrary.simpleMessage("Categories"),
+        "clear": MessageLookupByLibrary.simpleMessage("Clear"),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm password"),
         "cost150": MessageLookupByLibrary.simpleMessage("\$150"),
@@ -59,6 +60,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenses": MessageLookupByLibrary.simpleMessage("Expenses"),
         "eye_doctor_review":
             MessageLookupByLibrary.simpleMessage("Eye doctor review"),
+        "failure": MessageLookupByLibrary.simpleMessage("Failure"),
         "food": MessageLookupByLibrary.simpleMessage("Food"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot password"),
@@ -81,6 +83,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "link": MessageLookupByLibrary.simpleMessage("Link to meeting"),
         "meet": MessageLookupByLibrary.simpleMessage("Meet"),
         "new_title": MessageLookupByLibrary.simpleMessage("New title"),
+        "no_notifications":
+            MessageLookupByLibrary.simpleMessage("NO NOTIFICATION YET"),
+        "notification": MessageLookupByLibrary.simpleMessage("Notification"),
         "once": MessageLookupByLibrary.simpleMessage("Once"),
         "online": MessageLookupByLibrary.simpleMessage("Online"),
         "other": MessageLookupByLibrary.simpleMessage("Other"),

@@ -70,5 +70,9 @@
   "all_day": "All Day",
   "repeat": "Repeat",
   "once": "Once",
-  "title": "Enter title"
+  "title": "Enter title",
+  "notification": "Notification",
+  "clear": "Clear",
+  "no_notifications": "NO NOTIFICATION YET",
+  "failure": "Failure"
 }

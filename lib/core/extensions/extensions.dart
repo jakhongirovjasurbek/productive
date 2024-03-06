@@ -6,6 +6,8 @@ import 'package:productive/assets/images.dart';
 import 'package:productive/assets/theme.dart';
 import 'package:productive/features/calendar/data/models/model.dart';
 import 'package:productive/features/calendar/domain/entities/entities.dart';
+import 'package:productive/features/tasks/data/models/moke_model.dart';
+import 'package:productive/features/tasks/domain/entities/notification_entities.dart';
 import 'package:productive/generated/l10n.dart';
 
 extension BuildContextGeneral on BuildContext {
@@ -28,6 +30,7 @@ extension BuildContextGeneral on BuildContext {
   AppIcons get icons {
     return AppIcons();
   }
+
   AppImages get images {
     return AppImages();
   }
@@ -36,11 +39,21 @@ extension BuildContextGeneral on BuildContext {
 extension CalendarToCalendarEntities on CalendarModel {
   CalendarEntities get toEntities {
     return CalendarEntities(
-      description: description?? '',
+      description: description ?? '',
       title: title,
       icon: icon,
       startTime: startTime,
       endTime: endTime,
+    );
+  }
+}
+
+extension NotificationToNotificationEntites on MockDataNotificationsModel {
+  NotificationEntities get toEntitiesNotification {
+    return NotificationEntities(
+      id: id ,
+      title: title ,
+      subTitle: subTitle,
     );
   }
 }

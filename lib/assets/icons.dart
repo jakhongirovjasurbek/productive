@@ -64,4 +64,6 @@ class AppIcons {
   // static const bold = "assets/icons/bold.svg";
   // static const exit = "assets/icons/exit.svg";
   static const radio = "assets/icons/radio.svg";
+  static const noNotification = "assets/icons/no_notification.svg";
+  static const delete = "assets/icons/delete.svg";
 }

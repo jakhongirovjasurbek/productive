@@ -9,6 +9,7 @@ import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/injector/injector.dart';
 import 'package:productive/core/routes/app_route.dart';
 import 'package:productive/features/calendar/presentation/bloc/calendar_bloc.dart';
+import 'package:productive/features/tasks/presentation/bloc/notification_bloc.dart';
 
 import 'generated/l10n.dart';
 
@@ -42,6 +43,7 @@ class MainApp extends StatelessWidget {
       gestures: const [GestureType.onTap],
       child: MultiBlocProvider(
         providers: [
+          BlocProvider(create: (context)=>NotificationBloc(),),
           BlocProvider(
             create: (context) => CalendarBloc(),
           ),

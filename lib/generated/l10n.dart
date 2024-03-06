@@ -773,6 +773,46 @@ class AppLocalization {
       args: [],
     );
   }
+
+  /// `Notification`
+  String get notification {
+    return Intl.message(
+      'Notification',
+      name: 'notification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Clear`
+  String get clear {
+    return Intl.message(
+      'Clear',
+      name: 'clear',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `NO NOTIFICATION YET`
+  String get no_notifications {
+    return Intl.message(
+      'NO NOTIFICATION YET',
+      name: 'no_notifications',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Failure`
+  String get failure {
+    return Intl.message(
+      'Failure',
+      name: 'failure',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {
