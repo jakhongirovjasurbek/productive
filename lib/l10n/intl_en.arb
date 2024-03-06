@@ -26,7 +26,7 @@
   "kiritgan_parolingiz_tepadagisi_bilan_mos_kelmadi": "Kiritgan parolingiz tepadagisi bilan mos kelmadi",
   "xatolik_qayta_urining": "Xatolik qayta urining",
   "save": "Save",
-  "gym_time":"Gym time",
+  "gym_time": "Gym time",
   "PM": "PM",
   "categories_appbar": "Categories",
   "link":"Link to meeting",
@@ -71,4 +71,15 @@
   "repeat": "Repeat",
   "once": "Once",
   "title": "Enter title"
+  "link": "Link to meeting",
+  "daily": "Daily",
+  "weekly": "Weekly",
+  "monthly": "Monthly",
+  "yearly": "Yearly",
+  "createNavigationBar": "Create navigation bar",
+  "studyForTesting": "Study for testing",
+  "roomCleaning": "Room cleaning",
+  "readSurahAlBaqarah": "Read Surah Al-Baqarah",
+  "today": "Today",
+  "focusTime": "Focus Time"
 }
