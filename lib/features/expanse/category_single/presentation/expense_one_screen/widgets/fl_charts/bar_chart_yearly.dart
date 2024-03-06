@@ -3,37 +3,41 @@ import 'package:flutter/material.dart';
 import 'package:productive/assets/colors.dart';
 import 'package:productive/core/extensions/extensions.dart';
 
-class YearlyTab extends StatefulWidget {
-  YearlyTab({super.key});
+class YearlyTabPage extends StatefulWidget {
+  YearlyTabPage({super.key});
   final Color leftBarColor = AppColors.expensesFood;
-  final Color avgColor = Colors.blue;
+  final Color avgColor = AppColors.blue;
   @override
-  State<StatefulWidget> createState() => YearlyTabState();
+  State<StatefulWidget> createState() => YearlyTabPageState();
 }
 
-class YearlyTabState extends State<YearlyTab> {
+class YearlyTabPageState extends State<YearlyTabPage> {
+   Color textColor = AppColors.whitee;
+
   final double width = 10;
 
   late List<BarChartGroupData> rawBarGroups;
   late List<BarChartGroupData> showingBarGroups;
 
   int touchedGroupIndex = -1;
+  // rangi o'zgarishi uchun
+  int touchedIndex = -1;
 
   @override
   void initState() {
     super.initState();
     final barGroup1 = makeGroupData(0, 5, 12);
-    final barGroup2 = makeGroupData(0, 10, 12);
-    final barGroup3 = makeGroupData(1, 18, 5);
-    final barGroup4 = makeGroupData(2, 20, 16);
-    final barGroup5 = makeGroupData(3, 17, 6);
-    final barGroup6 = makeGroupData(4, 19, 1.5);
-    final barGroup7 = makeGroupData(5, 10, 1.5);
-    final barGroup8 = makeGroupData(6, 10, 1.5);
-    final barGroup9 = makeGroupData(7, 10, 1.5);
-    final barGroup10 = makeGroupData(8, 10, 1.5);
-    final barGroup11 = makeGroupData(9, 10, 1.5);
-    final barGroup12 = makeGroupData(6, 10, 15);
+    final barGroup2 = makeGroupData(1, 10, 12);
+    final barGroup3 = makeGroupData(2, 18, 5);
+    final barGroup4 = makeGroupData(3, 20, 16);
+    final barGroup5 = makeGroupData(4, 17, 6);
+    final barGroup6 = makeGroupData(5, 19, 1.5);
+    final barGroup7 = makeGroupData(6, 10, 1.5);
+    final barGroup8 = makeGroupData(7, 10, 1.5);
+    final barGroup9 = makeGroupData(8, 5, 1.5);
+    final barGroup10 = makeGroupData(9, 7, 1.5);
+    final barGroup11 = makeGroupData(10, 9, 1.5);
+    final barGroup12 = makeGroupData(11, 12, 15);
 
     final items = [
       barGroup1,
@@ -64,7 +68,7 @@ class YearlyTabState extends State<YearlyTab> {
         child: Container(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
+            children: [
               const SizedBox(
                 height: 38,
               ),
@@ -74,7 +78,7 @@ class YearlyTabState extends State<YearlyTab> {
                     maxY: 20,
                     barTouchData: BarTouchData(
                       touchTooltipData: BarTouchTooltipData(
-                        tooltipBgColor: Colors.grey,
+                        tooltipBgColor:  context.colors.tasksTimeColor,
                         getTooltipItem: (a, b, c, d) => null,
                       ),
                       touchCallback: (FlTouchEvent event, response) {
@@ -148,7 +152,13 @@ class YearlyTabState extends State<YearlyTab> {
                       show: false,
                     ),
                     barGroups: showingBarGroups,
-                    gridData: const FlGridData(show: false),
+                    gridData:  FlGridData(show: true, drawVerticalLine: false,
+                    getDrawingHorizontalLine: (value) {
+                      return FlLine(
+                        color: AppColors.conteinerdescriptions,
+                        strokeWidth: 1,
+                      );
+                    },),
                   ),
                 ),
               ),
@@ -163,8 +173,8 @@ class YearlyTabState extends State<YearlyTab> {
   }
 
   Widget leftTitles(double value, TitleMeta meta) {
-    const style = TextStyle(
-      color: Color(0xff7589a2),
+    final style = TextStyle(
+      color: context.colors.tasksTimeColor,
       fontWeight: FontWeight.bold,
       fontSize: 14,
     );
@@ -191,13 +201,20 @@ class YearlyTabState extends State<YearlyTab> {
 
   Widget bottomTitles(double value, TitleMeta meta) {
     final titles = <String>[context.localization.lbl_jan, context.localization.lbl_feb, context.localization.lbl_mar,context.localization.lbl_apr,context.localization.lbl_may, context.localization.lbl_jun, context.localization.lbl_jul, context.localization.lbl_aug, context.localization.lbl_sep,context.localization.lbl_oct,context.localization.lbl_nov,context.localization.lbl_des];
-print(value);
-    final Widget text = Text(
-      titles[value.toInt()],
-      style: const TextStyle(
-        color: Color(0xff7589a2),
-        fontWeight: FontWeight.bold,
-        fontSize: 14,
+    final Widget text = GestureDetector(
+      onTap: () {
+          setState(() {
+         textColor = AppColors.expensesFood;
+           touchedIndex = value.toInt();
+        });
+      },
+      child: Text(
+        titles[value.toInt()],
+        style:  TextStyle(
+          color: touchedIndex == value.toInt() ? AppColors.expensesFood : AppColors.whitee,
+          fontWeight: FontWeight.bold,
+          fontSize: 14,
+        ),
       ),
     );
 
@@ -209,8 +226,6 @@ print(value);
       child: Column(
         children: [
           text,
-
-
         ],
       ),
     );
@@ -236,11 +251,11 @@ print(value);
     const space = 3.5;
     return Row(
       mainAxisSize: MainAxisSize.min,
-      children: <Widget>[
+      children: [
         Container(
           width: width,
           height: 10,
-          color: Colors.white.withOpacity(0.4),
+          color: AppColors.whitee.withOpacity(0.4),
         ),
         const SizedBox(
           width: space,
@@ -248,7 +263,7 @@ print(value);
         Container(
           width: width,
           height: 28,
-          color: Colors.white.withOpacity(0.8),
+          color: AppColors.whitee.withOpacity(0.8),
         ),
         const SizedBox(
           width: space,
@@ -256,7 +271,7 @@ print(value);
         Container(
           width: width,
           height: 42,
-          color: Colors.white.withOpacity(1),
+          color: AppColors.whitee.withOpacity(1),
         ),
         const SizedBox(
           width: space,
@@ -264,7 +279,7 @@ print(value);
         Container(
           width: width,
           height: 28,
-          color: Colors.white.withOpacity(0.8),
+          color: AppColors.whitee.withOpacity(0.8),
         ),
         const SizedBox(
           width: space,
@@ -272,7 +287,7 @@ print(value);
         Container(
           width: width,
           height: 10,
-          color: Colors.white.withOpacity(0.4),
+          color: AppColors.whitee.withOpacity(0.4),
         ),
       ],
     );
