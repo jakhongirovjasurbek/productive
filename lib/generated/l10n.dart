@@ -350,16 +350,6 @@ class AppLocalization {
     );
   }
 
-  /// `Link to meeting`
-  String get link {
-    return Intl.message(
-      'Link to meeting',
-      name: 'link',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Expenses`
   String get expenses {
     return Intl.message(
@@ -769,6 +759,116 @@ class AppLocalization {
     return Intl.message(
       'Enter title',
       name: 'title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Link to meeting`
+  String get link {
+    return Intl.message(
+      'Link to meeting',
+      name: 'link',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Daily`
+  String get daily {
+    return Intl.message(
+      'Daily',
+      name: 'daily',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Weekly`
+  String get weekly {
+    return Intl.message(
+      'Weekly',
+      name: 'weekly',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monthly`
+  String get monthly {
+    return Intl.message(
+      'Monthly',
+      name: 'monthly',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yearly`
+  String get yearly {
+    return Intl.message(
+      'Yearly',
+      name: 'yearly',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create navigation bar`
+  String get createNavigationBar {
+    return Intl.message(
+      'Create navigation bar',
+      name: 'createNavigationBar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Study for testing`
+  String get studyForTesting {
+    return Intl.message(
+      'Study for testing',
+      name: 'studyForTesting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Room cleaning`
+  String get roomCleaning {
+    return Intl.message(
+      'Room cleaning',
+      name: 'roomCleaning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Read Surah Al-Baqarah`
+  String get readSurahAlBaqarah {
+    return Intl.message(
+      'Read Surah Al-Baqarah',
+      name: 'readSurahAlBaqarah',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Today`
+  String get today {
+    return Intl.message(
+      'Today',
+      name: 'today',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Focus Time`
+  String get focusTime {
+    return Intl.message(
+      'Focus Time',
+      name: 'focusTime',
       desc: '',
       args: [],
     );

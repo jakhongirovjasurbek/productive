@@ -39,10 +39,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "cost_plus20": MessageLookupByLibrary.simpleMessage("+\$20"),
         "cost_plus50": MessageLookupByLibrary.simpleMessage("+\$50"),
         "create": MessageLookupByLibrary.simpleMessage("Create"),
+        "createNavigationBar":
+            MessageLookupByLibrary.simpleMessage("Create navigation bar"),
         "create_event": MessageLookupByLibrary.simpleMessage("Create Event"),
         "create_income": MessageLookupByLibrary.simpleMessage("Create Income"),
         "create_new_password":
             MessageLookupByLibrary.simpleMessage("Create new password"),
+        "daily": MessageLookupByLibrary.simpleMessage("Daily"),
         "date": MessageLookupByLibrary.simpleMessage("28 Nov,2022 10:00 AM"),
         "easyManage":
             MessageLookupByLibrary.simpleMessage("Easy Time Management"),
@@ -59,6 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenses": MessageLookupByLibrary.simpleMessage("Expenses"),
         "eye_doctor_review":
             MessageLookupByLibrary.simpleMessage("Eye doctor review"),
+        "focusTime": MessageLookupByLibrary.simpleMessage("Focus Time"),
         "food": MessageLookupByLibrary.simpleMessage("Food"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot password"),
@@ -80,6 +84,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Kiritgan parolingiz tepadagisi bilan mos kelmadi"),
         "link": MessageLookupByLibrary.simpleMessage("Link to meeting"),
         "meet": MessageLookupByLibrary.simpleMessage("Meet"),
+        "monthly": MessageLookupByLibrary.simpleMessage("Monthly"),
         "new_title": MessageLookupByLibrary.simpleMessage("New title"),
         "once": MessageLookupByLibrary.simpleMessage("Once"),
         "online": MessageLookupByLibrary.simpleMessage("Online"),
@@ -91,12 +96,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage(
             " Please enter the 4 digital code that send to your email address"),
         "productive": MessageLookupByLibrary.simpleMessage("Productive"),
+        "readSurahAlBaqarah":
+            MessageLookupByLibrary.simpleMessage("Read Surah Al-Baqarah"),
         "receive_code":
             MessageLookupByLibrary.simpleMessage("If you don’t receive code. "),
         "recover_password":
             MessageLookupByLibrary.simpleMessage("Recover password"),
         "repeat": MessageLookupByLibrary.simpleMessage("Repeat"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),
+        "roomCleaning": MessageLookupByLibrary.simpleMessage("Room cleaning"),
         "salary": MessageLookupByLibrary.simpleMessage("Salary"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "saving_transportation_expenses": MessageLookupByLibrary.simpleMessage(
@@ -106,6 +114,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "skip": MessageLookupByLibrary.simpleMessage("SKIP"),
         "start_date": MessageLookupByLibrary.simpleMessage("Start Date"),
         "stats": MessageLookupByLibrary.simpleMessage("Stats"),
+        "studyForTesting":
+            MessageLookupByLibrary.simpleMessage("Study for testing"),
         "tasks": MessageLookupByLibrary.simpleMessage("Tasks"),
         "the_doctor_returned_my_money_after_I_was_satisfied_with_Rozan_designs":
             MessageLookupByLibrary.simpleMessage(
@@ -114,12 +124,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "time2_50_pm": MessageLookupByLibrary.simpleMessage("2:50 PM"),
         "time9_43_am": MessageLookupByLibrary.simpleMessage("9:43 AM"),
         "title": MessageLookupByLibrary.simpleMessage("Enter title"),
+        "today": MessageLookupByLibrary.simpleMessage("Today"),
         "today_transactions":
             MessageLookupByLibrary.simpleMessage("Today’s Transactions"),
         "trackYourExpense":
             MessageLookupByLibrary.simpleMessage("Track Your Expense"),
         "usd": MessageLookupByLibrary.simpleMessage("USD"),
+        "weekly": MessageLookupByLibrary.simpleMessage("Weekly"),
         "xatolik_qayta_urining":
-            MessageLookupByLibrary.simpleMessage("Xatolik qayta urining")
+            MessageLookupByLibrary.simpleMessage("Xatolik qayta urining"),
+        "yearly": MessageLookupByLibrary.simpleMessage("Yearly")
       };
 }

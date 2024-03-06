@@ -29,7 +29,6 @@
   "gym_time": "Gym time",
   "PM": "PM",
   "categories_appbar": "Categories",
-  "link":"Link to meeting",
   "expenses": "Expenses",
   "income": "Income",
   "outcome": "Outcome",
@@ -70,7 +69,7 @@
   "all_day": "All Day",
   "repeat": "Repeat",
   "once": "Once",
-  "title": "Enter title"
+  "title": "Enter title",
   "link": "Link to meeting",
   "daily": "Daily",
   "weekly": "Weekly",
