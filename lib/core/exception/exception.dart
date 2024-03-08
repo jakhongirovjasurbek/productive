@@ -11,5 +11,5 @@ class ServerException implements Exception {
   get code => 0;
 
   @override
-  String toString() => 'ServerExseption(errorMassege: $errorMassege, errorCode: $errorCode)';
+  String toString() => 'ServerException(errorMassege: $errorMassege, errorCode: $errorCode)';
 }

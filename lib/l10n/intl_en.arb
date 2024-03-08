@@ -57,5 +57,26 @@
   "new_title": "New title",
   "usd": "USD",
   "add_note": "Add note ...",
-  "salary": "Salary"
+  "salary": "Salary",
+  "select_icon": "Select Icon",
+  "create_task": "Create Task",
+  "start": "Start",
+  "end": "End",
+  "priority":"Priority",
+  "add_location": "Add Location",
+  "add_notification": "Add Notification",
+  "select_title": "Select Title",
+  "select_time": "Select Time",
+  "select_priority": "Select Priority",
+  "high": "High",
+  "medium": "Medium",
+  "low": "Low",
+  "add_time": "Add Time",
+  "remove_time": "Remove Time",
+  "confirm": "Confirm",
+  "search_by_category": "Search By Category..",
+  "work": "Work",
+  "study": "Study",
+  "sport": "Sport"
+
 }

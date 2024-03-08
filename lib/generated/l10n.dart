@@ -643,6 +643,206 @@ class AppLocalization {
       args: [],
     );
   }
+
+  /// `Select Icon`
+  String get select_icon {
+    return Intl.message(
+      'Select Icon',
+      name: 'select_icon',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create Task`
+  String get create_task {
+    return Intl.message(
+      'Create Task',
+      name: 'create_task',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start`
+  String get start {
+    return Intl.message(
+      'Start',
+      name: 'start',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `End`
+  String get end {
+    return Intl.message(
+      'End',
+      name: 'end',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Priority`
+  String get priority {
+    return Intl.message(
+      'Priority',
+      name: 'priority',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Location`
+  String get add_location {
+    return Intl.message(
+      'Add Location',
+      name: 'add_location',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Notification`
+  String get add_notification {
+    return Intl.message(
+      'Add Notification',
+      name: 'add_notification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Title`
+  String get select_title {
+    return Intl.message(
+      'Select Title',
+      name: 'select_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Time`
+  String get select_time {
+    return Intl.message(
+      'Select Time',
+      name: 'select_time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Priority`
+  String get select_priority {
+    return Intl.message(
+      'Select Priority',
+      name: 'select_priority',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `High`
+  String get high {
+    return Intl.message(
+      'High',
+      name: 'high',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medium`
+  String get medium {
+    return Intl.message(
+      'Medium',
+      name: 'medium',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Low`
+  String get low {
+    return Intl.message(
+      'Low',
+      name: 'low',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Time`
+  String get add_time {
+    return Intl.message(
+      'Add Time',
+      name: 'add_time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Remove Time`
+  String get remove_time {
+    return Intl.message(
+      'Remove Time',
+      name: 'remove_time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm`
+  String get confirm {
+    return Intl.message(
+      'Confirm',
+      name: 'confirm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search By Category..`
+  String get search_by_category {
+    return Intl.message(
+      'Search By Category..',
+      name: 'search_by_category',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Work`
+  String get work {
+    return Intl.message(
+      'Work',
+      name: 'work',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Study`
+  String get study {
+    return Intl.message(
+      'Study',
+      name: 'study',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sport`
+  String get sport {
+    return Intl.message(
+      'Sport',
+      name: 'sport',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {

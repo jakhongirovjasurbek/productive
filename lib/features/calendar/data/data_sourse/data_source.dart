@@ -1,4 +1,4 @@
-import 'package:productive/core/exseption/exseption.dart';
+import 'package:productive/core/exception/exception.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/features/calendar/data/models/model.dart';
 import 'package:productive/features/calendar/domain/entities/entities.dart';

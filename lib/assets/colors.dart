@@ -86,4 +86,5 @@ class AppColors {
   final onBoarding = const Color(0xFF4B7FD6).withOpacity(0.32);
   final onBordingComponet = const Color(0xFF4B7FD6);
   final blue = const Color(0xFF006EE9);
+  final selectDateTimeColor = Color(0xFF303745);
 }
