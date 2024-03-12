@@ -1,3 +1,5 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -46,28 +48,29 @@ class _NotesPageState extends State<NotesPage> {
         backgroundColor: context.colors.mainDark,
         // elevation: 0,
         centerTitle: true,
-        leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back_ios, color: context.colors.white
-          ,)),
-        title: Text(
-          context.localization.notes,
-          style: context.style.fontSize24Weight700
-        ),
+        leading: IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: context.colors.white,
+            )),
+        title: Text(context.localization.notes,
+            style: context.style.fontSize24Weight700),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-             Text(
-            context.localization.books,
-              style:context.style.fontSize18Weight600.copyWith(color: context.colors.createTaskTime)
-            ),
+            Text(context.localization.books,
+                style: context.style.fontSize18Weight600
+                    .copyWith(color: context.colors.createTaskTime)),
             const SizedBox(height: 16),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  child:SvgPicture.asset(context.icons.greenbook) ,
+                  child: SvgPicture.asset(context.icons.greenbook),
                   height: 100,
                   width: 100,
                 ),
@@ -81,7 +84,6 @@ class _NotesPageState extends State<NotesPage> {
                   height: 100,
                   width: 100,
                 )
-                
               ],
             ),
             Row(
@@ -89,16 +91,15 @@ class _NotesPageState extends State<NotesPage> {
                 Expanded(
                   child: Padding(
                     padding: EdgeInsets.only(top: 16.0),
-                    child: Text(
-                      context.localization.quick_notes,
-                      style:context.style.fontSize18Weight600.copyWith(color: context.colors.createTaskTime)
-                    ),
+                    child: Text(context.localization.quick_notes,
+                        style: context.style.fontSize18Weight600
+                            .copyWith(color: context.colors.createTaskTime)),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 16.0),
                   child: Container(
-                    decoration:  BoxDecoration(
+                    decoration: BoxDecoration(
                       color: context.colors.blue,
                       shape: BoxShape.circle,
                     ),
@@ -125,7 +126,8 @@ class _NotesPageState extends State<NotesPage> {
         ),
         Text(
           label,
-          style: context.style.fontSize16Weight500.copyWith(color: context.colors.black),
+          style: context.style.fontSize16Weight500
+              .copyWith(color: context.colors.black),
         ),
       ],
     );
@@ -142,7 +144,7 @@ class _NotesPageState extends State<NotesPage> {
           title: titles[index],
           image: images[index],
           desc: desc[index],
-          date:context.localization.day3,
+          date: context.localization.day3,
           isAudio: audio[index],
           onDelete: () {
             setState(() {
@@ -156,4 +158,4 @@ class _NotesPageState extends State<NotesPage> {
       },
     );
   }
-} 
+}
