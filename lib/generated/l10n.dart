@@ -1303,6 +1303,26 @@ class AppLocalization {
       args: [],
     );
   }
+
+  /// `Create Expense`
+  String get create_expense {
+    return Intl.message(
+      'Create Expense',
+      name: 'create_expense',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search by category..`
+  String get search_by_category {
+    return Intl.message(
+      'Search by category..',
+      name: 'search_by_category',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {

@@ -57,6 +57,10 @@ flutter:
     - assets/create_new_password/
     - assets/icons/
     - assets/icons/expenses/
+    - assets/icons/expenses/
+    - assets/icons/create_expense/
+    - assets/icons/create_expense/new_catalog_colors/
+    - assets/icons/create_expense/new_catalog_icon/
     - assets/icons/calendar/
     - assets/icons/bnb/
     - assets/icons/single_category/

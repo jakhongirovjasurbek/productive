@@ -44,6 +44,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNavigationBar":
             MessageLookupByLibrary.simpleMessage("Create navigation bar"),
         "create_event": MessageLookupByLibrary.simpleMessage("Create Event"),
+        "create_expense":
+            MessageLookupByLibrary.simpleMessage("Create Expense"),
         "create_income": MessageLookupByLibrary.simpleMessage("Create Income"),
         "create_new_password":
             MessageLookupByLibrary.simpleMessage("Create new password"),
@@ -156,6 +158,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "saving_transportation_expenses": MessageLookupByLibrary.simpleMessage(
             "Saving transportation expenses"),
+        "search_by_category":
+            MessageLookupByLibrary.simpleMessage("Search by category.."),
         "see_all": MessageLookupByLibrary.simpleMessage("see all"),
         "shopping": MessageLookupByLibrary.simpleMessage("Shopping"),
         "skip": MessageLookupByLibrary.simpleMessage("SKIP"),
