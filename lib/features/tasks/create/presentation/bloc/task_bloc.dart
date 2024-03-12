@@ -69,8 +69,9 @@ class TaskBloc extends Bloc<TaskEvent, TaskState> {
         default:
           emit(
             state.copyWith(
-                selectIcon: event.context.icons.sport,
-                selectIconcolor: event.context.colors.expensesFood),
+              selectIcon: event.context.icons.sport,
+              selectIconcolor: event.context.colors.expensesFood,
+            ),
           );
       }
     });
@@ -94,7 +95,6 @@ class TaskBloc extends Bloc<TaskEvent, TaskState> {
       }
     });
     on<CreateNewTaskButtonPressed>((event, emit) async {
-
       final isGood = await response.createTask(
           task: TaskModel(
         title: event.title,

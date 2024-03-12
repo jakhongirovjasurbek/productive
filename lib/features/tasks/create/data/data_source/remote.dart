@@ -29,7 +29,7 @@ class _TaskRemoteDataSourceImpl implements TaskRemoteDataSource {
     } catch (error) {
       print(error);
       throw ServerException(
-          errorMassege: 'Xatolik yuz berdi!', errorCode: "500");
+          errorMessage: 'Xatolik yuz berdi!', errorCode: "500");
     }
   }
 
@@ -46,7 +46,7 @@ class _TaskRemoteDataSourceImpl implements TaskRemoteDataSource {
     } catch (error) {
       print(error);
       throw ServerException(
-          errorMassege: 'Xatolik yuz berdi!', errorCode: "500");
+          errorMessage: 'Xatolik yuz berdi!', errorCode: "500");
     }
   }
 }

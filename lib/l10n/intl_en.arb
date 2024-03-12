@@ -50,7 +50,6 @@
   "new_title": "New title",
   "usd": "USD",
   "add_note": "Add note ...",
-  "salary": "Salary",
   "create_event": "Create Event",
   "meet": "Meet",
   "birthday": "Birthday",
@@ -123,7 +122,7 @@
   "lbl_sun": "Sun",
   "notification": "Notifications",
   "clear": "Clear",
-  "no_notifications": "NO NOTIFICATION YET"
+  "no_notifications": "NO NOTIFICATION YET",
   "salary": "Salary",
   "select_icon": "Select Icon",
   "create_task": "Create Task",
@@ -145,5 +144,4 @@
   "work": "Work",
   "study": "Study",
   "sport": "Sport"
-
 }

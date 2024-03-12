@@ -19,6 +19,7 @@ class AppColors {
   final backgroundColor = const Color(0xFF1C233A);
   final pinputBorderColor = const Color(0xFF0062FF);
   final expensesBackground = const Color(0xFF1C233A);
+  final expensesFood = const Color(0xFFFF8700);
   final emailVerification = const Color(0xFF979797);
   final tasksTimeColor = Color(0xFFABABAB);
   final notificationsClear = const Color(0xFFFF2752);
@@ -98,9 +99,9 @@ class AppColors {
   final statsTaskBackground = const Color.fromRGBO(61, 64, 85, 1);
 
 // single container uchun
-  final  Color whiteA700 = const Color(0XFFFDFDFD);
-  static  Color whitee = const Color(0XFFFDFDFD);
-  final  Color bacgroundColor = const Color(0xFF131524);
+  final Color whiteA700 = const Color(0XFFFDFDFD);
+  static Color whitee = const Color(0XFFFDFDFD);
+  final Color bacgroundColor = const Color(0xFF131524);
   final Color timeContainerOne = const Color(0xFFFF2752).withOpacity(0.7);
   final Color greenContainer = const Color.fromRGBO(77, 170, 82, 0.3);
 
@@ -108,18 +109,16 @@ class AppColors {
   final Color greenContainernumber = const Color.fromRGBO(68, 219, 74, 1);
   final Color redContainerone = const Color.fromRGBO(255, 39, 82, 0.3);
   final Color tabbarcontainer = const Color.fromRGBO(39, 44, 56, 1);
-  static Color expensesFood = const Color(0xFFFF8700);
   final Color linegraph = const Color(0xFFFF8700);
 
   final lineopacity = const Color.fromRGBO(255, 135, 0, 0.05);
   final conteinerdescription = const Color.fromRGBO(171, 171, 171, 1);
   final Color numbers = const Color.fromRGBO(254, 254, 254, 1);
 
-  static Color conteinerdescriptions = const Color.fromRGBO(171, 171, 171, 0.08);
+  static Color conteinerdescriptions =
+      const Color.fromRGBO(171, 171, 171, 0.08);
 
   static Color border = const Color.fromRGBO(28, 35, 58, 1);
-
-
 
   final selectDateTimeColor = Color(0xFF303745);
 }

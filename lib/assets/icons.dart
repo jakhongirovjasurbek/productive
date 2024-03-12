@@ -4,7 +4,6 @@ const path = "assets/icons/forgot_password/";
 const pathNotes="assets/icons/notes_svg/";
 
 const single = "assets/icons/single_category/";
-const path = "assets/icons/forgot_password/";
 const create = "assets/icons/create_task/";
 
 class AppIcons {
@@ -23,15 +22,6 @@ class AppIcons {
   final greenbook="${pathNotes}green_book.svg";
   final redbook="${pathNotes}red_book.svg";
   final plusbook="${pathNotes}plus_book.svg";
-
-
-  final back = "${path}back.svg";
-  final arrow = "assets/icons/arrow.svg";
-  final moneyFirst = "assets/icons/money_first.svg";
-  final moneySecond = "assets/icons/money_second.svg";
-  final plus = "assets/icons/plus.svg";
-  final exit = "assets/icons/exit.svg";
-  final premium = "assets/icons/premium.svg";
   static const tasks = "${_bnb}tasks.svg";
   static const expense = "${_bnb}expense.svg";
   static const create = "${_bnb}create.svg";
@@ -72,7 +62,7 @@ class AppIcons {
 
 
   // single category
-  static const String bag = '${single}bag.svg';
+  static const bag1 = '${single}bag.svg';
   final  String imgArrowLeft = '${single}img_arrow_left.svg';
   final  String imgBxRestaurant = '${single}img_bx_restaurant.svg';
   static const String imgChart = '${single}img_chart.svg';

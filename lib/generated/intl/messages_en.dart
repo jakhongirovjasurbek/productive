@@ -23,7 +23,11 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "PM": MessageLookupByLibrary.simpleMessage("PM"),
+        "add_location": MessageLookupByLibrary.simpleMessage("Add Location"),
         "add_note": MessageLookupByLibrary.simpleMessage("Add note ..."),
+        "add_notification":
+            MessageLookupByLibrary.simpleMessage("Add Notification"),
+        "add_time": MessageLookupByLibrary.simpleMessage("Add Time"),
         "all_day": MessageLookupByLibrary.simpleMessage("All Day"),
         "birthday": MessageLookupByLibrary.simpleMessage("Birthday"),
         "books": MessageLookupByLibrary.simpleMessage("Books"),
@@ -31,6 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "categories": MessageLookupByLibrary.simpleMessage("Categories"),
         "categories_appbar": MessageLookupByLibrary.simpleMessage("Categories"),
         "clear": MessageLookupByLibrary.simpleMessage("Clear"),
+        "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm password"),
         "cost150": MessageLookupByLibrary.simpleMessage("\$150"),
@@ -47,6 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "create_income": MessageLookupByLibrary.simpleMessage("Create Income"),
         "create_new_password":
             MessageLookupByLibrary.simpleMessage("Create new password"),
+        "create_task": MessageLookupByLibrary.simpleMessage("Create Task"),
         "daily": MessageLookupByLibrary.simpleMessage("Daily"),
         "date": MessageLookupByLibrary.simpleMessage("28 Nov,2022 10:00 AM"),
         "day": MessageLookupByLibrary.simpleMessage("15 November"),
@@ -72,6 +78,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "email_verification":
             MessageLookupByLibrary.simpleMessage("Email verification"),
+        "end": MessageLookupByLibrary.simpleMessage("End"),
         "end_date": MessageLookupByLibrary.simpleMessage("End Date"),
         "enter_new_password":
             MessageLookupByLibrary.simpleMessage("Enter new password"),
@@ -95,6 +102,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "We help you stay organized and\n manage your day"),
         "helpOrganize": MessageLookupByLibrary.simpleMessage(
             "We help you organize your expenses\n easily and safely"),
+        "high": MessageLookupByLibrary.simpleMessage("High"),
         "i_thought_Rozan_had_bad_designs_but_the_doctor_gave_me_new_glasses":
             MessageLookupByLibrary.simpleMessage(
                 "I thought Rozan had bad designs but the doctor gave me new glasses"),
@@ -125,6 +133,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "lbl_tue": MessageLookupByLibrary.simpleMessage("Tue"),
         "lbl_wed": MessageLookupByLibrary.simpleMessage("Wed"),
         "link": MessageLookupByLibrary.simpleMessage("Link to meeting"),
+        "low": MessageLookupByLibrary.simpleMessage("Low"),
+        "medium": MessageLookupByLibrary.simpleMessage("Medium"),
         "meet": MessageLookupByLibrary.simpleMessage("Meet"),
         "monthly": MessageLookupByLibrary.simpleMessage("Monthly"),
         "new_title": MessageLookupByLibrary.simpleMessage("New title"),
@@ -141,6 +151,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Parol kamida 8 belgidan iborat bo\'lsin"),
         "password": MessageLookupByLibrary.simpleMessage(
             " Please enter the 4 digital code that send to your email address"),
+        "priority": MessageLookupByLibrary.simpleMessage("Priority"),
         "productive": MessageLookupByLibrary.simpleMessage("Productive"),
         "quick_notes": MessageLookupByLibrary.simpleMessage("Quick Notes"),
         "readSurahAlBaqarah":
@@ -149,6 +160,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("If you don’t receive code. "),
         "recover_password":
             MessageLookupByLibrary.simpleMessage("Recover password"),
+        "remove_time": MessageLookupByLibrary.simpleMessage("Remove Time"),
         "repeat": MessageLookupByLibrary.simpleMessage("Repeat"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),
         "roomCleaning": MessageLookupByLibrary.simpleMessage("Room cleaning"),
@@ -156,11 +168,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "saving_transportation_expenses": MessageLookupByLibrary.simpleMessage(
             "Saving transportation expenses"),
+        "search_by_category":
+            MessageLookupByLibrary.simpleMessage("Search By Category.."),
         "see_all": MessageLookupByLibrary.simpleMessage("see all"),
+        "select_icon": MessageLookupByLibrary.simpleMessage("Select Icon"),
+        "select_priority":
+            MessageLookupByLibrary.simpleMessage("Select Priority"),
+        "select_time": MessageLookupByLibrary.simpleMessage("Select Time"),
+        "select_title": MessageLookupByLibrary.simpleMessage("Select Title"),
         "shopping": MessageLookupByLibrary.simpleMessage("Shopping"),
         "skip": MessageLookupByLibrary.simpleMessage("SKIP"),
+        "sport": MessageLookupByLibrary.simpleMessage("Sport"),
+        "start": MessageLookupByLibrary.simpleMessage("Start"),
         "start_date": MessageLookupByLibrary.simpleMessage("Start Date"),
         "stats": MessageLookupByLibrary.simpleMessage("Stats"),
+        "study": MessageLookupByLibrary.simpleMessage("Study"),
         "studyForTesting":
             MessageLookupByLibrary.simpleMessage("Study for testing"),
         "tasks": MessageLookupByLibrary.simpleMessage("Tasks"),
@@ -187,6 +209,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "transactions": MessageLookupByLibrary.simpleMessage("Transactions"),
         "usd": MessageLookupByLibrary.simpleMessage("USD"),
         "weekly": MessageLookupByLibrary.simpleMessage("Weekly"),
+        "work": MessageLookupByLibrary.simpleMessage("Work"),
         "xatolik_qayta_urining":
             MessageLookupByLibrary.simpleMessage("Xatolik qayta urining"),
         "yearly": MessageLookupByLibrary.simpleMessage("Yearly")
