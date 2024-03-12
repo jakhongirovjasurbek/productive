@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:productive/core/extensions/extensions.dart';
-import 'package:productive/features/expanse/category_single/presentation/expense_one_screen/widgets/fl_charts/bar_chart_yearly.dart';
-import 'package:productive/features/expanse/category_single/presentation/expense_one_screen/widgets/fl_charts/line_graph_yearly.dart';
+import 'package:productive/features/expanse/presentation/expense_one_screen/widgets/fl_charts/bar_chart_yearly.dart';
+import 'package:productive/features/expanse/presentation/expense_one_screen/widgets/fl_charts/line_chart.dart';
 
 class YearlyTabBar extends StatefulWidget {
 
@@ -24,7 +24,7 @@ class _YearlyTabBarState extends State<YearlyTabBar> {
         children: [
           Container(
             color: context.colors.bacgroundColor,
-            child: Center(child: widget.isPressed ? YearlyTabPage() : const LineGraphYearly(
+            child: Center(child: widget.isPressed ? YearlyTabPage() : const Lines(
             
             
             )),

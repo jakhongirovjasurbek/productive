@@ -3,8 +3,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:productive/core/extensions/extensions.dart';
-import 'package:productive/features/expanse/category_single/presentation/expense_one_screen/widgets/fl_charts/bar_chart_monthly.dart';
-import 'package:productive/features/expanse/category_single/presentation/expense_one_screen/widgets/fl_charts/line_graph_monthly.dart';
+import 'package:productive/features/expanse/presentation/expense_one_screen/widgets/fl_charts/bar_char_monthly.dart';
+import 'package:productive/features/expanse/presentation/expense_one_screen/widgets/fl_charts/line_chart.dart';
 
 class MonthlyTabBar extends StatefulWidget {
   final bool isPressed;
@@ -32,7 +32,7 @@ class _MonthlyTabBarState extends State<MonthlyTabBar> {
                 child: Center(
                     child: widget.isPressed
                         ? MontlyTabPage()
-                        :  const LineGraphMonthly(
+                        :  const Lines(
                           )),
               ),
             ),

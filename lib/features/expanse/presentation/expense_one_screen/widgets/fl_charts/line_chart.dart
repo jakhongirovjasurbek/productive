@@ -1,18 +1,20 @@
+
+
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:productive/assets/colors.dart';
 import 'package:productive/core/extensions/extensions.dart';
 
-class LineGraphYearly extends StatefulWidget {
-  const LineGraphYearly({super.key, });
+class Lines extends StatefulWidget {
+  const Lines({super.key});
 
 
 
   @override
-  State<LineGraphYearly> createState() => _LineGraphYearlyState();
+  State<Lines> createState() => _LinesState();
 }
 
-class _LineGraphYearlyState extends State<LineGraphYearly> {
+class _LinesState extends State<Lines> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,19 +24,23 @@ class _LineGraphYearlyState extends State<LineGraphYearly> {
             height: 400,
             child: Padding(
               padding: const EdgeInsets.all(40),
+
               child: LineChart(
                 LineChartData(
                   minX: 1,
                   minY: 0,
                   maxX: 12,
                   maxY: 50,
-                  gridData:  FlGridData(show: true, drawVerticalLine: false,
+                 
+                   gridData:  FlGridData(show: true, drawVerticalLine: false,
                     getDrawingHorizontalLine: (value) {
                       return FlLine(
                         color: AppColors.conteinerdescriptions,
                         strokeWidth: 1,
                       );
-                    },),
+                    },
+                    
+                    ),
 
                   titlesData: FlTitlesData(
                     show: true,
@@ -52,30 +58,11 @@ class _LineGraphYearlyState extends State<LineGraphYearly> {
                         getTitlesWidget: (index, _) {
                           return Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text(getMonthStringRepresentation(index),style: TextStyle(color: context.colors.whiteA700),),
+                            child: Text(getMonthStringRepresentation(index),style: TextStyle(color: context.colors.whiteA700)),
                           );
                         },
                       ),
                     ),
-
-
-                       leftTitles: AxisTitles(
-                      sideTitles: SideTitles(
-                        
-                        showTitles: true,
-                        interval: 1,
-                        getTitlesWidget: (index, _) {
-                          return GestureDetector(
-                            
-                            onTap: () {
-                              
-                            },
-                            child: Text(getStringRepresentation(index),style: TextStyle(color: context.colors.whiteA700),)) ;
-                        },
-                        reservedSize: 42,
-                      ),
-                    ),
-                  
                   ),
                   lineBarsData: [
                     LineChartBarData(
@@ -85,15 +72,15 @@ class _LineGraphYearlyState extends State<LineGraphYearly> {
                       shadow: Shadow(
                         blurRadius: 4,
                         offset: const Offset(2, 2),
-                        color: AppColors.conteinerdescriptions.withOpacity(.6),
+                        color:  AppColors.conteinerdescriptions.withOpacity(.6),
                       ),
                       belowBarData: BarAreaData(
                         show: true,
                         color: AppColors.expensesFood.withOpacity(.1),
-                        spotsLine: const BarAreaSpotsLine(
-                          show: false,
-                          flLineStyle: FlLine(color: Colors.white),
-                        ),
+                        // spotsLine: BarAreaSpotsLine(
+                        //   show: true,
+                        //   flLineStyle: FlLine(color: Colors.white),
+                        // ),
                       ),
                       spots: [
                         const FlSpot(1, 30),
@@ -113,16 +100,19 @@ class _LineGraphYearlyState extends State<LineGraphYearly> {
                   ],
                 ),
               ),
+            
+            
+            
             ),
           ),
+
+
+
+
         ],
       ),
     );
   }
-
-
-
-
 
   String getMonthStringRepresentation(double value) {
     switch (value) {
@@ -154,28 +144,7 @@ class _LineGraphYearlyState extends State<LineGraphYearly> {
         return '';
     }
   }
-
-    String getStringRepresentation(double value) {
-    switch (value) {
-      case 1:
-        return '\$0';
-      case 2:
-        return '\$20';
-      case 3:
-        return '\$30';
-      case 4:
-        return '\$40';
-      case 5:
-        return '\$50';
-
-      default:
-        return '';
-    }
-  }
 }
-
-
-
 
 
 

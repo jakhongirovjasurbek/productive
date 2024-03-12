@@ -5,6 +5,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:keyboard_dismisser/keyboard_dismisser.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/routes/app_route.dart';
+import 'package:productive/features/expanse/presentation/expense_one_screen/widgets/tab_bar/main_tabbar.dart';
 
 import 'generated/l10n.dart';
 
@@ -43,7 +44,8 @@ class MainApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         useInheritedMediaQuery: true,
         builder: DevicePreview.appBuilder,
-        onGenerateRoute: AppRoute.onGenerateRoute,
+        // onGenerateRoute: AppRoute.onGenerateRoute,
+home: const SingleCategory(),
         locale: const Locale.fromSubtags(languageCode: 'en'),
         supportedLocales: AppLocalization.delegate.supportedLocales,
         localizationsDelegates: const [

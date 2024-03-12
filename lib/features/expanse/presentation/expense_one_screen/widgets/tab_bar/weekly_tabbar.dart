@@ -4,8 +4,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:productive/core/extensions/extensions.dart';
-import 'package:productive/features/expanse/category_single/presentation/expense_one_screen/widgets/fl_charts/bar_chart_weekly.dart';
-import 'package:productive/features/expanse/category_single/presentation/expense_one_screen/widgets/fl_charts/line_graph_monthly.dart';
+import 'package:productive/features/expanse/presentation/expense_one_screen/widgets/fl_charts/barchart_weekly.dart';
+import 'package:productive/features/expanse/presentation/expense_one_screen/widgets/fl_charts/line_chart.dart';
 
 class WeeklyTabBar extends StatefulWidget {
 
@@ -25,7 +25,7 @@ class _WeeklyTabBarState extends State<WeeklyTabBar> {
         children: [
           Container(
             color: context.colors.bacgroundColor,
-            child: Center(child: widget.isPressed ? WeeklyTabPage() :   const LineGraphMonthly(
+            child: Center(child: widget.isPressed ? WeeklyTabPage() :    const Lines(
               
               )),
           ),
