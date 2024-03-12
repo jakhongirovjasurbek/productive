@@ -1,4 +1,5 @@
-class TaskRouteNames{
-  static const tasks ='/';
+class TaskRouteNames {
+  static const tasks = '/';
   static const createtasks = '/createtasks';
+  static const mapScreen = "/mapscreen";
 }

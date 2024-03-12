@@ -4,6 +4,8 @@ const path = "assets/icons/forgot_password/";
 const pathNotes="assets/icons/notes_svg/";
 
 const single = "assets/icons/single_category/";
+const path = "assets/icons/forgot_password/";
+const create = "assets/icons/create_task/";
 
 class AppIcons {
   static const rectangle = "assets/create_new_password/user.png";
@@ -23,6 +25,13 @@ class AppIcons {
   final plusbook="${pathNotes}plus_book.svg";
 
 
+  final back = "${path}back.svg";
+  final arrow = "assets/icons/arrow.svg";
+  final moneyFirst = "assets/icons/money_first.svg";
+  final moneySecond = "assets/icons/money_second.svg";
+  final plus = "assets/icons/plus.svg";
+  final exit = "assets/icons/exit.svg";
+  final premium = "assets/icons/premium.svg";
   static const tasks = "${_bnb}tasks.svg";
   static const expense = "${_bnb}expense.svg";
   static const create = "${_bnb}create.svg";
@@ -70,6 +79,24 @@ class AppIcons {
   final  String imgFrame = '${single}img_frame.svg';
   final  String imgThumbsUpWhite = '${single}img_thumbs_up_white.svg';
   final  String imgThumbsUp = '${single}img_thumbs_up.svg';
+
+  //create task svg
+  final arrowBack = "assets/icons/create_task/arrow.svg";
+  final eventCreate = "assets/icons/create_task/event.svg";
+  final expenseCreate = "assets/icons/create_task/expense.svg";
+  final moneyCreate = "assets/icons/create_task/money.svg";
+  final notesCreate = "assets/icons/create_task/notes.svg";
+  final tasksCreate = "assets/icons/create_task/tasks.svg";
+  final x = "assets/icons/create_task/x.svg";
+  final notification = "assets/icons/create_task/notification.svg";
+  final location = "assets/icons/create_task/location.svg";
+  final exitBottomSheet = "assets/icons/create_task/exit.svg";
+  final search = "assets/icons/create_task/search.svg";
+  final bag = "assets/icons/create_task/bag.svg";
+  final study = "assets/icons/create_task/study.svg";
+  final sport = "assets/icons/create_task/sport.svg";
+  final divider = "assets/icons/create_task/divider.svg";
+  final locationpng = "assets/icons/create_task/location.png";
 
   static const birthday = "assets/icons/birthday_event.svg";
   static const meet = "assets/icons/meet_event.svg";

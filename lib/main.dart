@@ -11,6 +11,10 @@ import 'package:productive/core/injector/injector.dart';
 import 'package:productive/core/routes/app_route.dart';
 import 'package:productive/features/calendar/presentation/bloc/calendar_bloc.dart';
 import 'package:productive/firebase_options.dart';
+import 'package:productive/features/tasks/create/data/data_source/remote.dart';
+import 'package:productive/features/tasks/create/data/repository/task.dart';
+import 'package:productive/features/tasks/create/presentation/bloc/location/location_cubit.dart';
+import 'package:productive/features/tasks/create/presentation/bloc/task_bloc.dart';
 
 import 'generated/l10n.dart';
 
@@ -47,6 +51,12 @@ class MainApp extends StatelessWidget {
         providers: [
           BlocProvider(
             create: (context) => CalendarBloc(),
+          ),
+          BlocProvider(
+            create: (context) => TaskBloc(response: TaskRepository(taskRemoteDataSource: TaskRemoteDataSource())),
+          ),
+          BlocProvider(
+            create: (context) => MapScreenCubit()..getCurrentLocation(),
           ),
         ],
         child: MaterialApp(
