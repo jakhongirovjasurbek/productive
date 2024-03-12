@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:productive/core/data/ad_helper.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/routes/calendar.dart';
 import 'package:productive/core/routes/create.dart';
@@ -23,44 +21,43 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   late PageController homePageController;
-  late BannerAd bannerAd;
-  late InterstitialAd interstitialAd;
+
+  // late BannerAd bannerAd;
+  // late InterstitialAd interstitialAd;
   var index = 0;
 
   @override
   void initState() {
     homePageController = PageController(keepPage: true);
-    isLoading = true;
-    bannerAd = BannerAd(
-      size: AdSize.banner,
-      adUnitId: AdHelper.bannerAdUnitId,
-      listener: BannerAdListener(
-        onAdLoaded: (_) {
-          setState(() {
-            isLoading = false;
-          });
-        },
-        onAdFailedToLoad: (ad, err) {
-          ad.dispose();
-        },
-      ),
-      request: const AdRequest(),
-    );
-
-    InterstitialAd.load(
-      adUnitId: AdHelper.interstitialAdUnitId,
-      request: const AdRequest(),
-      adLoadCallback: InterstitialAdLoadCallback(
-        onAdLoaded: (ad) {
-          ad.show();
-        },
-        onAdFailedToLoad: (err) {},
-      ),
-    ).then((value) {
-
-    });
-
-    bannerAd.load();
+    // isLoading = true;
+    // bannerAd = BannerAd(
+    //   size: AdSize.banner,
+    //   adUnitId: AdHelper.bannerAdUnitId,
+    //   listener: BannerAdListener(
+    //     onAdLoaded: (_) {
+    //       setState(() {
+    //         isLoading = false;
+    //       });
+    //     },
+    //     onAdFailedToLoad: (ad, err) {
+    //       ad.dispose();
+    //     },
+    //   ),
+    //   request: const AdRequest(),
+    // );
+    //
+    // InterstitialAd.load(
+    //   adUnitId: AdHelper.interstitialAdUnitId,
+    //   request: const AdRequest(),
+    //   adLoadCallback: InterstitialAdLoadCallback(
+    //     onAdLoaded: (ad) {
+    //       ad.show();
+    //     },
+    //     onAdFailedToLoad: (err) {},
+    //   ),
+    // ).then((value) {});
+    //
+    // bannerAd.load();
     super.initState();
   }
 
@@ -78,11 +75,21 @@ class _HomePageState extends State<HomePage> {
                 child: IndexedStack(
                   index: index,
                   children: const [
-                    DestinationPage(onGenerateRoute: TaskRoute.onGenerateRoute),
-                    DestinationPage(onGenerateRoute: ExpenseRoute.onGenerateRoute),
-                    DestinationPage(onGenerateRoute: CreateRoute.onGenerateRoute),
-                    DestinationPage(onGenerateRoute: CalendarRoute.onGenerateRoute),
-                    DestinationPage(onGenerateRoute: StatsRoute.onGenerateRoute),
+                    DestinationPage(
+                      onGenerateRoute: TaskRoute.onGenerateRoute,
+                    ),
+                    DestinationPage(
+                      onGenerateRoute: ExpenseRoute.onGenerateRoute,
+                    ),
+                    DestinationPage(
+                      onGenerateRoute: CreateRoute.onGenerateRoute,
+                    ),
+                    DestinationPage(
+                      onGenerateRoute: CalendarRoute.onGenerateRoute,
+                    ),
+                    DestinationPage(
+                      onGenerateRoute: StatsRoute.onGenerateRoute,
+                    ),
                   ],
                 ),
               ),
@@ -154,11 +161,6 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                     ),
-                    if (isLoading == false)
-                      SizedBox(
-                        height: bannerAd.size.height.toDouble(),
-                        child: AdWidget(ad: bannerAd),
-                      ),
                   ],
                 ),
               ),

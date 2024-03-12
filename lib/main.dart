@@ -1,4 +1,5 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -9,11 +10,15 @@ import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/injector/injector.dart';
 import 'package:productive/core/routes/app_route.dart';
 import 'package:productive/features/calendar/presentation/bloc/calendar_bloc.dart';
-import 'package:productive/features/tasks/presentation/bloc/notification_bloc.dart';
+import 'package:productive/firebase_options.dart';
+import 'package:productive/features/tasks/create/data/data_source/remote.dart';
+import 'package:productive/features/tasks/create/data/repository/task.dart';
+import 'package:productive/features/tasks/create/presentation/bloc/location/location_cubit.dart';
+import 'package:productive/features/tasks/create/presentation/bloc/task_bloc.dart';
 
 import 'generated/l10n.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await MobileAds.instance.initialize();
   await getItInjector();
@@ -22,6 +27,8 @@ void main() async {
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
+
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   runApp(
     DevicePreview(
@@ -33,7 +40,6 @@ void main() async {
   );
 }
 
-
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
@@ -43,9 +49,14 @@ class MainApp extends StatelessWidget {
       gestures: const [GestureType.onTap],
       child: MultiBlocProvider(
         providers: [
-          BlocProvider(create: (context)=>NotificationBloc(),),
           BlocProvider(
             create: (context) => CalendarBloc(),
+          ),
+          BlocProvider(
+            create: (context) => TaskBloc(response: TaskRepository(taskRemoteDataSource: TaskRemoteDataSource())),
+          ),
+          BlocProvider(
+            create: (context) => MapScreenCubit()..getCurrentLocation(),
           ),
         ],
         child: MaterialApp(

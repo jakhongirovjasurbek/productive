@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
+
 class AppColors {
   final white = const Color(0xFFFFFFFF);
   final black = const Color(0xFF000000);
@@ -17,10 +19,10 @@ class AppColors {
   final backgroundColor = const Color(0xFF1C233A);
   final pinputBorderColor = const Color(0xFF0062FF);
   final expensesBackground = const Color(0xFF1C233A);
+  final expensesFood = const Color(0xFFFF8700);
   final emailVerification = const Color(0xFF979797);
   final tasksTimeColor = Color(0xFFABABAB);
   final notificationsClear = const Color(0xFFFF2752);
-  final expensesFood = const Color(0xFFFF8700);
   final expensesShopping = const Color(0xFF32A7E2);
   final expensesGift = const Color(0xFFB548C6);
   final expensesGreen = const Color(0xFF44DB4A);
@@ -76,6 +78,8 @@ class AppColors {
   final locationColor = const Color(0xFFBF360C);
   final startDate = const Color(0xFF18B797);
   final endDate = const Color(0xFFF3737E);
+  final orange = Colors.orange;
+
   final btnBorderColor = const Color(0xFF28304B);
   final bottomSheetBgColor = const Color(0xFF272C38);
   final dividerBgColor = const Color(0xFF38414E);
@@ -88,4 +92,33 @@ class AppColors {
   final onBordingComponet = const Color(0xFF4B7FD6);
   final blue = const Color(0xFF006EE9);
   final innerAlignmentSecond = const Color(0xFFE2EAF9);
+  final darkBlue = const Color.fromRGBO(43, 48, 74, 1);
+  final blueGradient = const Color.fromRGBO(75, 127, 214, 1);
+  final lightBlueGradient = const Color.fromRGBO(91, 74, 209, 1);
+  final statsTextColor = const Color.fromRGBO(163, 163, 163, 1);
+  final statsTaskBackground = const Color.fromRGBO(61, 64, 85, 1);
+
+// single container uchun
+  final Color whiteA700 = const Color(0XFFFDFDFD);
+  static Color whitee = const Color(0XFFFDFDFD);
+  final Color bacgroundColor = const Color(0xFF131524);
+  final Color timeContainerOne = const Color(0xFFFF2752).withOpacity(0.7);
+  final Color greenContainer = const Color.fromRGBO(77, 170, 82, 0.3);
+
+  final Color redContainer = const Color.fromRGBO(255, 39, 82, 1);
+  final Color greenContainernumber = const Color.fromRGBO(68, 219, 74, 1);
+  final Color redContainerone = const Color.fromRGBO(255, 39, 82, 0.3);
+  final Color tabbarcontainer = const Color.fromRGBO(39, 44, 56, 1);
+  final Color linegraph = const Color(0xFFFF8700);
+
+  final lineopacity = const Color.fromRGBO(255, 135, 0, 0.05);
+  final conteinerdescription = const Color.fromRGBO(171, 171, 171, 1);
+  final Color numbers = const Color.fromRGBO(254, 254, 254, 1);
+
+  static Color conteinerdescriptions =
+      const Color.fromRGBO(171, 171, 171, 0.08);
+
+  static Color border = const Color.fromRGBO(28, 35, 58, 1);
+
+  final selectDateTimeColor = Color(0xFF303745);
 }

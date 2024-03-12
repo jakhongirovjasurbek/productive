@@ -3,13 +3,13 @@ part of 'income_bloc.dart';
 abstract class IncomeEvent {}
 
 class AddIncome extends IncomeEvent {
-  final IncomePrio prio;
+  final IncomePriority priority;
   final String title;
   final int usd;
   final String note;
 
   AddIncome({
-    required this.prio,
+    required this.priority,
     required this.title,
     required this.usd,
     required this.note,
@@ -17,9 +17,9 @@ class AddIncome extends IncomeEvent {
 }
 
 class ChangePriority extends IncomeEvent {
-  final IncomePrio prio;
+  final IncomePriority priority;
 
   ChangePriority({
-    required this.prio,
+    required this.priority,
   });
 }

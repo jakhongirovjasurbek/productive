@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppFonts extends ThemeExtension<AppFonts> {
+class  AppFonts extends ThemeExtension<AppFonts> {
   final TextStyle fontSize40Weight700;
 
   final TextStyle fontSize24Weight700;
@@ -88,14 +88,12 @@ class AppFonts extends ThemeExtension<AppFonts> {
 
   @override
   ThemeExtension<AppFonts> copyWith() {
-    // TODO: implement copyWith
     throw UnimplementedError();
   }
 
   @override
   ThemeExtension<AppFonts> lerp(
       covariant ThemeExtension<AppFonts>? other, double t) {
-    // TODO: implement lerp
     throw UnimplementedError();
   }
 }

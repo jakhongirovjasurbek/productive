@@ -53,8 +53,8 @@ class WButton extends StatelessWidget {
           child: Container(
             width: width,
             height: height,
-            padding: padding ?? const EdgeInsets.all(14),
-            alignment: Alignment.center,
+            
+            
             decoration: BoxDecoration(
               color: disabled
                   ? disabledColor
@@ -64,14 +64,19 @@ class WButton extends StatelessWidget {
             ),
             child: loading
                 ? const Center(child: CupertinoActivityIndicator())
-                : child ??
-                    Text(
-                      text,
-                      style: textStyle ??
-                          context.style.fontSize16Weight500.copyWith(
-                            color: context.colors.white,
-                          ),
-                    ),
+                : Align(
+                  alignment: Alignment.center,
+                  child: child ??
+                      Text(
+                        
+                        text,
+                        style: textStyle ??
+                            context.style.fontSize16Weight500.copyWith(
+                              color: context.colors.white,
+                              decorationColor: context.colors.buttonDisabledColor
+                            ),
+                      ),
+                ),
           ),
         ),
       );

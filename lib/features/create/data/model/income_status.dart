@@ -1,0 +1,1 @@
+enum IncomePriority { salary, expense }

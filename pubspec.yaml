@@ -27,6 +27,14 @@ dependencies:
   cached_network_image: ^3.3.1
   shimmer: ^3.0.0
   equatable: any
+  geolocator: ^11.0.0
+  yandex_mapkit: ^3.4.0
+  firebase_core: ^2.26.0
+  cloud_firestore: ^4.15.7
+  firebase_auth: ^4.17.7
+  firebase_storage: ^11.6.8
+  fl_chart: ^0.66.2
+  syncfusion_flutter_charts: ^24.2.8
 
 dev_dependencies:
   flutter_test:
@@ -53,9 +61,13 @@ flutter:
     - assets/icons/expenses/
     - assets/icons/calendar/
     - assets/icons/bnb/
+    - assets/icons/single_category/
     - assets/icons/forgot_password/
     - assets/images/
     - assets/icons/expanse/
+    - assets/icons/notes_svg/
+    - assets/svg/
+    - assets/icons/create_task/
 
 flutter_intl:
   enabled: true

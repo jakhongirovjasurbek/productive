@@ -37,7 +37,7 @@ class _VerificationPageState extends State<VerificationPage> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: context.colors.mainDark.withOpacity(0.3),
-        title: Row(
+        title:  Row(
           children: [
             SvgPicture.asset(AppIcons.back),
             Gap(10),
@@ -53,11 +53,12 @@ class _VerificationPageState extends State<VerificationPage> {
         child: Column(
           children: [
             Container(
-                height: 130,
-                width: 130,
-                margin: const EdgeInsets.only(top: 20, bottom: 20),
-                child: Image.asset(AppImages.person)),
-            Text(
+              height: 130,
+              width: 130,
+              margin: const EdgeInsets.only(top: 20, bottom: 20),
+              child: Image.asset(context.images.person)
+            ),
+             Text(
               context.localization.password,
               style: context.style.fontSize16Weight600,
               textAlign: TextAlign.center,
