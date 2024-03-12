@@ -105,7 +105,7 @@ Future<dynamic> selectIcon(BuildContext context) {
                 },
                 child: ListTile(
                   leading: SvgPicture.asset(AppIcons.new_category),
-                  title: Text('New Category',
+                  title: Text(context.localization.new_category,
                     style: Theme.of(context)
                         .textTheme
                         .titleLarge!

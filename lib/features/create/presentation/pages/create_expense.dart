@@ -79,24 +79,25 @@ class _CreateExpanseState extends State<CreateExpanse> {
                                 onTap: () {
                                   selectIcon(context);
                                 },
-                                child: SvgPicture.asset(state.selectIcon,),
+                                child: SvgPicture.asset(
+                                  state.selectIcon,
+                                ),
                               ),
                             ),
                             const Gap(20),
                             Expanded(
                               child: TextField(
-                                style:  TextStyle(
-                                    color: context.colors.whiteLabel,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500),
+                                style:
+                                    context.style.fontSize16Weight500.copyWith(
+                                  color: context.colors.whiteLabel,
+                                ),
                                 controller: titleController,
                                 // cursorColor: ,
-                                decoration:  InputDecoration(
-                                  hintText: "New title",
-                                  hintStyle: TextStyle(
-                                      color: context.colors.createTaskTime,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500),
+                                decoration: InputDecoration(
+                                  hintText: context.localization.new_title,
+                                  hintStyle: context.style.fontSize14Weight500
+                                      .copyWith(
+                                          color: context.colors.createTaskTime),
                                 ),
                               ),
                             ),
@@ -109,39 +110,36 @@ class _CreateExpanseState extends State<CreateExpanse> {
                         child: TextField(
                           keyboardType: TextInputType.number,
                           autofocus: false,
-                          style:  TextStyle(
-                              color: context.colors.timeContainerOne,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500),
+                          style: context.style.fontSize16Weight500.copyWith(
+                            color: context.colors.timeContainerOne,
+                          ),
                           controller: usdController,
-                          decoration:  InputDecoration(
+                          decoration: InputDecoration(
                             prefixIcon: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'USD',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 14,
-                                    color: context.colors.tasksTimeColor,
-                                  ),
+                                  context.localization.usd,
+                                  style: context.style.fontSize14Weight500
+                                      .copyWith(
+                                          color: context.colors.tasksTimeColor),
                                 ),
                               ],
                             ),
                             filled: true,
                             fillColor: context.colors.inpBackgroundColor,
-                            hintText: '0.00',
+                            hintText: context.localization.zero,
                             focusedBorder: OutlineInputBorder(
                               borderRadius:
-                              BorderRadius.all(Radius.circular(8)),
+                                  BorderRadius.all(Radius.circular(8)),
                             ),
-                            hintStyle: TextStyle(
-                                color: context.colors.notificationsClear,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500),
+                            hintStyle:
+                                context.style.fontSize16Weight500.copyWith(
+                              color: context.colors.notificationsClear,
+                            ),
                             enabledBorder: OutlineInputBorder(
                               borderRadius:
-                              BorderRadius.all(Radius.circular(8)),
+                                  BorderRadius.all(Radius.circular(8)),
                             ),
                             // focusColor: Colors.red
                           ),
@@ -151,22 +149,21 @@ class _CreateExpanseState extends State<CreateExpanse> {
                       TextField(
                         maxLines: 5,
                         autofocus: false,
-                        style:  TextStyle(
+                        style: TextStyle(
                             color: context.colors.whiteLabel,
                             fontSize: 14,
                             fontWeight: FontWeight.w500),
                         controller: noteController,
-                        decoration:  InputDecoration(
+                        decoration: InputDecoration(
                           filled: true,
                           fillColor: context.colors.inpBackgroundColor,
-                          hintText: 'Add note ...',
+                          hintText: context.localization.add_note,
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(8)),
                           ),
-                          hintStyle: TextStyle(
-                              color: context.colors.createTaskTime,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500),
+                          hintStyle: context.style.fontSize14Weight500.copyWith(
+                            color: context.colors.createTaskTime,
+                          ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(8)),
                           ),
@@ -194,32 +191,32 @@ class _CreateExpanseState extends State<CreateExpanse> {
               ),
               onPressed: () {
                 context.read<ExpenseBloc>().add(CreateNewExpense(
-                  colorIndex: state.colorIndex,
-                  description: noteController.text,
-                  price: double.parse(usdController.text),
-                  title: titleController.text,
-                  icon: state.selectIcon,
-                  onSuccess: () {
-                    print('expense created');
-                  },
-                  onFailure: (errorMassage) {
-                    ScaffoldMessenger.of(context).showMaterialBanner(
-                      MaterialBanner(
-                        onVisible: () async {
-                          await Future.delayed(const Duration(seconds: 3));
-                          ScaffoldMessenger.of(context)
-                              .hideCurrentMaterialBanner();
-                        },
-                        content: Text(errorMassage),
-                        actions: const [
-                          SizedBox(),
-                        ],
-                      ),
-                    );
-                  },
-                ));
+                      colorIndex: state.colorIndex,
+                      description: noteController.text,
+                      price: double.parse(usdController.text),
+                      title: titleController.text,
+                      icon: state.selectIcon,
+                      onSuccess: () {
+                        print('expense created');
+                      },
+                      onFailure: (errorMassage) {
+                        ScaffoldMessenger.of(context).showMaterialBanner(
+                          MaterialBanner(
+                            onVisible: () async {
+                              await Future.delayed(const Duration(seconds: 3));
+                              ScaffoldMessenger.of(context)
+                                  .hideCurrentMaterialBanner();
+                            },
+                            content: Text(errorMassage),
+                            actions: const [
+                              SizedBox(),
+                            ],
+                          ),
+                        );
+                      },
+                    ));
               },
-              child: const Text("Save"),
+              child: Text(context.localization.save),
             ),
           ),
         );

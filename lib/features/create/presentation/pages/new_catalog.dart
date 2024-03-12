@@ -7,7 +7,6 @@ import 'package:productive/features/create/presentation/pages/select_icon.dart';
 
 import '../../../../assets/icons.dart';
 
-
 class NewCategory extends StatefulWidget {
   const NewCategory({super.key});
 
@@ -32,26 +31,28 @@ class _NewCategoryState extends State<NewCategory> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: AppColors().mainDark,
-          centerTitle: true,
-          leading: Container(
-            width: 24,
-            height: 24,
-            alignment: Alignment.center,
-            child: GestureDetector(
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.of(context).pop();
-                },
-                child: SvgPicture.asset(
-                  AppIcons.backPage,
-                )),
+        backgroundColor: AppColors().mainDark,
+        centerTitle: true,
+        leading: Container(
+          width: 24,
+          height: 24,
+          alignment: Alignment.center,
+          child: GestureDetector(
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pop();
+              },
+              child: SvgPicture.asset(
+                AppIcons.backPage,
+              )),
+        ),
+        title: Text(
+          context.localization.new_category,
+          style: context.style.fontSize24Weight700.copyWith(
+            color: context.colors.whiteLabel,
           ),
-          title:  Text(
-            "New Category",
-            style: TextStyle(
-                color: context.colors.whiteLabel, fontSize: 24, fontWeight: FontWeight.w700),
-          )),
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: SingleChildScrollView(
@@ -67,15 +68,17 @@ class _NewCategoryState extends State<NewCategory> {
                       children: [
                         Expanded(
                           child: TextField(
-                            style:  TextStyle(color: context.colors.whiteLabel, fontSize: 16, fontWeight: FontWeight.w500),
+                            style: context.style.fontSize16Weight500.copyWith(
+                              color: context.colors.whiteLabel,
+                            ),
                             controller: titleController,
                             // cursorColor: ,
-                            decoration: const InputDecoration(
-                              hintText: "New title",
-                              hintStyle: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500),
+                            decoration: InputDecoration(
+                              hintText: context.localization.new_title,
+                              hintStyle:
+                                  context.style.fontSize14Weight500.copyWith(
+                                color: context.colors.createTaskTime,
+                              ),
                             ),
                           ),
                         ),
@@ -88,7 +91,9 @@ class _NewCategoryState extends State<NewCategory> {
                           ),
                           child: GestureDetector(
                             onTap: () {
-                              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const NewSelectIcon(),));
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => const NewSelectIcon(),
+                              ));
                             },
                             child: SvgPicture.asset(AppIcons.add),
                           ),
@@ -101,35 +106,25 @@ class _NewCategoryState extends State<NewCategory> {
                     height: 50,
                     child: TextField(
                       autofocus: false,
-                      style: TextStyle(
-                          color: context.colors.notificationsClear,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500),
+                      style: context.style.fontSize16Weight500.copyWith(color: context.colors.notificationsClear, ),
                       controller: usdController,
-                      decoration:  InputDecoration(
+                      decoration: InputDecoration(
                         prefixIcon: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              'USD',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 14,
-                                color: context.colors.whiteLabel,
-                              ),
+                              context.localization.usd,
+                              style: context.style.fontSize14Weight500.copyWith(color: context.colors.whiteLabel, ),
                             ),
                           ],
                         ),
                         filled: true,
                         fillColor: context.colors.inpBackgroundColor,
-                        hintText: '0.00',
+                        hintText: context.localization.zero,
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(8)),
                         ),
-                        hintStyle: TextStyle(
-                            color: context.colors.notificationsClear,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500),
+                        hintStyle: context.style.fontSize16Weight500.copyWith(color: context.colors.notificationsClear, ),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(8)),
                         ),
@@ -141,22 +136,16 @@ class _NewCategoryState extends State<NewCategory> {
                   TextField(
                     maxLines: 5,
                     autofocus: false,
-                    style:  TextStyle(
-                        color: context.colors.whiteLabel,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500),
+                    style: context.style.fontSize14Weight500.copyWith(color: context.colors.whiteLabel, ),
                     controller: usdController,
-                    decoration:  InputDecoration(
+                    decoration: InputDecoration(
                       filled: true,
                       fillColor: context.colors.inpBackgroundColor,
-                      hintText: 'Add note ...',
+                      hintText: context.localization.add_note,
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8)),
                       ),
-                      hintStyle: TextStyle(
-                          color: Colors.grey,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500),
+                      hintStyle: context.style.fontSize14Weight500.copyWith(color: context.colors.createTaskTime, ),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8)),
                       ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:productive/assets/icons.dart';
+import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/features/create/presentation/bloc/create_expense/create_expense_bloc.dart';
 
 class IconTabBar extends StatelessWidget {
@@ -30,7 +31,7 @@ class IconTabBar extends StatelessWidget {
                 width: 40,
                 height: 40,
                 decoration: BoxDecoration(
-                  color: Colors.grey,
+                  color: context.colors.colorContainerEleventh,
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),

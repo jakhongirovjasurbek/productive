@@ -61,9 +61,8 @@ class _NewSelectIconState extends State<NewSelectIcon>
                   )),
             ),
             title:  Text(
-              "New Catalog",
-              style:  TextStyle(
-                  color: context.colors.whiteLabel, fontSize: 24, fontWeight: FontWeight.w700),
+              context.localization.new_category,
+              style:  context.style.fontSize24Weight700.copyWith(color: context.colors.whiteLabel, ),
             ),
           ),
           body: Padding(
@@ -96,18 +95,12 @@ class _NewSelectIconState extends State<NewSelectIcon>
                         const Gap(20),
                         Expanded(
                           child: TextField(
-                            style:  TextStyle(
-                                color: context.colors.whiteLabel,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500),
+                            style:  context.style.fontSize16Weight500.copyWith(color: context.colors.whiteLabel, ),
                             controller: titleController,
                             // cursorColor: ,
                             decoration:  InputDecoration(
-                              hintText: "New title",
-                              hintStyle: TextStyle(
-                                  color: context.colors.createTaskTime,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500),
+                              hintText: context.localization.new_title,
+                              hintStyle: context.style.fontSize14Weight500.copyWith(color: context.colors.createTaskTime, ),
                             ),
                           ),
                         ),
@@ -119,15 +112,13 @@ class _NewSelectIconState extends State<NewSelectIcon>
                     child: TabBar(
                       // indicatorSize: TabBarIndicatorSize.tab,
                       controller: tabController,
-                      tabs: const [
+                      tabs:  [
                         Tab(
-                            child: Text("Icon",
-                                style: TextStyle(
-                                    fontSize: 18, fontWeight: FontWeight.w700))),
+                            child: Text(context.localization.icon,
+                                style: context.style.fontSize18Weight700),),
                         Tab(
-                            child: Text("Color",
-                                style: TextStyle(
-                                    fontSize: 18, fontWeight: FontWeight.w700))),
+                            child: Text(context.localization.color,
+                                style: context.style.fontSize18Weight700)),
                       ],
                     ),
                   ),
@@ -162,7 +153,7 @@ class _NewSelectIconState extends State<NewSelectIcon>
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CreateExpanse(),));
               },
-              child: const Text("CONFIRM"),
+              child: Text(context.localization.confirm),
             ),
           ),
         );

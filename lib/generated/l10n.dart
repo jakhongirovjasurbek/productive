@@ -1323,6 +1323,56 @@ class AppLocalization {
       args: [],
     );
   }
+
+  /// `0.00`
+  String get zero {
+    return Intl.message(
+      '0.00',
+      name: 'zero',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New Category`
+  String get new_category {
+    return Intl.message(
+      'New Category',
+      name: 'new_category',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Icon`
+  String get icon {
+    return Intl.message(
+      'Icon',
+      name: 'icon',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Color`
+  String get color {
+    return Intl.message(
+      'Color',
+      name: 'color',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `CONFIRM`
+  String get confirm {
+    return Intl.message(
+      'CONFIRM',
+      name: 'confirm',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {

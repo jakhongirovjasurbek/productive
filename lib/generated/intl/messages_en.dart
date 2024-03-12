@@ -31,6 +31,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "categories": MessageLookupByLibrary.simpleMessage("Categories"),
         "categories_appbar": MessageLookupByLibrary.simpleMessage("Categories"),
         "clear": MessageLookupByLibrary.simpleMessage("Clear"),
+        "color": MessageLookupByLibrary.simpleMessage("Color"),
+        "confirm": MessageLookupByLibrary.simpleMessage("CONFIRM"),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm password"),
         "cost150": MessageLookupByLibrary.simpleMessage("\$150"),
@@ -100,6 +102,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "i_thought_Rozan_had_bad_designs_but_the_doctor_gave_me_new_glasses":
             MessageLookupByLibrary.simpleMessage(
                 "I thought Rozan had bad designs but the doctor gave me new glasses"),
+        "icon": MessageLookupByLibrary.simpleMessage("Icon"),
         "iltimos_yangi_parolni_kiriting_kiriting":
             MessageLookupByLibrary.simpleMessage(
                 "Iltimos, yangi parolni kiriting kiriting"),
@@ -129,6 +132,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "link": MessageLookupByLibrary.simpleMessage("Link to meeting"),
         "meet": MessageLookupByLibrary.simpleMessage("Meet"),
         "monthly": MessageLookupByLibrary.simpleMessage("Monthly"),
+        "new_category": MessageLookupByLibrary.simpleMessage("New Category"),
         "new_title": MessageLookupByLibrary.simpleMessage("New title"),
         "no_notifications":
             MessageLookupByLibrary.simpleMessage("NO NOTIFICATION YET"),
@@ -193,6 +197,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "weekly": MessageLookupByLibrary.simpleMessage("Weekly"),
         "xatolik_qayta_urining":
             MessageLookupByLibrary.simpleMessage("Xatolik qayta urining"),
-        "yearly": MessageLookupByLibrary.simpleMessage("Yearly")
+        "yearly": MessageLookupByLibrary.simpleMessage("Yearly"),
+        "zero": MessageLookupByLibrary.simpleMessage("0.00")
       };
 }
