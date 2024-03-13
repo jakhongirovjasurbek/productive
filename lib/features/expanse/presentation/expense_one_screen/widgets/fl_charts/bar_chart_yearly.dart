@@ -142,7 +142,7 @@ class YearlyTabPageState extends State<YearlyTabPage> {
                       leftTitles: AxisTitles(
                         sideTitles: SideTitles(
                           showTitles: true,
-                          reservedSize: 28,
+                          reservedSize: 48,
                           interval: 1,
                           getTitlesWidget: leftTitles,
                         ),

@@ -5,16 +5,16 @@ import 'package:flutter/material.dart';
 import 'package:productive/assets/colors.dart';
 import 'package:productive/core/extensions/extensions.dart';
 
-class Lines extends StatefulWidget {
-  const Lines({super.key});
+class LinesMonthly extends StatefulWidget {
+  const LinesMonthly({super.key});
 
 
 
   @override
-  State<Lines> createState() => _LinesState();
+  State<LinesMonthly> createState() => _LinesMonthlyState();
 }
 
-class _LinesState extends State<Lines> {
+class _LinesMonthlyState extends State<LinesMonthly> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,24 +77,21 @@ class _LinesState extends State<Lines> {
                       belowBarData: BarAreaData(
                         show: true,
                         color: AppColors.expensesFood.withOpacity(.1),
-                        // spotsLine: BarAreaSpotsLine(
-                        //   show: true,
-                        //   flLineStyle: FlLine(color: Colors.white),
-                        // ),
+                       
                       ),
                       spots: [
-                        const FlSpot(1, 30),
+                        const FlSpot(1, 20),
                         const FlSpot(2, 35),
                         const FlSpot(3, 30),
-                        const FlSpot(4, 20),
-                        const FlSpot(5, 20),
-                        const FlSpot(6, 15),
-                        const FlSpot(7, 10),
-                        const FlSpot(8, 10),
+                        const FlSpot(4, 50),
+                        const FlSpot(5, 30),
+                        const FlSpot(6, 25),
+                        const FlSpot(7, 50),
+                        const FlSpot(8, 28),
                         const FlSpot(9, 35),
-                        const FlSpot(10, 30),
-                        const FlSpot(11, 35),
-                        const FlSpot(12, 40),
+                        const FlSpot(10, 50),
+                        const FlSpot(11, 25),
+                        const FlSpot(12, 30),
                       ],
                     ),
                   ],

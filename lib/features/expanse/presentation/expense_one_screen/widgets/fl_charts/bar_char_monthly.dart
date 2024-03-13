@@ -20,7 +20,6 @@ class MontlyTabPageState extends State<MontlyTabPage> {
   late List<BarChartGroupData> showingBarGroups;
 
   int touchedGroupIndex = -1;
-  // rangi o'zgarishi uchun
   int touchedIndex = -1;
 
   @override
@@ -142,7 +141,7 @@ class MontlyTabPageState extends State<MontlyTabPage> {
                       leftTitles: AxisTitles(
                         sideTitles: SideTitles(
                           showTitles: true,
-                          reservedSize: 28,
+                          reservedSize: 38,
                           interval: 1,
                           getTitlesWidget: leftTitles,
                         ),
@@ -172,6 +171,7 @@ class MontlyTabPageState extends State<MontlyTabPage> {
     );
   }
 
+
   Widget leftTitles(double value, TitleMeta meta) {
     final style = TextStyle(
       color: context.colors.tasksTimeColor,
@@ -182,13 +182,13 @@ class MontlyTabPageState extends State<MontlyTabPage> {
     if (value == 0) {
       text = '\$0';
     } else if (value == 4) {
-      text = '\$300';
+      text = '\$50';
     } else if (value == 10) {
-      text = '\$600';
+      text = '\$100';
     } else if (value == 15) {
-      text = '\$900';
+      text = '\$150';
     } else if (value == 20) {
-      text = '\$1200';
+      text = '\$200';
     } else {
       return Container();
     }
@@ -202,7 +202,7 @@ class MontlyTabPageState extends State<MontlyTabPage> {
   Widget bottomTitles(double value, TitleMeta meta) {
     final titles = <String>[
       
-"2","4","6","8","10","12","14","18","20","22","26","28","30"      
+"2","4","6","8","12","14","18","20","22","26","28","30"      
       
       
       ];
