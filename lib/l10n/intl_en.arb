@@ -143,5 +143,6 @@
   "search_by_category": "Search By Category..",
   "work": "Work",
   "study": "Study",
-  "sport": "Sport"
+  "sport": "Sport",
+  "failure":"Failure"
 }

@@ -51,7 +51,7 @@ extension CalendarToCalendarEntities on CalendarModel {
 extension NotificationToNotificationEntites on MockDataNotificationsModel {
   NotificationEntities get toEntitiesNotification {
     return NotificationEntities(
-      id: id ,
+      dateTime: dateTime,
       title: title ,
       subTitle: subTitle,
     );

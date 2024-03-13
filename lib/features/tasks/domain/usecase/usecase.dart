@@ -2,7 +2,7 @@ import 'package:productive/core/either/either.dart';
 import 'package:productive/core/failure/failure.dart';
 import 'package:productive/features/tasks/domain/entities/notification_entities.dart';
 import 'package:productive/features/tasks/domain/repository/repository.dart';
-import '../../../../core/use_case/use_case.dart';
+import '../../../../core/usecase/usecase.dart';
 
 class NotificationUseCase
     implements UseCase<List<NotificationEntities>, NoParams> {
@@ -18,6 +18,7 @@ class NotificationUseCase
     if (param is GetDataNotifi) {
       return await _repositoryImpl.getData();
     } else {
+      print("---------------------------------------UnimplementedError-------------------------------");
       throw UnimplementedError();
     }
   }

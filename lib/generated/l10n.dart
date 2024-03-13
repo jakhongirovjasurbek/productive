@@ -310,16 +310,6 @@ class AppLocalization {
     );
   }
 
-  /// `Save`
-  String get save {
-    return Intl.message(
-      'Save',
-      name: 'save',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Gym time`
   String get gym_time {
     return Intl.message(
@@ -335,26 +325,6 @@ class AppLocalization {
     return Intl.message(
       'PM',
       name: 'PM',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Categories`
-  String get categories_appbar {
-    return Intl.message(
-      'Categories',
-      name: 'categories_appbar',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Link to meeting`
-  String get link {
-    return Intl.message(
-      'Link to meeting',
-      name: 'link',
       desc: '',
       args: [],
     );
@@ -420,41 +390,11 @@ class AppLocalization {
     );
   }
 
-  /// `Food`
-  String get food {
-    return Intl.message(
-      'Food',
-      name: 'food',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Shopping`
-  String get shopping {
-    return Intl.message(
-      'Shopping',
-      name: 'shopping',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Gift`
   String get gift {
     return Intl.message(
       'Gift',
       name: 'gift',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Eye doctor review`
-  String get eye_doctor_review {
-    return Intl.message(
-      'Eye doctor review',
-      name: 'eye_doctor_review',
       desc: '',
       args: [],
     );
@@ -467,16 +407,6 @@ class AppLocalization {
       'I thought Rozan had bad designs but the doctor gave me new glasses',
       name:
           'i_thought_Rozan_had_bad_designs_but_the_doctor_gave_me_new_glasses',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Saving transportation expenses`
-  String get saving_transportation_expenses {
-    return Intl.message(
-      'Saving transportation expenses',
-      name: 'saving_transportation_expenses',
       desc: '',
       args: [],
     );
@@ -634,16 +564,6 @@ class AppLocalization {
     );
   }
 
-  /// `Salary`
-  String get salary {
-    return Intl.message(
-      'Salary',
-      name: 'salary',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Create Event`
   String get create_event {
     return Intl.message(
@@ -764,20 +684,590 @@ class AppLocalization {
     );
   }
 
-  /// `Enter title`
+  /// `Daily`
+  String get daily {
+    return Intl.message(
+      'Daily',
+      name: 'daily',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create navigation bar`
+  String get createNavigationBar {
+    return Intl.message(
+      'Create navigation bar',
+      name: 'createNavigationBar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Study for testing`
+  String get studyForTesting {
+    return Intl.message(
+      'Study for testing',
+      name: 'studyForTesting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Room cleaning`
+  String get roomCleaning {
+    return Intl.message(
+      'Room cleaning',
+      name: 'roomCleaning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Read Surah Al-Baqarah`
+  String get readSurahAlBaqarah {
+    return Intl.message(
+      'Read Surah Al-Baqarah',
+      name: 'readSurahAlBaqarah',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Today`
+  String get today {
+    return Intl.message(
+      'Today',
+      name: 'today',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Focus Time`
+  String get focusTime {
+    return Intl.message(
+      'Focus Time',
+      name: 'focusTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Link to meeting`
+  String get link {
+    return Intl.message(
+      'Link to meeting',
+      name: 'link',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Categories`
+  String get categories_appbar {
+    return Intl.message(
+      'Categories',
+      name: 'categories_appbar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Commitment resource lecture`
   String get title {
     return Intl.message(
-      'Enter title',
+      'Commitment resource lecture',
       name: 'title',
       desc: '',
       args: [],
     );
   }
 
-  /// `Notification`
+  /// `We explained the definition of commitment and it..`
+  String get description {
+    return Intl.message(
+      'We explained the definition of commitment and it..',
+      name: 'description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `15 November`
+  String get day {
+    return Intl.message(
+      '15 November',
+      name: 'day',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Duas`
+  String get title1 {
+    return Intl.message(
+      'Duas',
+      name: 'title1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Allahuma aeni ealaa dikrika wa shukrika wa husn e..`
+  String get description1 {
+    return Intl.message(
+      'Allahuma aeni ealaa dikrika wa shukrika wa husn e..',
+      name: 'description1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `15 November`
+  String get day1 {
+    return Intl.message(
+      '15 November',
+      name: 'day1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Commitment resource lecture`
+  String get title2 {
+    return Intl.message(
+      'Commitment resource lecture',
+      name: 'title2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We explained the definition of commitmen..`
+  String get description2 {
+    return Intl.message(
+      'We explained the definition of commitmen..',
+      name: 'description2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `15 November`
+  String get day2 {
+    return Intl.message(
+      '15 November',
+      name: 'day2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Commitment resource lecture`
+  String get title3 {
+    return Intl.message(
+      'Commitment resource lecture',
+      name: 'title3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We explained the definition of commitment and it..`
+  String get description3 {
+    return Intl.message(
+      'We explained the definition of commitment and it..',
+      name: 'description3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `15 November`
+  String get day3 {
+    return Intl.message(
+      '15 November',
+      name: 'day3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Commitment resource lecture`
+  String get title4 {
+    return Intl.message(
+      'Commitment resource lecture',
+      name: 'title4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We explained the definition of commitment and it..`
+  String get description4 {
+    return Intl.message(
+      'We explained the definition of commitment and it..',
+      name: 'description4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `15 November`
+  String get day4 {
+    return Intl.message(
+      '15 November',
+      name: 'day4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Quick Notes`
+  String get quick_notes {
+    return Intl.message(
+      'Quick Notes',
+      name: 'quick_notes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Books`
+  String get books {
+    return Intl.message(
+      'Books',
+      name: 'books',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete`
+  String get delete {
+    return Intl.message(
+      'Delete',
+      name: 'delete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Notes`
+  String get notes {
+    return Intl.message(
+      'Notes',
+      name: 'notes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Food`
+  String get food {
+    return Intl.message(
+      'Food',
+      name: 'food',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shopping`
+  String get shopping {
+    return Intl.message(
+      'Shopping',
+      name: 'shopping',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Weekly`
+  String get weekly {
+    return Intl.message(
+      'Weekly',
+      name: 'weekly',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monthly`
+  String get monthly {
+    return Intl.message(
+      'Monthly',
+      name: 'monthly',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yearly`
+  String get yearly {
+    return Intl.message(
+      'Yearly',
+      name: 'yearly',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Transactions`
+  String get transactions {
+    return Intl.message(
+      'Transactions',
+      name: 'transactions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Eye doctor review`
+  String get eye_doctor_review {
+    return Intl.message(
+      'Eye doctor review',
+      name: 'eye_doctor_review',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I thought Rozan had bad designs but the doctor gave me new glasses`
+  String get eyes_doctor_review_red_description {
+    return Intl.message(
+      'I thought Rozan had bad designs but the doctor gave me new glasses',
+      name: 'eyes_doctor_review_red_description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Saving transportation expenses`
+  String get saving_transportation_expenses {
+    return Intl.message(
+      'Saving transportation expenses',
+      name: 'saving_transportation_expenses',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The doctor returned my money after I was satisfied with Rozan designs`
+  String get eyes_doctor_review_green_description {
+    return Intl.message(
+      'The doctor returned my money after I was satisfied with Rozan designs',
+      name: 'eyes_doctor_review_green_description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Jan`
+  String get lbl_jan {
+    return Intl.message(
+      'Jan',
+      name: 'lbl_jan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Feb`
+  String get lbl_feb {
+    return Intl.message(
+      'Feb',
+      name: 'lbl_feb',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mar`
+  String get lbl_mar {
+    return Intl.message(
+      'Mar',
+      name: 'lbl_mar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apr`
+  String get lbl_apr {
+    return Intl.message(
+      'Apr',
+      name: 'lbl_apr',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `May`
+  String get lbl_may {
+    return Intl.message(
+      'May',
+      name: 'lbl_may',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Jun`
+  String get lbl_jun {
+    return Intl.message(
+      'Jun',
+      name: 'lbl_jun',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Jul`
+  String get lbl_jul {
+    return Intl.message(
+      'Jul',
+      name: 'lbl_jul',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Aug`
+  String get lbl_aug {
+    return Intl.message(
+      'Aug',
+      name: 'lbl_aug',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sep`
+  String get lbl_sep {
+    return Intl.message(
+      'Sep',
+      name: 'lbl_sep',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Oct`
+  String get lbl_oct {
+    return Intl.message(
+      'Oct',
+      name: 'lbl_oct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Nov`
+  String get lbl_nov {
+    return Intl.message(
+      'Nov',
+      name: 'lbl_nov',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Des`
+  String get lbl_des {
+    return Intl.message(
+      'Des',
+      name: 'lbl_des',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mon`
+  String get lbl_mon {
+    return Intl.message(
+      'Mon',
+      name: 'lbl_mon',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tue`
+  String get lbl_tue {
+    return Intl.message(
+      'Tue',
+      name: 'lbl_tue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wed`
+  String get lbl_wed {
+    return Intl.message(
+      'Wed',
+      name: 'lbl_wed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Thu`
+  String get lbl_thu {
+    return Intl.message(
+      'Thu',
+      name: 'lbl_thu',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fri`
+  String get lbl_fri {
+    return Intl.message(
+      'Fri',
+      name: 'lbl_fri',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sat`
+  String get lbl_sat {
+    return Intl.message(
+      'Sat',
+      name: 'lbl_sat',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sun`
+  String get lbl_sun {
+    return Intl.message(
+      'Sun',
+      name: 'lbl_sun',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Notifications`
   String get notification {
     return Intl.message(
-      'Notification',
+      'Notifications',
       name: 'notification',
       desc: '',
       args: [],
@@ -799,6 +1289,216 @@ class AppLocalization {
     return Intl.message(
       'NO NOTIFICATION YET',
       name: 'no_notifications',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Salary`
+  String get salary {
+    return Intl.message(
+      'Salary',
+      name: 'salary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Icon`
+  String get select_icon {
+    return Intl.message(
+      'Select Icon',
+      name: 'select_icon',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create Task`
+  String get create_task {
+    return Intl.message(
+      'Create Task',
+      name: 'create_task',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start`
+  String get start {
+    return Intl.message(
+      'Start',
+      name: 'start',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `End`
+  String get end {
+    return Intl.message(
+      'End',
+      name: 'end',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Priority`
+  String get priority {
+    return Intl.message(
+      'Priority',
+      name: 'priority',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Location`
+  String get add_location {
+    return Intl.message(
+      'Add Location',
+      name: 'add_location',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Notification`
+  String get add_notification {
+    return Intl.message(
+      'Add Notification',
+      name: 'add_notification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Title`
+  String get select_title {
+    return Intl.message(
+      'Select Title',
+      name: 'select_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Time`
+  String get select_time {
+    return Intl.message(
+      'Select Time',
+      name: 'select_time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Priority`
+  String get select_priority {
+    return Intl.message(
+      'Select Priority',
+      name: 'select_priority',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `High`
+  String get high {
+    return Intl.message(
+      'High',
+      name: 'high',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medium`
+  String get medium {
+    return Intl.message(
+      'Medium',
+      name: 'medium',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Low`
+  String get low {
+    return Intl.message(
+      'Low',
+      name: 'low',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Time`
+  String get add_time {
+    return Intl.message(
+      'Add Time',
+      name: 'add_time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Remove Time`
+  String get remove_time {
+    return Intl.message(
+      'Remove Time',
+      name: 'remove_time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm`
+  String get confirm {
+    return Intl.message(
+      'Confirm',
+      name: 'confirm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search By Category..`
+  String get search_by_category {
+    return Intl.message(
+      'Search By Category..',
+      name: 'search_by_category',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Work`
+  String get work {
+    return Intl.message(
+      'Work',
+      name: 'work',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Study`
+  String get study {
+    return Intl.message(
+      'Study',
+      name: 'study',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sport`
+  String get sport {
+    return Intl.message(
+      'Sport',
+      name: 'sport',
       desc: '',
       args: [],
     );

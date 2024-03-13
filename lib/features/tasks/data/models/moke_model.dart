@@ -1,19 +1,21 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class MockDataNotificationsModel {
-  final int id;
+  final Timestamp dateTime;
   final String title;
   final String subTitle;
 
   MockDataNotificationsModel({
-    required this.id,
+    required this.dateTime,
     required this.title,
     required this.subTitle,
   });
 
   factory MockDataNotificationsModel.fromJson(Map<String, dynamic> json) {
     return MockDataNotificationsModel(
-      id: json['id'],
+      subTitle: json['description'],
+      dateTime: json['createdAt'],
       title: json['title'],
-      subTitle: json['subTitle'],
     );
   }
 }

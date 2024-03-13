@@ -92,6 +92,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "The doctor returned my money after I was satisfied with Rozan designs"),
         "eyes_doctor_review_red_description": MessageLookupByLibrary.simpleMessage(
             "I thought Rozan had bad designs but the doctor gave me new glasses"),
+        "failure": MessageLookupByLibrary.simpleMessage("Failure"),
         "focusTime": MessageLookupByLibrary.simpleMessage("Focus Time"),
         "food": MessageLookupByLibrary.simpleMessage("Food"),
         "forgot_password":

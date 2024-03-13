@@ -12,8 +12,6 @@ class TaskRoute {
       case TaskRouteNames.createtasks:
         return fade(const CreateScreen());
 
-      case TaskRouteNames.mapScreen:
-        return fade(const MapScreen());
     }
     return null;
   }

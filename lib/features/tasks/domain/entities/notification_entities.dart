@@ -1,10 +1,12 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class NotificationEntities {
-  final int id;
+  final Timestamp dateTime;
   final String title;
   final String subTitle;
 
   NotificationEntities({
-    required this.id,
+    required this.dateTime,
     required this.title,
     required this.subTitle,
   });

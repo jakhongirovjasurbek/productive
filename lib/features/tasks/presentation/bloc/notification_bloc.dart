@@ -26,7 +26,7 @@ class NotificationBloc extends Bloc<NotificationEvent, NotificationInitial> {
       print("Get Success Notifications");
       print("GetData success");
       either.either((failure) {
-        print("Failure");
+        print("----------------------------------${failure}----------------------------------------");
         emit(
           state.copyWith(
             status: NotificationStatus.failure,

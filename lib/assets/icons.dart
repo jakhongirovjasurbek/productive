@@ -1,6 +1,10 @@
 const _bnb = 'assets/icons/bnb/';
 
 const path = "assets/icons/forgot_password/";
+const pathNotes="assets/icons/notes_svg/";
+
+const single = "assets/icons/single_category/";
+const create = "assets/icons/create_task/";
 
 class AppIcons {
   static const rectangle = "assets/create_new_password/user.png";
@@ -15,6 +19,9 @@ class AppIcons {
   static const plus = "assets/icons/plus.svg";
   static const exit = "assets/icons/exit.svg";
   static const premium = "assets/icons/premium.svg";
+  final greenbook="${pathNotes}green_book.svg";
+  final redbook="${pathNotes}red_book.svg";
+  final plusbook="${pathNotes}plus_book.svg";
   static const tasks = "${_bnb}tasks.svg";
   static const expense = "${_bnb}expense.svg";
   static const create = "${_bnb}create.svg";
@@ -52,6 +59,35 @@ class AppIcons {
   static const settings = "assets/icons/expenses/settings.svg";
   static const shopping = "assets/icons/expenses/shopping.svg";
 
+
+
+  // single category
+  static const bag1 = '${single}bag.svg';
+  final  String imgArrowLeft = '${single}img_arrow_left.svg';
+  final  String imgBxRestaurant = '${single}img_bx_restaurant.svg';
+  static const String imgChart = '${single}img_chart.svg';
+  final  String imgFrame = '${single}img_frame.svg';
+  final  String imgThumbsUpWhite = '${single}img_thumbs_up_white.svg';
+  final  String imgThumbsUp = '${single}img_thumbs_up.svg';
+
+  //create task svg
+  final arrowBack = "assets/icons/create_task/arrow.svg";
+  final eventCreate = "assets/icons/create_task/event.svg";
+  final expenseCreate = "assets/icons/create_task/expense.svg";
+  final moneyCreate = "assets/icons/create_task/money.svg";
+  final notesCreate = "assets/icons/create_task/notes.svg";
+  final tasksCreate = "assets/icons/create_task/tasks.svg";
+  final x = "assets/icons/create_task/x.svg";
+  final notification = "assets/icons/create_task/notification.svg";
+  final location = "assets/icons/create_task/location.svg";
+  final exitBottomSheet = "assets/icons/create_task/exit.svg";
+  final search = "assets/icons/create_task/search.svg";
+  final bag = "assets/icons/create_task/bag.svg";
+  final study = "assets/icons/create_task/study.svg";
+  final sport = "assets/icons/create_task/sport.svg";
+  final divider = "assets/icons/create_task/divider.svg";
+  final locationpng = "assets/icons/create_task/location.png";
+
   static const birthday = "assets/icons/birthday_event.svg";
   static const meet = "assets/icons/meet_event.svg";
   static const online = "assets/icons/online_event.svg";
@@ -64,6 +100,6 @@ class AppIcons {
   // static const bold = "assets/icons/bold.svg";
   // static const exit = "assets/icons/exit.svg";
   static const radio = "assets/icons/radio.svg";
-  static const noNotification = "assets/icons/no_notification.svg";
   static const delete = "assets/icons/delete.svg";
+  static const noNotification = "assets/svg/no_notification.svg";
 }
