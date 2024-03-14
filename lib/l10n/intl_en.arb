@@ -123,5 +123,8 @@
   "lbl_sun": "Sun",
   "notification": "Notifications",
   "clear": "Clear",
-  "no_notifications": "NO NOTIFICATION YET"
+  "no_notifications": "NO NOTIFICATION YET",
+  "add_time": "Add time",
+  "remove_time": "Remove time",
+  "confirm": "Confirm"
 }

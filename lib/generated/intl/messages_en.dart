@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "PM": MessageLookupByLibrary.simpleMessage("PM"),
         "add_note": MessageLookupByLibrary.simpleMessage("Add note ..."),
+        "add_time": MessageLookupByLibrary.simpleMessage("Add time"),
         "all_day": MessageLookupByLibrary.simpleMessage("All Day"),
         "birthday": MessageLookupByLibrary.simpleMessage("Birthday"),
         "books": MessageLookupByLibrary.simpleMessage("Books"),
@@ -31,6 +32,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "categories": MessageLookupByLibrary.simpleMessage("Categories"),
         "categories_appbar": MessageLookupByLibrary.simpleMessage("Categories"),
         "clear": MessageLookupByLibrary.simpleMessage("Clear"),
+        "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm password"),
         "cost150": MessageLookupByLibrary.simpleMessage("\$150"),
@@ -149,6 +151,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("If you don’t receive code. "),
         "recover_password":
             MessageLookupByLibrary.simpleMessage("Recover password"),
+        "remove_time": MessageLookupByLibrary.simpleMessage("Remove time"),
         "repeat": MessageLookupByLibrary.simpleMessage("Repeat"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),
         "roomCleaning": MessageLookupByLibrary.simpleMessage("Room cleaning"),

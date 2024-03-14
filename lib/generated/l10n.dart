@@ -1303,6 +1303,36 @@ class AppLocalization {
       args: [],
     );
   }
+
+  /// `Add time`
+  String get add_time {
+    return Intl.message(
+      'Add time',
+      name: 'add_time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Remove time`
+  String get remove_time {
+    return Intl.message(
+      'Remove time',
+      name: 'remove_time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm`
+  String get confirm {
+    return Intl.message(
+      'Confirm',
+      name: 'confirm',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {
