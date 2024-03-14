@@ -123,7 +123,6 @@
   "lbl_sun": "Sun",
   "notification": "Notifications",
   "clear": "Clear",
-  "no_notifications": "NO NOTIFICATION YET",
   "select_icon": "Select Icon",
   "create_task": "Create Task",
   "start": "Start",
@@ -146,5 +145,14 @@
   "sport": "Sport",
   "hintext_task_search": "Search by events, tasks.. ",
   "Upcoming": "Upcoming",
-  "All": "All"
+  "All": "All",
+  "no_notifications": "NO NOTIFICATION YET",
+
+  "create_expense" : "Create Expense",
+  "search_by_category" : "Search by category..",
+  "zero" : "0.00",
+  "new_category":  "New Category",
+  "icon" : "Icon",
+  "color": "Color",
+  "confirm" : "CONFIRM"
 }

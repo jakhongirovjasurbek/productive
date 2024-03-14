@@ -8,6 +8,8 @@ import 'package:productive/features/home/home.dart';
 import 'package:productive/features/calendar/calendar_screen.dart';
 import 'package:productive/features/statistics/presentation/pages/statistics.dart';
 
+import '../../features/create/presentation/pages/create_expense.dart';
+
 class AppRoute {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
