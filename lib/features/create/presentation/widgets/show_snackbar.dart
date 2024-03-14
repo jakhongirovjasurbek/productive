@@ -39,7 +39,7 @@ void showBottomSheetWidget(BuildContext context, IncomeModel model) {
                         borderRadius: BorderRadius.circular(24)),
                   ),
                   GestureDetector(
-                    child: SvgPicture.asset(AppIcons.exit),
+                    child: SvgPicture.asset(context.icons.exit),
                   ),
                 ],
               ),
@@ -61,7 +61,7 @@ void showBottomSheetWidget(BuildContext context, IncomeModel model) {
                       ),
                       padding: EdgeInsets.all(9),
                       child: SvgPicture.asset(
-                        AppIcons.moneyFirst,
+                        context.icons.moneyFirst,
                       ),
                     ),
                     const Gap(8),
@@ -93,7 +93,7 @@ void showBottomSheetWidget(BuildContext context, IncomeModel model) {
                             ),
                             padding: EdgeInsets.all(12),
                             child: SvgPicture.asset(
-                              AppIcons.plus,
+                              context.icons.plus,
                             ),
                           ),
                           const Gap(8),
@@ -104,7 +104,7 @@ void showBottomSheetWidget(BuildContext context, IncomeModel model) {
                         ],
                       ),
                     ),
-                    SvgPicture.asset(AppIcons.premium),
+                    SvgPicture.asset(context.icons.premium),
                   ],
                 ),
               ),

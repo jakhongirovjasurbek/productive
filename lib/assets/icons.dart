@@ -1,7 +1,7 @@
 const _bnb = 'assets/icons/bnb/';
 
 const path = "assets/icons/forgot_password/";
-const pathNotes="assets/icons/notes_svg/";
+const pathNotes = "assets/icons/notes_svg/";
 
 const single = "assets/icons/single_category/";
 
@@ -11,24 +11,16 @@ class AppIcons {
   static const logo = "assets/icons/logo.svg";
   static const right = "assets/icons/right.svg";
   static const left = "assets/icons/left.svg";
-  final back="${path}back.svg";
+  final back = "${path}back.svg";
   final arrow = "assets/icons/arrow.svg";
   final moneyFirst = "assets/icons/money_first.svg";
   final moneySecond = "assets/icons/money_second.svg";
   final plus = "assets/icons/plus.svg";
-  final  exit = "assets/icons/exit.svg";
+  final exit = "assets/icons/exit.svg";
   final premium = "assets/icons/premium.svg";
-  static const back = "${path}back.svg";
-  static const arrow = "assets/icons/arrow.svg";
-  static const moneyFirst = "assets/icons/money_first.svg";
-  static const moneySecond = "assets/icons/money_second.svg";
-  static const plus = "assets/icons/plus.svg";
-  static const exit = "assets/icons/exit.svg";
-  static const premium = "assets/icons/premium.svg";
-  final greenbook="${pathNotes}green_book.svg";
-  final redbook="${pathNotes}red_book.svg";
-  final plusbook="${pathNotes}plus_book.svg";
-
+  final greenbook = "${pathNotes}green_book.svg";
+  final redbook = "${pathNotes}red_book.svg";
+  final plusbook = "${pathNotes}plus_book.svg";
 
   static const tasks = "${_bnb}tasks.svg";
   static const expense = "${_bnb}expense.svg";
@@ -54,10 +46,6 @@ class AppIcons {
   static const expanse_categories_add2 = "assets/icons/expanse/add2.svg";
   static const expanse_categories_search = "assets/icons/expanse/search.svg";
 
-
-
-
-
   static const arrowRed = "assets/icons/expenses/arrow_red.svg";
   static const arrowGreen = "assets/icons/expenses/arrow_green.svg";
   static const blueVector = "assets/icons/expenses/blueVector.svg";
@@ -71,16 +59,14 @@ class AppIcons {
   static const settings = "assets/icons/expenses/settings.svg";
   static const shopping = "assets/icons/expenses/shopping.svg";
 
-
-
   // single category
   static const String bag = '${single}bag.svg';
-  final  String imgArrowLeft = '${single}img_arrow_left.svg';
-  final  String imgBxRestaurant = '${single}img_bx_restaurant.svg';
+  final String imgArrowLeft = '${single}img_arrow_left.svg';
+  final String imgBxRestaurant = '${single}img_bx_restaurant.svg';
   static const String imgChart = '${single}img_chart.svg';
-  final  String imgFrame = '${single}img_frame.svg';
-  final  String imgThumbsUpWhite = '${single}img_thumbs_up_white.svg';
-  final  String imgThumbsUp = '${single}img_thumbs_up.svg';
+  final String imgFrame = '${single}img_frame.svg';
+  final String imgThumbsUpWhite = '${single}img_thumbs_up_white.svg';
+  final String imgThumbsUp = '${single}img_thumbs_up.svg';
 
   static const birthday = "assets/icons/birthday_event.svg";
   static const meet = "assets/icons/meet_event.svg";
@@ -91,6 +77,7 @@ class AppIcons {
   static const switch_on = "assets/icons/switch_on.svg";
   static const switch_off = "assets/icons/switch.svg";
   static const down = "assets/icons/down.svg";
+
   // static const bold = "assets/icons/bold.svg";
   // static const exit = "assets/icons/exit.svg";
   static const radio = "assets/icons/radio.svg";

@@ -54,7 +54,7 @@ class _MyBottomSheetState extends State<MyBottomSheet> {
                     vertical: 8.0,
                     horizontal: 16.0,
                   ),
-                  child: SvgPicture.asset(AppIcons.exit),
+                  child: SvgPicture.asset(context.icons.exit),
                 ),
               ),
             ),

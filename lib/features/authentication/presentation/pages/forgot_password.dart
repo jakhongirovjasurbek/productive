@@ -93,7 +93,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
         automaticallyImplyLeading: false,
         title: Row(
           children: [
-            SvgPicture.asset(AppIcons.back),
+            SvgPicture.asset(context.icons.back),
             Gap(10),
             Text(
               context.localization.forgot_password,
