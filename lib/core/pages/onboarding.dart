@@ -66,7 +66,7 @@ class _OnBoardingState extends State<OnBoarding> {
                     title: localization.easyManage,
                   ),
                   OnboardingPageItem(
-                    image:AppImages.onboardingSecondImage,
+                    image:   AppImages.onboardingSecondImage,
                     desciption: localization.helpOrganize,
                     title: localization. trackYourExpense,
                   ),

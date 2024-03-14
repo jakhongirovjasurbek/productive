@@ -32,7 +32,7 @@ class _MonthlyTabBarState extends State<MonthlyTabBar> {
                 child: Center(
                     child: widget.isPressed
                         ? MontlyTabPage()
-                        :  const LinesMonthly(
+                        :   LinesMonthly(
                           )),
               ),
             ),

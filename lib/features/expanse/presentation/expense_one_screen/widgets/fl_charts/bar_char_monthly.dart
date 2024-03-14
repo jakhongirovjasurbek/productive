@@ -12,7 +12,7 @@ class MontlyTabPage extends StatefulWidget {
 }
 
 class MontlyTabPageState extends State<MontlyTabPage> {
-   Color textColor = AppColors.whitee;
+  Color textColor = AppColors.whitee;
 
   final double width = 10;
 
@@ -77,7 +77,7 @@ class MontlyTabPageState extends State<MontlyTabPage> {
                     maxY: 20,
                     barTouchData: BarTouchData(
                       touchTooltipData: BarTouchTooltipData(
-                        tooltipBgColor:  context.colors.tasksTimeColor,
+                        tooltipBgColor: context.colors.tasksTimeColor,
                         getTooltipItem: (a, b, c, d) => null,
                       ),
                       touchCallback: (FlTouchEvent event, response) {
@@ -151,13 +151,16 @@ class MontlyTabPageState extends State<MontlyTabPage> {
                       show: false,
                     ),
                     barGroups: showingBarGroups,
-                    gridData:  FlGridData(show: true, drawVerticalLine: false,
-                    getDrawingHorizontalLine: (value) {
-                      return FlLine(
-                        color: AppColors.conteinerdescriptions,
-                        strokeWidth: 1,
-                      );
-                    },),
+                    gridData: FlGridData(
+                      show: true,
+                      drawVerticalLine: false,
+                      getDrawingHorizontalLine: (value) {
+                        return FlLine(
+                          color: AppColors.conteinerdescriptions,
+                          strokeWidth: 1,
+                        );
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -170,7 +173,6 @@ class MontlyTabPageState extends State<MontlyTabPage> {
       ),
     );
   }
-
 
   Widget leftTitles(double value, TitleMeta meta) {
     final style = TextStyle(
@@ -201,29 +203,37 @@ class MontlyTabPageState extends State<MontlyTabPage> {
 
   Widget bottomTitles(double value, TitleMeta meta) {
     final titles = <String>[
-      
-"2","4","6","8","12","14","18","20","22","26","28","30"      
-      
-      
-      ];
+      "2",
+      "4",
+      "6",
+      "8",
+      "12",
+      "14",
+      "18",
+      "20",
+      "22",
+      "26",
+      "28",
+      "30"
+    ];
     final Widget text = GestureDetector(
       onTap: () {
-          setState(() {
-         textColor = AppColors.expensesFood;
-           touchedIndex = value.toInt();
+        setState(() {
+          textColor = AppColors.expensesFood;
+          touchedIndex = value.toInt();
         });
       },
       child: Text(
         titles[value.toInt()],
-        style:  TextStyle(
-          color: touchedIndex == value.toInt() ? AppColors.expensesFood : AppColors.whitee,
+        style: TextStyle(
+          color: touchedIndex == value.toInt()
+              ? AppColors.expensesFood
+              : AppColors.whitee,
           fontWeight: FontWeight.bold,
           fontSize: 14,
         ),
       ),
     );
-
-   
 
     return SideTitleWidget(
       axisSide: meta.axisSide,
@@ -246,7 +256,6 @@ class MontlyTabPageState extends State<MontlyTabPage> {
           color: widget.leftBarColor,
           width: width,
         ),
-       
       ],
     );
   }

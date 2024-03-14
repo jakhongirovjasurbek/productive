@@ -22,6 +22,7 @@ class _LinesState extends State<Lines> {
         children: [
           SizedBox(
             height: 400,
+            width: MediaQuery.sizeOf(context).width,
             child: Padding(
               padding: const EdgeInsets.all(40),
 
@@ -63,6 +64,27 @@ class _LinesState extends State<Lines> {
                         },
                       ),
                     ),
+
+                     leftTitles: AxisTitles(
+                      sideTitles: SideTitles(
+                        showTitles: true,
+                        reservedSize: 70,
+                        interval: 10,
+                        getTitlesWidget: (index, _) {
+                          return Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(getMonthString(index),
+                                style:
+                                    TextStyle(color: context.colors.whiteA700)),
+                          );
+                        },
+                      ),
+                    ),
+
+
+
+
+
                   ),
                   lineBarsData: [
                     LineChartBarData(
@@ -137,6 +159,38 @@ class _LinesState extends State<Lines> {
         return 'Noy';
       case 12:
         return 'Dek';
+      default:
+        return '';
+    }
+  }
+
+
+  String getMonthString(double value) {
+    switch (value) {
+      case 0:
+        return '\$1';
+      case 10:
+        return '\$2';
+      case 20:
+        return '\$3';
+      case 30:
+        return '\$4';
+      case 40:
+        return '\$5';
+      case 50:
+        return '\$6';
+      case 7:
+        return '\$7';
+      case 8:
+        return '\$8';
+      case 9:
+        return '\$9';
+      case 10:
+        return '\$10';
+      case 11:
+        return '\$11';
+      case 12:
+        return '\$12';
       default:
         return '';
     }

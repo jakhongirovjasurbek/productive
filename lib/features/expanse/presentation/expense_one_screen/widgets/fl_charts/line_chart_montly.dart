@@ -1,5 +1,3 @@
-
-
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:productive/assets/colors.dart';
@@ -7,8 +5,6 @@ import 'package:productive/core/extensions/extensions.dart';
 
 class LinesMonthly extends StatefulWidget {
   const LinesMonthly({super.key});
-
-
 
   @override
   State<LinesMonthly> createState() => _LinesMonthlyState();
@@ -24,24 +20,22 @@ class _LinesMonthlyState extends State<LinesMonthly> {
             height: 400,
             child: Padding(
               padding: const EdgeInsets.all(40),
-
               child: LineChart(
                 LineChartData(
                   minX: 1,
                   minY: 0,
                   maxX: 12,
                   maxY: 50,
-                 
-                   gridData:  FlGridData(show: true, drawVerticalLine: false,
+                  gridData: FlGridData(
+                    show: true,
+                    drawVerticalLine: false,
                     getDrawingHorizontalLine: (value) {
                       return FlLine(
                         color: AppColors.conteinerdescriptions,
                         strokeWidth: 1,
                       );
                     },
-                    
-                    ),
-
+                  ),
                   titlesData: FlTitlesData(
                     show: true,
                     rightTitles: const AxisTitles(
@@ -49,6 +43,21 @@ class _LinesMonthlyState extends State<LinesMonthly> {
                     ),
                     topTitles: const AxisTitles(
                       sideTitles: SideTitles(showTitles: false),
+                    ),
+                    leftTitles: AxisTitles(
+                      sideTitles: SideTitles(
+                        showTitles: true,
+                        reservedSize: 70,
+                        interval: 10,
+                        getTitlesWidget: (index, _) {
+                          return Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(getMonthString(index),
+                                style:
+                                    TextStyle(color: context.colors.whiteA700)),
+                          );
+                        },
+                      ),
                     ),
                     bottomTitles: AxisTitles(
                       sideTitles: SideTitles(
@@ -58,7 +67,9 @@ class _LinesMonthlyState extends State<LinesMonthly> {
                         getTitlesWidget: (index, _) {
                           return Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text(getMonthStringRepresentation(index),style: TextStyle(color: context.colors.whiteA700)),
+                            child: Text(getMonthStringRepresentation(index),
+                                style:
+                                    TextStyle(color: context.colors.whiteA700)),
                           );
                         },
                       ),
@@ -72,12 +83,11 @@ class _LinesMonthlyState extends State<LinesMonthly> {
                       shadow: Shadow(
                         blurRadius: 4,
                         offset: const Offset(2, 2),
-                        color:  AppColors.conteinerdescriptions.withOpacity(.6),
+                        color: AppColors.conteinerdescriptions.withOpacity(.6),
                       ),
                       belowBarData: BarAreaData(
                         show: true,
                         color: AppColors.expensesFood.withOpacity(.1),
-                       
                       ),
                       spots: [
                         const FlSpot(1, 20),
@@ -97,15 +107,8 @@ class _LinesMonthlyState extends State<LinesMonthly> {
                   ],
                 ),
               ),
-            
-            
-            
             ),
           ),
-
-
-
-
         ],
       ),
     );
@@ -141,7 +144,42 @@ class _LinesMonthlyState extends State<LinesMonthly> {
         return '';
     }
   }
+
+  String getMonthString(double value) {
+    switch (value) {
+      case 0:
+        return '\$0';
+      case 10:
+        return '\$50';
+      case 20:
+        return '\$100';
+      case 30:
+        return '\$150';
+      case 40:
+        return '\$200';
+      case 70:
+        return '\$250';
+      case 7:
+        return '\$0';
+      case 8:
+        return '\$20';
+      case 9:
+        return '\$0';
+      case 10:
+        return '\$60';
+      case 11:
+        return '\$1';
+      case 12:
+        return '\$11';
+      default:
+        return '';
+    }
+  }
+
+
+
+
+
+
+  
 }
-
-
-
