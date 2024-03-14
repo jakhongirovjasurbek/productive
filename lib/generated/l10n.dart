@@ -1294,16 +1294,6 @@ class AppLocalization {
     );
   }
 
-  /// `NO NOTIFICATION YET`
-  String get no_notifications {
-    return Intl.message(
-      'NO NOTIFICATION YET',
-      name: 'no_notifications',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Select Icon`
   String get select_icon {
     return Intl.message(
@@ -1529,6 +1519,66 @@ class AppLocalization {
     return Intl.message(
       'All',
       name: 'All',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `NO NOTIFICATION YET`
+  String get no_notifications {
+    return Intl.message(
+      'NO NOTIFICATION YET',
+      name: 'no_notifications',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create Expense`
+  String get create_expense {
+    return Intl.message(
+      'Create Expense',
+      name: 'create_expense',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `0.00`
+  String get zero {
+    return Intl.message(
+      '0.00',
+      name: 'zero',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New Category`
+  String get new_category {
+    return Intl.message(
+      'New Category',
+      name: 'new_category',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Icon`
+  String get icon {
+    return Intl.message(
+      'Icon',
+      name: 'icon',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Color`
+  String get color {
+    return Intl.message(
+      'Color',
+      name: 'color',
       desc: '',
       args: [],
     );

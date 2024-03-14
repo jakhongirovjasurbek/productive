@@ -127,7 +127,7 @@
   "create_task": "Create Task",
   "start": "Start",
   "end": "End",
-  "priority":"Priority",
+  "priority": "Priority",
   "add_location": "Add Location",
   "add_notification": "Add Notification",
   "select_title": "Select Title",
@@ -147,12 +147,9 @@
   "Upcoming": "Upcoming",
   "All": "All",
   "no_notifications": "NO NOTIFICATION YET",
-
-  "create_expense" : "Create Expense",
-  "search_by_category" : "Search by category..",
-  "zero" : "0.00",
-  "new_category":  "New Category",
-  "icon" : "Icon",
-  "color": "Color",
-  "confirm" : "CONFIRM"
+  "create_expense": "Create Expense",
+  "zero": "0.00",
+  "new_category": "New Category",
+  "icon": "Icon",
+  "color": "Color"
 }
