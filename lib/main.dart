@@ -11,11 +11,11 @@ import 'package:productive/core/injector/injector.dart';
 import 'package:productive/core/routes/app_route.dart';
 import 'package:productive/features/calendar/presentation/bloc/calendar_bloc.dart';
 import 'package:productive/firebase_options.dart';
-import 'package:productive/features/tasks/create/data/data_source/remote.dart';
-import 'package:productive/features/tasks/create/data/repository/task.dart';
-import 'package:productive/features/tasks/create/presentation/bloc/location/location_cubit.dart';
-import 'package:productive/features/tasks/create/presentation/bloc/task_bloc.dart';
 
+import 'features/create/data/data_source/remote.dart';
+import 'features/create/data/repository/task.dart';
+import 'features/create/presentation/bloc/location/location_cubit.dart';
+import 'features/create/presentation/bloc/task_bloc.dart';
 import 'features/tasks1/presentation/tasks_screen.dart';
 import 'generated/l10n.dart';
 
@@ -70,7 +70,6 @@ class MainApp extends StatelessWidget {
           themeAnimationCurve: Curves.slowMiddle,
           darkTheme: context.theme.darkTheme(),
           debugShowCheckedModeBanner: false,
-          useInheritedMediaQuery: true,
           builder: DevicePreview.appBuilder,
           onGenerateRoute: AppRoute.onGenerateRoute,
           locale: const Locale.fromSubtags(languageCode: 'en'),

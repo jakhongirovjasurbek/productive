@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:productive/core/extensions/extensions.dart';
-import 'package:productive/features/tasks/create/presentation/bloc/location/location_cubit.dart';
-import 'package:productive/features/tasks/create/presentation/bloc/location/location_state.dart';
 import 'package:yandex_mapkit/yandex_mapkit.dart';
+
+import '../bloc/location/location_cubit.dart';
+import '../bloc/location/location_state.dart';
 
 class MapScreen extends StatelessWidget {
   const MapScreen({super.key});

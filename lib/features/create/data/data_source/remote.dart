@@ -1,6 +1,6 @@
 import 'package:productive/core/exception/exception.dart';
-import 'package:productive/features/tasks/create/data/mock_data.dart';
 
+import '../mock_data.dart';
 import '../models/task.dart';
 
 abstract class TaskRemoteDataSource {

@@ -6,11 +6,12 @@ import 'package:flutter/material.dart';
 
 import 'package:productive/core/extensions/extensions.dart';
 
-import 'package:productive/features/tasks/create/data/models/priority.dart';
-import 'package:productive/features/tasks/create/data/models/status.dart';
-import 'package:productive/features/tasks/create/data/models/task.dart';
 import 'package:flutter/foundation.dart';
-import 'package:productive/features/tasks/create/data/repository/task.dart';
+
+import '../../data/models/priority.dart';
+import '../../data/models/status.dart';
+import '../../data/models/task.dart';
+import '../../data/repository/task.dart';
 
 part 'task_event.dart';
 
@@ -21,13 +22,16 @@ class TaskBloc extends Bloc<TaskEvent, TaskState> {
 
   TaskBloc({required TaskRepository response})
       : _response = response,
-        super(TaskState(
+        super(
+          TaskState(
             selectIcon: "assets/icons/create_task/tasks.svg",
             selectIconcolor: const Color(0xFF4B7FD6),
             status: LoadingStatus.pure,
             tasklist: [],
             startDate: DateTime(2000, 1, 1, 10),
-            endDate: DateTime(2000, 1, 1, 10))) {
+            endDate: DateTime(2000, 1, 1, 10),
+          ),
+        ) {
     on<LoadingTask>((event, emit) async {
       emit(state.copyWith(status: LoadingStatus.loading));
       try {
@@ -40,7 +44,6 @@ class TaskBloc extends Bloc<TaskEvent, TaskState> {
           ),
         );
       } catch (e) {
-        print('Error occured: $e');
         addError(e);
         emit(state.copyWith(status: LoadingStatus.loadedWithFailure));
       }

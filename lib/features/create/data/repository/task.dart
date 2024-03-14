@@ -1,8 +1,9 @@
-import 'package:productive/features/tasks/create/data/data_source/remote.dart';
-import 'package:productive/features/tasks/create/data/models/task.dart';
+import '../data_source/remote.dart';
+import '../models/task.dart';
 
 class TaskRepository {
   final TaskRemoteDataSource taskRemoteDataSource;
+
   TaskRepository({required this.taskRemoteDataSource});
 
   Future<List<TaskModel>> getTasks() async {

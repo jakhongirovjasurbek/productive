@@ -1,8 +1,7 @@
 import 'dart:math';
 import 'dart:ui';
 
-import 'package:productive/features/tasks/create/data/models/priority.dart';
-
+import 'models/priority.dart';
 
 final _random = Random();
 var dataTask = <String, dynamic>{

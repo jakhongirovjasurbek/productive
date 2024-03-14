@@ -1,19 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:productive/features/create/data/model/income_active_status.dart';
-import 'package:productive/features/create/data/model/income_status.dart';
 import 'package:productive/core/extensions/extensions.dart';
-import 'package:productive/features/create/data/model/income_model.dart';
 import 'package:productive/features/create/presentation/bloc/income_bloc.dart';
-import 'package:productive/features/create/presentation/mixin/create_income_mixin.dart';
 import 'package:productive/features/create/presentation/widgets/show_snackbar.dart';
 import 'package:productive/features/create/presentation/widgets/w_text_field.dart';
 
 import '../../../../assets/icons.dart';
+import '../../../../core/mixin/create_income_mixin.dart';
 
 class CreateIncomeScreen extends StatefulWidget {
   const CreateIncomeScreen({super.key});
@@ -21,11 +18,11 @@ class CreateIncomeScreen extends StatefulWidget {
   @override
   State<CreateIncomeScreen> createState() => _CreateIncomeScreenState();
 }
-class _CreateIncomeScreenState extends State<CreateIncomeScreen> with CreateIncomeMixin{
+
+class _CreateIncomeScreenState extends State<CreateIncomeScreen>
+    with CreateIncomeMixin {
   @override
   void initState() {
-    titleController = TextEditingController();
-    noteController = TextEditingController();
     super.initState();
   }
 
@@ -66,7 +63,8 @@ class _CreateIncomeScreenState extends State<CreateIncomeScreen> with CreateInco
                             children: [
                               GestureDetector(
                                 onTap: () {
-                                  showBottomSheetWidget(context, state.incomeModel);
+                                  showBottomSheetWidget(
+                                      context, state.incomeModel);
                                 },
                                 child: Container(
                                   decoration: BoxDecoration(
@@ -188,10 +186,9 @@ class _CreateIncomeScreenState extends State<CreateIncomeScreen> with CreateInco
       ),
     );
   }
+
   @override
   void dispose() {
-    titleController!.dispose();
-    noteController!.dispose();
     super.dispose();
   }
 }

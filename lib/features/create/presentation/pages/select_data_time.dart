@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 import 'package:gap/gap.dart';
 import 'package:productive/core/extensions/extensions.dart';
 
 import 'package:productive/core/widgets/w_button.dart';
-import 'package:productive/features/tasks/create/presentation/widgets/modal_widget.dart';
+
+import '../widgets/modal_widget.dart';
 
 Future<DateTime?> selectTime(BuildContext context) async {
   DateTime callingDate = DateTime.now();
@@ -15,9 +15,12 @@ Future<DateTime?> selectTime(BuildContext context) async {
     builder: (BuildContext builderContext) {
       return Container(
         decoration: BoxDecoration(
-            color: context.colors.bottomSheetBgColor,
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(24), topRight: Radius.circular(24))),
+          color: context.colors.bottomSheetBgColor,
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(24),
+            topRight: Radius.circular(24),
+          ),
+        ),
         height: 268,
         child: SingleChildScrollView(
           child: Column(
@@ -84,10 +87,12 @@ Future<DateTime?> selectTime(BuildContext context) async {
                                   builder: (BuildContext builderContext) {
                                     return Container(
                                       decoration: const BoxDecoration(
-                                          color: Color(0xFF303745),
-                                          borderRadius: BorderRadius.only(
-                                              topLeft: Radius.circular(24),
-                                              topRight: Radius.circular(24))),
+                                        color: Color(0xFF303745),
+                                        borderRadius: BorderRadius.only(
+                                          topLeft: Radius.circular(24),
+                                          topRight: Radius.circular(24),
+                                        ),
+                                      ),
                                       height: 378,
                                       child: Column(
                                         children: [
@@ -98,10 +103,10 @@ Future<DateTime?> selectTime(BuildContext context) async {
                                             style: context
                                                 .style.fontSize20Weight500
                                                 .copyWith(
-                                                    color: context.colors.white,
-                                                    decorationColor: context
-                                                        .colors
-                                                        .bottomSheetBgColor),
+                                              color: context.colors.white,
+                                              decorationColor: context
+                                                  .colors.bottomSheetBgColor,
+                                            ),
                                           ),
                                           const Gap(26),
                                           const LineDivider(),
@@ -129,9 +134,7 @@ Future<DateTime?> selectTime(BuildContext context) async {
                                             leftPadding: 17,
                                             title: context
                                                 .localization.remove_time,
-                                            onTap: () {
-                                              Navigator.pop(context);
-                                            },
+                                            onTap: () => Navigator.pop(context),
                                           ),
                                           const Gap(4),
                                           const Align(
@@ -149,10 +152,6 @@ Future<DateTime?> selectTime(BuildContext context) async {
                                                         .bottom +
                                                     8),
                                             child: WButton(
-                                              /*  padding: EdgeInsets.only(
-                                                  bottom: MediaQuery.of(context)
-                                                      .padding
-                                                      .bottom), */
                                               width: 121,
                                               height: 30,
                                               text:

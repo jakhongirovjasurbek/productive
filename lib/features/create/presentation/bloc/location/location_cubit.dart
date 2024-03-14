@@ -1,6 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:productive/features/tasks/create/presentation/bloc/location/location_state.dart';
+
+import 'location_state.dart';
 
 class MapScreenCubit extends Cubit<MapScreenState> {
   MapScreenCubit() : super(MapScreenLoadingState());

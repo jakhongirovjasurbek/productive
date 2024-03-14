@@ -4,7 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:productive/core/extensions/extensions.dart';
-import 'package:productive/features/tasks/create/presentation/bloc/task_bloc.dart';
+
+import '../bloc/task_bloc.dart';
 
 Future<dynamic> selectIcon(BuildContext context) {
   return showModalBottomSheet(

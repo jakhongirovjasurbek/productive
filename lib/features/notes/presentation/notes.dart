@@ -1,11 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:productive/assets/icons.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/features/notes/presentation/list_item.dart';
-
-import '../../../assets/colors.dart';
 
 class NotesPage extends StatefulWidget {
   const NotesPage({Key? key}) : super(key: key);
@@ -44,13 +40,17 @@ class _NotesPageState extends State<NotesPage> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: context.colors.mainDark,
-        // elevation: 0,
         centerTitle: true,
-        leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back_ios, color: context.colors.white
-          ,)),
+        leading: IconButton(
+          onPressed: () => Navigator.of(context).pop(),
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: context.colors.white,
+          ),
+        ),
         title: Text(
           context.localization.notes,
-          style: context.style.fontSize24Weight700
+          style: context.style.fontSize24Weight700,
         ),
       ),
       body: SingleChildScrollView(
@@ -58,47 +58,44 @@ class _NotesPageState extends State<NotesPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-             Text(
-            context.localization.books,
-              style:context.style.fontSize18Weight600.copyWith(color: context.colors.createTaskTime)
-            ),
+            Text(context.localization.books,
+                style: context.style.fontSize18Weight600
+                    .copyWith(color: context.colors.createTaskTime)),
             const SizedBox(height: 16),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  child:SvgPicture.asset(context.icons.greenbook) ,
+                SizedBox(
                   height: 100,
                   width: 100,
+                  child: SvgPicture.asset(context.icons.greenbook),
                 ),
-                Container(
+                SizedBox(
+                  height: 100,
+                  width: 100,
                   child: SvgPicture.asset(context.icons.redbook),
-                  height: 100,
-                  width: 100,
                 ),
-                Container(
-                  child: SvgPicture.asset(context.icons.plusbook),
+                SizedBox(
                   height: 100,
                   width: 100,
+                  child: SvgPicture.asset(context.icons.plusbook),
                 )
-                
               ],
             ),
             Row(
               children: [
                 Expanded(
                   child: Padding(
-                    padding: EdgeInsets.only(top: 16.0),
-                    child: Text(
-                      context.localization.quick_notes,
-                      style:context.style.fontSize18Weight600.copyWith(color: context.colors.createTaskTime)
-                    ),
+                    padding: const EdgeInsets.only(top: 16.0),
+                    child: Text(context.localization.quick_notes,
+                        style: context.style.fontSize18Weight600
+                            .copyWith(color: context.colors.createTaskTime)),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 16.0),
                   child: Container(
-                    decoration:  BoxDecoration(
+                    decoration: BoxDecoration(
                       color: context.colors.blue,
                       shape: BoxShape.circle,
                     ),
@@ -125,7 +122,8 @@ class _NotesPageState extends State<NotesPage> {
         ),
         Text(
           label,
-          style: context.style.fontSize16Weight500.copyWith(color: context.colors.black),
+          style: context.style.fontSize16Weight500
+              .copyWith(color: context.colors.black),
         ),
       ],
     );
@@ -142,18 +140,20 @@ class _NotesPageState extends State<NotesPage> {
           title: titles[index],
           image: images[index],
           desc: desc[index],
-          date:context.localization.day3,
+          date: context.localization.day3,
           isAudio: audio[index],
           onDelete: () {
-            setState(() {
-              titles.removeAt(index);
-              desc.removeAt(index);
-              images.removeAt(index);
-              audio.removeAt(index);
-            });
+            setState(
+              () {
+                titles.removeAt(index);
+                desc.removeAt(index);
+                images.removeAt(index);
+                audio.removeAt(index);
+              },
+            );
           },
         );
       },
     );
   }
-} 
+}

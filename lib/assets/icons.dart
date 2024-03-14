@@ -130,7 +130,6 @@ class AppIcons {
   final note = "assets/icons/tasks/note.svg";
   final notyfication = "assets/icons/tasks/notyfication.svg";
   final simplenote = "assets/icons/tasks/simplenote.svg";
-  final study = "assets/icons/tasks/study.svg";
   final checked = "assets/icons/tasks/checked.svg";
   final unchecked = "assets/icons/tasks/unchecked.svg";
 

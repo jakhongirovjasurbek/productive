@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:productive/features/tasks/create/data/models/status.dart';
-
-import 'package:productive/features/tasks/create/presentation/bloc/task_bloc.dart';
+import '../../data/models/status.dart';
+import '../bloc/task_bloc.dart';
 
 class HomePageScreen extends StatelessWidget {
   const HomePageScreen({super.key});

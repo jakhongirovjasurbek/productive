@@ -6,15 +6,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 
 import 'package:productive/core/extensions/extensions.dart';
-import 'package:productive/core/route_names/task_name.dart';
 
-import 'package:productive/features/tasks/create/data/models/priority.dart';
-import 'package:productive/features/tasks/create/presentation/bloc/task_bloc.dart';
-import 'package:productive/features/tasks/create/presentation/pages/home.dart';
-import 'package:productive/features/tasks/create/presentation/pages/map_screen.dart';
-import 'package:productive/features/tasks/create/presentation/pages/select_data_time.dart';
-import 'package:productive/features/tasks/create/presentation/pages/select_icon_bottom_sheet.dart';
-import 'package:productive/features/tasks/create/presentation/widgets/show_modal_bottomsheet.dart';
+import 'package:productive/features/create/presentation/pages/home.dart';
+import 'package:productive/features/create/presentation/pages/map_screen.dart';
+import 'package:productive/features/create/presentation/pages/select_data_time.dart';
+import 'package:productive/features/create/presentation/pages/select_icon_bottom_sheet.dart';
+
+import '../../data/models/priority.dart';
+import '../bloc/task_bloc.dart';
 
 class CreateScreen extends StatefulWidget {
   const CreateScreen({super.key});
@@ -289,7 +288,8 @@ class _CreateScreenState extends State<CreateScreen> {
                       GestureDetector(
                         onTap: () {
                           Navigator.of(context).pushAndRemoveUntil(
-                              CupertinoPageRoute(builder: (_) => const MapScreen()),
+                              CupertinoPageRoute(
+                                  builder: (_) => const MapScreen()),
                               (route) => false);
                         },
                         child: Container(

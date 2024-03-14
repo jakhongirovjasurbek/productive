@@ -3,9 +3,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/functions/app_functions.dart';
+import 'package:productive/core/route_names/task_name.dart';
 import 'package:productive/features/tasks1/presentation/pages/drawer.dart';
 import '../../../assets/colors.dart';
-import '../../notes/presentation/notes.dart';
 
 class TaskScreen extends StatefulWidget {
   const TaskScreen({super.key});
@@ -26,126 +26,146 @@ class _TaskScreenState extends State<TaskScreen>
 
   @override
   Widget build(BuildContext context) {
-    return Builder(builder: (context) {
-      return Scaffold(
-        drawer: const DrawerMenu(),
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          titleSpacing: 0,
-          toolbarHeight: 116,
-          title: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Builder(builder: (context) {
-                      return GestureDetector(
-                          onTap: () {
-                            Scaffold.of(context).openDrawer();
-                          },
-                          child: SvgPicture.asset(context.icons.humburger));
-                    }),
-                    const Spacer(),
-                    GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const NotesPage()));
+    return Builder(
+      builder: (context) {
+        return Scaffold(
+          drawer: const DrawerMenu(),
+          appBar: AppBar(
+            automaticallyImplyLeading: false,
+            titleSpacing: 0,
+            toolbarHeight: 116,
+            title: Padding(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Builder(
+                        builder: (context) {
+                          return GestureDetector(
+                            onTap: () {
+                              Scaffold.of(context).openDrawer();
+                            },
+                            child: SvgPicture.asset(context.icons.humburger),
+                          );
                         },
-                        child: SvgPicture.asset(context.icons.note)),
-                    const SizedBox(width: 24),
-                    GestureDetector(
-                      onTap: () {},
-                      child: SvgPicture.asset(context.icons.notyfication),
-                    )
-                  ],
-                ),
-                const SizedBox(height: 16),
-                TextField(onChanged: (value) {},
-                  cursorColor: context.colors.orange,
-                  decoration: InputDecoration(
-                    border: UnderlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
+                      ),
+                      const Spacer(),
+                      GestureDetector(
+                        onTap: () =>
+                            Navigator.pushNamed(context, TaskRouteNames.notes),
+                        child: SvgPicture.asset(context.icons.note),
+                      ),
+                      const SizedBox(width: 24),
+                      GestureDetector(
+                        onTap: () {},
+                        child: SvgPicture.asset(context.icons.notyfication),
+                      )
+                    ],
+                  ),
+                  const SizedBox(height: 16),
+                  TextField(
+                    onChanged: (value) {},
+                    cursorColor: context.colors.orange,
+                    decoration: InputDecoration(
+                      border: UnderlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: const BorderRadius.all(
+                          Radius.circular(8),
+                        ),
+                        borderSide: BorderSide(
+                            color: context.colors.textFieldBackgroundColor),
+                      ),
+                      contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 44, vertical: 13.5),
+                      prefixIcon: Container(
+                        padding: const EdgeInsets.all(10),
+                        child: SvgPicture.asset(
+                          context.icons.expanse_categories_search_task,
+                        ),
+                      ),
+                      suffixIcon: Container(
+                        padding: const EdgeInsets.all(10),
+                        child: GestureDetector(
+                            onTap: () {},
+                            child: SvgPicture.asset(context.icons.filter)),
+                      ),
+                      filled: true,
+                      fillColor: context.colors.textFieldBackgroundColor,
+                      hintText: context.localization.hintext_task_search,
+                      hintStyle: Theme.of(context)
+                          .textTheme
+                          .titleSmall!
+                          .copyWith(color: context.colors.allPageTextColor),
                     ),
-                    enabledBorder:  OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(8)),
-                      borderSide: BorderSide(color: context.colors.textFieldBackgroundColor),
-                    ),
-                    contentPadding:  EdgeInsets.symmetric(
-                        horizontal: 44, vertical: 13.5),
-                    prefixIcon: Container(
-                      padding: EdgeInsets.all(10),
-                      child: SvgPicture.asset(
-                        context.icons.expanse_categories_search_task,
+                  ),
+                ],
+              ),
+            ),
+            bottom: TabBar(
+                controller: tabController,
+                indicatorColor: context.colors.activeColor,
+                indicatorSize: TabBarIndicatorSize.tab,
+                labelColor: context.colors.whitetask,
+                unselectedLabelColor: AppColors.greyish,
+                tabs: [
+                  Tab(
+                    child: Text(
+                      context.localization.Upcoming,
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
-                    suffixIcon: Container(
-                      padding: const EdgeInsets.all(10),
-                      child: GestureDetector(
-                          onTap: () {},
-                          child: SvgPicture.asset(context.icons.filter)),
-                    ),
-                    filled: true,
-                    fillColor: context.colors.textFieldBackgroundColor,
-                    hintText: context.localization.hintext_task_search,
-                    hintStyle: Theme.of(context)
-                        .textTheme
-                        .titleSmall!
-                        .copyWith(color: context.colors.allPageTextColor),
                   ),
-                ),
-              ],
-            ),
+                  Tab(
+                    child: Text(
+                      context.localization.All,
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ),
+                ]),
           ),
-          bottom: TabBar(
-              controller: tabController,
-              indicatorColor: context.colors.activeColor,
-              indicatorSize: TabBarIndicatorSize.tab,
-              labelColor: context.colors.whitetask,
-              unselectedLabelColor: AppColors.greyish,
-              tabs: [
-            Tab(child: Text(context.localization.Upcoming,
-                style: TextStyle(fontSize: 18,fontWeight: FontWeight.w700))),
-            Tab(child: Text(context.localization.All,
-                style: TextStyle(fontSize: 18,fontWeight: FontWeight.w700))),
-          ]),
-        ),
-        body: TabBarView(
-                        controller: tabController,
-                        children: [
-                          ListView.separated(
-                            itemBuilder: (context, index) {
-                              return TaskItem(
-                                title: context.localization.tasks,
-                                startDate: DateTime.now(),
-                                endDate:  DateTime.now(),
-                                icon: context.icons.study,
-                                priority: Priority.low,
-                                checkout: true,
-                              );
-                            },
-                            separatorBuilder: (context, index) {
-                              return const Gap(16);
-                            },
-                            itemCount: 1,
-                          ),
-                          ListView.separated(
-                            itemBuilder: (context, index) {
-                              return Container();
-                            },
-                            separatorBuilder: (context, index) {
-                              return const Gap(16);
-                            },
-                            itemCount: 1,
-                          )
-                        ],
-        )
-      );
-    });
+          body: TabBarView(
+            controller: tabController,
+            children: [
+              ListView.separated(
+                itemBuilder: (context, index) {
+                  return TaskItem(
+                    title: context.localization.tasks,
+                    startDate: DateTime.now(),
+                    endDate: DateTime.now(),
+                    icon: context.icons.study,
+                    priority: Priority.low,
+                    checkout: true,
+                  );
+                },
+                separatorBuilder: (context, index) {
+                  return const Gap(16);
+                },
+                itemCount: 1,
+              ),
+              ListView.separated(
+                itemBuilder: (context, index) {
+                  return Container();
+                },
+                separatorBuilder: (context, index) {
+                  return const Gap(16);
+                },
+                itemCount: 1,
+              )
+            ],
+          ),
+        );
+      },
+    );
   }
 }
 
@@ -168,8 +188,8 @@ class TaskItem extends StatelessWidget {
     required this.icon,
     required this.checkout,
     required this.priority,
-
   });
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -198,8 +218,8 @@ class TaskItem extends StatelessWidget {
                   height: 55,
                   padding: const EdgeInsets.all(7),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                     ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                   child: SvgPicture.asset(icon),
                 ),
                 const Gap(10),
@@ -254,6 +274,7 @@ class TaskItem extends StatelessWidget {
     );
   }
 }
+
 Color getPriorityColor(Priority priority) {
   switch (priority) {
     case Priority.high:
@@ -264,4 +285,5 @@ Color getPriorityColor(Priority priority) {
       return AppColors.greenPriority;
   }
 }
-enum Priority{high, medium,low}
+
+enum Priority { high, medium, low }

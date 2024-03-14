@@ -564,6 +564,16 @@ class AppLocalization {
     );
   }
 
+  /// `Salary`
+  String get salary {
+    return Intl.message(
+      'Salary',
+      name: 'salary',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Create Event`
   String get create_event {
     return Intl.message(
@@ -1294,16 +1304,6 @@ class AppLocalization {
     );
   }
 
-  /// `Salary`
-  String get salary {
-    return Intl.message(
-      'Salary',
-      name: 'salary',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Select Icon`
   String get select_icon {
     return Intl.message(
@@ -1499,6 +1499,36 @@ class AppLocalization {
     return Intl.message(
       'Sport',
       name: 'sport',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search by events, tasks.. `
+  String get hintext_task_search {
+    return Intl.message(
+      'Search by events, tasks.. ',
+      name: 'hintext_task_search',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upcoming`
+  String get Upcoming {
+    return Intl.message(
+      'Upcoming',
+      name: 'Upcoming',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All`
+  String get All {
+    return Intl.message(
+      'All',
+      name: 'All',
       desc: '',
       args: [],
     );
