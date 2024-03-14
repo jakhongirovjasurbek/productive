@@ -1,11 +1,10 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:pinput/pinput.dart';
 import 'package:productive/core/extensions/extensions.dart';
 
+import '../../../../assets/icons.dart';
 import '../../../../assets/images.dart';
 
 class VerificationPage extends StatefulWidget {
@@ -16,7 +15,6 @@ class VerificationPage extends StatefulWidget {
 }
 
 class _VerificationPageState extends State<VerificationPage> {
-
   @override
   Widget build(BuildContext context) {
     PinTheme defaultPinTheme = PinTheme(
@@ -26,7 +24,7 @@ class _VerificationPageState extends State<VerificationPage> {
       decoration: BoxDecoration(
         color: context.colors.loginTextFieldBackgroundColor,
         border: Border.all(
-          color:context.colors.pinputBorderColor.withOpacity(0.1),
+          color: context.colors.pinputBorderColor.withOpacity(0.1),
         ),
         borderRadius: BorderRadius.circular(8),
       ),
@@ -41,9 +39,12 @@ class _VerificationPageState extends State<VerificationPage> {
         backgroundColor: context.colors.mainDark.withOpacity(0.3),
         title:  Row(
           children: [
-            SvgPicture.asset(context.icons.back),
+            SvgPicture.asset(AppIcons.back),
             Gap(10),
-            Text(context.localization.email_verification,style: context.style.fontSize24Weight600,),
+            Text(
+              context.localization.email_verification,
+              style: context.style.fontSize24Weight600,
+            ),
           ],
         ),
       ),
@@ -55,7 +56,7 @@ class _VerificationPageState extends State<VerificationPage> {
               height: 130,
               width: 130,
               margin: const EdgeInsets.only(top: 20, bottom: 20),
-              child: Image.asset(AppImages.person)
+              child: Image.asset(context.images.person)
             ),
              Text(
               context.localization.password,
@@ -76,12 +77,14 @@ class _VerificationPageState extends State<VerificationPage> {
                   : defaultPinTheme,
               focusedPinTheme: defaultPinTheme.copyBorderWith(
                 border: Border.all(
-                  color:context.colors.pinputBorderColor,
+                  color: context.colors.pinputBorderColor,
                 ),
               ),
               errorPinTheme: defaultPinTheme.copyBorderWith(
                 border: Border.all(
-                  color: !isPinPutValid ? context.colors.pinputBorderColor : context.colors.calendarGreen,
+                  color: !isPinPutValid
+                      ? context.colors.pinputBorderColor
+                      : context.colors.calendarGreen,
                 ),
               ),
               onChanged: (value) {
@@ -113,13 +116,13 @@ class _VerificationPageState extends State<VerificationPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                 Text(
+                Text(
                   context.localization.receive_code,
                   style: context.style.fontSize14Weight600,
                 ),
                 GestureDetector(
                   onTap: () {},
-                  child:  Text(
+                  child: Text(
                     "Resent",
                     style: context.style.fontSize14Weight600,
                   ),

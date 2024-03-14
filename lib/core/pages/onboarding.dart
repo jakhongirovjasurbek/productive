@@ -2,19 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:productive/assets/icons.dart';
-import 'package:productive/assets/images.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/route_names/app_route_name.dart';
-import 'package:productive/generated/l10n.dart';
 
-class OnBoarding extends StatefulWidget {
-  const OnBoarding({super.key});
+class OnboardingPage extends StatefulWidget {
+  const OnboardingPage({super.key});
 
   @override
-  State<OnBoarding> createState() => _OnBoardingState();
+  State<OnboardingPage> createState() => _OnboardingPageState();
 }
 
-class _OnBoardingState extends State<OnBoarding> {
+class _OnboardingPageState extends State<OnboardingPage> {
   final controller = PageController();
   int thisPage = 0;
 
@@ -62,13 +60,13 @@ class _OnBoardingState extends State<OnBoarding> {
                 controller: controller,
                 children: [
                   OnboardingPageItem(
-                    image: AppImages.onboardingFirstImage,
-                    desciption: localization.help,
+                    image: context.images.onboardingFirstImage,
+                    description: localization.help,
                     title: localization.easyManage,
                   ),
                   OnboardingPageItem(
-                    image:AppImages.onboardingSecondImage,
-                    desciption: localization.helpOrganize,
+                    image:context.images.onboardingSecondImage,
+                    description: localization.helpOrganize,
                     title: localization. trackYourExpense,
                   ),
                   
@@ -171,12 +169,12 @@ class _OnBoardingState extends State<OnBoarding> {
 class OnboardingPageItem extends StatelessWidget {
   final String image;
   final String title;
-  final String desciption;
+  final String description;
   const OnboardingPageItem({
     super.key,
     required this.image,
     required this.title,
-    required this.desciption,
+    required this.description,
   });
 
   @override
@@ -202,7 +200,7 @@ class OnboardingPageItem extends StatelessWidget {
           const Gap(6),
           Center(
             child: Text(
-              desciption,
+              description,
               style: TextStyle(
                   fontSize: 18, color: context.colors.onBoardTextColor),
               textAlign: TextAlign.center,

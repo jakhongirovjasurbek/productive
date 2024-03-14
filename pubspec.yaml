@@ -10,6 +10,7 @@ dependencies:
   device_preview: ^1.1.0
   flutter:
     sdk: flutter
+  flutter_intl: ^0.0.1
   flutter_localizations:
     sdk: flutter
   flutter_svg: ^2.0.10+1
@@ -25,7 +26,14 @@ dependencies:
   url_launcher: ^6.2.5
   cached_network_image: ^3.3.1
   shimmer: ^3.0.0
-  equatable: any
+  firebase_core: ^2.26.0
+  cloud_firestore: ^4.15.7
+  firebase_auth: ^4.17.7
+  firebase_storage: ^11.6.8
+  equatable: ^2.0.5
+  fl_chart: ^0.66.2
+  syncfusion_flutter_charts: ^24.2.8
+  flutter_rounded_date_picker: ^3.0.4
 
 dev_dependencies:
   flutter_test:
@@ -52,9 +60,12 @@ flutter:
     - assets/icons/expenses/
     - assets/icons/calendar/
     - assets/icons/bnb/
+    - assets/icons/single_category/
     - assets/icons/forgot_password/
     - assets/images/
     - assets/icons/expanse/
+    - assets/icons/notes_svg/
+    - assets/svg/
 
 flutter_intl:
   enabled: true

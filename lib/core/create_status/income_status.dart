@@ -1,1 +1,0 @@
-enum IncomePrio{salary,expense}

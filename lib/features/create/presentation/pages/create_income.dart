@@ -4,14 +4,16 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:productive/core/create_status/income_active_status.dart';
-import 'package:productive/core/create_status/income_status.dart';
+import 'package:productive/features/create/data/model/income_active_status.dart';
+import 'package:productive/features/create/data/model/income_status.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/features/create/data/model/income_model.dart';
 import 'package:productive/features/create/presentation/bloc/income_bloc.dart';
 import 'package:productive/features/create/presentation/mixin/create_income_mixin.dart';
 import 'package:productive/features/create/presentation/widgets/show_snackbar.dart';
 import 'package:productive/features/create/presentation/widgets/w_text_field.dart';
+
+import '../../../../assets/icons.dart';
 
 class CreateIncomeScreen extends StatefulWidget {
   const CreateIncomeScreen({super.key});
@@ -49,7 +51,7 @@ class _CreateIncomeScreenState extends State<CreateIncomeScreen> with CreateInco
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
                               horizontal: 10, vertical: 17),
-                          child: SvgPicture.asset(context.icons.arrow),
+                          child: SvgPicture.asset(AppIcons.arrow),
                         ),
                       ),
                     ),

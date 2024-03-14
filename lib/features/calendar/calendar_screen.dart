@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/functions/app_functions.dart';
-import 'package:productive/core/widgets/wcalendar_widget.dart';
+import 'package:productive/core/widgets/w_calendar.dart';
 import 'package:productive/features/calendar/presentation/bloc/calendar_bloc.dart';
 
 class CalendarScreen extends StatefulWidget {

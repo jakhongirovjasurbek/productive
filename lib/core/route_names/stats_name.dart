@@ -1,3 +1,3 @@
-class StatsRouteNames{
-  static const stats ='/';
+class StatsRouteNames {
+  static const stats = '/';
 }

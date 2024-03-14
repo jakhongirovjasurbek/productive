@@ -14,32 +14,55 @@ class AppTheme {
       ),
       extensions: [
         AppFonts(
+          fontSize20Weight300: TextStyle(
+            fontFamily: "Barlow",
+            fontSize: 20,
+            fontWeight: FontWeight.w300,
+            color: colors.white,
+          ),
           fontSize40Weight700: TextStyle(
             fontSize: 40,
             fontWeight: FontWeight.w700,
             color: colors.whiteLabel,
           ),
           fontSize16Weight400: TextStyle(
+            fontFamily: "Barlow",
             fontSize: 16,
             fontWeight: FontWeight.w400,
             color: colors.whiteLabel,
           ),
           fontSize16Weight500: TextStyle(
+            fontFamily: "Barlow",
             fontSize: 16,
             fontWeight: FontWeight.w500,
             color: colors.whiteLabel,
           ),
+          fontSize16Weight500Blue: TextStyle(
+            fontFamily: "Barlow",
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+            color: colors.skipButtonColor,
+          ),
+          fontSize16Weight500Grey: TextStyle(
+            fontFamily: "Barlow",
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+            color: colors.unactivatedColor,
+          ),
           fontSize16Weight600: TextStyle(
+            fontFamily: "Barlow",
             fontSize: 16,
             fontWeight: FontWeight.w600,
             color: colors.whiteLabel,
           ),
           fontSize16Weight700: TextStyle(
+            fontFamily: "Barlow",
             fontSize: 16,
             fontWeight: FontWeight.w700,
             color: colors.whiteLabel,
           ),
           fontSize14Weight400: TextStyle(
+            fontFamily: "Barlow",
             fontSize: 14,
             fontWeight: FontWeight.w400,
             color: colors.whiteLabel,
@@ -102,6 +125,12 @@ class AppTheme {
             fontWeight: FontWeight.w500,
             color: colors.expensesGreen,
           ),
+          fontSize18Weight500Grey: TextStyle(
+            fontFamily: "Barlow",
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+            color: colors.unactivatedColor,
+          ),
           fontSize18Weight400: TextStyle(
             fontFamily: "Barlow",
             fontSize: 18,
@@ -120,11 +149,10 @@ class AppTheme {
             fontWeight: FontWeight.w700,
             color: colors.whiteLabel,
           ),
-          fontSize16Weight500orange: TextStyle(
+          fontSize16Weight500orange: const TextStyle(
             fontFamily: "Barlow",
             fontSize: 16,
             fontWeight: FontWeight.w500,
-            color: colors.expensesFood,
           ),
           fontSize16Weight500blue: TextStyle(
             fontFamily: "Barlow",
@@ -191,11 +219,24 @@ class AppTheme {
             fontSize: 8,
             fontWeight: FontWeight.w400,
             color: colors.whiteLabel,
-          ), fontSize30Weight700: TextStyle( 
+          ),
+          fontSize30Weight700: TextStyle(
             fontFamily: "Barlow",
             fontSize: 30,
             fontWeight: FontWeight.w700,
             color: colors.whiteLabel,
+          ),
+          fontSize14Weight400Grey: TextStyle(
+            fontFamily: "Barlow",
+            fontSize: 14,
+            fontWeight: FontWeight.w400,
+            color: colors.unactivatedColor,
+          ),
+          fontSize14Weight500Grey: TextStyle(
+            fontFamily: "Barlow",
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
+            color: colors.createTaskTime,
           ),
         ),
       ],

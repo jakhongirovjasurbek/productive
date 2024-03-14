@@ -5,6 +5,8 @@ import 'package:gap/gap.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/features/create/data/model/income_model.dart';
 
+import '../../../../assets/icons.dart';
+
 void showBottomSheetWidget(BuildContext context, IncomeModel model) {
   showModalBottomSheet(
     context: context,
@@ -37,7 +39,7 @@ void showBottomSheetWidget(BuildContext context, IncomeModel model) {
                         borderRadius: BorderRadius.circular(24)),
                   ),
                   GestureDetector(
-                    child: SvgPicture.asset(context.icons.exit),
+                    child: SvgPicture.asset(AppIcons.exit),
                   ),
                 ],
               ),
@@ -59,7 +61,7 @@ void showBottomSheetWidget(BuildContext context, IncomeModel model) {
                       ),
                       padding: EdgeInsets.all(9),
                       child: SvgPicture.asset(
-                        context.icons.moneyFirst,
+                        AppIcons.moneyFirst,
                       ),
                     ),
                     const Gap(8),
@@ -91,7 +93,7 @@ void showBottomSheetWidget(BuildContext context, IncomeModel model) {
                             ),
                             padding: EdgeInsets.all(12),
                             child: SvgPicture.asset(
-                              context.icons.plus,
+                              AppIcons.plus,
                             ),
                           ),
                           const Gap(8),
@@ -102,7 +104,7 @@ void showBottomSheetWidget(BuildContext context, IncomeModel model) {
                         ],
                       ),
                     ),
-                    SvgPicture.asset(context.icons.premium),
+                    SvgPicture.asset(AppIcons.premium),
                   ],
                 ),
               ),
