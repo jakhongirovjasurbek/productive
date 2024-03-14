@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:productive/core/functions/app_functions.dart';
 import 'package:productive/core/pages/onboarding.dart';
-import 'package:productive/core/pages/splash.dart';
+
+
 import 'package:productive/features/authentication/presentation/pages/create_new_password.dart';
 import 'package:productive/core/route_names/app_route_name.dart';
 import 'package:productive/features/authentication/presentation/pages/login_screen.dart';
 import 'package:productive/features/authentication/presentation/pages/sign_up.dart';
-import 'package:productive/features/create/presentation/pages/create_income.dart';
 import 'package:productive/features/home/home.dart';
 import 'package:productive/features/calendar/calendar_screen.dart';
-import 'package:productive/features/statistics/presentation/pages/statistics.dart';
-
-import '../../features/create/presentation/pages/create_expense.dart';
+import '../../features/statistics/presentation/pages/statistics.dart';
+import '../pages/splash.dart';
 
 class AppRoute {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {

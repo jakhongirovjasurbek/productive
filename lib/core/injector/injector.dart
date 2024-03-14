@@ -3,11 +3,17 @@ import 'package:productive/features/calendar/data/data_sourse/data_source.dart';
 import 'package:productive/features/calendar/data/repository/repository.dart';
 import 'package:productive/features/calendar/domain/repository/repository.dart';
 import 'package:productive/features/calendar/domain/usecase/usecase.dart';
+import 'package:productive/features/tasks/data/data_source/data_source.dart';
+import 'package:productive/features/tasks/data/repository/repository.dart';
+import 'package:productive/features/tasks/domain/usecase/usecase.dart';
+
+import '../../features/tasks/domain/repository/repository.dart';
 
 final sl = GetIt.instance;
 
 Future<void> getItInjector() async {
   calendarUseCase();
+  notificationUseCase();
 }
 
 calendarUseCase() {
@@ -21,4 +27,19 @@ calendarUseCase() {
     ..registerLazySingleton(
       () => CalendarDataSource(),
     );
+}
+
+notificationUseCase() {
+  sl
+    ..registerFactory(
+      () => NotificationUseCase(
+        repositoryImpl: sl(),
+      ),
+    )
+    ..registerLazySingleton<CalendarRepositoryImpl>(
+      () => CalendarRepositoryImpl(
+        dataSource: sl(),
+      ),
+    )..registerLazySingleton<NotificationRepository>(() => NotificationRepositoryImpl(dataSource: sl()))
+    ..registerLazySingleton(() => NotificationDataSource());
 }
