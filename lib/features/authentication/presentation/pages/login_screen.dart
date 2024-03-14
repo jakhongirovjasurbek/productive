@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -11,7 +10,6 @@ import '../../../../assets/icons.dart';
 import '../../../../core/route_names/app_route_name.dart';
 import '../../../../core/widgets/w_button.dart';
 import '../../../../core/widgets/w_textfield.dart';
-import '../../../home/home.dart';
 import '../bloc/auth_bloc.dart';
 import '../widgets/social.dart';
 
