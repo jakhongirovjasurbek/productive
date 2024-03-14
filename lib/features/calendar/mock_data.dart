@@ -4,7 +4,7 @@ var data = <String, dynamic>{
   "data": [
     {
       "title": "Gym time",
-      "description": null,
+      "description": '',
       "icon": AppIcons.calendarGymIcon,
       "start_time": DateTime.now(),
       "end_time": DateTime.now(),

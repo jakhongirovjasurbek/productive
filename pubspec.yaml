@@ -61,6 +61,8 @@ flutter:
     - assets/icons/bnb/
     - assets/icons/single_category/
     - assets/icons/forgot_password/
+    - assets/icons/tasks/
+    - assets/icons/tasks/drawer/
     - assets/images/
     - assets/icons/expanse/
     - assets/icons/notes_svg/

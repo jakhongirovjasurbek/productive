@@ -190,10 +190,10 @@ class AppLocalization {
     );
   }
 
-  /// `Tasks`
+  /// `tasks`
   String get tasks {
     return Intl.message(
-      'Tasks',
+      'tasks',
       name: 'tasks',
       desc: '',
       args: [],
@@ -1299,6 +1299,36 @@ class AppLocalization {
     return Intl.message(
       'NO NOTIFICATION YET',
       name: 'no_notifications',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search by events, tasks.. `
+  String get hintext_task_search {
+    return Intl.message(
+      'Search by events, tasks.. ',
+      name: 'hintext_task_search',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upcoming`
+  String get Upcoming {
+    return Intl.message(
+      'Upcoming',
+      name: 'Upcoming',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All`
+  String get All {
+    return Intl.message(
+      'All',
+      name: 'All',
       desc: '',
       args: [],
     );

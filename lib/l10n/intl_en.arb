@@ -123,5 +123,10 @@
   "lbl_sun": "Sun",
   "notification": "Notifications",
   "clear": "Clear",
-  "no_notifications": "NO NOTIFICATION YET"
+  "no_notifications": "NO NOTIFICATION YET",
+  "hintext_task_search": "Search by events, tasks.. ",
+  "Upcoming": "Upcoming",
+  "All": "All",
+  "tasks": "tasks"
+
 }

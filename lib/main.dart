@@ -11,7 +11,7 @@ import 'package:productive/core/injector/injector.dart';
 import 'package:productive/core/routes/app_route.dart';
 import 'package:productive/features/calendar/presentation/bloc/calendar_bloc.dart';
 import 'package:productive/firebase_options.dart';
-
+import 'features/tasks1/presentation/tasks_screen.dart';
 import 'generated/l10n.dart';
 
 Future<void> main() async {
@@ -48,6 +48,9 @@ class MainApp extends StatelessWidget {
           BlocProvider(
             create: (context) => CalendarBloc(),
           ),
+          BlocProvider(
+            create: (context) => CalendarBloc(),
+          ),
         ],
         child: MaterialApp(
           theme: context.theme.lightTheme(),
@@ -58,7 +61,8 @@ class MainApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           useInheritedMediaQuery: true,
           builder: DevicePreview.appBuilder,
-          onGenerateRoute: AppRoute.onGenerateRoute,
+          home: TaskScreen(),
+          // onGenerateRoute: AppRoute.onGenerateRoute,
           locale: const Locale.fromSubtags(languageCode: 'en'),
           supportedLocales: AppLocalization.delegate.supportedLocales,
           localizationsDelegates: const [
