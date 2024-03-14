@@ -8,6 +8,7 @@ class WButton extends StatelessWidget {
   final double? width;
   final double? height;
   final String text;
+  final Color? buttonColor;
   final Color? color;
   final Color? textColor;
   final TextStyle? textStyle;
@@ -23,6 +24,7 @@ class WButton extends StatelessWidget {
 
   const WButton({
     required this.onTap,
+    this.buttonColor,
     this.width,
     this.borderRadius,
     this.height,

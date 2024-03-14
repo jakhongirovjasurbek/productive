@@ -47,6 +47,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Create new password"),
         "daily": MessageLookupByLibrary.simpleMessage("Daily"),
         "date": MessageLookupByLibrary.simpleMessage("28 Nov,2022 10:00 AM"),
+        "dont_accaunt":
+            MessageLookupByLibrary.simpleMessage("Don’t have an account?"),
         "easyManage":
             MessageLookupByLibrary.simpleMessage("Easy Time Management"),
         "easy_time_management":
@@ -65,7 +67,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "focusTime": MessageLookupByLibrary.simpleMessage("Focus Time"),
         "food": MessageLookupByLibrary.simpleMessage("Food"),
         "forgot_password":
-            MessageLookupByLibrary.simpleMessage("Forgot password"),
+            MessageLookupByLibrary.simpleMessage("Forgot Password"),
         "gift": MessageLookupByLibrary.simpleMessage("Gift"),
         "gym_time": MessageLookupByLibrary.simpleMessage("Gym time"),
         "help": MessageLookupByLibrary.simpleMessage(
@@ -83,18 +85,21 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Kiritgan parolingiz tepadagisi bilan mos kelmadi"),
         "link": MessageLookupByLibrary.simpleMessage("Link to meeting"),
+        "login": MessageLookupByLibrary.simpleMessage("Login"),
         "meet": MessageLookupByLibrary.simpleMessage("Meet"),
         "monthly": MessageLookupByLibrary.simpleMessage("Monthly"),
         "new_title": MessageLookupByLibrary.simpleMessage("New title"),
+        "not_found":
+            MessageLookupByLibrary.simpleMessage("Bunday user mavjud emas!"),
         "once": MessageLookupByLibrary.simpleMessage("Once"),
         "online": MessageLookupByLibrary.simpleMessage("Online"),
+        "or": MessageLookupByLibrary.simpleMessage("OR"),
         "other": MessageLookupByLibrary.simpleMessage("Other"),
         "outcome": MessageLookupByLibrary.simpleMessage("Outcome"),
         "parol_kamida_8_belgidan_iborat_bolsin":
             MessageLookupByLibrary.simpleMessage(
                 "Parol kamida 8 belgidan iborat bo\'lsin"),
-        "password": MessageLookupByLibrary.simpleMessage(
-            " Please enter the 4 digital code that send to your email address"),
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
         "productive": MessageLookupByLibrary.simpleMessage("Productive"),
         "readSurahAlBaqarah":
             MessageLookupByLibrary.simpleMessage("Read Surah Al-Baqarah"),
@@ -111,6 +116,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Saving transportation expenses"),
         "see_all": MessageLookupByLibrary.simpleMessage("see all"),
         "shopping": MessageLookupByLibrary.simpleMessage("Shopping"),
+        "sign_up": MessageLookupByLibrary.simpleMessage("Sign up"),
         "skip": MessageLookupByLibrary.simpleMessage("SKIP"),
         "start_date": MessageLookupByLibrary.simpleMessage("Start Date"),
         "stats": MessageLookupByLibrary.simpleMessage("Stats"),

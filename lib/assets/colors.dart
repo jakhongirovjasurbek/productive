@@ -79,7 +79,6 @@ class AppColors {
   final startDate = const Color(0xFF18B797);
   final endDate = const Color(0xFFF3737E);
   final orange = Colors.orange;
-
   final btnBorderColor = const Color(0xFF28304B);
   final bottomSheetBgColor = const Color(0xFF272C38);
   final dividerBgColor = const Color(0xFF38414E);
@@ -97,4 +96,5 @@ class AppColors {
   final lightBlueGradient = const Color.fromRGBO(91, 74, 209, 1);
   final statsTextColor = const Color.fromRGBO(163, 163, 163, 1);
   final statsTaskBackground = const Color.fromRGBO(61, 64, 85, 1);
+  final hintextcolor=Color(0xFFFEFEFE);
 }

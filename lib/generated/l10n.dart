@@ -70,10 +70,10 @@ class AppLocalization {
     );
   }
 
-  /// `Forgot password`
+  /// `Forgot Password`
   String get forgot_password {
     return Intl.message(
-      'Forgot password',
+      'Forgot Password',
       name: 'forgot_password',
       desc: '',
       args: [],
@@ -110,10 +110,10 @@ class AppLocalization {
     );
   }
 
-  /// ` Please enter the 4 digital code that send to your email address`
+  /// `Password`
   String get password {
     return Intl.message(
-      ' Please enter the 4 digital code that send to your email address',
+      'Password',
       name: 'password',
       desc: '',
       args: [],
@@ -869,6 +869,56 @@ class AppLocalization {
     return Intl.message(
       'Focus Time',
       name: 'focusTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get login {
+    return Intl.message(
+      'Login',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `OR`
+  String get or {
+    return Intl.message(
+      'OR',
+      name: 'or',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don’t have an account?`
+  String get dont_accaunt {
+    return Intl.message(
+      'Don’t have an account?',
+      name: 'dont_accaunt',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign up`
+  String get sign_up {
+    return Intl.message(
+      'Sign up',
+      name: 'sign_up',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bunday user mavjud emas!`
+  String get not_found {
+    return Intl.message(
+      'Bunday user mavjud emas!',
+      name: 'not_found',
       desc: '',
       args: [],
     );

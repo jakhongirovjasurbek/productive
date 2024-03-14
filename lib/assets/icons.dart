@@ -2,6 +2,8 @@ const _bnb = 'assets/icons/bnb/';
 
 const path = "assets/icons/forgot_password/";
 
+const pathLogin = "assets/icons/login/";
+
 class AppIcons {
   static const rectangle = "assets/create_new_password/user.png";
   static const isCheck = "assets/create_new_password/isCheck.svg";
@@ -64,4 +66,11 @@ class AppIcons {
   // static const bold = "assets/icons/bold.svg";
   // static const exit = "assets/icons/exit.svg";
   static const radio = "assets/icons/radio.svg";
+  static const logoL="${pathLogin}logo.svg";
+  static const eye_off="${pathLogin}eye_off.svg";
+  static const eye_on="${pathLogin}eye_on.svg";
+  static const apple="${pathLogin}apple.svg";
+  static const facebook="${pathLogin}facebook.svg";
+  static const google="${pathLogin}google.svg";
+
 }

@@ -80,5 +80,13 @@
   "roomCleaning": "Room cleaning",
   "readSurahAlBaqarah": "Read Surah Al-Baqarah",
   "today": "Today",
-  "focusTime": "Focus Time"
+  "focusTime": "Focus Time",
+  "email": "Email",
+  "password": "Password",
+  "forgot_password": "Forgot Password",
+  "login" : "Login",
+  "or": "OR",
+  "dont_accaunt": "Don’t have an account?",
+  "sign_up":"Sign up",
+  "not_found": "Bunday user mavjud emas!"
 }

@@ -60,6 +60,7 @@ flutter:
     - assets/icons/forgot_password/
     - assets/images/
     - assets/icons/expanse/
+    - assets/icons/login/
 
 flutter_intl:
   enabled: true
