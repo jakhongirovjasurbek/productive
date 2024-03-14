@@ -86,7 +86,7 @@ class _LinesWeeklyState extends State<LinesWeekly> {
                     LineChartBarData(
                       isCurved: true,
                       show: true,
-                      color: AppColors.expensesFood,
+                      color: context.colors.expensesFood,
                       shadow: Shadow(
                         blurRadius: 4,
                         offset: const Offset(2, 2),
@@ -94,7 +94,7 @@ class _LinesWeeklyState extends State<LinesWeekly> {
                       ),
                       belowBarData: BarAreaData(
                         show: true,
-                        color: AppColors.expensesFood.withOpacity(.1),
+                        color: context.colors.expensesFood.withOpacity(.1),
                       ),
                       spots: [
                         const FlSpot(1, 20),

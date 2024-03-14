@@ -4,15 +4,14 @@ import 'package:productive/assets/colors.dart';
 import 'package:productive/core/extensions/extensions.dart';
 
 class YearlyTabPage extends StatefulWidget {
-  YearlyTabPage({super.key});
-  final Color leftBarColor = AppColors.expensesFood;
-  final Color avgColor = AppColors.blue;
+  const YearlyTabPage({super.key});
+
   @override
   State<StatefulWidget> createState() => YearlyTabPageState();
 }
 
 class YearlyTabPageState extends State<YearlyTabPage> {
-   Color textColor = AppColors.whitee;
+  Color textColor = AppColors.whitee;
 
   final double width = 10;
 
@@ -20,6 +19,7 @@ class YearlyTabPageState extends State<YearlyTabPage> {
   late List<BarChartGroupData> showingBarGroups;
 
   int touchedGroupIndex = -1;
+
   // rangi o'zgarishi uchun
   int touchedIndex = -1;
 
@@ -65,108 +65,111 @@ class YearlyTabPageState extends State<YearlyTabPage> {
       aspectRatio: 1,
       child: Padding(
         padding: const EdgeInsets.all(16),
-        child: Container(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              const SizedBox(
-                height: 38,
-              ),
-              Expanded(
-                child: BarChart(
-                  BarChartData(
-                    maxY: 20,
-                    barTouchData: BarTouchData(
-                      touchTooltipData: BarTouchTooltipData(
-                        tooltipBgColor:  context.colors.tasksTimeColor,
-                        getTooltipItem: (a, b, c, d) => null,
-                      ),
-                      touchCallback: (FlTouchEvent event, response) {
-                        if (response == null || response.spot == null) {
-                          setState(() {
-                            touchedGroupIndex = -1;
-                            showingBarGroups = List.of(rawBarGroups);
-                          });
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            const SizedBox(
+              height: 38,
+            ),
+            Expanded(
+              child: BarChart(
+                BarChartData(
+                  maxY: 20,
+                  barTouchData: BarTouchData(
+                    touchTooltipData: BarTouchTooltipData(
+                      tooltipBgColor: context.colors.tasksTimeColor,
+                      getTooltipItem: (a, b, c, d) => null,
+                    ),
+                    touchCallback: (FlTouchEvent event, response) {
+                      if (response == null || response.spot == null) {
+                        setState(() {
+                          touchedGroupIndex = -1;
+                          showingBarGroups = List.of(rawBarGroups);
+                        });
+                        return;
+                      }
+
+                      touchedGroupIndex = response.spot!.touchedBarGroupIndex;
+
+                      setState(() {
+                        if (!event.isInterestedForInteractions) {
+                          touchedGroupIndex = -1;
+                          showingBarGroups = List.of(rawBarGroups);
                           return;
                         }
-
-                        touchedGroupIndex = response.spot!.touchedBarGroupIndex;
-
-                        setState(() {
-                          if (!event.isInterestedForInteractions) {
-                            touchedGroupIndex = -1;
-                            showingBarGroups = List.of(rawBarGroups);
-                            return;
+                        showingBarGroups = List.of(rawBarGroups);
+                        if (touchedGroupIndex != -1) {
+                          var sum = 0.0;
+                          for (final rod
+                              in showingBarGroups[touchedGroupIndex]
+                                  .barRods) {
+                            sum += rod.toY;
                           }
-                          showingBarGroups = List.of(rawBarGroups);
-                          if (touchedGroupIndex != -1) {
-                            var sum = 0.0;
-                            for (final rod
-                                in showingBarGroups[touchedGroupIndex]
-                                    .barRods) {
-                              sum += rod.toY;
-                            }
-                            final avg = sum /
-                                showingBarGroups[touchedGroupIndex]
-                                    .barRods
-                                    .length;
-
-                            showingBarGroups[touchedGroupIndex] =
-                                showingBarGroups[touchedGroupIndex].copyWith(
-                              barRods: showingBarGroups[touchedGroupIndex]
+                          final avg = sum /
+                              showingBarGroups[touchedGroupIndex]
                                   .barRods
-                                  .map((rod) {
-                                return rod.copyWith(
-                                    toY: avg, color: widget.avgColor);
-                              }).toList(),
-                            );
-                          }
-                        });
-                      },
+                                  .length;
+
+                          showingBarGroups[touchedGroupIndex] =
+                              showingBarGroups[touchedGroupIndex].copyWith(
+                            barRods: showingBarGroups[touchedGroupIndex]
+                                .barRods
+                                .map((rod) {
+                              return rod.copyWith(
+                                toY: avg,
+                                color: context.colors.blue,
+                              );
+                            }).toList(),
+                          );
+                        }
+                      });
+                    },
+                  ),
+                  titlesData: FlTitlesData(
+                    show: true,
+                    rightTitles: const AxisTitles(
+                      sideTitles: SideTitles(showTitles: false),
                     ),
-                    titlesData: FlTitlesData(
-                      show: true,
-                      rightTitles: const AxisTitles(
-                        sideTitles: SideTitles(showTitles: false),
-                      ),
-                      topTitles: const AxisTitles(
-                        sideTitles: SideTitles(showTitles: false),
-                      ),
-                      bottomTitles: AxisTitles(
-                        sideTitles: SideTitles(
-                          showTitles: true,
-                          getTitlesWidget: bottomTitles,
-                          reservedSize: 42,
-                        ),
-                      ),
-                      leftTitles: AxisTitles(
-                        sideTitles: SideTitles(
-                          showTitles: true,
-                          reservedSize: 48,
-                          interval: 1,
-                          getTitlesWidget: leftTitles,
-                        ),
+                    topTitles: const AxisTitles(
+                      sideTitles: SideTitles(showTitles: false),
+                    ),
+                    bottomTitles: AxisTitles(
+                      sideTitles: SideTitles(
+                        showTitles: true,
+                        getTitlesWidget: bottomTitles,
+                        reservedSize: 42,
                       ),
                     ),
-                    borderData: FlBorderData(
-                      show: false,
+                    leftTitles: AxisTitles(
+                      sideTitles: SideTitles(
+                        showTitles: true,
+                        reservedSize: 48,
+                        interval: 1,
+                        getTitlesWidget: leftTitles,
+                      ),
                     ),
-                    barGroups: showingBarGroups,
-                    gridData:  FlGridData(show: true, drawVerticalLine: false,
+                  ),
+                  borderData: FlBorderData(
+                    show: false,
+                  ),
+                  barGroups: showingBarGroups,
+                  gridData: FlGridData(
+                    show: true,
+                    drawVerticalLine: false,
                     getDrawingHorizontalLine: (value) {
                       return FlLine(
                         color: AppColors.conteinerdescriptions,
                         strokeWidth: 1,
                       );
-                    },),
+                    },
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 12,
-              ),
-            ],
-          ),
+            ),
+            const SizedBox(
+              height: 12,
+            ),
+          ],
         ),
       ),
     );
@@ -200,25 +203,38 @@ class YearlyTabPageState extends State<YearlyTabPage> {
   }
 
   Widget bottomTitles(double value, TitleMeta meta) {
-    final titles = <String>[context.localization.lbl_jan, context.localization.lbl_feb, context.localization.lbl_mar,context.localization.lbl_apr,context.localization.lbl_may, context.localization.lbl_jun, context.localization.lbl_jul, context.localization.lbl_aug, context.localization.lbl_sep,context.localization.lbl_oct,context.localization.lbl_nov,context.localization.lbl_des];
+    final titles = <String>[
+      context.localization.lbl_jan,
+      context.localization.lbl_feb,
+      context.localization.lbl_mar,
+      context.localization.lbl_apr,
+      context.localization.lbl_may,
+      context.localization.lbl_jun,
+      context.localization.lbl_jul,
+      context.localization.lbl_aug,
+      context.localization.lbl_sep,
+      context.localization.lbl_oct,
+      context.localization.lbl_nov,
+      context.localization.lbl_des
+    ];
     final Widget text = GestureDetector(
       onTap: () {
-          setState(() {
-         textColor = AppColors.expensesFood;
-           touchedIndex = value.toInt();
+        setState(() {
+          textColor = context.colors.expensesFood;
+          touchedIndex = value.toInt();
         });
       },
       child: Text(
         titles[value.toInt()],
-        style:  TextStyle(
-          color: touchedIndex == value.toInt() ? AppColors.expensesFood : AppColors.whitee,
+        style: TextStyle(
+          color: touchedIndex == value.toInt()
+              ? context.colors.expensesFood
+              : AppColors.whitee,
           fontWeight: FontWeight.bold,
           fontSize: 14,
         ),
       ),
     );
-
-   
 
     return SideTitleWidget(
       axisSide: meta.axisSide,
@@ -238,10 +254,9 @@ class YearlyTabPageState extends State<YearlyTabPage> {
       barRods: [
         BarChartRodData(
           toY: y1,
-          color: widget.leftBarColor,
+          color: context.colors.expensesFood,
           width: width,
         ),
-       
       ],
     );
   }

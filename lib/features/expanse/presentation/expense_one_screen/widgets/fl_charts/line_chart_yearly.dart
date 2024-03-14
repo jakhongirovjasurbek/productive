@@ -1,5 +1,3 @@
-
-
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:productive/assets/colors.dart';
@@ -7,8 +5,6 @@ import 'package:productive/core/extensions/extensions.dart';
 
 class Lines extends StatefulWidget {
   const Lines({super.key});
-
-
 
   @override
   State<Lines> createState() => _LinesState();
@@ -25,24 +21,22 @@ class _LinesState extends State<Lines> {
             width: MediaQuery.sizeOf(context).width,
             child: Padding(
               padding: const EdgeInsets.all(40),
-
               child: LineChart(
                 LineChartData(
                   minX: 1,
                   minY: 0,
                   maxX: 12,
                   maxY: 50,
-                 
-                   gridData:  FlGridData(show: true, drawVerticalLine: false,
+                  gridData: FlGridData(
+                    show: true,
+                    drawVerticalLine: false,
                     getDrawingHorizontalLine: (value) {
                       return FlLine(
                         color: AppColors.conteinerdescriptions,
                         strokeWidth: 1,
                       );
                     },
-                    
-                    ),
-
+                  ),
                   titlesData: FlTitlesData(
                     show: true,
                     rightTitles: const AxisTitles(
@@ -59,13 +53,14 @@ class _LinesState extends State<Lines> {
                         getTitlesWidget: (index, _) {
                           return Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text(getMonthStringRepresentation(index),style: TextStyle(color: context.colors.whiteA700)),
+                            child: Text(getMonthStringRepresentation(index),
+                                style:
+                                    TextStyle(color: context.colors.whiteA700)),
                           );
                         },
                       ),
                     ),
-
-                     leftTitles: AxisTitles(
+                    leftTitles: AxisTitles(
                       sideTitles: SideTitles(
                         showTitles: true,
                         reservedSize: 70,
@@ -80,26 +75,20 @@ class _LinesState extends State<Lines> {
                         },
                       ),
                     ),
-
-
-
-
-
                   ),
                   lineBarsData: [
                     LineChartBarData(
                       isCurved: true,
                       show: true,
-                      color: AppColors.expensesFood,
+                      color: context.colors.expensesFood,
                       shadow: Shadow(
                         blurRadius: 4,
                         offset: const Offset(2, 2),
-                        color:  AppColors.conteinerdescriptions.withOpacity(.6),
+                        color: AppColors.conteinerdescriptions.withOpacity(.6),
                       ),
                       belowBarData: BarAreaData(
                         show: true,
-                        color: AppColors.expensesFood.withOpacity(.1),
-                       
+                        color: context.colors.expensesFood.withOpacity(.1),
                       ),
                       spots: [
                         const FlSpot(1, 30),
@@ -119,15 +108,8 @@ class _LinesState extends State<Lines> {
                   ],
                 ),
               ),
-            
-            
-            
             ),
           ),
-
-
-
-
         ],
       ),
     );
@@ -164,7 +146,6 @@ class _LinesState extends State<Lines> {
     }
   }
 
-
   String getMonthString(double value) {
     switch (value) {
       case 0:
@@ -196,6 +177,3 @@ class _LinesState extends State<Lines> {
     }
   }
 }
-
-
-

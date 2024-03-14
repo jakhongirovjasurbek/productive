@@ -5,8 +5,7 @@ import 'package:productive/core/extensions/extensions.dart';
 
 class MontlyTabPage extends StatefulWidget {
   MontlyTabPage({super.key});
-  final Color leftBarColor = AppColors.expensesFood;
-  final Color avgColor = AppColors.blue;
+
   @override
   State<StatefulWidget> createState() => MontlyTabPageState();
 }
@@ -116,7 +115,9 @@ class MontlyTabPageState extends State<MontlyTabPage> {
                                   .barRods
                                   .map((rod) {
                                 return rod.copyWith(
-                                    toY: avg, color: widget.avgColor);
+                                  toY: avg,
+                                  color: context.colors.blue,
+                                );
                               }).toList(),
                             );
                           }
@@ -219,7 +220,7 @@ class MontlyTabPageState extends State<MontlyTabPage> {
     final Widget text = GestureDetector(
       onTap: () {
         setState(() {
-          textColor = AppColors.expensesFood;
+          textColor = context.colors.expensesFood;
           touchedIndex = value.toInt();
         });
       },
@@ -227,7 +228,7 @@ class MontlyTabPageState extends State<MontlyTabPage> {
         titles[value.toInt()],
         style: TextStyle(
           color: touchedIndex == value.toInt()
-              ? AppColors.expensesFood
+              ? context.colors.expensesFood
               : AppColors.whitee,
           fontWeight: FontWeight.bold,
           fontSize: 14,
@@ -253,7 +254,7 @@ class MontlyTabPageState extends State<MontlyTabPage> {
       barRods: [
         BarChartRodData(
           toY: y1,
-          color: widget.leftBarColor,
+          color: context.colors.expensesFood,
           width: width,
         ),
       ],

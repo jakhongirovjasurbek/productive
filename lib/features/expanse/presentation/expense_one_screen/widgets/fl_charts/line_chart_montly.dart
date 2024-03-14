@@ -79,7 +79,7 @@ class _LinesMonthlyState extends State<LinesMonthly> {
                     LineChartBarData(
                       isCurved: true,
                       show: true,
-                      color: AppColors.expensesFood,
+                      color: context.colors.expensesFood,
                       shadow: Shadow(
                         blurRadius: 4,
                         offset: const Offset(2, 2),
@@ -87,7 +87,7 @@ class _LinesMonthlyState extends State<LinesMonthly> {
                       ),
                       belowBarData: BarAreaData(
                         show: true,
-                        color: AppColors.expensesFood.withOpacity(.1),
+                        color: context.colors.expensesFood.withOpacity(.1),
                       ),
                       spots: [
                         const FlSpot(1, 20),

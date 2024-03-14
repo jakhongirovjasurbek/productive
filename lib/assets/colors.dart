@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class AppColors {
@@ -21,7 +19,7 @@ class AppColors {
   final expensesBackground = const Color(0xFF1C233A);
   final expensesFood = const Color(0xFFFF8700);
   final emailVerification = const Color(0xFF979797);
-  final tasksTimeColor = Color(0xFFABABAB);
+  final tasksTimeColor = const Color(0xFFABABAB);
   final notificationsClear = const Color(0xFFFF2752);
   final expensesShopping = const Color(0xFF32A7E2);
   final expensesGift = const Color(0xFFB548C6);
