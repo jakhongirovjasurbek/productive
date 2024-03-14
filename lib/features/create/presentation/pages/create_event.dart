@@ -73,12 +73,6 @@ class _CreateEventState extends State<CreateEvent> {
                         Text(context.localization.meet,
                             style: context.style.fontSize14Weight400),
 
-                        SizedBox(height: 8),
-                        Text(
-                          context.localization.meet,
-                          style: context.style.fontSize14Weight400,
-                        ),
-
                       ],
                     ),
                     Column(
@@ -89,11 +83,6 @@ class _CreateEventState extends State<CreateEvent> {
                         Text(context.localization.birthday,
                             style: context.style.fontSize14Weight400),
 
-                        SizedBox(height: 8),
-                        Text(
-                          context.localization.birthday,
-                          style: context.style.fontSize14Weight400,
-                        ),
 
                       ],
                     ),
@@ -105,12 +94,6 @@ class _CreateEventState extends State<CreateEvent> {
                         Text(context.localization.online,
                             style: context.style.fontSize14Weight400),
 
-                        SizedBox(height: 8),
-                        Text(
-                          context.localization.online,
-                          style: context.style.fontSize14Weight400,
-                        ),
-
                       ],
                     ),
                     Column(
@@ -120,12 +103,6 @@ class _CreateEventState extends State<CreateEvent> {
                         const SizedBox(height: 8),
                         Text(context.localization.other,
                             style: context.style.fontSize14Weight400),
-
-                        SizedBox(height: 8),
-                        Text(
-                          context.localization.other,
-                          style: context.style.fontSize14Weight400,
-                        ),
 
                       ],
                     ),
@@ -190,8 +167,8 @@ class _CreateEventState extends State<CreateEvent> {
                     border: InputBorder.none,
                     prefixIcon: GestureDetector(
                       onTap: () {
-                        print('lorem ipsum');
-                         SelectCurrentDateBottomSheet();
+
+                        showSelectCurrentDateBottomSheet(context);
                       },
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(16, 13, 8, 13),
@@ -224,8 +201,6 @@ class _CreateEventState extends State<CreateEvent> {
                   style: TextStyle(color: context.colors.whiteLabel),
                   decoration: InputDecoration(
 
-                    // contentPadding: const EdgeInsets.fromLTRB(16, 13, 0, 12),
-                    // hintText: context.localization.date,
 
                     contentPadding: EdgeInsets.fromLTRB(16, 13, 0, 12),
                     hintText: _endDate != null

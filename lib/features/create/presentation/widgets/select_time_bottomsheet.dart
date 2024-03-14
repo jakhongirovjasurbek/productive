@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:intl/intl.dart';
 import 'package:productive/assets/icons.dart';
 import 'package:productive/core/extensions/extensions.dart';
 
@@ -28,8 +29,8 @@ class _SelectTimeBottomSheetState extends State<SelectTimeBottomSheet> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 375,
-      height: 268,
+      width: 368,
+      height: 375,
       decoration: BoxDecoration(
         color: context.colors.loginTextFieldBackgroundColor,
         borderRadius: BorderRadius.only(
@@ -49,12 +50,20 @@ class _SelectTimeBottomSheetState extends State<SelectTimeBottomSheet> {
                   Navigator.pop(context);
                 },
                 child: SvgPicture.asset(
-                  AppIcons.exit,
+                  context.icons.exit,
                   width: 24,
                   height: 24,
                 ),
               ),
             ],
+          ),
+          SizedBox(height: 16),
+          Align(
+            alignment: Alignment.topCenter,
+            child: Text(
+              DateFormat('dd/MM/yyyy').format(DateTime.now()),
+              style: context.style.fontSize20Weight500,
+            ),
           ),
           SizedBox(height: 16),
           Divider(
@@ -97,7 +106,7 @@ class _SelectTimeBottomSheetState extends State<SelectTimeBottomSheet> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 127),
+            padding: const EdgeInsets.symmetric(horizontal: 125),
             child: Container(
               height: 38,
               decoration: BoxDecoration(

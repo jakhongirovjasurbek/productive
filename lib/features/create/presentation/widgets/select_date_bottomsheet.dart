@@ -37,8 +37,8 @@ class _SelectDateBottomSheetState extends State<SelectDateBottomSheet> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 375,
-      height: 268,
+      width: 368,
+      height: 375,
       decoration: BoxDecoration(
         color: context.colors.loginTextFieldBackgroundColor,
         borderRadius: BorderRadius.only(
@@ -58,7 +58,7 @@ class _SelectDateBottomSheetState extends State<SelectDateBottomSheet> {
                   Navigator.pop(context);
                 },
                 child: SvgPicture.asset(
-                  AppIcons.exit,
+                  context.icons.exit,
                   width: 24,
                   height: 24,
                 ),
@@ -84,8 +84,8 @@ class _SelectDateBottomSheetState extends State<SelectDateBottomSheet> {
           ),
           SizedBox(height: 8),
           GestureDetector(
-            onTap: () {
-              showSelectTimeBottomSheet(context).then((selectedTime) {
+            onTap: () async{
+              await showSelectTimeBottomSheet(context).then((selectedTime) {
                 if (selectedTime != null) {
                   setState(() {
                     _selectedTimeText = DateFormat('HH:mm').format(selectedTime);
@@ -106,7 +106,7 @@ class _SelectDateBottomSheetState extends State<SelectDateBottomSheet> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 127),
+            padding: const EdgeInsets.symmetric(horizontal: 125),
             child: Container(
               height: 38,
               decoration: BoxDecoration(

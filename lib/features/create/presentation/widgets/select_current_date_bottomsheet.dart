@@ -40,7 +40,7 @@ class SelectCurrentDateBottomSheet extends StatelessWidget {
                   Navigator.pop(context);
                 },
                 child: SvgPicture.asset(
-                  AppIcons.exit,
+                  context.icons.exit,
                   width: 24,
                   height: 24,
                 ),
@@ -62,8 +62,8 @@ class SelectCurrentDateBottomSheet extends StatelessWidget {
           ),
           SizedBox(height: 8),
           GestureDetector(
-            onTap: () {
-              showSelectDateBottomSheet(context,null);
+            onTap: () async{
+             await showSelectDateBottomSheet(context,null);
               Navigator.pop(context, DateTime.now());
             },
             child: Text(
@@ -80,9 +80,9 @@ class SelectCurrentDateBottomSheet extends StatelessWidget {
           ),
           Spacer(),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 127),
+            padding: const EdgeInsets.symmetric(horizontal: 125),
             child: Container(
-              height: 38,
+              height: 35,
               decoration: BoxDecoration(
                 color: context.colors.skipButtonColor,
                 borderRadius: BorderRadius.circular(10),
