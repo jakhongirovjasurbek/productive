@@ -13,7 +13,7 @@ class AppIcons {
   final moneyFirst = "assets/icons/money_first.svg";
   final moneySecond = "assets/icons/money_second.svg";
   final plus = "assets/icons/plus.svg";
-  final exit = "assets/icons/exit.svg";
+  final  exit = "assets/icons/exit.svg";
   final premium = "assets/icons/premium.svg";
   static const tasks = "${_bnb}tasks.svg";
   static const expense = "${_bnb}expense.svg";
@@ -35,7 +35,6 @@ class AppIcons {
   static const expanse_categories_transport2 = "assets/icons/expanse/transport2.svg";
   static const expanse_categories_add2 = "assets/icons/expanse/add2.svg";
   static const expanse_categories_search = "assets/icons/expanse/search.svg";
-
 
 
 
