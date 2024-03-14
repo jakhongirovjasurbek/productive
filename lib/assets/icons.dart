@@ -6,6 +6,9 @@ const pathNotes="assets/icons/notes_svg/";
 const single = "assets/icons/single_category/";
 const create = "assets/icons/create_task/";
 
+
+
+const tasks = "assets/icons/tasks/";
 class AppIcons {
   static const rectangle = "assets/create_new_password/user.png";
   static const isCheck = "assets/create_new_password/isCheck.svg";
@@ -22,6 +25,8 @@ class AppIcons {
   final greenbook="${pathNotes}green_book.svg";
   final redbook="${pathNotes}red_book.svg";
   final plusbook="${pathNotes}plus_book.svg";
+
+
   static const tasks = "${_bnb}tasks.svg";
   static const expense = "${_bnb}expense.svg";
   static const create = "${_bnb}create.svg";
@@ -102,4 +107,31 @@ class AppIcons {
   static const radio = "assets/icons/radio.svg";
   static const delete = "assets/svg/delete.svg";
   static const noNotification = "assets/svg/no_notification.svg";
+
+
+  //tasks
+
+  //drower
+  final articles = "assets/icons/tasks/drawer/articles.svg";
+  final faq = "assets/icons/tasks/drawer/faq.svg";
+  final help = "assets/icons/tasks/drawer/help.svg";
+  final premiumtask = "assets/icons/tasks/drawer/premium.svg";
+  final settingstask = "assets/icons/tasks/drawer/settings.svg";
+  final sun = "assets/icons/tasks/drawer/sun.svg";
+  final terms = "assets/icons/tasks/drawer/terms.svg";
+
+  //else
+  final expanse_categories_search_task = "assets/icons/expanse/search.svg";
+  final beg = "assets/icons/tasks/beg.svg";
+  final filter = "assets/icons/tasks/filter.svg";
+  final gym = "assets/icons/tasks/gym.svg";
+  final humburger = "assets/icons/tasks/humburger.svg";
+  final meettask = "assets/icons/tasks/meet.svg";
+  final note = "assets/icons/tasks/note.svg";
+  final notyfication = "assets/icons/tasks/notyfication.svg";
+  final simplenote = "assets/icons/tasks/simplenote.svg";
+  final study = "assets/icons/tasks/study.svg";
+  final checked = "assets/icons/tasks/checked.svg";
+  final unchecked = "assets/icons/tasks/unchecked.svg";
+
 }

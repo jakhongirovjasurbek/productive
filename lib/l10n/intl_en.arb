@@ -50,6 +50,7 @@
   "new_title": "New title",
   "usd": "USD",
   "add_note": "Add note ...",
+  "salary": "Salary",
   "create_event": "Create Event",
   "meet": "Meet",
   "birthday": "Birthday",
@@ -123,7 +124,6 @@
   "notification": "Notifications",
   "clear": "Clear",
   "no_notifications": "NO NOTIFICATION YET",
-  "salary": "Salary",
   "select_icon": "Select Icon",
   "create_task": "Create Task",
   "start": "Start",
@@ -143,5 +143,8 @@
   "search_by_category": "Search By Category..",
   "work": "Work",
   "study": "Study",
-  "sport": "Sport"
+  "sport": "Sport",
+  "hintext_task_search": "Search by events, tasks.. ",
+  "Upcoming": "Upcoming",
+  "All": "All"
 }

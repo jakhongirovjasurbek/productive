@@ -99,9 +99,9 @@ class AppColors {
   final statsTaskBackground = const Color.fromRGBO(61, 64, 85, 1);
 
 // single container uchun
-  final Color whiteA700 = const Color(0XFFFDFDFD);
-  static Color whitee = const Color(0XFFFDFDFD);
-  final Color bacgroundColor = const Color(0xFF131524);
+  final  Color whiteA700 = const Color(0XFFFDFDFD);
+  static  Color whitee = const Color(0XFFFDFDFD);
+  final  Color bacgroundColor = const Color(0xFF131524);
   final Color timeContainerOne = const Color(0xFFFF2752).withOpacity(0.7);
   final Color greenContainer = const Color.fromRGBO(77, 170, 82, 0.3);
 
@@ -115,10 +115,53 @@ class AppColors {
   final conteinerdescription = const Color.fromRGBO(171, 171, 171, 1);
   final Color numbers = const Color.fromRGBO(254, 254, 254, 1);
 
-  static Color conteinerdescriptions =
-      const Color.fromRGBO(171, 171, 171, 0.08);
+  static Color conteinerdescriptions = const Color.fromRGBO(171, 171, 171, 0.08);
 
   static Color border = const Color.fromRGBO(28, 35, 58, 1);
+
+  //task colors
+  final Color whitetask = const Color(0xFFFFFFFF);
+  static Color navigationBarBackgroundColor = const Color(0XFF1C1E2D);
+  final Color activeColor = const Color(0xFF4B7FD6);
+  static Color inactiveColor = const Color(0xFFFEFEFE);
+  static Color scaffoldBackgroundColor = const Color(0xFF131524);
+  static Color appBarColor = const Color(0xFF131524);
+  static Color onPrimaryColor = const Color(0xFFFEFEFE);
+  static Color secondaryColor = const Color(0xFF2B304A);
+  static Color errorColor = const Color(0xFFFF2752);
+  final Color textFieldBackgroundColor = const Color(0xFF2B304A);
+  static Color cursorColor = const Color(0xFF4B7FD6);
+  static Color textFieldBackgroundColor2 = const Color(0xFF1C233A);
+  static Color textFieldBorderColor = const Color.fromRGBO(0, 110, 233, 0.10);
+  static Color hintTextColor = const  Color(0xFFFEFEFE);
+  static Color textButtonColor = const  Color(0xFF4B7FD6);
+  static Color wButtonColor = const Color(0xFF4B7FD6);
+  static Color disabledButtonColor = const  Color(0xFF4B7FD6).withOpacity(0.3);
+  static Color socialMediaButtonColor = const  Color(0xFF272C38);
+  static Color pinPutBorderColor = const  Color(0xFF006EE9);
+  static Color verificationTextColor = const  Color(0xFF979797);
+  static Color verificationResentColor = const  Color(0xFF407BFF);
+  static Color newPasswordColor = const  Color(0xFFFEFEFE);
+  static Color iconColor = const Color(0xFF44DB4A);
+  static Color upcomingTextColor = const Color(0xFFABABAB);
+  static Color upcomingMeetColor = const  Color(0xFF22B07D);
+  final Color upcomingLinkBolt = const Color(0xFF272C38);
+  static Color gymColor = const  Color(0xFFFF8700);
+  static Color upComingBorderSolid = const Color.fromRGBO(255, 255, 255, 0.02);
+  static Color studyIconColor = const Color(0xFFDD8491);
+  static Color upComingLink = const  Color(0xFF4B7FD6);
+
+  static Color allCreateNavigation = const  Color(0xFF525298);
+  final Color allPageTextColor = const  Color(0xFFABABAB);
+  static Color englishStudy = const Color(0xFFDD8491);
+  static Color cleaningRoom = const Color(0xFF4B7FD6);
+  static Color greyish = const  Color(0xFF8E8E8E);
+  static Color redPriorty = const  Color(0xFFFF2752);
+  static Color yellowPriority = const  Color(0xFF44DB4A);
+  static Color greenPriority = const  Color(0xFF525298);
+  static Color selectIconWork = const Color(0xFF525298);
+  static Color createSearchColor = const   Color(0xFF303644);
+  static Color modalBottomSheetTop = const Color(0xFFF8FFFF).withOpacity(0.4);
 
   final selectDateTimeColor = Color(0xFF303745);
 }

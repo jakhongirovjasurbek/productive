@@ -16,6 +16,7 @@ import 'package:productive/features/tasks/create/data/repository/task.dart';
 import 'package:productive/features/tasks/create/presentation/bloc/location/location_cubit.dart';
 import 'package:productive/features/tasks/create/presentation/bloc/task_bloc.dart';
 
+import 'features/tasks1/presentation/tasks_screen.dart';
 import 'generated/l10n.dart';
 
 Future<void> main() async {
@@ -49,6 +50,9 @@ class MainApp extends StatelessWidget {
       gestures: const [GestureType.onTap],
       child: MultiBlocProvider(
         providers: [
+          BlocProvider(
+            create: (context) => CalendarBloc(),
+          ),
           BlocProvider(
             create: (context) => CalendarBloc(),
           ),
