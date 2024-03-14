@@ -9,6 +9,7 @@ import 'package:keyboard_dismisser/keyboard_dismisser.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/injector/injector.dart';
 import 'package:productive/core/routes/app_route.dart';
+import 'package:productive/features/authentication/presentation/bloc/auth_bloc.dart';
 import 'package:productive/features/calendar/presentation/bloc/calendar_bloc.dart';
 import 'package:productive/features/create/data/repository/expense_repo.dart';
 import 'package:productive/features/create/presentation/bloc/create_expense/create_expense_bloc.dart';
@@ -52,6 +53,7 @@ class MainApp extends StatelessWidget {
       gestures: const [GestureType.onTap],
       child: MultiBlocProvider(
         providers: [
+          BlocProvider(create: (context)=> AuthenticationBloc()),
           BlocProvider(
             create: (context) => CalendarBloc(),
           ),

@@ -4,6 +4,9 @@ import 'package:productive/core/pages/onboarding.dart';
 import 'package:productive/core/pages/splash.dart';
 import 'package:productive/features/authentication/presentation/pages/create_new_password.dart';
 import 'package:productive/core/route_names/app_route_name.dart';
+import 'package:productive/features/authentication/presentation/pages/login_screen.dart';
+import 'package:productive/features/authentication/presentation/pages/sign_up.dart';
+import 'package:productive/features/create/presentation/pages/create_income.dart';
 import 'package:productive/features/home/home.dart';
 import 'package:productive/features/calendar/calendar_screen.dart';
 import 'package:productive/features/statistics/presentation/pages/statistics.dart';
@@ -25,6 +28,12 @@ class AppRoute {
         return fade(const CalendarScreen());
       case AppRouteNames.statistics:
         return fade(const StatisticsScreen());
+      case AppRouteNames.login:
+        return fade(const LoginScreen());
+      case AppRouteNames.signUp:
+        return fade(const SignUpScreen());
+      case AppRouteNames.forgotPassword:
+        return fade(const SignUpScreen());
       default:
         return fade(const Scaffold());
     }

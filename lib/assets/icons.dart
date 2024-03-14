@@ -14,6 +14,8 @@ const _new_catalog_icon = "assets/icons/create_expense/new_catalog_icon/";
 const _new_catalog_color = 'assets/icons/create_expense/new_catalog_colors/';
 
 
+const pathLogin = "assets/icons/login/";
+
 class AppIcons {
   static const rectangle = "assets/create_new_password/user.png";
   static const isCheck = "assets/create_new_password/isCheck.svg";
@@ -199,5 +201,12 @@ class AppIcons {
   static const color14 = '${_new_catalog_color}color14.svg';
   static const color15 = '${_new_catalog_color}color15.svg';
   static const color16 = '${_new_catalog_color}color16.svg';
+
+  static const logoL="${pathLogin}logo.svg";
+  static const eye_off="${pathLogin}eye_off.svg";
+  static const eye_on="${pathLogin}eye_on.svg";
+  static const apple="${pathLogin}apple.svg";
+  static const facebook="${pathLogin}facebook.svg";
+  static const google="${pathLogin}google.svg";
 
 }

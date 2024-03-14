@@ -71,6 +71,7 @@ flutter:
     - assets/icons/tasks/drawer/
     - assets/images/
     - assets/icons/expanse/
+    - assets/icons/login/
     - assets/icons/notes_svg/
     - assets/svg/
     - assets/icons/create_task/

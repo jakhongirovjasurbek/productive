@@ -21,7 +21,7 @@ class WTextField extends StatefulWidget {
   final double? height;
   final int? maxLength;
   final TextInputType? keyBoardType;
-  final bool isObscureText;
+  final bool? isObscureText;
   final Widget? suffix;
   final String? suffixIcon;
   final EdgeInsets? suffixPadding;
@@ -76,7 +76,7 @@ class WTextField extends StatefulWidget {
     this.suffix,
     this.suffixIcon,
     this.suffixPadding = const EdgeInsets.all(12),
-    this.isObscureText = false,
+    this.isObscureText,
     this.onEyeTap,
     this.margin,
     this.sizeBetweenFieldTitle = 8,
@@ -110,12 +110,14 @@ class _WTextFieldState extends State<WTextField>
   late FocusNode focusNode;
   bool focused = false;
   bool hasText = false;
-  bool isObscure = false;
+  bool? isObscure;
   late AnimationController controller;
 
   @override
   void initState() {
     super.initState();
+
+    isObscure = widget.isObscureText?? false;
     controller = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 200),
@@ -167,13 +169,14 @@ class _WTextFieldState extends State<WTextField>
                   ClipRRect(
                     borderRadius: BorderRadius.circular(widget.borderRadius),
                     child: TextField(
+
                       readOnly: widget.readonly ?? false,
                       onTap: widget.onTap,
                       textAlign: widget.textAlign,
                       inputFormatters: widget.textInputFormatters,
                       textInputAction: widget.textInputAction,
                       textCapitalization: widget.textCapitalization,
-                      obscureText: isObscure,
+                      obscureText: isObscure!,
                       keyboardType: widget.keyBoardType,
                       maxLength: widget.maxLength,
                       controller: widget.controller,
@@ -214,6 +217,7 @@ class _WTextFieldState extends State<WTextField>
                             Theme.of(context).textTheme.headline1!.copyWith(
                                 fontSize: 18, fontWeight: FontWeight.w300),
                         filled: true,
+                        suffix:widget.suffix,
                         prefixIcon: widget.prefix,
                         fillColor: widget.fillColor ??
                             context.colors.inpBackgroundColor,

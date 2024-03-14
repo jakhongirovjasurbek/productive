@@ -21,6 +21,7 @@ class AppColors {
   final emailVerification = const Color(0xFF979797);
   final tasksTimeColor = const Color(0xFFABABAB);
   final notificationsClear = const Color(0xFFFF2752);
+  final expensesFood = const Color(0xFFFF8700);
   final expensesShopping = const Color(0xFF32A7E2);
   final expensesGift = const Color(0xFFB548C6);
   final expensesGreen = const Color(0xFF44DB4A);
@@ -95,6 +96,7 @@ class AppColors {
   final lightBlueGradient = const Color.fromRGBO(91, 74, 209, 1);
   final statsTextColor = const Color.fromRGBO(163, 163, 163, 1);
   final statsTaskBackground = const Color.fromRGBO(61, 64, 85, 1);
+  final hintextcolor=Color(0xFFFEFEFE);
 
 // single container uchun
   final  Color whiteA700 = const Color(0XFFFDFDFD);
