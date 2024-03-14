@@ -61,8 +61,7 @@ class MainApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           useInheritedMediaQuery: true,
           builder: DevicePreview.appBuilder,
-          home: TaskScreen(),
-          // onGenerateRoute: AppRoute.onGenerateRoute,
+          onGenerateRoute: AppRoute.onGenerateRoute,
           locale: const Locale.fromSubtags(languageCode: 'en'),
           supportedLocales: AppLocalization.delegate.supportedLocales,
           localizationsDelegates: const [
