@@ -8,11 +8,14 @@ import 'package:productive/features/tasks/data/repository/repository.dart';
 import 'package:productive/features/tasks/domain/usecase/usecase.dart';
 
 import '../../features/tasks/domain/repository/repository.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 final sl = GetIt.instance;
 
 Future<void> getItInjector() async {
   calendarUseCase();
+  sl.registerSingletonAsync(
+          () async => await SharedPreferences.getInstance());
   notificationUseCase();
 }
 
