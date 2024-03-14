@@ -13,6 +13,7 @@
   "tasks": "Tasks",
   "expense": "Expense",
   "create": "Create",
+  "event":"Event",
   "calendar": "Calendar",
   "stats": "Stats",
   "create_new_password": "Create new password",

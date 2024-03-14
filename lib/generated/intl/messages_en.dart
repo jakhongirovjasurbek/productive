@@ -89,6 +89,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "end_date": MessageLookupByLibrary.simpleMessage("End Date"),
         "enter_new_password":
             MessageLookupByLibrary.simpleMessage("Enter new password"),
+        "event": MessageLookupByLibrary.simpleMessage("Event"),
         "event_title": MessageLookupByLibrary.simpleMessage("Event title"),
         "expense": MessageLookupByLibrary.simpleMessage("Expense"),
         "expenses": MessageLookupByLibrary.simpleMessage("Expenses"),

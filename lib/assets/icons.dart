@@ -16,6 +16,9 @@ const _new_catalog_color = 'assets/icons/create_expense/new_catalog_colors/';
 
 const pathLogin = "assets/icons/login/";
 
+const createhomeitem = "assets/icons/create_home_items/";
+
+
 class AppIcons {
   static const rectangle = "assets/create_new_password/user.png";
   static const isCheck = "assets/create_new_password/isCheck.svg";
@@ -208,5 +211,18 @@ class AppIcons {
   static const apple="${pathLogin}apple.svg";
   static const facebook="${pathLogin}facebook.svg";
   static const google="${pathLogin}google.svg";
+
+
+
+
+
+  // createhomeitem 
+  final closecreate  = '${createhomeitem}close_create.svg';
+  final expensess  = '${createhomeitem}expense.svg';
+  final money  = '${createhomeitem}money.svg';
+  final notess  = '${createhomeitem}note.svg';
+  final taskhome  = '${createhomeitem}task_home.svg';
+
+  final taskstar  = '${createhomeitem}tasks_star.svg';
 
 }

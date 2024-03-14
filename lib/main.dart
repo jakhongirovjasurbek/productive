@@ -13,6 +13,7 @@ import 'package:productive/features/authentication/presentation/bloc/auth_bloc.d
 import 'package:productive/features/calendar/presentation/bloc/calendar_bloc.dart';
 import 'package:productive/features/create/data/repository/expense_repo.dart';
 import 'package:productive/features/create/presentation/bloc/create_expense/create_expense_bloc.dart';
+import 'package:productive/features/create/presentation/pages/create.dart';
 import 'package:productive/firebase_options.dart';
 
 import 'features/create/data/data_source/remote.dart';
@@ -78,7 +79,9 @@ class MainApp extends StatelessWidget {
           darkTheme: context.theme.darkTheme(),
           debugShowCheckedModeBanner: false,
           builder: DevicePreview.appBuilder,
-          onGenerateRoute: AppRoute.onGenerateRoute,
+
+          home:CreateItems(),
+          // onGenerateRoute: AppRoute.onGenerateRoute,
           locale: const Locale.fromSubtags(languageCode: 'en'),
           supportedLocales: AppLocalization.delegate.supportedLocales,
           localizationsDelegates: const [
