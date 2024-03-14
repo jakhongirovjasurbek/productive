@@ -68,41 +68,65 @@ class _CreateEventState extends State<CreateEvent> {
                     Column(
                       children: [
                         SvgPicture.asset(AppIcons.meet),
+
+                        const SizedBox(height: 8),
+                        Text(context.localization.meet,
+                            style: context.style.fontSize14Weight400),
+
                         SizedBox(height: 8),
                         Text(
                           context.localization.meet,
                           style: context.style.fontSize14Weight400,
                         ),
+
                       ],
                     ),
                     Column(
                       children: [
                         SvgPicture.asset(AppIcons.birthday),
+
+                        const SizedBox(height: 8),
+                        Text(context.localization.birthday,
+                            style: context.style.fontSize14Weight400),
+
                         SizedBox(height: 8),
                         Text(
                           context.localization.birthday,
                           style: context.style.fontSize14Weight400,
                         ),
+
                       ],
                     ),
                     Column(
                       children: [
                         SvgPicture.asset(AppIcons.online),
+
+                        const SizedBox(height: 8),
+                        Text(context.localization.online,
+                            style: context.style.fontSize14Weight400),
+
                         SizedBox(height: 8),
                         Text(
                           context.localization.online,
                           style: context.style.fontSize14Weight400,
                         ),
+
                       ],
                     ),
                     Column(
                       children: [
                         SvgPicture.asset(AppIcons.other),
+
+                        const SizedBox(height: 8),
+                        Text(context.localization.other,
+                            style: context.style.fontSize14Weight400),
+
                         SizedBox(height: 8),
                         Text(
                           context.localization.other,
                           style: context.style.fontSize14Weight400,
                         ),
+
                       ],
                     ),
                   ],
@@ -121,7 +145,7 @@ class _CreateEventState extends State<CreateEvent> {
                 child: TextField(
                   style: TextStyle(color: context.colors.whiteLabel),
                   decoration: InputDecoration(
-                    contentPadding: EdgeInsets.fromLTRB(16, 12, 0, 12),
+                    contentPadding: const EdgeInsets.fromLTRB(16, 12, 0, 12),
                     hintText: context.localization.event_title,
                     hintStyle: context.style.fontSize18Weight500Grey,
                     border: InputBorder.none,
@@ -155,10 +179,13 @@ class _CreateEventState extends State<CreateEvent> {
                 child: TextField(
                   style: TextStyle(color: context.colors.whiteLabel),
                   decoration: InputDecoration(
-                    contentPadding: EdgeInsets.fromLTRB(16, 13, 0, 12),
+          // contentPadding: const EdgeInsets.fromLTRB(16, 13, 0, 12),
+          //           hintText: context.localization.date,
+          contentPadding: EdgeInsets.fromLTRB(16, 13, 0, 12),
                     hintText: _startDate != null
                         ? _startDate!.toString()
                         : context.localization.date,
+
                     hintStyle: context.style.fontSize14Weight400Grey,
                     border: InputBorder.none,
                     prefixIcon: GestureDetector(
@@ -196,10 +223,15 @@ class _CreateEventState extends State<CreateEvent> {
                 child: TextField(
                   style: TextStyle(color: context.colors.whiteLabel),
                   decoration: InputDecoration(
+
+                    // contentPadding: const EdgeInsets.fromLTRB(16, 13, 0, 12),
+                    // hintText: context.localization.date,
+
                     contentPadding: EdgeInsets.fromLTRB(16, 13, 0, 12),
                     hintText: _endDate != null
                         ? _endDate!.toString()
                         : context.localization.date,
+
                     hintStyle: context.style.fontSize14Weight400Grey,
                     border: InputBorder.none,
                     prefixIcon: GestureDetector(
@@ -216,7 +248,7 @@ class _CreateEventState extends State<CreateEvent> {
                 ),
               ),
               const Gap(28),
-              Row(
+              const Row(
                 children: [
                   AllDayWidget(),
                   Gap(40),
@@ -243,7 +275,7 @@ class _CreateEventState extends State<CreateEvent> {
                   style: context.style.fontSize8Weight400
                       .copyWith(color: context.colors.whiteLabel),
                   decoration: InputDecoration(
-                    contentPadding: EdgeInsets.fromLTRB(16, 12, 0, 12),
+                    contentPadding: const EdgeInsets.fromLTRB(16, 12, 0, 12),
                     hintText: context.localization.add_note,
                     hintStyle: context.style.fontSize14Weight500Grey,
                     border: InputBorder.none,
@@ -254,8 +286,8 @@ class _CreateEventState extends State<CreateEvent> {
           ),
         ),
       ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(16.0),
+      bottomNavigationBar: const Padding(
+        padding: EdgeInsets.all(16.0),
         child: SaveButton(),
       ),
     );
