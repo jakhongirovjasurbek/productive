@@ -58,7 +58,7 @@ class _SelectDateBottomSheetState extends State<SelectDateBottomSheet> {
                   Navigator.pop(context);
                 },
                 child: SvgPicture.asset(
-                  context.icons.exit,
+                  AppIcons.exit,
                   width: 24,
                   height: 24,
                 ),
