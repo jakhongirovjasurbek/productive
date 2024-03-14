@@ -7,7 +7,6 @@ import 'package:productive/features/create/data/model/income_active_status.dart'
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/features/create/presentation/bloc/income_bloc.dart';
 import 'package:productive/features/create/presentation/widgets/show_snackbar.dart';
-import 'package:productive/features/create/presentation/widgets/w_text_field.dart';
 
 import '../../../../assets/icons.dart';
 import '../../../../core/mixin/create_income_mixin.dart';
@@ -78,11 +77,11 @@ class _CreateIncomeScreenState extends State<CreateIncomeScreen>
                                 ),
                               ),
                               const Gap(20),
-                              Expanded(child: WTextField(
-                                onChange: (a) {
-                                  titleController!.text = a;
-                                },
-                              )),
+                              // Expanded(child: WTextField(
+                              //   onChange: (a) {
+                              //     titleController!.text = a;
+                              //   },
+                              // )),
                             ],
                           ),
                           Gap(31.5),
@@ -117,58 +116,58 @@ class _CreateIncomeScreenState extends State<CreateIncomeScreen>
                                     ),
                                   ),
                                 ),
-                                Expanded(
-                                  child: WTextField(
-                                    onChange: (a) {
-                                      a != "" ? (usd = int.parse(a)) : null;
-                                    },
-                                    decoration: InputDecoration(
-                                      contentPadding:
-                                          const EdgeInsets.symmetric(
-                                              vertical: 15, horizontal: 8),
-                                      border: InputBorder.none,
-                                      hintText: "0.00",
-                                      hintStyle: context
-                                          .style.fontSize16Weight500
-                                          .copyWith(
-                                              color: context
-                                                  .colors.isCheckGreenColor),
-                                    ),
-                                    keyboardType: TextInputType.number,
-                                    style: context.style.fontSize16Weight500
-                                        .copyWith(
-                                            color: context
-                                                .colors.isCheckGreenColor),
-                                  ),
-                                ),
+                                // Expanded(
+                                //   child: WTextField(
+                                //     onChange: (a) {
+                                //       a != "" ? (usd = int.parse(a)) : null;
+                                //     },
+                                //     decoration: InputDecoration(
+                                //       contentPadding:
+                                //           const EdgeInsets.symmetric(
+                                //               vertical: 15, horizontal: 8),
+                                //       border: InputBorder.none,
+                                //       hintText: "0.00",
+                                //       hintStyle: context
+                                //           .style.fontSize16Weight500
+                                //           .copyWith(
+                                //               color: context
+                                //                   .colors.isCheckGreenColor),
+                                //     ),
+                                //     keyboardType: TextInputType.number,
+                                //     style: context.style.fontSize16Weight500
+                                //         .copyWith(
+                                //             color: context
+                                //                 .colors.isCheckGreenColor),
+                                //   ),
+                                // ),
                                 const Gap(16),
                               ],
                             ),
                           ),
                           const Gap(18),
-                          WTextField(
-                            onChange: (a) {},
-                            keyboardType: TextInputType.text,
-                            style: context.style.fontSize14Weight500.copyWith(
-                              color: context.colors.createTaskTime,
-                            ),
-                            decoration: InputDecoration(
-                              contentPadding: const EdgeInsets.symmetric(
-                                  vertical: 12, horizontal: 16),
-                              border: OutlineInputBorder(
-                                  borderSide: BorderSide.none,
-                                  borderRadius: BorderRadius.circular(8)),
-                              filled: true,
-                              fillColor:
-                                  context.colors.loginTextFieldBackgroundColor,
-                              hintText: context.localization.add_note,
-                              hintStyle:
-                                  context.style.fontSize14Weight500.copyWith(
-                                color: context.colors.createTaskTime,
-                              ),
-                            ),
-                            maxLines: 7,
-                          ),
+                          // WTextField(
+                          //   onChange: (a) {},
+                          //   keyboardType: TextInputType.text,
+                          //   style: context.style.fontSize14Weight500.copyWith(
+                          //     color: context.colors.createTaskTime,
+                          //   ),
+                          //   decoration: InputDecoration(
+                          //     contentPadding: const EdgeInsets.symmetric(
+                          //         vertical: 12, horizontal: 16),
+                          //     border: OutlineInputBorder(
+                          //         borderSide: BorderSide.none,
+                          //         borderRadius: BorderRadius.circular(8)),
+                          //     filled: true,
+                          //     fillColor:
+                          //         context.colors.loginTextFieldBackgroundColor,
+                          //     hintText: context.localization.add_note,
+                          //     hintStyle:
+                          //         context.style.fontSize14Weight500.copyWith(
+                          //       color: context.colors.createTaskTime,
+                          //     ),
+                          //   ),
+                          //   maxLines: 7,
+                          // ),
                         ],
                       ),
                     )),

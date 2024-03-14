@@ -1,8 +1,9 @@
 import 'package:productive/core/either/either.dart';
 import 'package:productive/core/failure/failure.dart';
-import 'package:productive/core/use_case/use_case.dart';
 import 'package:productive/features/authentication/domain/entity/user.dart';
 import 'package:productive/features/authentication/domain/repository/auth_repo.dart';
+
+import '../../../../core/usecase/usecase.dart';
 
 class AuthUseCase implements UseCase<AuthUserEntity, Params> {
   final AuthRepository _repository;

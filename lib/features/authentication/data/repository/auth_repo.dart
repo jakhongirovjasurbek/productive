@@ -1,10 +1,10 @@
 import 'package:productive/core/either/either.dart';
-import 'package:productive/core/exseption/exseption.dart';
 import 'package:productive/core/failure/failure.dart';
 import 'package:productive/features/authentication/data/data_source/remote.dart';
 import 'package:productive/features/authentication/data/model/user.dart';
 import 'package:productive/features/authentication/domain/entity/user.dart';
 
+import '../../../../core/exception/exception.dart';
 import '../../domain/repository/auth_repo.dart';
 
 class AuthRepositoryImpl implements AuthRepository{

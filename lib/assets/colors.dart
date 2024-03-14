@@ -21,7 +21,6 @@ class AppColors {
   final emailVerification = const Color(0xFF979797);
   final tasksTimeColor = const Color(0xFFABABAB);
   final notificationsClear = const Color(0xFFFF2752);
-  final expensesFood = const Color(0xFFFF8700);
   final expensesShopping = const Color(0xFF32A7E2);
   final expensesGift = const Color(0xFFB548C6);
   final expensesGreen = const Color(0xFF44DB4A);

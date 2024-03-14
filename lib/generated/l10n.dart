@@ -70,26 +70,6 @@ class AppLocalization {
     );
   }
 
-  /// `Forgot password`
-  String get forgot_password {
-    return Intl.message(
-      'Forgot password',
-      name: 'forgot_password',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Email`
-  String get email {
-    return Intl.message(
-      'Email',
-      name: 'email',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Recover password`
   String get recover_password {
     return Intl.message(
@@ -105,16 +85,6 @@ class AppLocalization {
     return Intl.message(
       'If you don’t receive code. ',
       name: 'receive_code',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// ` Please enter the 4 digital code that send to your email address`
-  String get password {
-    return Intl.message(
-      ' Please enter the 4 digital code that send to your email address',
-      name: 'password',
       desc: '',
       args: [],
     );
@@ -1579,6 +1549,86 @@ class AppLocalization {
     return Intl.message(
       'Color',
       name: 'color',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forgot Password`
+  String get forgot_password {
+    return Intl.message(
+      'Forgot Password',
+      name: 'forgot_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get login {
+    return Intl.message(
+      'Login',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `OR`
+  String get or {
+    return Intl.message(
+      'OR',
+      name: 'or',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don’t have an account?`
+  String get dont_accaunt {
+    return Intl.message(
+      'Don’t have an account?',
+      name: 'dont_accaunt',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign up`
+  String get sign_up {
+    return Intl.message(
+      'Sign up',
+      name: 'sign_up',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bunday user mavjud emas!`
+  String get not_found {
+    return Intl.message(
+      'Bunday user mavjud emas!',
+      name: 'not_found',
       desc: '',
       args: [],
     );

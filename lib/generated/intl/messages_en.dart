@@ -76,6 +76,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "We explained the definition of commitment and it.."),
         "description4": MessageLookupByLibrary.simpleMessage(
             "We explained the definition of commitment and it.."),
+        "dont_accaunt":
+            MessageLookupByLibrary.simpleMessage("Don’t have an account?"),
         "easyManage":
             MessageLookupByLibrary.simpleMessage("Easy Time Management"),
         "easy_time_management":
@@ -100,7 +102,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "focusTime": MessageLookupByLibrary.simpleMessage("Focus Time"),
         "food": MessageLookupByLibrary.simpleMessage("Food"),
         "forgot_password":
-            MessageLookupByLibrary.simpleMessage("Forgot password"),
+            MessageLookupByLibrary.simpleMessage("Forgot Password"),
         "gift": MessageLookupByLibrary.simpleMessage("Gift"),
         "gym_time": MessageLookupByLibrary.simpleMessage("Gym time"),
         "help": MessageLookupByLibrary.simpleMessage(
@@ -141,6 +143,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "lbl_tue": MessageLookupByLibrary.simpleMessage("Tue"),
         "lbl_wed": MessageLookupByLibrary.simpleMessage("Wed"),
         "link": MessageLookupByLibrary.simpleMessage("Link to meeting"),
+        "login": MessageLookupByLibrary.simpleMessage("Login"),
         "low": MessageLookupByLibrary.simpleMessage("Low"),
         "medium": MessageLookupByLibrary.simpleMessage("Medium"),
         "meet": MessageLookupByLibrary.simpleMessage("Meet"),
@@ -149,17 +152,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "new_title": MessageLookupByLibrary.simpleMessage("New title"),
         "no_notifications":
             MessageLookupByLibrary.simpleMessage("NO NOTIFICATION YET"),
+        "not_found":
+            MessageLookupByLibrary.simpleMessage("Bunday user mavjud emas!"),
         "notes": MessageLookupByLibrary.simpleMessage("Notes"),
         "notification": MessageLookupByLibrary.simpleMessage("Notifications"),
         "once": MessageLookupByLibrary.simpleMessage("Once"),
         "online": MessageLookupByLibrary.simpleMessage("Online"),
+        "or": MessageLookupByLibrary.simpleMessage("OR"),
         "other": MessageLookupByLibrary.simpleMessage("Other"),
         "outcome": MessageLookupByLibrary.simpleMessage("Outcome"),
         "parol_kamida_8_belgidan_iborat_bolsin":
             MessageLookupByLibrary.simpleMessage(
                 "Parol kamida 8 belgidan iborat bo\'lsin"),
-        "password": MessageLookupByLibrary.simpleMessage(
-            " Please enter the 4 digital code that send to your email address"),
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
         "priority": MessageLookupByLibrary.simpleMessage("Priority"),
         "productive": MessageLookupByLibrary.simpleMessage("Productive"),
         "quick_notes": MessageLookupByLibrary.simpleMessage("Quick Notes"),
@@ -186,6 +191,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "select_time": MessageLookupByLibrary.simpleMessage("Select Time"),
         "select_title": MessageLookupByLibrary.simpleMessage("Select Title"),
         "shopping": MessageLookupByLibrary.simpleMessage("Shopping"),
+        "sign_up": MessageLookupByLibrary.simpleMessage("Sign up"),
         "skip": MessageLookupByLibrary.simpleMessage("SKIP"),
         "sport": MessageLookupByLibrary.simpleMessage("Sport"),
         "start": MessageLookupByLibrary.simpleMessage("Start"),

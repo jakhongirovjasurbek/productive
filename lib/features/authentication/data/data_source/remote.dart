@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:productive/core/exseption/exseption.dart';
+
+import '../../../../core/exception/exception.dart';
 
 abstract class AuthenticationDataSource {
   Future<User> getUser();
@@ -16,14 +17,14 @@ class _AuthenticationDataSourceImpl
   Future<User> getUser() async {
     try {
       if (FirebaseAuth.instance.currentUser == null) {
-        throw ServerException(errorMassege: "User is null", errorCode: "140");
+        throw ServerException(errorMessage: "User is null", errorCode: "140");
       }
       return FirebaseAuth.instance.currentUser!;
     } on ServerException {
       rethrow;
     } catch (error) {
       throw ServerException(
-        errorMassege: "$error",
+        errorMessage: "$error",
         errorCode: "500",
       );
     }
@@ -32,14 +33,13 @@ class _AuthenticationDataSourceImpl
   @override
   Future<User> login(String email, String password) async {
     try {
-      print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA    $email");
       final response = await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: email, password: password);
       return await getUser();
     } on ServerException {
       rethrow;
     } catch (error) {
-      throw ServerException(errorMassege: "$error", errorCode: "500");
+      throw ServerException(errorMessage: "$error", errorCode: "500");
     }
   }
 
@@ -48,7 +48,7 @@ class _AuthenticationDataSourceImpl
     try {
       await FirebaseAuth.instance.signOut();
     } catch (e) {
-      ServerException(errorMassege: "Cannot logout the user", errorCode: "500");
+      ServerException(errorMessage: "Cannot logout the user", errorCode: "500");
     }
   }
 
@@ -59,7 +59,7 @@ class _AuthenticationDataSourceImpl
           .createUserWithEmailAndPassword(email: email, password: password);
       return FirebaseAuth.instance.currentUser!;
     } catch (e) {
-      throw ServerException(errorMassege: "message", errorCode: "500");
+      throw ServerException(errorMessage: "message", errorCode: "500");
     }
   }
 }
