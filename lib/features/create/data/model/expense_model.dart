@@ -1,46 +1,35 @@
-import 'package:equatable/equatable.dart';
-
-class ExpenseModel extends Equatable {
-  final int id;
+class ExpenseModel  {
   final String title;
-  final int colorIndex;
+  final String description;
   final String icon;
   final double price;
-  final String description;
-  const ExpenseModel({
-    required this.id,
-    required this.title,
-    required this.colorIndex,
-    required this.icon,
+  final int indexColor;
+
+  ExpenseModel({
+    required this.indexColor,
     required this.price,
+    required this.title,
+    required this.icon,
     required this.description,
+
   });
 
-  factory ExpenseModel.fromJson(DataMap json) {
+  factory ExpenseModel.fromJson(Map<String, dynamic> json, String id) {
     return ExpenseModel(
-        id: json['id'],
-        title: json['title'] ?? ' ',
-        icon: json['icon']  ?? ' ',
-        colorIndex: json['colorIndex'] ?? 0,
-        price: json['price'] ?? 0.0,
-        description: json['description']  ?? ' '
-    );}
-
-
-
-  DataMap toJson() =>
-      {
-        'id': id,
-        'icon': icon,
-        'price' : price,
-        'colorIndex' : colorIndex,
-        'title': title,
-        'description': description
-      };
-
-
-  @override
-  List<Object?> get props =>[id,title, colorIndex,description,icon,price];
+      indexColor: json['index_color'] ?? 0,
+      price: json['price'] ?? 0.0,
+      title: json['title'] ?? '',
+      icon: json['icon'] ?? '',
+      description: json['description'] ?? '',
+    );
+  }
+  Map<String, dynamic> toJson() {
+    return {
+      'index_color' : indexColor,
+      'price' : price,
+      'title': title,
+      'icon': icon,
+      'description': description,
+    };
+  }
 }
-
-typedef DataMap = Map<String, dynamic>;

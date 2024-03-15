@@ -1633,6 +1633,16 @@ class AppLocalization {
       args: [],
     );
   }
+
+  /// `Failure`
+  String get failure {
+    return Intl.message(
+      'Failure',
+      name: 'failure',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {

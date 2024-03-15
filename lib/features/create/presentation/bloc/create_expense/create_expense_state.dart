@@ -2,7 +2,7 @@ part of 'create_expense_bloc.dart';
 
 class ExpenseState {
   final LoadingStatus status;
-  final List<ExpenseModel> expensesList;
+  final List<ExpenseEntity> expensesList;
   final List searchedIcon;
   final String selectIcon;
   final int colorIndex;
@@ -19,7 +19,7 @@ class ExpenseState {
 
   ExpenseState copyWith({
     LoadingStatus? status,
-    List<ExpenseModel>? expensesList,
+    List<ExpenseEntity>? expensesList,
     List? searchedIcon,
     int? colorIndex,
     String? selectIcon,
@@ -70,5 +70,6 @@ class ExpenseState {
     isSearching.hashCode;
   }
 }
+
 
 

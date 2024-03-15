@@ -9,6 +9,7 @@ import 'package:productive/features/authentication/presentation/pages/login_scre
 import 'package:productive/features/authentication/presentation/pages/sign_up.dart';
 import 'package:productive/features/home/home.dart';
 import 'package:productive/features/calendar/calendar_screen.dart';
+import '../../features/create/presentation/pages/create_expense.dart';
 import '../../features/statistics/presentation/pages/statistics.dart';
 import '../pages/splash.dart';
 
@@ -16,7 +17,7 @@ class AppRoute {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case AppRouteNames.splash:
-        return fade(const SplashPage());
+        return fade(const CreateExpanse());
       case AppRouteNames.home:
         return fade(const HomePage());
       case AppRouteNames.onboarding:
