@@ -11,6 +11,7 @@ import 'package:productive/core/injector/injector.dart';
 import 'package:productive/core/routes/app_route.dart';
 import 'package:productive/features/calendar/presentation/bloc/calendar_bloc.dart';
 import 'package:productive/features/create/presentation/bloc/create_expense/create_expense_bloc.dart';
+import 'package:productive/features/calendar/presentation/bloc/task_bloc/calendar_bloc.dart';
 import 'package:productive/firebase_options.dart';
 import 'features/create/data/data_source/remote.dart';
 import 'features/create/data/repository/task.dart';
@@ -50,7 +51,7 @@ class MainApp extends StatelessWidget {
       child: MultiBlocProvider(
         providers: [
           BlocProvider(
-            create: (context) => CalendarBloc(),
+            create: (context) => CalendarTaskBloc(),
           ),
           BlocProvider(
             create: (context) => CalendarBloc(),
@@ -74,6 +75,7 @@ class MainApp extends StatelessWidget {
           themeAnimationCurve: Curves.slowMiddle,
           darkTheme: context.theme.darkTheme(),
           debugShowCheckedModeBanner: false,
+          useInheritedMediaQuery: true,
           builder: DevicePreview.appBuilder,
           onGenerateRoute: AppRoute.onGenerateRoute,
           locale: const Locale.fromSubtags(languageCode: 'en'),

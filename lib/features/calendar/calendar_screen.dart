@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gap/gap.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/functions/app_functions.dart';
 import 'package:productive/core/widgets/w_calendar.dart';
-import 'package:productive/features/calendar/presentation/bloc/calendar_bloc.dart';
+import 'package:productive/features/calendar/presentation/bloc/task_bloc/calendar_bloc.dart';
+import 'package:productive/features/calendar/presentation/widgets/calendar_widget.dart';
 
 class CalendarScreen extends StatefulWidget {
   const CalendarScreen({super.key});
@@ -25,13 +27,21 @@ class _CalendarScreenState extends State<CalendarScreen> {
           style: context.style.fontSize30Weight700,
         ),
       ),
-      body: BlocBuilder<CalendarBloc, CalendarState>(
+      body: BlocBuilder<CalendarTaskBloc, CalendarTaskState>(
         builder: (context, state) {
           if (state.status == CalendarStatus.succsess) {
             return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16,),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 16,
+              ),
               child: CustomScrollView(
                 slivers: [
+                  const SliverToBoxAdapter(
+                    child: CalendarWidget(),
+                  ),
+                  const SliverToBoxAdapter(
+                    child: Gap(20),
+                  ),
                   SliverList.builder(
                     itemCount: state.datas.length,
                     itemBuilder: (context, index) {
@@ -45,8 +55,12 @@ class _CalendarScreenState extends State<CalendarScreen> {
                               ? null
                               : state.datas[index].description,
                           title: state.datas[index].title,
-                          startTime: formatTime(state.datas[index].startTime),
-                          endTime: formatTime(state.datas[index].endTime),
+                          startTime: formatTime(
+                            state.datas[index].startTime,
+                          ),
+                          endTime: formatTime(
+                            state.datas[index].endTime,
+                          ),
                         ),
                       );
                     },
@@ -55,7 +69,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
               ),
             );
           } else if (state.status == CalendarStatus.pure) {
-            context.read<CalendarBloc>().add(
+            context.read<CalendarTaskBloc>().add(
                   CalendarBlocStarted(),
                 );
             return const SizedBox();

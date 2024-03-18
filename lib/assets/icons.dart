@@ -12,23 +12,28 @@ const _new_catalog_icon = "assets/icons/create_expense/new_catalog_icon/";
 const _new_catalog_color = 'assets/icons/create_expense/new_catalog_colors/';
 
 const pathLogin = "assets/icons/login/";
+const calendar = "assets/icons/calendar/";
 
 class AppIcons {
+  static const leftButton = "assets/icons/calendar/left_button.svg";
+  static const rightButton = "assets/icons/calendar/right_button.svg";
+
   static const rectangle = "assets/create_new_password/user.png";
   static const isCheck = "assets/create_new_password/isCheck.svg";
   static const logo = "assets/icons/logo.svg";
   static const right = "assets/icons/right.svg";
   static const left = "assets/icons/left.svg";
-  final back = "${path}back.svg";
-  final arrow = "assets/icons/arrow.svg";
-  final moneyFirst = "assets/icons/money_first.svg";
-  final moneySecond = "assets/icons/money_second.svg";
-  final plus = "assets/icons/plus.svg";
-  final exit = "assets/icons/exit.svg";
-  final premium = "assets/icons/premium.svg";
-  final greenbook = "${pathNotes}green_book.svg";
-  final redbook = "${pathNotes}red_book.svg";
-  final plusbook = "${pathNotes}plus_book.svg";
+  static const back = "${path}back.svg";
+  static const arrow = "assets/icons/arrow.svg";
+  static const moneyFirst = "assets/icons/money_first.svg";
+  static const moneySecond = "assets/icons/money_second.svg";
+  static const plus = "assets/icons/plus.svg";
+  static const exit = "assets/icons/exit.svg";
+  static const premium = "assets/icons/premium.svg";
+  final greenbook="${pathNotes}green_book.svg";
+  final redbook="${pathNotes}red_book.svg";
+  final plusbook="${pathNotes}plus_book.svg";
+
 
   static const tasks = "${_bnb}tasks.svg";
   static const expense = "${_bnb}expense.svg";
