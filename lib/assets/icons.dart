@@ -4,8 +4,12 @@ const path = "assets/icons/forgot_password/";
 const pathNotes="assets/icons/notes_svg/";
 
 const single = "assets/icons/single_category/";
+const calendar = "assets/icons/calendar/";
 
 class AppIcons {
+  static const leftButton = "assets/icons/calendar/left_button.svg";
+  static const rightButton = "assets/icons/calendar/right_button.svg";
+
   static const rectangle = "assets/create_new_password/user.png";
   static const isCheck = "assets/create_new_password/isCheck.svg";
   static const logo = "assets/icons/logo.svg";

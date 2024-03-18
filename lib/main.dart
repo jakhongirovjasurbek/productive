@@ -9,7 +9,7 @@ import 'package:keyboard_dismisser/keyboard_dismisser.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/injector/injector.dart';
 import 'package:productive/core/routes/app_route.dart';
-import 'package:productive/features/calendar/presentation/bloc/calendar_bloc.dart';
+import 'package:productive/features/calendar/presentation/bloc/task_bloc/calendar_bloc.dart';
 import 'package:productive/firebase_options.dart';
 
 import 'generated/l10n.dart';
@@ -46,7 +46,7 @@ class MainApp extends StatelessWidget {
       child: MultiBlocProvider(
         providers: [
           BlocProvider(
-            create: (context) => CalendarBloc(),
+            create: (context) => CalendarTaskBloc(),
           ),
         ],
         child: MaterialApp(

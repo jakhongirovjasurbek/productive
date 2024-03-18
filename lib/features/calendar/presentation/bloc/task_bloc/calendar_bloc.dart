@@ -7,9 +7,9 @@ import 'package:productive/features/calendar/domain/usecase/usecase.dart';
 part 'calendar_event.dart';
 part 'calendar_state.dart';
 
-class CalendarBloc extends Bloc<CalendarEvent, CalendarState> {
-  CalendarBloc()
-      : super(CalendarState(
+class CalendarTaskBloc extends Bloc<CalendarTaskEvent, CalendarTaskState> {
+  CalendarTaskBloc()
+      : super(CalendarTaskState(
           datas: [],
           status: CalendarStatus.pure,
         )) {

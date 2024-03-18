@@ -2,19 +2,19 @@
 
 part of 'calendar_bloc.dart';
 
-class CalendarState {
+class CalendarTaskState {
   final List<CalendarEntities> datas; 
   final CalendarStatus status; 
-  CalendarState({
+  CalendarTaskState({
     required this.datas,
     required this.status,
   });
 
-  CalendarState copyWith({
+  CalendarTaskState copyWith({
     List<CalendarEntities>? datas,
     CalendarStatus? status,
   }) {
-    return CalendarState(
+    return CalendarTaskState(
       datas: datas ?? this.datas,
       status: status ?? this.status,
     );
@@ -24,7 +24,7 @@ class CalendarState {
   String toString() => 'CalendarState(datas: $datas, status: $status)';
 
   @override
-  bool operator ==(covariant CalendarState other) {
+  bool operator ==(covariant CalendarTaskState other) {
     if (identical(this, other)) return true;
   
     return 
