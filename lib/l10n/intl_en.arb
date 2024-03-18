@@ -157,13 +157,5 @@
   "dont_accaunt": "Don’t have an account?",
   "sign_up":"Sign up",
   "not_found": "Bunday user mavjud emas!",
-  "failure":"Failure",
-  "add_time": "Add time",
-  "remove_time": "Remove time",
-  "confirm": "Confirm",
-  "salary": "Salary",
-  "confirm": "Confirm",
-  "add_time": "Add time",
-  "remove_time": "Remove time"
-
+  "failure":"Failure"
 }

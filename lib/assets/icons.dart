@@ -6,13 +6,10 @@ const pathNotes = "assets/icons/notes_svg/";
 const single = "assets/icons/single_category/";
 const create = "assets/icons/create_task/";
 
-
-
 const tasks = "assets/icons/tasks/";
 const _create_expense = "assets/icons/create_expense/";
 const _new_catalog_icon = "assets/icons/create_expense/new_catalog_icon/";
 const _new_catalog_color = 'assets/icons/create_expense/new_catalog_colors/';
-
 
 const pathLogin = "assets/icons/login/";
 
@@ -70,15 +67,10 @@ class AppIcons {
   static const settings = "assets/icons/expenses/settings.svg";
   static const shopping = "assets/icons/expenses/shopping.svg";
 
-
-
   // single category
-  static const String bag = '${single}bag.svg';
   final String imgArrowLeft = '${single}img_arrow_left.svg';
   final String imgBxRestaurant = '${single}img_bx_restaurant.svg';
   static const bag1 = '${single}bag.svg';
-  final  String imgArrowLeft = '${single}img_arrow_left.svg';
-  final  String imgBxRestaurant = '${single}img_bx_restaurant.svg';
   static const String imgChart = '${single}img_chart.svg';
   final String imgFrame = '${single}img_frame.svg';
   final String imgThumbsUpWhite = '${single}img_thumbs_up_white.svg';
@@ -118,7 +110,6 @@ class AppIcons {
   static const delete = "assets/icons/delete.svg";
   static const noNotification = "assets/svg/no_notification.svg";
 
-
   //tasks
 
   //drower
@@ -142,9 +133,6 @@ class AppIcons {
   final simplenote = "assets/icons/tasks/simplenote.svg";
   final checked = "assets/icons/tasks/checked.svg";
   final unchecked = "assets/icons/tasks/unchecked.svg";
-
-
-
 
   ///  Create expense
 
@@ -185,7 +173,6 @@ class AppIcons {
   static const translate = '${_new_catalog_icon}translate.svg';
   static const umbrella = '${_new_catalog_icon}umbrella.svg';
 
-
   /// New Catalog Colors
 
   static const color1 = '${_new_catalog_color}color1.svg';
@@ -205,11 +192,10 @@ class AppIcons {
   static const color15 = '${_new_catalog_color}color15.svg';
   static const color16 = '${_new_catalog_color}color16.svg';
 
-  static const logoL="${pathLogin}logo.svg";
-  static const eye_off="${pathLogin}eye_off.svg";
-  static const eye_on="${pathLogin}eye_on.svg";
-  static const apple="${pathLogin}apple.svg";
-  static const facebook="${pathLogin}facebook.svg";
-  static const google="${pathLogin}google.svg";
-
+  static const logoL = "${pathLogin}logo.svg";
+  static const eye_off = "${pathLogin}eye_off.svg";
+  static const eye_on = "${pathLogin}eye_on.svg";
+  static const apple = "${pathLogin}apple.svg";
+  static const facebook = "${pathLogin}facebook.svg";
+  static const google = "${pathLogin}google.svg";
 }
