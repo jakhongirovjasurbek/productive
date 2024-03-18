@@ -1,11 +1,16 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:productive/core/extensions/extensions.dart';
-import 'package:productive/core/functions/app_functions.dart';
 import 'package:productive/core/route_names/task_name.dart';
 import 'package:productive/features/tasks1/presentation/pages/drawer.dart';
-import '../../../assets/colors.dart';
+import 'package:productive/assets/colors.dart';
+import 'package:productive/features/tasks1/data/models/task_models.dart';
+import 'package:productive/features/tasks1/data/models/status.dart';
+import 'package:productive/features/tasks1/presentation/bloc/task_bloc.dart';
 
 class TaskScreen extends StatefulWidget {
   const TaskScreen({super.key});
@@ -26,168 +31,183 @@ class _TaskScreenState extends State<TaskScreen>
 
   @override
   Widget build(BuildContext context) {
-    return Builder(
-      builder: (context) {
-        return Scaffold(
-          drawer: const DrawerMenu(),
-          appBar: AppBar(
-            automaticallyImplyLeading: false,
-            titleSpacing: 0,
-            toolbarHeight: 116,
-            title: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Builder(
-                        builder: (context) {
-                          return GestureDetector(
-                            onTap: () {
-                              Scaffold.of(context).openDrawer();
-                            },
-                            child: SvgPicture.asset(context.icons.humburger),
-                          );
-                        },
-                      ),
-                      const Spacer(),
-                      GestureDetector(
-                        onTap: () =>
-                            Navigator.pushNamed(context, TaskRouteNames.notes),
-                        child: SvgPicture.asset(context.icons.note),
-                      ),
-                      const SizedBox(width: 24),
-                      GestureDetector(
-                        onTap: () {},
-                        child: SvgPicture.asset(context.icons.notyfication),
-                      )
-                    ],
-                  ),
-                  const SizedBox(height: 16),
-                  TextField(
-                    onChanged: (value) {},
-                    cursorColor: context.colors.orange,
-                    decoration: InputDecoration(
-                      border: UnderlineInputBorder(
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(8),
-                        ),
-                        borderSide: BorderSide(
-                            color: context.colors.textFieldBackgroundColor),
-                      ),
-                      contentPadding: const EdgeInsets.symmetric(
-                          horizontal: 44, vertical: 13.5),
-                      prefixIcon: Container(
-                        padding: const EdgeInsets.all(10),
-                        child: SvgPicture.asset(
-                          context.icons.expanse_categories_search_task,
-                        ),
-                      ),
-                      suffixIcon: Container(
-                        padding: const EdgeInsets.all(10),
-                        child: GestureDetector(
-                            onTap: () {},
-                            child: SvgPicture.asset(context.icons.filter)),
-                      ),
-                      filled: true,
-                      fillColor: context.colors.textFieldBackgroundColor,
-                      hintText: context.localization.hintext_task_search,
-                      hintStyle: Theme.of(context)
-                          .textTheme
-                          .titleSmall!
-                          .copyWith(color: context.colors.allPageTextColor),
+    return Builder(builder: (context) {
+      return Scaffold(
+        drawer: const DrawerMenu(),
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          titleSpacing: 0,
+          toolbarHeight: 116,
+          title: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Builder(
+                      builder: (context) {
+                        return GestureDetector(
+                          onTap: () {
+                            Scaffold.of(context).openDrawer();
+                          },
+                          child: SvgPicture.asset(context.icons.hamburger),
+                        );
+                      },
                     ),
+                    const Spacer(),
+                    GestureDetector(
+                      onTap: () =>
+                          Navigator.pushNamed(context, TaskRouteNames.notes),
+                      child: SvgPicture.asset(context.icons.note),
+                    ),
+                    const SizedBox(width: 24),
+                    GestureDetector(
+                      onTap: () {},
+                      child: SvgPicture.asset(context.icons.notificationTasks),
+                    )
+                  ],
+                ),
+                const SizedBox(height: 16),
+                TextField(
+
+                  style: TextStyle(color: context.colors.whiteLabel,
+
+                   ),
+
+                  onChanged: (value) {
+                    context.read<Task1Bloc>().add(
+                          Searching(query: value),
+                        );
+                  },
+                  cursorColor: context.colors.buttonDisabledColor,
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(
+                     borderRadius: BorderRadius.circular(8),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: const BorderRadius.all(Radius.circular(8)),
+                      borderSide: BorderSide(
+                          color: context.colors.textFieldBackgroundColor),
+                    ),
+                    contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 44, vertical: 13.5),
+                    prefixIcon: Container(
+                      padding: const EdgeInsets.all(10),
+                      child: SvgPicture.asset(
+                        context.icons.searchTask,
+                      ),
+                    ),
+                    suffixIcon: Container(
+                      padding: const EdgeInsets.all(10),
+                      child: GestureDetector(
+                          onTap: () {},
+                          child: SvgPicture.asset(context.icons.filter)),
+                    ),
+                    filled: true,
+                    fillColor: context.colors.textFieldBackgroundColor,
+                    hintText: context.localization.hintext_task_search,
+                    hintStyle: Theme.of(context)
+                        .textTheme
+                        .titleSmall!
+                        .copyWith(color: context.colors.allPageTextColor),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-            bottom: TabBar(
-                controller: tabController,
-                indicatorColor: context.colors.activeColor,
-                indicatorSize: TabBarIndicatorSize.tab,
-                labelColor: context.colors.whitetask,
-                unselectedLabelColor: AppColors.greyish,
-                tabs: [
-                  Tab(
-                    child: Text(
-                      context.localization.Upcoming,
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ),
-                  Tab(
-                    child: Text(
-                      context.localization.All,
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ),
-                ]),
           ),
-          body: TabBarView(
+          bottom: TabBar(
             controller: tabController,
-            children: [
-              ListView.separated(
-                itemBuilder: (context, index) {
-                  return TaskItem(
-                    title: context.localization.tasks,
-                    startDate: DateTime.now(),
-                    endDate: DateTime.now(),
-                    icon: context.icons.study,
-                    priority: Priority.low,
-                    checkout: true,
-                  );
-                },
-                separatorBuilder: (context, index) {
-                  return const Gap(16);
-                },
-                itemCount: 1,
+            indicatorColor: context.colors.activeColor,
+            indicatorSize: TabBarIndicatorSize.tab,
+            labelColor: context.colors.whitetask,
+            unselectedLabelColor: context.colors.greyColor,
+            tabs: [
+              Tab(
+                child: Text(
+                  context.localization.Upcoming,
+                  style: context.style.fontSize18Weight700,
+                ),
               ),
-              ListView.separated(
-                itemBuilder: (context, index) {
-                  return Container();
-                },
-                separatorBuilder: (context, index) {
-                  return const Gap(16);
-                },
-                itemCount: 1,
-              )
+              Tab(
+                child: Text(
+                  context.localization.All,
+                  style: context.style.fontSize18Weight700,
+                ),
+              ),
             ],
           ),
-        );
-      },
-    );
+        ),
+        body: BlocBuilder<Task1Bloc, TaskState>(
+          builder: (context, state) {
+            switch (state.status) {
+              case LoadingStatus.pure:
+                context.read<Task1Bloc>().add(
+                      LoadingTask(),
+                    );
+                return const SizedBox();
+              case LoadingStatus.loading:
+                return const CupertinoActivityIndicator();
+              case LoadingStatus.loadedWithSuccess:
+                return state.isSearching
+                    ? ListView.separated(
+
+                        itemBuilder: (context, index) {
+                          return TaskItem(
+                            task: state.searchedTask[index],
+                          );
+                        },
+                        separatorBuilder: (context, index) {
+                          return const Gap(16);
+                        },
+                        itemCount: state.searchedTask.length,
+                      )
+                    : TabBarView(
+                        controller: tabController,
+                        children: [
+                          ListView.separated(
+                            padding: const EdgeInsets.symmetric(vertical: 20),
+                            itemBuilder: (context, index) {
+                              return TaskItem(
+                                task: state.upcomingList[index],
+                              );
+                            },
+                            separatorBuilder: (context, index) {
+                              return const Gap(16);
+                            },
+                            itemCount: state.upcomingList.length,
+                          ),
+                          ListView.separated(
+                            padding: const EdgeInsets.symmetric(vertical: 20),
+                            itemBuilder: (context, index) {
+                              return TaskItem(
+                                task: state.taskList[index],
+                              );
+                            },
+                            separatorBuilder: (context, index) {
+                              return const Gap(16);
+                            },
+                            itemCount: state.taskList.length,
+                          )
+                        ],
+                      );
+              default:
+                return const SizedBox();
+            }
+          },
+        ),
+      );
+    });
   }
 }
 
 class TaskItem extends StatelessWidget {
-  final String title;
-  final String? description;
-  final DateTime startDate;
-  final DateTime endDate;
-  final String? link;
-  final String icon;
-  final bool checkout;
-  final Priority priority;
+  final TaskModel task;
 
-  TaskItem({
-    required this.title,
-    this.description,
-    required this.startDate,
-    required this.endDate,
-    this.link,
-    required this.icon,
-    required this.checkout,
-    required this.priority,
+  const TaskItem({
+    super.key,
+    required this.task,
   });
 
   @override
@@ -203,7 +223,7 @@ class TaskItem extends StatelessWidget {
             right: BorderSide(
               width: 10,
               style: BorderStyle.solid,
-              color: getPriorityColor(priority),
+              color: getPriorityColor(task.priority),
             ),
           ),
         ),
@@ -214,32 +234,35 @@ class TaskItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  width: 55,
-                  height: 55,
+                  width: 38,
+                  height: 38,
                   padding: const EdgeInsets.all(7),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
+                    color: getIconColor(task.iconColor),
                   ),
-                  child: SvgPicture.asset(icon),
+                  child: SvgPicture.network(task.icon),
                 ),
                 const Gap(10),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      title,
+                      task.title,
                       style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                          color: context.colors.white,
-                          decoration: checkout
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: context.colors.whiteLabel,
+                          decoration: task.isChecked
                               ? TextDecoration.lineThrough
                               : TextDecoration.none),
                     ),
                     const Gap(2),
                     Text(
-                      '${formatTime(startDate)} - ${formatTime(endDate)}',
+                      '${getProperTime(task.startDate)} - ${getProperTime(task.dueDate)}',
                       style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                          color: context.colors.white,
-                          decoration: checkout
+                          color: context.colors.allPageTextColor,
+                          decoration: task.isChecked
                               ? TextDecoration.lineThrough
                               : TextDecoration.none),
                     ),
@@ -249,20 +272,27 @@ class TaskItem extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 3),
                   child: GestureDetector(
-                      onTap: () {},
-                      child: checkout
-                          ? SvgPicture.asset(context.icons.unchecked)
-                          : SvgPicture.asset(context.icons.checked)),
+                    onTap: () {
+                      context
+                          .read<Task1Bloc>()
+                          .add(CheckedTask(index: task.id));
+                    },
+                    child: task.isChecked
+                        ? SvgPicture.asset(context.icons.checked)
+                        : SvgPicture.asset(context.icons.unchecked),
+                  ),
                 ),
               ],
             ),
-            if (description != "" && description != null) ...{
+            if (task.note != "" && task.note != null) ...{
               const Gap(8),
               Text(
-                description!,
+                task.note!,
                 style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                      color: context.colors.whitetask,
-                      decoration: checkout
+                      color: context.colors.white,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 14,
+                      decoration: task.isChecked
                           ? TextDecoration.lineThrough
                           : TextDecoration.none,
                     ),
@@ -275,15 +305,47 @@ class TaskItem extends StatelessWidget {
   }
 }
 
-Color getPriorityColor(Priority priority) {
-  switch (priority) {
-    case Priority.high:
-      return AppColors.redPriorty;
-    case Priority.medium:
-      return AppColors.yellowPriority;
+getIconColor(String iconColor) {
+  switch (iconColor) {
+    case 'pinkColor':
+      return AppColors.englishStudy;
+    case 'orangeColor':
+      return AppColors.gymColor;
+    case 'greenColor':
+      return AppColors.greenIconColor;
+    case 'blueColor':
+      return AppColors.cleaningRoom;
     default:
-      return AppColors.greenPriority;
+      return AppColors.selectIconWork;
   }
 }
 
-enum Priority { high, medium, low }
+Color getPriorityColor(String priority) {
+  switch (priority) {
+    case 'high':
+      return AppColors.redPriority;
+    case 'medium':
+      return AppColors.yellowPriority;
+    case 'low':
+      return AppColors.greenPriority;
+    default:
+      return Colors.transparent;
+  }
+}
+
+String getProperTime(Timestamp value) {
+  final date = value.toDate();
+  if (date.hour > -12) {
+    final soat = date.hour >= 12 ? date.hour - 12 : date.hour;
+    final hour = soat < 10 ? '0$soat' : '$soat';
+    final minute = date.minute < 10 ? '0${date.minute}' : '${date.minute}';
+
+    return "$hour:$minute PM";
+  } else {
+    final soat = date.hour >= 12 ? date.hour - 12 : date.hour;
+    final hour = soat < 10 ? '0$soat' : '$soat';
+    final minute = date.minute < 10 ? '0${date.minute}' : '${date.minute}';
+
+    return "$hour:$minute AM";
+  }
+}

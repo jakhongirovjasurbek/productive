@@ -63,6 +63,8 @@ class AppIcons {
   static const purpleVector = "assets/icons/expenses/purpleVector.svg";
   static const settings = "assets/icons/expenses/settings.svg";
   static const shopping = "assets/icons/expenses/shopping.svg";
+  static const studyTask = "assets/icons/create_task/study.svg";
+  static const sportTask = "assets/icons/create_task/sport.svg";
 
 
 
@@ -115,21 +117,21 @@ class AppIcons {
   final articles = "assets/icons/tasks/drawer/articles.svg";
   final faq = "assets/icons/tasks/drawer/faq.svg";
   final help = "assets/icons/tasks/drawer/help.svg";
-  final premiumtask = "assets/icons/tasks/drawer/premium.svg";
-  final settingstask = "assets/icons/tasks/drawer/settings.svg";
+  final premiumTask = "assets/icons/tasks/drawer/premium.svg";
+  final settingsTask = "assets/icons/tasks/drawer/settings.svg";
   final sun = "assets/icons/tasks/drawer/sun.svg";
   final terms = "assets/icons/tasks/drawer/terms.svg";
 
   //else
-  final expanse_categories_search_task = "assets/icons/expanse/search.svg";
+  final searchTask = "assets/icons/tasks/searchTask.svg";
   final beg = "assets/icons/tasks/beg.svg";
   final filter = "assets/icons/tasks/filter.svg";
   final gym = "assets/icons/tasks/gym.svg";
-  final humburger = "assets/icons/tasks/humburger.svg";
-  final meettask = "assets/icons/tasks/meet.svg";
+  final hamburger = "assets/icons/tasks/humburger.svg";
+  final meetTask = "assets/icons/tasks/meet.svg";
   final note = "assets/icons/tasks/note.svg";
-  final notyfication = "assets/icons/tasks/notyfication.svg";
-  final simplenote = "assets/icons/tasks/simplenote.svg";
+  final notificationTasks = "assets/icons/tasks/notyfication.svg";
+  final simpleNote = "assets/icons/tasks/simplenote.svg";
   final checked = "assets/icons/tasks/checked.svg";
   final unchecked = "assets/icons/tasks/unchecked.svg";
 

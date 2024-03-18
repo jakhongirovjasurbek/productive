@@ -12,11 +12,12 @@ import 'package:productive/core/routes/app_route.dart';
 import 'package:productive/features/calendar/presentation/bloc/calendar_bloc.dart';
 import 'package:productive/firebase_options.dart';
 
-import 'features/create/data/data_source/remote.dart';
-import 'features/create/data/repository/task.dart';
 import 'features/create/presentation/bloc/location/location_cubit.dart';
-import 'features/create/presentation/bloc/task_bloc.dart';
-import 'features/tasks1/presentation/tasks_screen.dart';
+
+import 'features/tasks1/data/data_source/remote.dart';
+import 'features/tasks1/data/repository/task.dart';
+import 'features/tasks1/presentation/bloc/task_bloc.dart';
+
 import 'generated/l10n.dart';
 
 Future<void> main() async {
@@ -57,7 +58,7 @@ class MainApp extends StatelessWidget {
             create: (context) => CalendarBloc(),
           ),
           BlocProvider(
-            create: (context) => TaskBloc(response: TaskRepository(taskRemoteDataSource: TaskRemoteDataSource())),
+            create: (context) => Task1Bloc(response: Task1Repository(taskRemoteDataSource: Task1RemoteDataSource())),
           ),
           BlocProvider(
             create: (context) => MapScreenCubit()..getCurrentLocation(),
