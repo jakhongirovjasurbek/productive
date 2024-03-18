@@ -5,6 +5,7 @@ import 'package:intl/intl.dart';
 import 'package:productive/assets/icons.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/features/create/presentation/widgets/select_date_bottomsheet.dart';
+import 'package:productive/features/create/presentation/widgets/select_time_bottomsheet.dart';
 
 Future<DateTime?> showSelectCurrentDateBottomSheet(BuildContext context) async {
   return showModalBottomSheet<DateTime?>(
@@ -15,7 +16,15 @@ Future<DateTime?> showSelectCurrentDateBottomSheet(BuildContext context) async {
   );
 }
 
-class SelectCurrentDateBottomSheet extends StatelessWidget {
+class SelectCurrentDateBottomSheet extends StatefulWidget {
+  @override
+  State<SelectCurrentDateBottomSheet> createState() => _SelectCurrentDateBottomSheetState();
+}
+
+class _SelectCurrentDateBottomSheetState extends State<SelectCurrentDateBottomSheet> {
+  DateTime? _startDate;
+  DateTime? _endDate;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -62,9 +71,13 @@ class SelectCurrentDateBottomSheet extends StatelessWidget {
           ),
           SizedBox(height: 8),
           GestureDetector(
-            onTap: () async{
-             await showSelectDateBottomSheet(context,null);
-              Navigator.pop(context, DateTime.now());
+            onTap: () async {
+              DateTime? selectedDate = await showSelectDateBottomSheet(context,null);
+              if (selectedDate != null) {
+                setState(() {
+                  _startDate = selectedDate;
+                });
+              }
             },
             child: Text(
               context.localization.add_time,
@@ -80,9 +93,9 @@ class SelectCurrentDateBottomSheet extends StatelessWidget {
           ),
           Spacer(),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 125),
+            padding: const EdgeInsets.symmetric(horizontal: 127),
             child: Container(
-              height: 35,
+              height: 38,
               decoration: BoxDecoration(
                 color: context.colors.skipButtonColor,
                 borderRadius: BorderRadius.circular(10),

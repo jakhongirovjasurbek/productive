@@ -1,12 +1,14 @@
+// Import the necessary packages and widgets
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:intl/intl.dart';
 import 'package:productive/assets/icons.dart';
 import 'package:productive/core/extensions/extensions.dart';
+import 'package:productive/features/create/presentation/widgets/select_time_bottomsheet.dart'; // Import the SelectTimeBottomSheet widget
 
+// Define a function to show the time picker bottom sheet
 Future<DateTime?> showSelectTimeBottomSheet(BuildContext context) async {
-  return showModalBottomSheet<DateTime?>(
+  return showModalBottomSheet<DateTime>(
     context: context,
     builder: (BuildContext context) {
       return SelectTimeBottomSheet();
@@ -14,6 +16,7 @@ Future<DateTime?> showSelectTimeBottomSheet(BuildContext context) async {
   );
 }
 
+// Your SelectTimeBottomSheet widget
 class SelectTimeBottomSheet extends StatefulWidget {
   final DateTime? initialTime;
 
@@ -29,8 +32,8 @@ class _SelectTimeBottomSheetState extends State<SelectTimeBottomSheet> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 368,
-      height: 375,
+      width: 375,
+      height: 368,
       decoration: BoxDecoration(
         color: context.colors.loginTextFieldBackgroundColor,
         borderRadius: BorderRadius.only(
@@ -56,14 +59,6 @@ class _SelectTimeBottomSheetState extends State<SelectTimeBottomSheet> {
                 ),
               ),
             ],
-          ),
-          SizedBox(height: 16),
-          Align(
-            alignment: Alignment.topCenter,
-            child: Text(
-              DateFormat('dd/MM/yyyy').format(DateTime.now()),
-              style: context.style.fontSize20Weight500,
-            ),
           ),
           SizedBox(height: 16),
           Divider(
@@ -106,7 +101,7 @@ class _SelectTimeBottomSheetState extends State<SelectTimeBottomSheet> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 125),
+            padding: const EdgeInsets.symmetric(horizontal: 127),
             child: Container(
               height: 38,
               decoration: BoxDecoration(
@@ -115,7 +110,6 @@ class _SelectTimeBottomSheetState extends State<SelectTimeBottomSheet> {
               ),
               child: MaterialButton(
                 onPressed: () {
-
                   Navigator.pop(context, _selectedTime);
                 },
                 child: Text(context.localization.confirm),
@@ -125,13 +119,5 @@ class _SelectTimeBottomSheetState extends State<SelectTimeBottomSheet> {
         ],
       ),
     );
-  }
-  void _showTimePicker() async {
-    DateTime? selectedTime = await showSelectTimeBottomSheet(context);
-    if (selectedTime != null) {
-      setState(() {
-        _selectedTime = selectedTime;
-      });
-    }
   }
 }

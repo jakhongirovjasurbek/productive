@@ -32,15 +32,32 @@ class SelectDateBottomSheet extends StatefulWidget {
 
 class _SelectDateBottomSheetState extends State<SelectDateBottomSheet> {
   DateTime? _selectedDate;
-  String? _selectedTimeText; // Define _selectedTimeText here
+  String? _selectedTimeText;
+  late TextEditingController _dateController;
+
+  @override
+  void initState() {
+    super.initState();
+    _dateController = TextEditingController();
+    if (widget.initialDate != null) {
+      _dateController.text =
+          DateFormat('yyyy-MM-dd').format(widget.initialDate!);
+    }
+  }
+
+  @override
+  void dispose() {
+    _dateController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 368,
-      height: 375,
+      width: 375,
+      height: 368,
       decoration: BoxDecoration(
-        color: context.colors.loginTextFieldBackgroundColor,
+        color: context.colors.backgroundColor,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(16),
           topRight: Radius.circular(16),
@@ -74,6 +91,8 @@ class _SelectDateBottomSheetState extends State<SelectDateBottomSheet> {
               onDateTimeChanged: (DateTime newDateTime) {
                 setState(() {
                   _selectedDate = newDateTime;
+                  _dateController.text =
+                      DateFormat('yyyy-MM-dd').format(newDateTime);
                 });
               },
             ),
@@ -84,14 +103,13 @@ class _SelectDateBottomSheetState extends State<SelectDateBottomSheet> {
           ),
           SizedBox(height: 8),
           GestureDetector(
-            onTap: () async{
-              await showSelectTimeBottomSheet(context).then((selectedTime) {
-                if (selectedTime != null) {
-                  setState(() {
-                    _selectedTimeText = DateFormat('HH:mm').format(selectedTime);
-                  });
-                }
-              });
+            onTap: () async {
+              DateTime? selectedTime = await showSelectTimeBottomSheet(context);
+              if (selectedTime != null) {
+                setState(() {
+                  _selectedTimeText = DateFormat('HH:mm').format(selectedTime);
+                });
+              }
             },
             child: Text(
               _selectedTimeText ?? widget.selectedTimeText ?? context.localization.add_time,
@@ -106,7 +124,7 @@ class _SelectDateBottomSheetState extends State<SelectDateBottomSheet> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 125),
+            padding: const EdgeInsets.symmetric(horizontal: 127),
             child: Container(
               height: 38,
               decoration: BoxDecoration(
@@ -121,6 +139,7 @@ class _SelectDateBottomSheetState extends State<SelectDateBottomSheet> {
               ),
             ),
           ),
+
         ],
       ),
     );

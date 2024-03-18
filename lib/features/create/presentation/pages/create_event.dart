@@ -33,6 +33,7 @@ class _CreateEventState extends State<CreateEvent> {
       });
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,42 +69,41 @@ class _CreateEventState extends State<CreateEvent> {
                     Column(
                       children: [
                         SvgPicture.asset(AppIcons.meet),
-
                         const SizedBox(height: 8),
-                        Text(context.localization.meet,
-                            style: context.style.fontSize14Weight400),
-
+                        Text(
+                          context.localization.meet,
+                          style: context.style.fontSize14Weight400,
+                        ),
                       ],
                     ),
                     Column(
                       children: [
                         SvgPicture.asset(AppIcons.birthday),
-
                         const SizedBox(height: 8),
-                        Text(context.localization.birthday,
-                            style: context.style.fontSize14Weight400),
-
-
+                        Text(
+                          context.localization.birthday,
+                          style: context.style.fontSize14Weight400,
+                        ),
                       ],
                     ),
                     Column(
                       children: [
                         SvgPicture.asset(AppIcons.online),
-
                         const SizedBox(height: 8),
-                        Text(context.localization.online,
-                            style: context.style.fontSize14Weight400),
-
+                        Text(
+                          context.localization.online,
+                          style: context.style.fontSize14Weight400,
+                        ),
                       ],
                     ),
                     Column(
                       children: [
                         SvgPicture.asset(AppIcons.other),
-
                         const SizedBox(height: 8),
-                        Text(context.localization.other,
-                            style: context.style.fontSize14Weight400),
-
+                        Text(
+                          context.localization.other,
+                          style: context.style.fontSize14Weight400,
+                        ),
                       ],
                     ),
                   ],
@@ -156,19 +156,15 @@ class _CreateEventState extends State<CreateEvent> {
                 child: TextField(
                   style: TextStyle(color: context.colors.whiteLabel),
                   decoration: InputDecoration(
-          // contentPadding: const EdgeInsets.fromLTRB(16, 13, 0, 12),
-          //           hintText: context.localization.date,
-          contentPadding: EdgeInsets.fromLTRB(16, 13, 0, 12),
+                    contentPadding: EdgeInsets.fromLTRB(16, 13, 0, 12),
                     hintText: _startDate != null
                         ? _startDate!.toString()
                         : context.localization.date,
-
                     hintStyle: context.style.fontSize14Weight400Grey,
                     border: InputBorder.none,
                     prefixIcon: GestureDetector(
-                      onTap: () {
-
-                        showSelectCurrentDateBottomSheet(context);
+                      onTap: () async {
+                        DateTime? selectedDate = await showSelectCurrentDateBottomSheet(context);
                       },
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(16, 13, 8, 13),
@@ -200,25 +196,21 @@ class _CreateEventState extends State<CreateEvent> {
                 child: TextField(
                   style: TextStyle(color: context.colors.whiteLabel),
                   decoration: InputDecoration(
-
-
                     contentPadding: EdgeInsets.fromLTRB(16, 13, 0, 12),
                     hintText: _endDate != null
-                        ? _endDate!.toString()
+                        ? DateFormat('yyyy-MM-dd').format(_endDate!)
                         : context.localization.date,
-
                     hintStyle: context.style.fontSize14Weight400Grey,
                     border: InputBorder.none,
                     prefixIcon: GestureDetector(
-                      onTap: () {
-                        showSelectCurrentDateBottomSheet(context);
+                      onTap: () async {
+                        DateTime? selectedDate = await showSelectCurrentDateBottomSheet(context);
                       },
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(16, 13, 8, 13),
                         child: SvgPicture.asset(AppIcons.end),
                       ),
                     ),
-
                   ),
                 ),
               ),
@@ -267,6 +259,4 @@ class _CreateEventState extends State<CreateEvent> {
       ),
     );
   }
-
-
 }
