@@ -45,16 +45,16 @@ class _MyBottomSheetState extends State<MyBottomSheet> {
               child: GestureDetector(
                 onTap: () {
                   if (_selectedValue != null) {
-                  widget.onSelected(_selectedValue!);
-                  Navigator.pop(context);
-                }
+                    widget.onSelected(_selectedValue!);
+                    Navigator.pop(context);
+                  }
                 },
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
                     vertical: 8.0,
                     horizontal: 16.0,
                   ),
-                  child: SvgPicture.asset(AppIcons.exit),
+                  child: SvgPicture.asset(context.icons.exit),
                 ),
               ),
             ),

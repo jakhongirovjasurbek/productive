@@ -9,17 +9,17 @@ class SaveButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8),
-          color: context.colors.skipButtonColor,
-        ),
-        height: 40,
-        width: 380,
-        child: Center(
-            child: Text(
-              context.localization.save,
-              style: context.style.fontSize16Weight500,
-            )),
-      );
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(8),
+        color: context.colors.skipButtonColor,
+      ),
+      height: 40,
+      width: 380,
+      child: Center(
+          child: Text(
+            context.localization.save,
+            style: context.style.fontSize16Weight500,
+          )),
+    );
   }
 }

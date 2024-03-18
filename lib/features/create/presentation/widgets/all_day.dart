@@ -33,7 +33,7 @@ class _AllDayWidgetState extends State<AllDayWidget> {
                   ),
                 ),
                 Transform.scale(
-                  scale: 0.8, // Adjust the scale factor as needed
+                  scale: 0.8,
                   child: CupertinoSwitch(
                     activeColor: context.colors.skipButtonColor,
                     value: isSwitchOn,

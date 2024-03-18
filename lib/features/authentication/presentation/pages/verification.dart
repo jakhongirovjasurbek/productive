@@ -39,7 +39,7 @@ class _VerificationPageState extends State<VerificationPage> {
         backgroundColor: context.colors.mainDark.withOpacity(0.3),
         title:  Row(
           children: [
-            SvgPicture.asset(AppIcons.back),
+            SvgPicture.asset(context.icons.back),
             Gap(10),
             Text(
               context.localization.email_verification,
