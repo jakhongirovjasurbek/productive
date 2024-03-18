@@ -23,12 +23,12 @@ class AppIcons {
   static const logo = "assets/icons/logo.svg";
   static const right = "assets/icons/right.svg";
   static const left = "assets/icons/left.svg";
-  static const back = "${path}back.svg";
+  final back = "${path}back.svg";
   static const arrow = "assets/icons/arrow.svg";
   static const moneyFirst = "assets/icons/money_first.svg";
   static const moneySecond = "assets/icons/money_second.svg";
   static const plus = "assets/icons/plus.svg";
-  static const exit = "assets/icons/exit.svg";
+  final exit = "assets/icons/exit.svg";
   static const premium = "assets/icons/premium.svg";
   final greenbook="${pathNotes}green_book.svg";
   final redbook="${pathNotes}red_book.svg";
