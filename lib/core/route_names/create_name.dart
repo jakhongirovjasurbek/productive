@@ -1,4 +1,4 @@
 class CreateRouteNames{
-  static const create ='/';
-  static const homecreate = '/homecreate';
+  static const createevent ='/';
+  static const createincome = '/createincome';
 }

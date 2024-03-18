@@ -1,8 +1,5 @@
-class TaskRouteNames {
-  static const tasks = '/';
+class TaskRouteNames{
+  static const tasks ='/';
   static const createtasks = '/createtasks';
-  static const notification = '/notification';
-  static const mapScreen = "/mapscreen";
-  static const notes = '/notes';
-
+  static const notifications = '/notifications';
 }

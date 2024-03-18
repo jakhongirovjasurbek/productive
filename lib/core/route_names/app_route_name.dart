@@ -5,13 +5,6 @@ class AppRouteNames {
   static const statistics = '/statistics';
   static const calendar = '/statistics';
   static const createNewPassword = 'create-new-password';
-  static const login = '/login';
-  static const signUp = '/signup';
-  static const forgotPassword = '/forgot';
-
-  
-  static const createItems = '/createitem';
-
-
-
+  static const forgotPassword = '/forgotPassword';
+  static const verification = '/verification';
 }
