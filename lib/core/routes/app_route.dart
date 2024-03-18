@@ -14,7 +14,6 @@ import '../../features/create/presentation/pages/create_event.dart';
 import '../../features/create/presentation/pages/create_income.dart';
 import '../../features/expense/presentation/pages/expense_screen.dart';
 import '../../features/tasks/presentation/pages/notifications.dart';
-import '../../features/tasks1/presentation/tasks_screen.dart';
 import '../route_names/create_name.dart';
 import '../route_names/expanse_name.dart';
 import '../route_names/stats_name.dart';
@@ -43,14 +42,14 @@ class AppRoute {
         return fade(const CalendarScreen());
       case CreateRouteNames.createevent:
         return fade(const CreateEvent());
-      case CreateRouteNames.createincome:
-        return fade(const CreateIncomeScreen());
+      // case CreateRouteNames.createincome:
+      //   return fade(const CreateIncomeScreen());
       case ExpenseRouteNames.expense:
         return fade(const ExpenseScreen());
       case StatsRouteNames.stats:
         return fade(const StatisticsScreen());
-      case TaskRouteNames.tasks:
-        return fade(const TaskScreen());
+      // case TaskRouteNames.tasks:
+      //   return fade(const TaskScreen());
       case TaskRouteNames.notifications:
         return fade(const NotificationPage());
       default:

@@ -14,10 +14,6 @@ import '../bloc/auth_bloc.dart';
 import '../widgets/social.dart';
 
 class LoginScreen extends StatefulWidget {
-  static Route route() => MaterialPageRoute(
-        builder: (_) => const LoginScreen(),
-      );
-
   const LoginScreen({super.key});
 
   @override
@@ -167,7 +163,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                     password: passwordTextEditingController.text
                                         .trim(),
                                     onSuccess: () {
-                                      Navigator.pushNamed(context, AppRouteNames.home);
+                                      Navigator.pushNamed(
+                                          context, AppRouteNames.home);
                                     },
                                     onFailure: () {
                                       ScaffoldMessenger.of(context)
@@ -240,9 +237,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).pushNamed(AppRouteNames.signUp);
-                  },
+                  onTap: () {},
                   child: Padding(
                     padding: EdgeInsets.only(
                         bottom: MediaQuery.of(context).padding.bottom + 18),

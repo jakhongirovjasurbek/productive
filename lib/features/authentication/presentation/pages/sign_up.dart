@@ -169,10 +169,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                         mailTextEditingController.text.trim(),
                                     password: passwordTextEditingController.text
                                         .trim(),
-                                    onSuccess: () {
-                                      Navigator.pushNamed(
-                                          context, AppRouteNames.login);
-                                    },
+                                    onSuccess: () {},
                                     onFailure: () {
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(
@@ -240,9 +237,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).pushNamed(AppRouteNames.login);
-                  },
+                  onTap: () {},
                   child: Padding(
                     padding: EdgeInsets.only(
                         bottom: MediaQuery.of(context).padding.bottom + 18),
