@@ -4,13 +4,11 @@ import 'package:productive/core/route_names/task_name.dart';
 import 'package:productive/features/create/presentation/pages/map_screen.dart';
 import 'package:productive/features/notes/presentation/notes.dart';
 
-import '../../features/tasks1/presentation/tasks_screen.dart';
-
 class TaskRoute {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case TaskRouteNames.tasks:
-        return fade(const TaskScreen());
+        return fade(const Scaffold());
       // case TaskRouteNames.createtasks:
       //   return fade(const CreateScreen());
       case TaskRouteNames.mapScreen:
