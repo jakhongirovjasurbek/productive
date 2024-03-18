@@ -210,17 +210,6 @@ class AppIcons {
   static const apple = "${pathLogin}apple.svg";
   static const facebook = "${pathLogin}facebook.svg";
   static const google = "${pathLogin}google.svg";
-  static const logoL="${pathLogin}logo.svg";
-  static const eye_off="${pathLogin}eye_off.svg";
-  static const eye_on="${pathLogin}eye_on.svg";
-  static const apple="${pathLogin}apple.svg";
-  static const facebook="${pathLogin}facebook.svg";
-  static const google="${pathLogin}google.svg";
-
-
-
-
-
   // createhomeitem
   final closecreate  = '${createhomeitem}close_create.svg';
   final expensess  = '${createhomeitem}expense.svg';
