@@ -79,7 +79,7 @@ class _CreateExpanseState extends State<CreateExpanse> {
                                 onTap: () {
                                   selectIcon(context);
                                 },
-                                child: SvgPicture.asset(
+                                child: SvgPicture.network(
                                   state.selectIcon,
                                 ),
                               ),
@@ -88,7 +88,7 @@ class _CreateExpanseState extends State<CreateExpanse> {
                             Expanded(
                               child: TextField(
                                 style:
-                                    context.style.fontSize16Weight500.copyWith(
+                                context.style.fontSize16Weight500.copyWith(
                                   color: context.colors.whiteLabel,
                                 ),
                                 controller: titleController,
@@ -97,7 +97,7 @@ class _CreateExpanseState extends State<CreateExpanse> {
                                   hintText: context.localization.new_title,
                                   hintStyle: context.style.fontSize14Weight500
                                       .copyWith(
-                                          color: context.colors.createTaskTime),
+                                      color: context.colors.createTaskTime),
                                 ),
                               ),
                             ),
@@ -122,7 +122,7 @@ class _CreateExpanseState extends State<CreateExpanse> {
                                   context.localization.usd,
                                   style: context.style.fontSize14Weight500
                                       .copyWith(
-                                          color: context.colors.tasksTimeColor),
+                                      color: context.colors.tasksTimeColor),
                                 ),
                               ],
                             ),
@@ -131,15 +131,15 @@ class _CreateExpanseState extends State<CreateExpanse> {
                             hintText: context.localization.zero,
                             focusedBorder: OutlineInputBorder(
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(8)),
+                              BorderRadius.all(Radius.circular(8)),
                             ),
                             hintStyle:
-                                context.style.fontSize16Weight500.copyWith(
+                            context.style.fontSize16Weight500.copyWith(
                               color: context.colors.notificationsClear,
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(8)),
+                              BorderRadius.all(Radius.circular(8)),
                             ),
                             // focusColor: Colors.red
                           ),
@@ -191,30 +191,24 @@ class _CreateExpanseState extends State<CreateExpanse> {
               ),
               onPressed: () {
                 context.read<ExpenseBloc>().add(CreateNewExpense(
-                      colorIndex: state.colorIndex,
-                      description: noteController.text,
-                      price: double.parse(usdController.text),
-                      title: titleController.text,
-                      icon: state.selectIcon,
-                      onSuccess: () {
-                        print('expense created');
-                      },
-                      onFailure: (errorMassage) {
-                        ScaffoldMessenger.of(context).showMaterialBanner(
-                          MaterialBanner(
-                            onVisible: () async {
-                              await Future.delayed(const Duration(seconds: 3));
-                              ScaffoldMessenger.of(context)
-                                  .hideCurrentMaterialBanner();
-                            },
-                            content: Text(errorMassage),
-                            actions: const [
-                              SizedBox(),
-                            ],
-                          ),
-                        );
-                      },
-                    ));
+                  indexColor: state.colorIndex,
+                  description: noteController.text,
+                  price: double.parse(usdController.text.isEmpty ? '0' : usdController.text),
+                  title: titleController.text,
+                  icon: state.selectIcon,
+                  onSuccess: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text('Expense successfully created'),
+                      ),
+                    );
+                  },
+                  onFailure: (errorMassage) {
+                    const SnackBar(
+                      content: Text('Unknown error occurred'),
+                    );
+                  },
+                ));
               },
               child: Text(context.localization.save),
             ),

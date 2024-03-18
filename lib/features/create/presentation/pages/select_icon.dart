@@ -89,7 +89,7 @@ class _NewSelectIconState extends State<NewSelectIcon>
                             onTap: () {
                               selectIcon(context);
                             },
-                            child: SvgPicture.asset(state.selectIcon,),
+                            child: SvgPicture.network(state.selectIcon),
                           ),
                         ),
                         const Gap(20),
@@ -114,8 +114,8 @@ class _NewSelectIconState extends State<NewSelectIcon>
                       controller: tabController,
                       tabs:  [
                         Tab(
-                            child: Text(context.localization.icon,
-                                style: context.style.fontSize18Weight700),),
+                          child: Text(context.localization.icon,
+                              style: context.style.fontSize18Weight700),),
                         Tab(
                             child: Text(context.localization.color,
                                 style: context.style.fontSize18Weight700)),

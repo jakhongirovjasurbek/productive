@@ -1,5 +1,6 @@
 part of 'create_expense_bloc.dart';
 
+
 @immutable
 sealed class ExpenseEvent extends Equatable {}
 
@@ -22,10 +23,10 @@ class SelectIconButton extends ExpenseEvent {
 
 class SelectIcon extends ExpenseEvent {
   int? indexColor;
-   String? icon;
+  String? icon;
   SelectIcon({
-     this.icon,
-     this.indexColor,
+    this.icon,
+    this.indexColor,
   });
 
   @override
@@ -35,7 +36,7 @@ class SelectIcon extends ExpenseEvent {
 class CreateNewExpense extends ExpenseEvent {
   final String title;
   final String icon;
-  final int colorIndex;
+  final int indexColor;
   final String description;
   final double price;
   final VoidCallback onSuccess;
@@ -44,7 +45,7 @@ class CreateNewExpense extends ExpenseEvent {
   CreateNewExpense({
     required this.description,
     required this.price,
-    required this.colorIndex,
+    required this.indexColor,
     required this.title,
     required this.icon,
     required this.onSuccess,
@@ -53,7 +54,7 @@ class CreateNewExpense extends ExpenseEvent {
 
   @override
   List<Object?> get props =>
-      [title, icon,colorIndex, description, price, onSuccess, onFailure];
+      [title, icon,indexColor, description, price, onSuccess, onFailure];
 }
 
 class Searching extends ExpenseEvent {

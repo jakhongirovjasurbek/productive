@@ -76,7 +76,7 @@ class _NewCategoryState extends State<NewCategory> {
                             decoration: InputDecoration(
                               hintText: context.localization.new_title,
                               hintStyle:
-                                  context.style.fontSize14Weight500.copyWith(
+                              context.style.fontSize14Weight500.copyWith(
                                 color: context.colors.createTaskTime,
                               ),
                             ),
