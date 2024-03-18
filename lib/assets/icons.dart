@@ -6,13 +6,19 @@ const pathNotes = "assets/icons/notes_svg/";
 const single = "assets/icons/single_category/";
 const create = "assets/icons/create_task/";
 
+
+
 const tasks = "assets/icons/tasks/";
 const _create_expense = "assets/icons/create_expense/";
 const _new_catalog_icon = "assets/icons/create_expense/new_catalog_icon/";
 const _new_catalog_color = 'assets/icons/create_expense/new_catalog_colors/';
 
+
 const pathLogin = "assets/icons/login/";
 const calendar = "assets/icons/calendar/";
+
+const createhomeitem = "assets/icons/create_home_items/";
+
 
 class AppIcons {
   static const leftButton = "assets/icons/calendar/left_button.svg";
@@ -178,6 +184,7 @@ class AppIcons {
   static const translate = '${_new_catalog_icon}translate.svg';
   static const umbrella = '${_new_catalog_icon}umbrella.svg';
 
+
   /// New Catalog Colors
 
   static const color1 = '${_new_catalog_color}color1.svg';
@@ -203,4 +210,24 @@ class AppIcons {
   static const apple = "${pathLogin}apple.svg";
   static const facebook = "${pathLogin}facebook.svg";
   static const google = "${pathLogin}google.svg";
+  static const logoL="${pathLogin}logo.svg";
+  static const eye_off="${pathLogin}eye_off.svg";
+  static const eye_on="${pathLogin}eye_on.svg";
+  static const apple="${pathLogin}apple.svg";
+  static const facebook="${pathLogin}facebook.svg";
+  static const google="${pathLogin}google.svg";
+
+
+
+
+
+  // createhomeitem
+  final closecreate  = '${createhomeitem}close_create.svg';
+  final expensess  = '${createhomeitem}expense.svg';
+  final money  = '${createhomeitem}money.svg';
+  final notess  = '${createhomeitem}note.svg';
+  final taskhome  = '${createhomeitem}task_home.svg';
+
+  final taskstar  = '${createhomeitem}tasks_star.svg';
+
 }

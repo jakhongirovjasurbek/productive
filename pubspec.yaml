@@ -78,6 +78,7 @@ flutter:
     - assets/icons/notes_svg/
     - assets/svg/
     - assets/icons/create_task/
+    - assets/icons/create_home_items/
 
 flutter_intl:
   enabled: true

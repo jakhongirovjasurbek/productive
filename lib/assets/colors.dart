@@ -163,4 +163,11 @@ class AppColors {
   static Color modalBottomSheetTop = const Color(0xFFF8FFFF).withOpacity(0.4);
 
   final selectDateTimeColor = Color(0xFF303745);
+
+
+
+  // createHomeItems
+
+  final Color createhomeitem = const Color(0xFF4B7FD6);
+  final Color createhomeitemwhite = const  Color(0xFFFEFEFE);
 }

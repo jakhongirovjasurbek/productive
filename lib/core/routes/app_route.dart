@@ -7,8 +7,11 @@ import 'package:productive/features/authentication/presentation/pages/create_new
 import 'package:productive/core/route_names/app_route_name.dart';
 import 'package:productive/features/authentication/presentation/pages/login_screen.dart';
 import 'package:productive/features/authentication/presentation/pages/sign_up.dart';
+import 'package:productive/features/create/presentation/pages/create.dart';
 import 'package:productive/features/home/home.dart';
 import 'package:productive/features/calendar/calendar_screen.dart';
+import 'package:productive/features/statistics/presentation/pages/statistics.dart';
+
 import '../../features/create/presentation/pages/create_expense.dart';
 import '../../features/statistics/presentation/pages/statistics.dart';
 import '../pages/splash.dart';
@@ -17,7 +20,9 @@ class AppRoute {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case AppRouteNames.splash:
-        return fade(const CreateExpanse());
+        return fade(const SplashPage());
+         case AppRouteNames.createItems:
+        return fade(const CreateItems());
       case AppRouteNames.home:
         return fade(const HomePage());
       case AppRouteNames.onboarding:
