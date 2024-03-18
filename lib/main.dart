@@ -80,8 +80,8 @@ class MainApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           builder: DevicePreview.appBuilder,
 
-          home:CreateItems(),
-          // onGenerateRoute: AppRoute.onGenerateRoute,
+          // home:CreateItems(),
+          onGenerateRoute: AppRoute.onGenerateRoute,
           locale: const Locale.fromSubtags(languageCode: 'en'),
           supportedLocales: AppLocalization.delegate.supportedLocales,
           localizationsDelegates: const [

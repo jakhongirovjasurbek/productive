@@ -18,8 +18,10 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     Timer(const Duration(seconds: 0), () {
+
+      // CreateItems()
       Navigator.of(context)
-          .pushNamedAndRemoveUntil(AppRouteNames.login, (_) => false);
+          .pushNamedAndRemoveUntil(AppRouteNames.createItems, (_) => false);
     });
     super.initState();
   }
