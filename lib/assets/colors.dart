@@ -155,19 +155,16 @@ class AppColors {
   static Color englishStudy = const Color(0xFFDD8491);
   static Color cleaningRoom = const Color(0xFF4B7FD6);
   static Color greyish = const  Color(0xFF8E8E8E);
-  static Color redPriorty = const  Color(0xFFFF2752);
-  static Color yellowPriority = const  Color(0xFF44DB4A);
-  static Color greenPriority = const  Color(0xFF525298);
+  final Color greyColor = const  Color(0xFF8E8E8E);
+  static Color redPriority = const  Color(0xFFFF2752);
+  static Color greenPriority = const  Color(0xFF44DB4A);
+  static Color yellowPriority = const  Color(0xFFF6A845);
+  static Color greenIconColor = const  Color(0xFF22B07D);
   static Color selectIconWork = const Color(0xFF525298);
   static Color createSearchColor = const   Color(0xFF303644);
   static Color modalBottomSheetTop = const Color(0xFFF8FFFF).withOpacity(0.4);
-
-  final selectDateTimeColor = Color(0xFF303745);
-
-
-
+  final selectDateTimeColor = const Color(0xFF303745);
   // createHomeItems
-
   final Color createhomeitem = const Color(0xFF4B7FD6);
   final Color createhomeitemwhite = const  Color(0xFFFEFEFE);
 }

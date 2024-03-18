@@ -126,8 +126,8 @@ class SelectPriorityColor extends TaskEvent {
   @override
   bool operator ==(covariant SelectPriorityColor other) {
     if (identical(this, other)) return true;
-  
-    return 
+
+    return
       other.context == context &&
       other.index == index;
   }
@@ -143,7 +143,7 @@ class CreateNewTaskButtonPressed extends TaskEvent {
   final String? note;
   final DateTime startDate;
   final DateTime dueDate;
- 
+
   final Color iconColor;
   final VoidCallback onSuccess;
   final ValueChanged<String> onFailure;
@@ -155,7 +155,7 @@ class CreateNewTaskButtonPressed extends TaskEvent {
     this.note,
     required this.startDate,
     required this.dueDate,
-   
+
     required this.iconColor,
     required this.onSuccess,
     required this.onFailure,
