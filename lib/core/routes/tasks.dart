@@ -9,7 +9,6 @@ class TaskRoute {
         return fade(const Scaffold());
        case TaskRouteNames.createtasks:
         return fade(const Scaffold());
-       
     }
     return null;
   }

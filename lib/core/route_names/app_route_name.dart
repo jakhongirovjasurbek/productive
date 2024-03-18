@@ -5,5 +5,6 @@ class AppRouteNames {
   static const statistics = '/statistics';
   static const calendar = '/statistics';
   static const createNewPassword = 'create-new-password';
-
+  static const forgotPassword = '/forgotPassword';
+  static const verification = '/verification';
 }

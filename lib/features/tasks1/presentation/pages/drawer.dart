@@ -59,7 +59,8 @@ class _DrawerMenuState extends State<DrawerMenu> {
           DrawerWidget(
               onTap: () {},
               icon: context.icons.premiumtask,
-              title: 'Premium'),
+              title: 'Premium',
+          ),
           const Gap(20),
 
           /// Settings button
