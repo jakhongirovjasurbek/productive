@@ -27,7 +27,7 @@ class AppRoute {
       case AppRouteNames.notes:
         return fade(const NotesPage());
       default:
-        return fade(const Scaffold());
+        return fade(const  Scaffold());
     }
   }
 }
