@@ -76,7 +76,6 @@ flutter:
     - assets/icons/expanse/
     - assets/icons/login/
     - assets/icons/notes_svg/
-    - assets/svg/
     - assets/icons/create_task/
     - assets/icons/create_home_items/
 

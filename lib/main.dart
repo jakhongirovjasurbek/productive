@@ -9,6 +9,7 @@ import 'package:keyboard_dismisser/keyboard_dismisser.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/injector/injector.dart';
 import 'package:productive/core/routes/app_route.dart';
+import 'package:productive/features/authentication/presentation/bloc/auth_bloc.dart';
 import 'package:productive/features/create/presentation/bloc/create_expense/create_expense_bloc.dart';
 import 'package:productive/features/calendar/presentation/bloc/task_bloc/calendar_bloc.dart';
 import 'package:productive/firebase_options.dart';
@@ -51,6 +52,9 @@ class MainApp extends StatelessWidget {
       child: MultiBlocProvider(
         providers: [
           BlocProvider(
+            create: (_) => AuthenticationBloc(),
+          ),
+          BlocProvider(
             create: (context) => CalendarTaskBloc(),
           ),
           BlocProvider(
@@ -58,8 +62,10 @@ class MainApp extends StatelessWidget {
           ),
           BlocProvider(
             create: (context) => TaskBloc(
-                response: TaskRepository(
-                    taskRemoteDataSource: TaskRemoteDataSource())),
+              response: TaskRepository(
+                taskRemoteDataSource: TaskRemoteDataSource(),
+              ),
+            ),
           ),
           BlocProvider(
             create: (context) => MapScreenCubit()..getCurrentLocation(),
