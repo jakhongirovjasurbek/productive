@@ -77,6 +77,7 @@ class AppColors {
   final startDate = const Color(0xFF18B797);
   final endDate = const Color(0xFFF3737E);
   final orange = Colors.orange;
+  final createIncomeInputLineColor = const Color(0xFF424450);
 
   final btnBorderColor = const Color(0xFF28304B);
   final bottomSheetBgColor = const Color(0xFF272C38);
@@ -95,12 +96,12 @@ class AppColors {
   final lightBlueGradient = const Color.fromRGBO(91, 74, 209, 1);
   final statsTextColor = const Color.fromRGBO(163, 163, 163, 1);
   final statsTaskBackground = const Color.fromRGBO(61, 64, 85, 1);
-  final hintextcolor=Color(0xFFFEFEFE);
+  final hintextcolor = Color(0xFFFEFEFE);
 
 // single container uchun
-  final  Color whiteA700 = const Color(0XFFFDFDFD);
-  static  Color whitee = const Color(0XFFFDFDFD);
-  final  Color bacgroundColor = const Color(0xFF131524);
+  final Color whiteA700 = const Color(0XFFFDFDFD);
+  static Color whitee = const Color(0XFFFDFDFD);
+  final Color bacgroundColor = const Color(0xFF131524);
   final Color timeContainerOne = const Color(0xFFFF2752).withOpacity(0.7);
   final Color greenContainer = const Color.fromRGBO(77, 170, 82, 0.3);
 
@@ -114,7 +115,8 @@ class AppColors {
   final conteinerdescription = const Color.fromRGBO(171, 171, 171, 1);
   final Color numbers = const Color.fromRGBO(254, 254, 254, 1);
 
-  static Color conteinerdescriptions = const Color.fromRGBO(171, 171, 171, 0.08);
+  static Color conteinerdescriptions =
+      const Color.fromRGBO(171, 171, 171, 0.08);
 
   static Color border = const Color.fromRGBO(28, 35, 58, 1);
 
@@ -132,26 +134,26 @@ class AppColors {
   static Color cursorColor = const Color(0xFF4B7FD6);
   static Color textFieldBackgroundColor2 = const Color(0xFF1C233A);
   static Color textFieldBorderColor = const Color.fromRGBO(0, 110, 233, 0.10);
-  static Color hintTextColor = const  Color(0xFFFEFEFE);
-  static Color textButtonColor = const  Color(0xFF4B7FD6);
+  static Color hintTextColor = const Color(0xFFFEFEFE);
+  static Color textButtonColor = const Color(0xFF4B7FD6);
   static Color wButtonColor = const Color(0xFF4B7FD6);
-  static Color disabledButtonColor = const  Color(0xFF4B7FD6).withOpacity(0.3);
-  static Color socialMediaButtonColor = const  Color(0xFF272C38);
-  static Color pinPutBorderColor = const  Color(0xFF006EE9);
-  static Color verificationTextColor = const  Color(0xFF979797);
-  static Color verificationResentColor = const  Color(0xFF407BFF);
-  static Color newPasswordColor = const  Color(0xFFFEFEFE);
+  static Color disabledButtonColor = const Color(0xFF4B7FD6).withOpacity(0.3);
+  static Color socialMediaButtonColor = const Color(0xFF272C38);
+  static Color pinPutBorderColor = const Color(0xFF006EE9);
+  static Color verificationTextColor = const Color(0xFF979797);
+  static Color verificationResentColor = const Color(0xFF407BFF);
+  static Color newPasswordColor = const Color(0xFFFEFEFE);
   static Color iconColor = const Color(0xFF44DB4A);
   static Color upcomingTextColor = const Color(0xFFABABAB);
-  static Color upcomingMeetColor = const  Color(0xFF22B07D);
+  static Color upcomingMeetColor = const Color(0xFF22B07D);
   final Color upcomingLinkBolt = const Color(0xFF272C38);
-  static Color gymColor = const  Color(0xFFFF8700);
+  static Color gymColor = const Color(0xFFFF8700);
   static Color upComingBorderSolid = const Color.fromRGBO(255, 255, 255, 0.02);
   static Color studyIconColor = const Color(0xFFDD8491);
-  static Color upComingLink = const  Color(0xFF4B7FD6);
+  static Color upComingLink = const Color(0xFF4B7FD6);
 
-  static Color allCreateNavigation = const  Color(0xFF525298);
-  final Color allPageTextColor = const  Color(0xFFABABAB);
+  static Color allCreateNavigation = const Color(0xFF525298);
+  final Color allPageTextColor = const Color(0xFFABABAB);
   static Color englishStudy = const Color(0xFFDD8491);
   static Color cleaningRoom = const Color(0xFF4B7FD6);
   static Color greyish = const  Color(0xFF8E8E8E);
@@ -160,8 +162,12 @@ class AppColors {
   static Color greenPriority = const  Color(0xFF44DB4A);
   static Color yellowPriority = const  Color(0xFFF6A845);
   static Color greenIconColor = const  Color(0xFF22B07D);
+  static Color greyish = const Color(0xFF8E8E8E);
+  static Color redPriorty = const Color(0xFFFF2752);
+  static Color yellowPriority = const Color(0xFF44DB4A);
+  static Color greenPriority = const Color(0xFF525298);
   static Color selectIconWork = const Color(0xFF525298);
-  static Color createSearchColor = const   Color(0xFF303644);
+  static Color createSearchColor = const Color(0xFF303644);
   static Color modalBottomSheetTop = const Color(0xFFF8FFFF).withOpacity(0.4);
   final selectDateTimeColor = const Color(0xFF303745);
   // createHomeItems

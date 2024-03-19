@@ -49,7 +49,6 @@ class WTextField extends StatefulWidget {
   final Color? disabledColor;
   final Function()? onClearTap;
   final String? titleWidget;
-
   const WTextField({
     this.controller,
     this.onChanged,
@@ -117,7 +116,7 @@ class _WTextFieldState extends State<WTextField>
   void initState() {
     super.initState();
 
-    isObscure = widget.isObscureText?? false;
+    isObscure = widget.isObscureText ?? false;
     controller = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 200),
@@ -169,7 +168,6 @@ class _WTextFieldState extends State<WTextField>
                   ClipRRect(
                     borderRadius: BorderRadius.circular(widget.borderRadius),
                     child: TextField(
-
                       readOnly: widget.readonly ?? false,
                       onTap: widget.onTap,
                       textAlign: widget.textAlign,
@@ -199,8 +197,7 @@ class _WTextFieldState extends State<WTextField>
                               fontSize: 16, fontWeight: FontWeight.w500),
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
-                          borderRadius:
-                              BorderRadius.circular(widget.borderRadius),
+                          borderRadius: BorderRadius.circular(10),
                           borderSide: BorderSide(
                             width: 1,
                             color: widget.hasError
@@ -217,7 +214,7 @@ class _WTextFieldState extends State<WTextField>
                             Theme.of(context).textTheme.headline1!.copyWith(
                                 fontSize: 18, fontWeight: FontWeight.w300),
                         filled: true,
-                        suffix:widget.suffix,
+                        suffix: widget.suffix,
                         prefixIcon: widget.prefix,
                         fillColor: widget.fillColor ??
                             context.colors.inpBackgroundColor,

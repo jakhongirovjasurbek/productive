@@ -1,18 +1,15 @@
 const _bnb = 'assets/icons/bnb/';
 
 const path = "assets/icons/forgot_password/";
-const pathNotes = "assets/icons/notes_svg/";
+const pathNotes="assets/icons/notes_svg/";
 
 const single = "assets/icons/single_category/";
 const create = "assets/icons/create_task/";
-
-
 
 const tasks = "assets/icons/tasks/";
 const _create_expense = "assets/icons/create_expense/";
 const _new_catalog_icon = "assets/icons/create_expense/new_catalog_icon/";
 const _new_catalog_color = 'assets/icons/create_expense/new_catalog_colors/';
-
 
 const pathLogin = "assets/icons/login/";
 const calendar = "assets/icons/calendar/";
@@ -39,7 +36,6 @@ class AppIcons {
   final greenbook="${pathNotes}green_book.svg";
   final redbook="${pathNotes}red_book.svg";
   final plusbook="${pathNotes}plus_book.svg";
-
 
   static const tasks = "${_bnb}tasks.svg";
   static const expense = "${_bnb}expense.svg";
@@ -77,6 +73,7 @@ class AppIcons {
   static const purpleVector = "assets/icons/expenses/purpleVector.svg";
   static const settings = "assets/icons/expenses/settings.svg";
   static const shopping = "assets/icons/expenses/shopping.svg";
+
   static const studyTask = "assets/icons/create_task/study.svg";
   static const sportTask = "assets/icons/create_task/sport.svg";
 
@@ -84,6 +81,9 @@ class AppIcons {
   final String imgArrowLeft = '${single}img_arrow_left.svg';
   final String imgBxRestaurant = '${single}img_bx_restaurant.svg';
   static const bag1 = '${single}bag.svg';
+  static const bag1 = '${single}bag.svg';
+  final String imgArrowLeft = '${single}img_arrow_left.svg';
+  final String imgBxRestaurant = '${single}img_bx_restaurant.svg';
   static const String imgChart = '${single}img_chart.svg';
   final String imgFrame = '${single}img_frame.svg';
   final String imgThumbsUpWhite = '${single}img_thumbs_up_white.svg';
@@ -116,12 +116,12 @@ class AppIcons {
   static const switch_on = "assets/icons/switch_on.svg";
   static const switch_off = "assets/icons/switch.svg";
   static const down = "assets/icons/down.svg";
-
   // static const bold = "assets/icons/bold.svg";
   // static const exit = "assets/icons/exit.svg";
   static const radio = "assets/icons/radio.svg";
   static const delete = "assets/icons/delete.svg";
   static const noNotification = "assets/svg/no_notification.svg";
+
 
   //tasks
 
@@ -129,21 +129,21 @@ class AppIcons {
   final articles = "assets/icons/tasks/drawer/articles.svg";
   final faq = "assets/icons/tasks/drawer/faq.svg";
   final help = "assets/icons/tasks/drawer/help.svg";
-  final premiumTask = "assets/icons/tasks/drawer/premium.svg";
-  final settingsTask = "assets/icons/tasks/drawer/settings.svg";
+  final premiumtask = "assets/icons/tasks/drawer/premium.svg";
+  final settingstask = "assets/icons/tasks/drawer/settings.svg";
   final sun = "assets/icons/tasks/drawer/sun.svg";
   final terms = "assets/icons/tasks/drawer/terms.svg";
 
   //else
-  final searchTask = "assets/icons/tasks/searchTask.svg";
+  final expanse_categories_search_task = "assets/icons/expanse/search.svg";
   final beg = "assets/icons/tasks/beg.svg";
   final filter = "assets/icons/tasks/filter.svg";
   final gym = "assets/icons/tasks/gym.svg";
-  final hamburger = "assets/icons/tasks/humburger.svg";
-  final meetTask = "assets/icons/tasks/meet.svg";
+  final humburger = "assets/icons/tasks/humburger.svg";
+  final meettask = "assets/icons/tasks/meet.svg";
   final note = "assets/icons/tasks/note.svg";
-  final notificationTasks = "assets/icons/tasks/notyfication.svg";
-  final simpleNote = "assets/icons/tasks/simplenote.svg";
+  final notyfication = "assets/icons/tasks/notyfication.svg";
+  final simplenote = "assets/icons/tasks/simplenote.svg";
   final checked = "assets/icons/tasks/checked.svg";
   final unchecked = "assets/icons/tasks/unchecked.svg";
 
@@ -221,4 +221,10 @@ class AppIcons {
 
   final taskstar  = '${createhomeitem}tasks_star.svg';
 
+  static const logoL = "${pathLogin}logo.svg";
+  static const eye_off = "${pathLogin}eye_off.svg";
+  static const eye_on = "${pathLogin}eye_on.svg";
+  static const apple = "${pathLogin}apple.svg";
+  static const facebook = "${pathLogin}facebook.svg";
+  static const google = "${pathLogin}google.svg";
 }
