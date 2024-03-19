@@ -6,6 +6,7 @@ import 'package:productive/features/authentication/presentation/pages/create_new
 import 'package:productive/core/route_names/app_route_name.dart';
 import 'package:productive/features/home/home.dart';
 import 'package:productive/features/calendar/calendar_screen.dart';
+import 'package:productive/features/notes/presentation/pages/notes.dart';
 import 'package:productive/features/statistics/presentation/pages/statistics.dart';
 
 class AppRoute {
@@ -23,6 +24,8 @@ class AppRoute {
         return fade(const CalendarScreen());
       case AppRouteNames.statistics:
         return fade(const StatisticsScreen());
+      case AppRouteNames.notes:
+        return fade(const NotesPage());
       default:
         return fade(const Scaffold());
     }
