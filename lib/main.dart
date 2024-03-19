@@ -13,13 +13,13 @@ import 'package:productive/features/authentication/presentation/bloc/auth_bloc.d
 import 'package:productive/features/calendar/presentation/bloc/calendar_bloc.dart';
 import 'package:productive/features/create/data/repository/expense_repo.dart';
 import 'package:productive/features/create/presentation/bloc/create_expense/create_expense_bloc.dart';
+import 'package:productive/features/create/presentation/bloc/create_income/income_bloc.dart';
 import 'package:productive/firebase_options.dart';
 
 import 'features/create/data/data_source/remote.dart';
 import 'features/create/data/repository/task.dart';
 import 'features/create/presentation/bloc/location/location_cubit.dart';
 import 'features/create/presentation/bloc/task_bloc.dart';
-import 'features/tasks1/presentation/tasks_screen.dart';
 import 'generated/l10n.dart';
 
 Future<void> main() async {
@@ -53,7 +53,7 @@ class MainApp extends StatelessWidget {
       gestures: const [GestureType.onTap],
       child: MultiBlocProvider(
         providers: [
-          BlocProvider(create: (context)=> AuthenticationBloc()),
+          BlocProvider(create: (context) => AuthenticationBloc()),
           BlocProvider(
             create: (context) => CalendarBloc(),
           ),
@@ -61,7 +61,9 @@ class MainApp extends StatelessWidget {
             create: (context) => CalendarBloc(),
           ),
           BlocProvider(
-            create: (context) => TaskBloc(response: TaskRepository(taskRemoteDataSource: TaskRemoteDataSource())),
+            create: (context) => TaskBloc(
+                response: TaskRepository(
+                    taskRemoteDataSource: TaskRemoteDataSource())),
           ),
           BlocProvider(
             create: (context) => MapScreenCubit()..getCurrentLocation(),
@@ -69,6 +71,9 @@ class MainApp extends StatelessWidget {
           BlocProvider(
             create: (context) => ExpenseBloc(response: ExpenseRepository()),
           ),
+          BlocProvider(
+            create: (context) => IncomeBloc(),
+          )
         ],
         child: MaterialApp(
           theme: context.theme.lightTheme(),

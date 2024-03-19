@@ -1,20 +1,22 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:productive/core/extensions/extensions.dart';
-import 'package:productive/features/create/data/model/income_model.dart';
+import 'package:productive/features/create/data/model/income_status.dart';
+import 'package:productive/features/create/presentation/bloc/create_income/income_bloc.dart';
 
 import '../../../../assets/icons.dart';
 
-void showBottomSheetWidget(BuildContext context, IncomeModel model) {
+void showBottomSheetWidget(BuildContext context) {
   showModalBottomSheet(
     context: context,
-    builder: (context) {
+    builder: (BuildContext context) {
       return Container(
         padding: const EdgeInsets.only(top: 8, bottom: 16),
         width: double.maxFinite,
-        height: MediaQuery.of(context).size.height / 100 * 27.8,
+        height: MediaQuery.sizeOf(context).height / 100 * 30,
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(24),
@@ -30,7 +32,9 @@ void showBottomSheetWidget(BuildContext context, IncomeModel model) {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const SizedBox(),
+                  const SizedBox(
+                    width: 20,
+                  ),
                   Container(
                     width: 80,
                     height: 4,
@@ -39,6 +43,9 @@ void showBottomSheetWidget(BuildContext context, IncomeModel model) {
                         borderRadius: BorderRadius.circular(24)),
                   ),
                   GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
                     child: SvgPicture.asset(AppIcons.exit),
                   ),
                 ],
@@ -49,8 +56,15 @@ void showBottomSheetWidget(BuildContext context, IncomeModel model) {
               color: context.colors.dividerBgColor,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                context
+                    .read<IncomeBloc>()
+                    .add(ChangePriority(priorityName: IncomePriority.salary));
+                Navigator.pop(context);
+              },
               child: Container(
+                color: Colors.transparent,
+                width: double.maxFinite,
                 padding: const EdgeInsets.all(16),
                 child: Row(
                   children: [
@@ -77,12 +91,19 @@ void showBottomSheetWidget(BuildContext context, IncomeModel model) {
               color: context.colors.dividerBgColor,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                context
+                    .read<IncomeBloc>()
+                    .add(ChangePriority(priorityName: IncomePriority.expense));
+                Navigator.pop(context);
+              },
               child: Padding(
                 padding: const EdgeInsets.all(8),
                 child: Stack(
                   children: [
                     Container(
+                      color: Colors.transparent,
+                      width: double.maxFinite,
                       padding: const EdgeInsets.all(8),
                       child: Row(
                         children: [

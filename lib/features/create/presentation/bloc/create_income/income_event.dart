@@ -17,9 +17,9 @@ class AddIncome extends IncomeEvent {
 }
 
 class ChangePriority extends IncomeEvent {
-  final IncomePriority priority;
+  final IncomePriority priorityName;
 
   ChangePriority({
-    required this.priority,
+    required this.priorityName,
   });
 }

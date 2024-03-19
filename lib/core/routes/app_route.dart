@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:productive/core/functions/app_functions.dart';
 import 'package:productive/core/pages/onboarding.dart';
 
-
 import 'package:productive/features/authentication/presentation/pages/create_new_password.dart';
 import 'package:productive/core/route_names/app_route_name.dart';
 import 'package:productive/features/authentication/presentation/pages/login_screen.dart';
 import 'package:productive/features/authentication/presentation/pages/sign_up.dart';
+import 'package:productive/features/create/presentation/pages/create_income.dart';
 import 'package:productive/features/home/home.dart';
 import 'package:productive/features/calendar/calendar_screen.dart';
 import '../../features/statistics/presentation/pages/statistics.dart';
@@ -16,7 +16,7 @@ class AppRoute {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case AppRouteNames.splash:
-        return fade(const SplashPage());
+        return fade(const CreateIncomeScreen());
       case AppRouteNames.home:
         return fade(const HomePage());
       case AppRouteNames.onboarding:
