@@ -11,6 +11,7 @@ import 'package:productive/features/authentication/presentation/pages/sign_up.da
 import 'package:productive/features/create/presentation/pages/create_income.dart';
 import 'package:productive/features/home/home.dart';
 import 'package:productive/features/calendar/calendar_screen.dart';
+import 'package:productive/features/notes/presentation/pages/notes.dart';
 import 'package:productive/features/statistics/presentation/pages/statistics.dart';
 import '../../features/authentication/presentation/pages/forgot_password.dart';
 import '../../features/authentication/presentation/pages/verification.dart';
@@ -60,8 +61,10 @@ class AppRoute {
       //   return fade(const TaskScreen());
       case TaskRouteNames.notifications:
         return fade(const NotificationPage());
+      case AppRouteNames.notes:
+        return fade(const NotesPage());
       default:
-        return fade(const Scaffold());
+        return fade(const  Scaffold());
     }
   }
 }
