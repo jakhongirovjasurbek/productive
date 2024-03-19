@@ -60,7 +60,7 @@ class _SelectCurrentDateBottomSheetState extends State<SelectCurrentDateBottomSh
           Align(
             alignment: Alignment.topCenter,
             child: Text(
-              DateFormat('dd/MM/yyyy').format(DateTime.now()),
+              DateFormat('dd/MM/yyyy').format(_startDate ?? DateTime.now()),
               style: context.style.fontSize20Weight500,
             ),
           ),
@@ -72,7 +72,7 @@ class _SelectCurrentDateBottomSheetState extends State<SelectCurrentDateBottomSh
           SizedBox(height: 8),
           GestureDetector(
             onTap: () async {
-              DateTime? selectedDate = await showSelectDateBottomSheet(context,null);
+              DateTime? selectedDate = await showSelectDateBottomSheet(context, _startDate as String?);
               if (selectedDate != null) {
                 setState(() {
                   _startDate = selectedDate;
@@ -102,7 +102,7 @@ class _SelectCurrentDateBottomSheetState extends State<SelectCurrentDateBottomSh
               ),
               child: MaterialButton(
                 onPressed: () {
-                  Navigator.pop(context, DateTime.now());
+                  Navigator.pop(context, _startDate ?? DateTime.now());
                 },
                 child: Text(context.localization.confirm),
               ),

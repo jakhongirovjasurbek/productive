@@ -25,11 +25,15 @@ class _CreateEventState extends State<CreateEvent> {
   DateTime? _currentTime;
   DateTime? _selectedTime;
 
-  void _showTimePicker(BuildContext context) async {
-    DateTime? selectedTime = await showSelectTimeBottomSheet(context);
-    if (selectedTime != null) {
+  void _showTimePicker(BuildContext context, bool isStartDate) async {
+    DateTime? selectedDate = await showSelectCurrentDateBottomSheet(context);
+    if (selectedDate != null) {
       setState(() {
-        _selectedTime = selectedTime;
+        if (isStartDate) {
+          _startDate = selectedDate;
+        } else {
+          _endDate = selectedDate;
+        }
       });
     }
   }
@@ -84,6 +88,7 @@ class _CreateEventState extends State<CreateEvent> {
                           context.localization.birthday,
                           style: context.style.fontSize14Weight400,
                         ),
+
                       ],
                     ),
                     Column(
@@ -164,6 +169,7 @@ class _CreateEventState extends State<CreateEvent> {
                     border: InputBorder.none,
                     prefixIcon: GestureDetector(
                       onTap: () async {
+                        _showTimePicker(context, true);
                         DateTime? selectedDate = await showSelectCurrentDateBottomSheet(context);
                       },
                       child: Padding(
@@ -204,6 +210,7 @@ class _CreateEventState extends State<CreateEvent> {
                     border: InputBorder.none,
                     prefixIcon: GestureDetector(
                       onTap: () async {
+                        _showTimePicker(context, false);
                         DateTime? selectedDate = await showSelectCurrentDateBottomSheet(context);
                       },
                       child: Padding(
