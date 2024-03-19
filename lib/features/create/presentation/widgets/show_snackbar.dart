@@ -46,7 +46,7 @@ void showBottomSheetWidget(BuildContext context) {
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    child: SvgPicture.asset(AppIcons.exit),
+                    child: SvgPicture.asset(context.icons.exit),
                   ),
                 ],
               ),

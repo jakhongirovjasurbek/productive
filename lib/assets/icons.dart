@@ -81,9 +81,6 @@ class AppIcons {
   final String imgArrowLeft = '${single}img_arrow_left.svg';
   final String imgBxRestaurant = '${single}img_bx_restaurant.svg';
   static const bag1 = '${single}bag.svg';
-  static const bag1 = '${single}bag.svg';
-  final String imgArrowLeft = '${single}img_arrow_left.svg';
-  final String imgBxRestaurant = '${single}img_bx_restaurant.svg';
   static const String imgChart = '${single}img_chart.svg';
   final String imgFrame = '${single}img_frame.svg';
   final String imgThumbsUpWhite = '${single}img_thumbs_up_white.svg';
@@ -220,11 +217,4 @@ class AppIcons {
   final taskhome  = '${createhomeitem}task_home.svg';
 
   final taskstar  = '${createhomeitem}tasks_star.svg';
-
-  static const logoL = "${pathLogin}logo.svg";
-  static const eye_off = "${pathLogin}eye_off.svg";
-  static const eye_on = "${pathLogin}eye_on.svg";
-  static const apple = "${pathLogin}apple.svg";
-  static const facebook = "${pathLogin}facebook.svg";
-  static const google = "${pathLogin}google.svg";
 }

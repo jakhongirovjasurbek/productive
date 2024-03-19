@@ -38,10 +38,10 @@ class AppRoute {
         return fade(const CalendarScreen());
       case AppRouteNames.statistics:
         return fade(const StatisticsScreen());
-      case AppRouteNames.login:
-        return fade(const LoginScreen());
-      case AppRouteNames.signUp:
-        return fade(const SignUpScreen());
+      // case AppRouteNames.login:
+      //   return fade(const LoginScreen());
+      // case AppRouteNames.signUp:
+      //   return fade(const SignUpScreen());
       case AppRouteNames.forgotPassword:
         return fade(const ForgotPassword());
       case AppRouteNames.verification:
