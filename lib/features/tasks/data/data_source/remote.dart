@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:productive/core/either/either.dart';
 import 'package:productive/core/failure/failure.dart';
-import 'package:productive/features/notes/data/models/note.dart';
+import 'package:productive/features/tasks/data/models/note.dart';
 
 abstract class NotesRemoteDataSource {
   Future<Either< List<NoteModel>, Failure>> getNotes();

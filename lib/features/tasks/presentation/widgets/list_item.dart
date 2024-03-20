@@ -24,7 +24,7 @@ class ListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(bottom: 8),
+      padding: const EdgeInsets.only(bottom: 8),
       child: Slidable(
         key: const ValueKey(0),
         endActionPane: ActionPane(

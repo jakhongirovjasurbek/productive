@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:productive/assets/colors.dart';
 import 'package:productive/assets/fonts.dart';
+import 'package:productive/features/create/presentation/widgets/select_color_expense.dart';
 
 class AppTheme {
   ThemeData lightTheme() => ThemeData();
@@ -149,10 +150,11 @@ class AppTheme {
             fontWeight: FontWeight.w700,
             color: colors.whiteLabel,
           ),
-          fontSize16Weight500orange: const TextStyle(
+          fontSize16Weight500orange: TextStyle(
             fontFamily: "Barlow",
             fontSize: 16,
             fontWeight: FontWeight.w500,
+            color: colors.expensesFood,
           ),
           fontSize16Weight500blue: TextStyle(
             fontFamily: "Barlow",

@@ -1,24 +1,23 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:productive/core/extensions/extensions.dart';
-import 'package:productive/features/expanse/presentation/expense_one_screen/widgets/fl_charts/bar_char_monthly.dart';
-import 'package:productive/features/expanse/presentation/expense_one_screen/widgets/fl_charts/line_chart_montly.dart';
+import 'package:productive/features/expense/presentation/widgets/fl_charts/barchart_weekly.dart';
+import 'package:productive/features/expense/presentation/widgets/fl_charts/line_chart_weekly.dart';
 
-class MonthlyTabBar extends StatefulWidget {
+class WeeklyTabBar extends StatefulWidget {
+
   final bool isPressed;
-
-  const MonthlyTabBar({
-    super.key,
-    required this.isPressed,
+  const WeeklyTabBar({
+    super.key, required this.isPressed,
   });
-
   @override
-  State<MonthlyTabBar> createState() => _MonthlyTabBarState();
+  State<WeeklyTabBar> createState() => _WeeklyTabBarState();
 }
 
-class _MonthlyTabBarState extends State<MonthlyTabBar> {
+class _WeeklyTabBarState extends State<WeeklyTabBar> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -31,8 +30,8 @@ class _MonthlyTabBarState extends State<MonthlyTabBar> {
                 height: 400,
                 child: Center(
                     child: widget.isPressed
-                        ? MontlyTabPage()
-                        :   LinesMonthly(
+                        ? WeeklyTabPage()
+                        :  const LinesWeekly(
                           )),
               ),
             ),

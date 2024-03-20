@@ -1,14 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:productive/core/exception/exception.dart';
-import 'package:productive/features/tasks1/data/models/task_models.dart';
+import 'package:productive/features/tasks/data/models/task_models.dart';
 
-abstract class Task1RemoteDataSource {
+abstract class TaskRemoteDataSource {
   Future<List<TaskModel>> getTasks();
 
-  factory Task1RemoteDataSource() => _TaskRemoteDataSourceImpl();
+  factory TaskRemoteDataSource() => _TaskRemoteDataSourceImpl();
 }
 
-class _TaskRemoteDataSourceImpl implements Task1RemoteDataSource {
+class _TaskRemoteDataSourceImpl implements TaskRemoteDataSource {
   @override
   Future<List<TaskModel>> getTasks() async {
     try {

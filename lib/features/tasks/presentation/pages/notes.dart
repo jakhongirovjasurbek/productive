@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:productive/core/extensions/extensions.dart';
-import 'package:productive/features/notes/data/models/note.dart';
-import 'package:productive/features/notes/presentation/bloc/notes_bloc.dart';
-import 'package:productive/features/notes/presentation/widgets/list_item.dart';
+import 'package:productive/features/tasks/data/models/note.dart';
+import 'package:productive/features/tasks/presentation/bloc/notes_bloc.dart';
+
+import '../widgets/list_item.dart';
 
 class NotesPage extends StatefulWidget {
   const NotesPage({Key? key}) : super(key: key);
@@ -47,7 +48,9 @@ class _NotesPageState extends State<NotesPage> {
         // elevation: 0,
         centerTitle: true,
         leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: Icon(
               Icons.arrow_back_ios,
               color: context.colors.white,

@@ -1,6 +1,6 @@
 class TaskRouteNames{
   static const tasks ='/';
-  static const createtasks = '/createtasks';
+  static const createTasks = '/createtasks';
   static const notifications = '/notifications';
-  static const hotes = '/notes';
+  static const notes = '/notes';
 }

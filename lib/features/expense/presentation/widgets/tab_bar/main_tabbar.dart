@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:productive/core/extensions/extensions.dart';
-import 'package:productive/features/expanse/presentation/expense_one_screen/widgets/tab_bar/monthly_tabbar.dart';
-import 'package:productive/features/expanse/presentation/expense_one_screen/widgets/tab_bar/weekly_tabbar.dart';
-import 'package:productive/features/expanse/presentation/expense_one_screen/widgets/tab_bar/yearly_tabbar.dart';
+import 'package:productive/features/expense/presentation/widgets/tab_bar/monthly_tabbar.dart';
+import 'package:productive/features/expense/presentation/widgets/tab_bar/weekly_tabbar.dart';
+import 'package:productive/features/expense/presentation/widgets/tab_bar/yearly_tabbar.dart';
 
 class SingleCategory extends StatefulWidget {
   const SingleCategory({super.key});

@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:productive/core/extensions/extensions.dart';
-import 'package:productive/features/expanse/presentation/expense_one_screen/widgets/fl_charts/bar_chart_yearly.dart';
-import 'package:productive/features/expanse/presentation/expense_one_screen/widgets/fl_charts/line_chart_yearly.dart';
+import 'package:productive/features/expense/presentation/widgets/fl_charts/bar_chart_yearly.dart';
+import 'package:productive/features/expense/presentation/widgets/fl_charts/line_chart_yearly.dart';
 
 class YearlyTabBar extends StatefulWidget {
-
   final bool isPressed;
+
   const YearlyTabBar({
-    super.key, required this.isPressed,
+    super.key,
+    required this.isPressed,
   });
 
   @override
@@ -19,7 +20,7 @@ class YearlyTabBar extends StatefulWidget {
 class _YearlyTabBarState extends State<YearlyTabBar> {
   @override
   Widget build(BuildContext context) {
-      return SafeArea(
+    return SafeArea(
       child: SingleChildScrollView(
         child: Column(
           children: [
@@ -28,10 +29,7 @@ class _YearlyTabBarState extends State<YearlyTabBar> {
               child: SizedBox(
                 height: 400,
                 child: Center(
-                    child: widget.isPressed
-                        ? YearlyTabPage()
-                        :  const Lines(
-                          )),
+                    child: widget.isPressed ? YearlyTabPage() : const Lines()),
               ),
             ),
             Row(
