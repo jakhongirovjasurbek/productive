@@ -139,7 +139,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: GestureDetector(
                           onTap: () {
                             Navigator.of(context)
-                                .pushNamed(AppRouteNames.forgotPassword);
+                                .pushNamed(AppRouteNames.forgot_password);
                           },
                           child: Text(context.localization.forgot_password,
                               style: context.style.fontSize14Weight500.copyWith(

@@ -1,4 +1,4 @@
 class CreateRouteNames{
-  static const createevent ='/';
-  static const createincome = '/createincome';
+  static const create_event ='/';
+  static const create_income = '/create_income';
 }

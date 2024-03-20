@@ -5,9 +5,9 @@ import 'package:productive/core/route_names/create_name.dart';
 class CreateRoute {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case CreateRouteNames.createevent:
+      case CreateRouteNames.create_event:
         return fade(const Scaffold());
-      case CreateRouteNames.createincome:
+      case CreateRouteNames.create_income:
         return fade(const Scaffold());
        
     }

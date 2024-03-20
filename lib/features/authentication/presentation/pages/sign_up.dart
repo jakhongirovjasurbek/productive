@@ -143,7 +143,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         child: GestureDetector(
                           onTap: () {
                             Navigator.of(context)
-                                .pushNamed(AppRouteNames.forgotPassword);
+                                .pushNamed(AppRouteNames.forgot_password);
                           },
                           child: Text(
                             context.localization.forgot_password,

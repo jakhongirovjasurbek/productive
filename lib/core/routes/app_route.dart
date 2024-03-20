@@ -10,6 +10,8 @@ import 'package:productive/features/calendar/calendar_screen.dart';
 import 'package:productive/features/tasks/presentation/pages/notes.dart';
 import 'package:productive/features/statistics/presentation/pages/statistics.dart';
 import '../../features/authentication/presentation/pages/forgot_password.dart';
+import '../../features/authentication/presentation/pages/login_screen.dart';
+import '../../features/authentication/presentation/pages/sign_up.dart';
 import '../../features/authentication/presentation/pages/verification.dart';
 import '../../features/create/presentation/pages/create_event.dart';
 import '../../features/expense/presentation/pages/expense_screen.dart';
@@ -28,32 +30,30 @@ class AppRoute {
         return fade(const HomePage());
       case AppRouteNames.onboarding:
         return fade(const OnboardingPage());
-      case AppRouteNames.createNewPassword:
+      case AppRouteNames.login:
+        return fade(const LoginScreen());
+      case AppRouteNames.sing_up:
+        return fade(const SignUpScreen());
+      case AppRouteNames.create_new_password:
         return fade(const CreateNewPassword());
       case AppRouteNames.calendar:
         return fade(const CalendarScreen());
       case AppRouteNames.statistics:
         return fade(const StatisticsScreen());
-      // case AppRouteNames.login:
-      //   return fade(const LoginScreen());
-      // case AppRouteNames.signUp:
-      //   return fade(const SignUpScreen());
-      case AppRouteNames.forgotPassword:
+      case AppRouteNames.sing_up:
+        return fade(const SignUpScreen());
+      case AppRouteNames.forgot_password:
         return fade(const ForgotPassword());
       case AppRouteNames.verification:
         return fade(const VerificationPage());
       case CalendarRouteNames.calendar:
         return fade(const CalendarScreen());
-      case CreateRouteNames.createevent:
+      case CreateRouteNames.create_event:
         return fade(const CreateEvent());
-      // case CreateRouteNames.createincome:
-      //   return fade(const CreateIncomeScreen());
       case ExpenseRouteNames.expense:
         return fade(const ExpenseScreen());
       case StatsRouteNames.stats:
         return fade(const StatisticsScreen());
-      // case TaskRouteNames.tasks:
-      //   return fade(const TaskScreen());
       case TaskRouteNames.notifications:
         return fade(const NotificationPage());
       case AppRouteNames.notes:

@@ -43,7 +43,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   child: GestureDetector(
                     onTap: () {
                       sl<SharedPreferences>().setBool("wizard", true);
-                      Navigator.of(context).pushNamed(AppRouteNames.home);
+                      Navigator.of(context).pushNamed(AppRouteNames.login);
                     },
                     child: Text(
                       localization.skip,
