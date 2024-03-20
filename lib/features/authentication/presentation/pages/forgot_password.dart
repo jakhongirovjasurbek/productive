@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
@@ -93,7 +94,11 @@ class _ForgotPasswordState extends State<ForgotPassword> {
         automaticallyImplyLeading: false,
         title: Row(
           children: [
-            SvgPicture.asset(context.icons.back),
+            GestureDetector(
+              onTap: (){
+                Navigator.pop(context);
+              },
+                child: SvgPicture.asset(context.icons.back)),
             Gap(10),
             Text(
               context.localization.forgot_password,
@@ -117,7 +122,11 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 height: 130,
                 child: Image.asset(context.images.unknown),
               ),
-              Gap(100),
+              Gap(65),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
+                child: Text(context.localization.email,style: context.style.fontSize18Weight600,),
+              ),
               Form(
                 key: formKey,
                 child: TextFormField(
@@ -164,8 +173,8 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 }
               : null,
           child: Container(
-            width: 343,
-            height: 48,
+            width: (MediaQuery.of(context).size.width/100)*95,
+            height:(MediaQuery.of(context).size.height /100)*6 ,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
                 color:context.colors.statsGradient1),

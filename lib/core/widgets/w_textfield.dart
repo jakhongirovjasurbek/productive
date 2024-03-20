@@ -49,6 +49,7 @@ class WTextField extends StatefulWidget {
   final Color? disabledColor;
   final Function()? onClearTap;
   final String? titleWidget;
+
   const WTextField({
     this.controller,
     this.onChanged,
@@ -109,14 +110,13 @@ class _WTextFieldState extends State<WTextField>
   late FocusNode focusNode;
   bool focused = false;
   bool hasText = false;
-  bool? isObscure;
   late AnimationController controller;
 
   @override
   void initState() {
     super.initState();
 
-    isObscure = widget.isObscureText ?? false;
+
     controller = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 200),
@@ -174,7 +174,7 @@ class _WTextFieldState extends State<WTextField>
                       inputFormatters: widget.textInputFormatters,
                       textInputAction: widget.textInputAction,
                       textCapitalization: widget.textCapitalization,
-                      obscureText: isObscure!,
+                      obscureText: widget.isObscureText ?? false,
                       keyboardType: widget.keyBoardType,
                       maxLength: widget.maxLength,
                       controller: widget.controller,

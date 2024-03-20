@@ -10,6 +10,8 @@ import 'package:productive/features/calendar/calendar_screen.dart';
 import 'package:productive/features/tasks/presentation/pages/notes.dart';
 import 'package:productive/features/statistics/presentation/pages/statistics.dart';
 import '../../features/authentication/presentation/pages/forgot_password.dart';
+import '../../features/authentication/presentation/pages/login_screen.dart';
+import '../../features/authentication/presentation/pages/sign_up.dart';
 import '../../features/authentication/presentation/pages/verification.dart';
 import '../../features/create/presentation/pages/create_event.dart';
 import '../../features/expense/presentation/pages/expense_screen.dart';
@@ -34,10 +36,10 @@ class AppRoute {
         return fade(const CalendarScreen());
       case AppRouteNames.statistics:
         return fade(const StatisticsScreen());
-      // case AppRouteNames.login:
-      //   return fade(const LoginScreen());
-      // case AppRouteNames.signUp:
-      //   return fade(const SignUpScreen());
+      case AppRouteNames.login:
+        return fade(const LoginScreen());
+      case AppRouteNames.sign_up:
+        return fade(const SignUpScreen());
       case AppRouteNames.forgotPassword:
         return fade(const ForgotPassword());
       case AppRouteNames.verification:
