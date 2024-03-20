@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:productive/features/create/data/model/income_status.dart';
-import 'package:productive/features/notes/data/data_source/remote.dart';
-import 'package:productive/features/notes/data/models/note.dart';
+import 'package:productive/features/tasks/data/data_source/remote.dart';
+import 'package:productive/features/tasks/data/models/note.dart';
 
 part 'notes_event.dart';
 

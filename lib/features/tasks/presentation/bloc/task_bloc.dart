@@ -1,20 +1,20 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:productive/features/tasks1/data/repository/task.dart';
+import 'package:productive/features/tasks/data/repository/task.dart';
 import 'package:productive/assets/icons.dart';
-import 'package:productive/features/tasks1/data/models/task_models.dart';
-import 'package:productive/features/tasks1/data/models/status.dart';
-import 'package:productive/features/tasks1/data/models/priority.dart';
+import 'package:productive/features/tasks/data/models/task_models.dart';
+import 'package:productive/features/tasks/data/models/status.dart';
+import 'package:productive/features/tasks/data/models/priority.dart';
 
 
 part 'task_state.dart';
 part 'task_event.dart';
 
-class Task1Bloc extends Bloc<TaskEvent, TaskState> {
-  final Task1Repository _response;
+class TaskBloc extends Bloc<TaskEvent, TaskState> {
+  final TaskRepository _response;
 
-  Task1Bloc({required Task1Repository response})
+  TaskBloc({required TaskRepository response})
       : _response = response,
         super(TaskState(
             searchedTask: [],
