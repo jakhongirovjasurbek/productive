@@ -48,8 +48,6 @@ class AppRoute {
         return fade(const VerificationPage());
       case CalendarRouteNames.calendar:
         return fade(const CalendarScreen());
-      case CreateRouteNames.create_event:
-        return fade(const CreateEvent());
       case ExpenseRouteNames.expense:
         return fade(const ExpenseScreen());
       case StatsRouteNames.stats:
