@@ -44,7 +44,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             width: 1,
             color:context.colors.whiteLabel.withOpacity(.1),
             style: BorderStyle.solid,
-          ),
+          ), 
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
@@ -80,8 +80,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           });
         }
       }
-    });
-
+    },);
     super.initState();
   }
 

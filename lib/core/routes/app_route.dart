@@ -28,7 +28,7 @@ class AppRoute {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case AppRouteNames.splash:
-        return fade(const SplashPage());
+        return fade(const HomePage());
       case AppRouteNames.home:
         return fade(const HomePage());
       case AppRouteNames.onboarding:
@@ -56,6 +56,7 @@ class AppRoute {
       case ExpenseRouteNames.expense:
         return fade(const ExpenseScreen());
       case StatsRouteNames.stats:
+      
         return fade(const StatisticsScreen());
       // case TaskRouteNames.tasks:
       //   return fade(const TaskScreen());

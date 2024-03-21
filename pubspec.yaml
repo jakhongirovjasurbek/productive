@@ -39,6 +39,7 @@ dependencies:
 
   flutter_rounded_date_picker: ^3.0.4
   shared_preferences: ^2.2.2
+  firebase_messaging: ^14.7.19
 dev_dependencies:
   flutter_test:
     sdk: flutter
