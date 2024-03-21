@@ -238,7 +238,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushNamed(context, AppRouteNames.sign_up);
+                    // Navigator.pushNamed(context, AppRouteNames.sign_up);
                   },
                   child: Padding(
                     padding: EdgeInsets.only(
