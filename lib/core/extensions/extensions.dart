@@ -10,6 +10,9 @@ import 'package:productive/features/tasks/data/models/moke_model.dart';
 import 'package:productive/features/tasks/domain/entities/notification_entities.dart';
 import 'package:productive/generated/l10n.dart';
 
+import '../../features/create/data/model/expense_model.dart';
+import '../../features/create/domain/entity/expense_entity.dart';
+
 extension BuildContextGeneral on BuildContext {
   AppColors get colors {
     return AppColors();
@@ -54,6 +57,20 @@ extension NotificationToNotificationEntites on MockDataNotificationsModel {
       dateTime: dateTime,
       title: title ,
       subTitle: subTitle,
+    );
+  }
+}
+
+
+
+extension ExpenseModelToEntities on ExpenseModel {
+  ExpenseEntity get toExpenseEntities {
+    return ExpenseEntity(
+      price: price,
+      indexColor: indexColor,
+      title: title,
+      description: description,
+      icon: icon,
     );
   }
 }

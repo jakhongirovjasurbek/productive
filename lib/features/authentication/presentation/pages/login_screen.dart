@@ -1,5 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -11,15 +9,10 @@ import '../../../../assets/icons.dart';
 import '../../../../core/route_names/app_route_name.dart';
 import '../../../../core/widgets/w_button.dart';
 import '../../../../core/widgets/w_textfield.dart';
-import '../../../home/home.dart';
 import '../bloc/auth_bloc.dart';
 import '../widgets/social.dart';
 
 class LoginScreen extends StatefulWidget {
-  static Route route() => MaterialPageRoute(
-        builder: (_) => const LoginScreen(),
-      );
-
   const LoginScreen({super.key});
 
   @override
@@ -35,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final passwordFocusNode = FocusNode();
 
   final formKey = GlobalKey<FormState>();
-  bool isObscure = true;
+  bool isObscure = false;
 
   @override
   void initState() {
@@ -84,7 +77,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final user = FirebaseAuth.instance;
     return BlocBuilder<AuthenticationBloc, AuthenticationState>(
       builder: (context, state) {
         return Builder(builder: (context) {
@@ -147,7 +139,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: GestureDetector(
                           onTap: () {
                             Navigator.of(context)
-                                .pushNamed(AppRouteNames.forgotPassword);
+                                .pushNamed(AppRouteNames.forgot_password);
                           },
                           child: Text(context.localization.forgot_password,
                               style: context.style.fontSize14Weight500.copyWith(
@@ -159,6 +151,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         isDisabled: !isLoginDataValid,
                         onTap: () {},
                         child: WButton(
+                          width: (MediaQuery.of(context).size.width/100)*95,
+                          height:(MediaQuery.of(context).size.height /100)*6 ,
                           borderRadius: 12,
                           disabled: !isLoginDataValid,
                           onTap: () async {
@@ -169,7 +163,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                     password: passwordTextEditingController.text
                                         .trim(),
                                     onSuccess: () {
-                                      Navigator.pushNamed(context, AppRouteNames.home);
+                                      Navigator.pushNamed(
+                                          context, AppRouteNames.home);
                                     },
                                     onFailure: () {
                                       ScaffoldMessenger.of(context)
@@ -243,7 +238,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.of(context).pushNamed(AppRouteNames.signUp);
+                    // Navigator.pushNamed(context, AppRouteNames.sign_up);
                   },
                   child: Padding(
                     padding: EdgeInsets.only(

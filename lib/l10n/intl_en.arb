@@ -13,6 +13,7 @@
   "tasks": "Tasks",
   "expense": "Expense",
   "create": "Create",
+  "event":"Event",
   "calendar": "Calendar",
   "stats": "Stats",
   "create_new_password": "Create new password",
@@ -157,6 +158,5 @@
   "dont_accaunt": "Don’t have an account?",
   "sign_up":"Sign up",
   "not_found": "Bunday user mavjud emas!",
-  "sport": "Sport",
   "failure":"Failure"
 }

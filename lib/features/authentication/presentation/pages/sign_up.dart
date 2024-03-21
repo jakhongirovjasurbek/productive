@@ -117,6 +117,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                       const Gap(16),
                       WTextField(
+                        isObscureText: isObscure,
                         controller: passwordTextEditingController,
                         suffix: GestureDetector(
                           onTap: () {
@@ -143,7 +144,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         child: GestureDetector(
                           onTap: () {
                             Navigator.of(context)
-                                .pushNamed(AppRouteNames.forgotPassword);
+                                .pushNamed(AppRouteNames.forgot_password);
                           },
                           child: Text(
                             context.localization.forgot_password,
@@ -160,6 +161,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         isDisabled: !isLoginDataValid,
                         onTap: () {},
                         child: WButton(
+                          width: (MediaQuery.of(context).size.width/100)*95,
+                          height:(MediaQuery.of(context).size.height /100)*6 ,
                           borderRadius: 12,
                           disabled: !isLoginDataValid,
                           onTap: () async {
@@ -170,8 +173,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                     password: passwordTextEditingController.text
                                         .trim(),
                                     onSuccess: () {
-                                      Navigator.pushNamed(
-                                          context, AppRouteNames.login);
+                                      Navigator.of(context).pushNamed(AppRouteNames.home);
                                     },
                                     onFailure: () {
                                       ScaffoldMessenger.of(context)
@@ -241,7 +243,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.of(context).pushNamed(AppRouteNames.login);
+                    Navigator.of(context).pop();
                   },
                   child: Padding(
                     padding: EdgeInsets.only(

@@ -1,5 +1,6 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,29 +11,38 @@ import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/injector/injector.dart';
 import 'package:productive/core/routes/app_route.dart';
 import 'package:productive/features/authentication/presentation/bloc/auth_bloc.dart';
-import 'package:productive/features/calendar/presentation/bloc/calendar_bloc.dart';
-import 'package:productive/features/create/data/repository/expense_repo.dart';
 import 'package:productive/features/create/presentation/bloc/create_expense/create_expense_bloc.dart';
+import 'package:productive/features/calendar/presentation/bloc/task_bloc/calendar_bloc.dart';
 import 'package:productive/features/create/presentation/bloc/create_income/income_bloc.dart';
+import 'package:productive/features/tasks/presentation/bloc/notes_bloc.dart';
 import 'package:productive/firebase_options.dart';
-
-import 'features/create/data/data_source/remote.dart';
-import 'features/create/data/repository/task.dart';
+import 'features/calendar/presentation/bloc/bloc/calendar_bloc.dart';
 import 'features/create/presentation/bloc/location/location_cubit.dart';
-import 'features/create/presentation/bloc/task_bloc.dart';
+import 'features/tasks/presentation/bloc/task_bloc.dart';
+import 'features/tasks/data/data_source/task_remote.dart';
+import 'features/tasks/data/repository/task.dart';
 import 'generated/l10n.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await MobileAds.instance.initialize();
   await getItInjector();
-
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  final message = FirebaseMessaging.instance;
+  NotificationSettings settings = await message.requestPermission(
+    alert: true,
+    announcement: false,
+    sound: true,
+    badge: true,
+    carPlay: false,
+    criticalAlert: false,
+    provisional: false,
+  );
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
 
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   runApp(
     DevicePreview(
@@ -55,21 +65,29 @@ class MainApp extends StatelessWidget {
         providers: [
           BlocProvider(create: (context) => AuthenticationBloc()),
           BlocProvider(
-            create: (context) => CalendarBloc(),
+            create: (_) => AuthenticationBloc(),
+          ),
+          BlocProvider(
+            create: (context) => CalendarTaskBloc(),
           ),
           BlocProvider(
             create: (context) => CalendarBloc(),
+          ),
+          BlocProvider(
+            create: (context) => NotesBloc()..add(GetNotes()),
           ),
           BlocProvider(
             create: (context) => TaskBloc(
-                response: TaskRepository(
-                    taskRemoteDataSource: TaskRemoteDataSource())),
+              response: TaskRepository(
+                taskRemoteDataSource: TaskRemoteDataSource(),
+              ),
+            ),
           ),
           BlocProvider(
             create: (context) => MapScreenCubit()..getCurrentLocation(),
           ),
           BlocProvider(
-            create: (context) => ExpenseBloc(response: ExpenseRepository()),
+            create: (context) => ExpenseBloc(),
           ),
           BlocProvider(
             create: (context) => IncomeBloc(),
@@ -82,6 +100,7 @@ class MainApp extends StatelessWidget {
           themeAnimationCurve: Curves.slowMiddle,
           darkTheme: context.theme.darkTheme(),
           debugShowCheckedModeBanner: false,
+          useInheritedMediaQuery: true,
           builder: DevicePreview.appBuilder,
           onGenerateRoute: AppRoute.onGenerateRoute,
           locale: const Locale.fromSubtags(languageCode: 'en'),

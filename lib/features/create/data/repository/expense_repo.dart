@@ -1,50 +1,32 @@
-import 'package:productive/features/create/data/data_source/mock_expense.dart';
 import 'package:productive/features/create/data/model/expense_model.dart';
+import 'package:productive/features/create/domain/entity/expense_entity.dart';
+import '../../../../core/either/either.dart';
+import '../../../../core/failure/failure.dart';
+import '../../domain/repository/expene_repo.dart';
+import '../data_source/remote_expense.dart';
 
-class ExpenseRepository {
-  Future<List<ExpenseModel>> getExpenses() async {
-    Future.delayed(const Duration(seconds: 3));
+class ExpenseRepositoryImpl implements ExpenseRepository {
+  final ExpenseRemoteDataSource _expenseRemoteDataSource;
 
-    return (dataExpense['expense'] as List)
-        .map((e) => ExpenseModel.fromJson(e))
-        .toList();
+  ExpenseRepositoryImpl({required ExpenseRemoteDataSource expenseRemoteDataSource})
+      : _expenseRemoteDataSource = expenseRemoteDataSource;
+  @override
+  Future<Either<Failure, List<ExpenseEntity>>> getExpenses() async {
+    try {
+      final result = await _expenseRemoteDataSource.getExpenses();
+      return Right(result);
+    } catch(error) {
+      return Left(const ServerFailure());
+    }
   }
 
-  Future<ExpenseModel> createExpense({
-    required String icon,
-    required String title,
-    required int colorIndex,
-    required double price,
-    required String description,
-  }) async {
-    await Future.delayed(
-      const Duration(seconds: 3),
-    );
-
-    if (title.isEmpty || title.length < 3) {
-      throw Exception('Title is invalid');
+  @override
+  Future<Either<Failure, bool>> createExpense(ExpenseModel expenseModel) async {
+    try {
+      final result = await _expenseRemoteDataSource.createExpense(expenseModel);
+      return Right(result);
+    } catch(error) {
+      return Left(const ServerFailure());
     }
-    final newExpense = ExpenseModel(
-        id: (dataExpense['expense'] as List).lastOrNull['id'] + 1 ?? 0,
-        icon: icon,
-        colorIndex: colorIndex,
-        title: title,
-        price: price,
-        description: description);
-
-    dataExpense['expense'].add(
-      {
-        "id": newExpense.id,
-        "title": newExpense.title,
-        "icon": newExpense.icon,
-        "index_color": newExpense.colorIndex,
-        "price": newExpense.price,
-        "description": newExpense.description,
-        "is_income": false,
-        "name": ""
-      },
-    );
-
-    return newExpense;
   }
 }

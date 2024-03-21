@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/features/create/presentation/bloc/create_expense/create_expense_bloc.dart';
-
+import 'package:productive/features/create/presentation/widgets/select_icon_expense.dart';
 import '../../../../assets/icons.dart';
 import '../pages/new_catalog.dart';
 
@@ -81,16 +81,16 @@ Future<dynamic> selectIcon(BuildContext context) {
                             color: getColor(index),
                           ),
                           alignment: Alignment.center,
-                          child: SvgPicture.asset(
+                          child: SvgPicture.network(
                             getIcon(index),
                           ),
                         ),
                         title: Text(
-                          getTitle(index),
-                          style: Theme.of(context)
-                              .textTheme
-                              .titleLarge!
-                              .copyWith(fontWeight: FontWeight.w500,color: context.colors.whiteLabel,)
+                            getTitle(index),
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleLarge!
+                                .copyWith(fontWeight: FontWeight.w500,color: context.colors.whiteLabel,)
                         ),
                       ),
                     ),
@@ -123,15 +123,15 @@ Future<dynamic> selectIcon(BuildContext context) {
 String getIcon(int index) {
   switch (index) {
     case 0:
-      return AppIcons.food2;
+      return items[0];
     case 1:
-      return AppIcons.health;
+      return items[1];
     case 2:
-      return AppIcons.shopping2;
+      return items[2];
     case 3:
-      return AppIcons.gift2;
+      return items[3];
     default:
-      return AppIcons.transport;
+      return items[4];
   }
 }
 

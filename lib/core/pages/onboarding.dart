@@ -4,6 +4,9 @@ import 'package:gap/gap.dart';
 import 'package:productive/assets/icons.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/route_names/app_route_name.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import '../injector/injector.dart';
 
 class OnboardingPage extends StatefulWidget {
   const OnboardingPage({super.key});
@@ -39,7 +42,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   padding: const EdgeInsets.only(top: 24, right: 24),
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.of(context).pushNamed(AppRouteNames.home);
+                      sl<SharedPreferences>().setBool("wizard", true);
+                      Navigator.of(context).pushNamed(AppRouteNames.login);
                     },
                     child: Text(
                       localization.skip,
@@ -145,7 +149,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   duration: const Duration(milliseconds: 300),
                   curve: Curves.ease);
             } else {
-              Navigator.of(context).pushNamed(AppRouteNames.home);
+              sl<SharedPreferences>().setBool("wizard", true);
+              Navigator.of(context).pushNamed(AppRouteNames.login);
             }
           },
           child: Container(

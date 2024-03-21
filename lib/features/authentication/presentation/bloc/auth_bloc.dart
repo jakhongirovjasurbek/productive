@@ -20,6 +20,7 @@ class AuthenticationBloc
             email: "",
           ),
         )) {
+
     on<AuthenticationGetStatusEvent>((event, emit) async {
       final usecase = AuthUseCase(
         AuthRepositoryImpl(
@@ -54,14 +55,18 @@ class AuthenticationBloc
       final usecase = AuthUseCase(
           AuthRepositoryImpl(dataSource: AuthenticationDataSource())
               as AuthRepository);
+      print('1');
       final either = await usecase
           .call(LoginParams(email: event.email, password: event.password));
+      print('2');
       either.either(
         (failure) {
+          print('3');
           emit(state.copyWith(status: AuthenticationStatus.unauthenticated));
           event.onFailure();
         },
         (value) {
+          print('4');
           emit(
             state.copyWith(
               status: AuthenticationStatus.authenticated,

@@ -24,7 +24,7 @@ class AuthRepositoryImpl implements AuthRepository{
   @override
   Future<Either<Failure, AuthUserEntity>> login(String email, String password)async {
     try {
-      final user = await _dataSource.getUser();
+      final user = await _dataSource.login(email, password);
       return Right(AuthUserModel.fromFirebaseUser(user));
     } on ServerException catch (error) {
       return Left(ServerFailure(message: error.message, code: error.code));
