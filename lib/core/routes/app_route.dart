@@ -51,6 +51,7 @@ class AppRoute {
       case ExpenseRouteNames.expense:
         return fade(const ExpenseScreen());
       case StatsRouteNames.stats:
+      
         return fade(const StatisticsScreen());
       // case TaskRouteNames.tasks:
       //   return fade(const TaskScreen());
