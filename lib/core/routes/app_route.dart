@@ -28,7 +28,7 @@ class AppRoute {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case AppRouteNames.splash:
-        return fade(const HomePage());
+        return fade(const SplashPage());
       case AppRouteNames.home:
         return fade(const HomePage());
       case AppRouteNames.onboarding:
