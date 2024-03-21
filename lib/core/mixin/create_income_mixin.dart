@@ -6,9 +6,9 @@ import 'package:productive/features/create/presentation/pages/create_income.dart
 import '../../../../assets/icons.dart';
 
 mixin CreateIncomeMixin on State<CreateIncomeScreen> {
-  TextEditingController? titleController;
+  TextEditingController titleController = TextEditingController();
   int usd = 0;
-  TextEditingController? noteController;
+  TextEditingController noteController = TextEditingController();
 
   String getSvg(IncomePriority priority) {
     switch (priority) {

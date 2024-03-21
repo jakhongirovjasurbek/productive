@@ -46,7 +46,7 @@ void showBottomSheetWidget(BuildContext context) {
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    child: SvgPicture.asset(AppIcons.exit),
+                    child: SvgPicture.network(AppIcons.exit),
                   ),
                 ],
               ),
@@ -74,7 +74,7 @@ void showBottomSheetWidget(BuildContext context) {
                         color: context.colors.meetingColor,
                       ),
                       padding: EdgeInsets.all(9),
-                      child: SvgPicture.asset(
+                      child: SvgPicture.network(
                         AppIcons.moneyFirst,
                       ),
                     ),
@@ -113,7 +113,7 @@ void showBottomSheetWidget(BuildContext context) {
                               color: context.colors.addButtonLinear1,
                             ),
                             padding: EdgeInsets.all(12),
-                            child: SvgPicture.asset(
+                            child: SvgPicture.network(
                               AppIcons.plus,
                             ),
                           ),
@@ -125,7 +125,7 @@ void showBottomSheetWidget(BuildContext context) {
                         ],
                       ),
                     ),
-                    SvgPicture.asset(AppIcons.premium),
+                    SvgPicture.network(AppIcons.premium),
                   ],
                 ),
               ),
