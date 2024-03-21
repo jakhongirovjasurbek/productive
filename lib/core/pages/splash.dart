@@ -19,6 +19,7 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
+
   @override
   void initState() {
     super.initState();
@@ -30,8 +31,8 @@ class _SplashPageState extends State<SplashPage> {
       listener: (context, state) {
         if(state.status == AuthenticationStatus.unauthenticated) {
           if(sl<SharedPreferences>().getBool("wizard") == true) {
-            // Navigator.of(context)
-            //     .pushNamedAndRemoveUntil(AppRouteNames.login, (_) => false);
+            Navigator.of(context)
+                .pushNamedAndRemoveUntil(AppRouteNames.login, (_) => false);
           } else {
             Navigator.of(context)
                 .pushNamedAndRemoveUntil(AppRouteNames.onboarding, (_) => false);

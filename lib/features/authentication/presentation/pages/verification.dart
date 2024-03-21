@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:pinput/pinput.dart';
 import 'package:productive/core/extensions/extensions.dart';
+import 'package:productive/features/authentication/presentation/pages/create_new_password.dart';
 
 import '../../../../assets/icons.dart';
 import '../../../../assets/images.dart';
@@ -106,7 +107,7 @@ class _VerificationPageState extends State<VerificationPage> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const Scaffold()));
+                          builder: (context) => const CreateNewPassword()));
                 }
               },
             ),

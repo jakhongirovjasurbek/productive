@@ -28,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final passwordFocusNode = FocusNode();
 
   final formKey = GlobalKey<FormState>();
-  bool isObscure = true;
+  bool isObscure = false;
 
   @override
   void initState() {
@@ -151,6 +151,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         isDisabled: !isLoginDataValid,
                         onTap: () {},
                         child: WButton(
+                          width: (MediaQuery.of(context).size.width/100)*95,
+                          height:(MediaQuery.of(context).size.height /100)*6 ,
                           borderRadius: 12,
                           disabled: !isLoginDataValid,
                           onTap: () async {
@@ -235,7 +237,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, AppRouteNames.sign_up);
+                  },
                   child: Padding(
                     padding: EdgeInsets.only(
                         bottom: MediaQuery.of(context).padding.bottom + 18),

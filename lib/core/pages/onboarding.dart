@@ -150,7 +150,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   curve: Curves.ease);
             } else {
               sl<SharedPreferences>().setBool("wizard", true);
-              Navigator.of(context).pushNamed(AppRouteNames.home);
+              Navigator.of(context).pushNamed(AppRouteNames.login);
             }
           },
           child: Container(

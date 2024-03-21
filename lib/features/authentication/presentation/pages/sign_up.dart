@@ -117,6 +117,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                       const Gap(16),
                       WTextField(
+                        isObscureText: isObscure,
                         controller: passwordTextEditingController,
                         suffix: GestureDetector(
                           onTap: () {
@@ -160,6 +161,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         isDisabled: !isLoginDataValid,
                         onTap: () {},
                         child: WButton(
+                          width: (MediaQuery.of(context).size.width/100)*95,
+                          height:(MediaQuery.of(context).size.height /100)*6 ,
                           borderRadius: 12,
                           disabled: !isLoginDataValid,
                           onTap: () async {
@@ -169,7 +172,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                         mailTextEditingController.text.trim(),
                                     password: passwordTextEditingController.text
                                         .trim(),
-                                    onSuccess: () {},
+                                    onSuccess: () {
+                                      Navigator.of(context).pushNamed(AppRouteNames.home);
+                                    },
                                     onFailure: () {
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(
@@ -237,7 +242,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
                   child: Padding(
                     padding: EdgeInsets.only(
                         bottom: MediaQuery.of(context).padding.bottom + 18),
