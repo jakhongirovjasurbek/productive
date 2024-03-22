@@ -10,6 +10,7 @@ class EventModel {
   final Timestamp startDate;
   final Timestamp endDate;
   final bool isAllDay;
+
   EventModel({
     required this.id,
     required this.eventTitle,
@@ -23,7 +24,6 @@ class EventModel {
   });
 
   factory EventModel.fromJson(Map<String, dynamic> json, String id) {
-
     return EventModel(
       id: id,
       eventTitle: json['eventTitle'],
@@ -34,6 +34,43 @@ class EventModel {
       startDate: json['startDate'],
       endDate: json['endDate'],
       isAllDay: json['isAllDay'],
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'eventTitle': eventTitle,
+      'eventIcon': eventIcon,
+      'addNote': addNote,
+      'repeatTime': repeatTime,
+      'iconEventColor': iconEventColor,
+      'startDate': startDate,
+      'endDate': endDate,
+      'isAllDay': isAllDay,
+    };
+  }
+
+  EventModel copyWith({
+    String? id,
+    String? eventTitle,
+    String? eventIcon,
+    String? repeatTime,
+    String? iconEventColor,
+    String? addNote,
+    Timestamp? startDate,
+    Timestamp? endDate,
+    bool? isAllDay,
+  }) {
+    return EventModel(
+      id: id ?? this.id,
+      eventTitle: eventTitle ?? this.eventTitle,
+      eventIcon: eventIcon ?? this.eventIcon,
+      repeatTime: repeatTime ?? this.repeatTime,
+      iconEventColor: iconEventColor ?? this.iconEventColor,
+      addNote: addNote ?? this.addNote,
+      startDate: startDate ?? this.startDate,
+      endDate: endDate ?? this.endDate,
+      isAllDay: isAllDay ?? this.isAllDay,
     );
   }
 
@@ -67,31 +104,6 @@ class EventModel {
     addNote.hashCode ^
     startDate.hashCode ^
     endDate.hashCode ^
-    isAllDay.hashCode ;
-  }
-
-  EventModel copyWith({
-    String? id,
-    String? eventTitle,
-    String? icon,
-    String? repeatTime,
-    String? iconEventColor,
-    String? addNote,
-    Timestamp? startDate,
-    Timestamp? endDate,
-    bool? isAllDay,
-    //Color? iconColor,
-  }) {
-    return EventModel(
-        id: id ?? this.id,
-        eventTitle: eventTitle ?? this.eventTitle,
-        eventIcon: icon ?? this.eventIcon,
-        repeatTime: repeatTime ?? this.repeatTime,
-        iconEventColor: iconEventColor ?? this.iconEventColor,
-        addNote: addNote?? this.addNote,
-        startDate: startDate ?? this.startDate,
-        endDate: endDate ?? this.endDate,
-        isAllDay: isAllDay ?? this.isAllDay
-    );
+    isAllDay.hashCode;
   }
 }

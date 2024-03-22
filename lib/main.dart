@@ -12,12 +12,14 @@ import 'package:productive/core/routes/app_route.dart';
 import 'package:productive/features/authentication/presentation/bloc/auth_bloc.dart';
 import 'package:productive/features/create/presentation/bloc/create_expense/create_expense_bloc.dart';
 import 'package:productive/features/calendar/presentation/bloc/task_bloc/calendar_bloc.dart';
+import 'package:productive/features/create/presentation/pages/create_event.dart';
 import 'package:productive/firebase_options.dart';
 import 'features/calendar/presentation/bloc/bloc/calendar_bloc.dart';
 import 'features/create/data/data_source/remote.dart';
 import 'features/create/data/repository/task.dart';
 import 'features/create/presentation/bloc/location/location_cubit.dart';
 import 'features/create/presentation/bloc/task_bloc.dart';
+import 'features/create/presentation/event_bloc/event_bloc.dart';
 import 'generated/l10n.dart';
 
 Future<void> main() async {
@@ -43,57 +45,76 @@ Future<void> main() async {
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  const MainApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return KeyboardDismisser(
-      gestures: const [GestureType.onTap],
-      child: MultiBlocProvider(
-        providers: [
-          BlocProvider(
-            create: (_) => AuthenticationBloc(),
-          ),
-          BlocProvider(
-            create: (context) => CalendarTaskBloc(),
-          ),
-          BlocProvider(
-            create: (context) => CalendarBloc(),
-          ),
-          BlocProvider(
-            create: (context) => TaskBloc(
-              response: TaskRepository(
-                taskRemoteDataSource: TaskRemoteDataSource(),
-              ),
-            ),
-          ),
-          BlocProvider(
-            create: (context) => MapScreenCubit()..getCurrentLocation(),
-          ),
-          BlocProvider(
-            create: (context) => ExpenseBloc(),
-          ),
-        ],
+    return BlocProvider(
+      create: (context) => CreateEventBloc(),
+      child: KeyboardDismisser(
+        gestures: const [GestureType.onTap],
         child: MaterialApp(
-          theme: context.theme.lightTheme(),
-          themeMode: ThemeMode.dark,
-          themeAnimationDuration: const Duration(milliseconds: 250),
-          themeAnimationCurve: Curves.slowMiddle,
-          darkTheme: context.theme.darkTheme(),
-          debugShowCheckedModeBanner: false,
-          useInheritedMediaQuery: true,
-          builder: DevicePreview.appBuilder,
-          onGenerateRoute: AppRoute.onGenerateRoute,
-          locale: const Locale.fromSubtags(languageCode: 'en'),
-          supportedLocales: AppLocalization.delegate.supportedLocales,
-          localizationsDelegates: const [
-            AppLocalization.delegate,
-            GlobalCupertinoLocalizations.delegate,
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-          ],
+          theme: ThemeData.dark(),
+          home: CreateEvent(),
         ),
       ),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+// MultiBlocProvider(
+//   providers: [
+//     BlocProvider(
+//       create: (_) => AuthenticationBloc(),
+//     ),
+//     BlocProvider(
+//       create: (context) => CalendarTaskBloc(),
+//     ),
+//     BlocProvider(
+//       create: (context) => CalendarBloc(),
+//     ),
+//     BlocProvider(
+//       create: (context) => TaskBloc(
+//         response: TaskRepository(
+//           taskRemoteDataSource: TaskRemoteDataSource(),
+//         ),
+//       ),
+//     ),
+//     BlocProvider(
+//       create: (context) => MapScreenCubit()..getCurrentLocation(),
+//     ),
+//     BlocProvider(
+//       create: (context) => ExpenseBloc(),
+//     ),
+//   ],
+//   child: MaterialApp(
+//     theme: context.theme.lightTheme(),
+//     themeMode: ThemeMode.dark,
+//     themeAnimationDuration: const Duration(milliseconds: 250),
+//     themeAnimationCurve: Curves.slowMiddle,
+//     darkTheme: context.theme.darkTheme(),
+//     debugShowCheckedModeBanner: false,
+//     useInheritedMediaQuery: true,
+//     builder: DevicePreview.appBuilder,
+//     onGenerateRoute: AppRoute.onGenerateRoute,
+//     locale: const Locale.fromSubtags(languageCode: 'en'),
+//     supportedLocales: AppLocalization.delegate.supportedLocales,
+//     localizationsDelegates: const [
+//       AppLocalization.delegate,
+//       GlobalCupertinoLocalizations.delegate,
+//       GlobalMaterialLocalizations.delegate,
+//       GlobalWidgetsLocalizations.delegate,
+//     ],
+//   ),
+// ),

@@ -12,6 +12,7 @@ class AppColors {
   final inpBackgroundColor = const Color(0xFF1C233A);
   final isCheckGreenColor = const Color(0xFF44DB4A);
   final buttonDisabledColor = const Color(0xFF4B7FD6);
+  final switchColor = const Color(0xFF4B4E6D);
   final skipButtonColor = const Color(0xFF4B7FD6);
   final loginTextFieldBackgroundColor = const Color(0xFF272C38);
   final backgroundColor = const Color(0xFF1C233A);

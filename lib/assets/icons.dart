@@ -107,7 +107,6 @@ class AppIcons {
   final divider = "assets/icons/create_task/divider.svg";
   final locationpng = "assets/icons/create_task/location.png";
 
-  static const birthday = "assets/icons/birthday_event.svg";
   static const meet = "assets/icons/meet_event.svg";
   static const online = "assets/icons/online_event.svg";
   static const other = "assets/icons/other_event.svg";
@@ -220,5 +219,9 @@ class AppIcons {
   final taskhome  = '${createhomeitem}task_home.svg';
 
   final taskstar  = '${createhomeitem}tasks_star.svg';
-
+  ///create_event icons
+  static const meeting = "assets/icons/meeting.svg";
+  static const communication = "assets/icons/communication.svg";
+  static const starEvent = "assets/icons/star_event.svg";
+  static const birthday = "assets/icons/birthday.svg";
 }
