@@ -49,14 +49,49 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => CreateEventBloc(),
-      child: KeyboardDismisser(
-        gestures: const [GestureType.onTap],
-        child: MaterialApp(
-          theme: ThemeData.dark(),
-          home: CreateEvent(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (_) => AuthenticationBloc(),
         ),
+        BlocProvider(
+          create: (context) => CalendarTaskBloc(),
+        ),
+        BlocProvider(
+          create: (context) => CalendarBloc(),
+        ),
+        BlocProvider(
+          create: (context) => TaskBloc(
+            response: TaskRepository(
+              taskRemoteDataSource: TaskRemoteDataSource(),
+            ),
+          ),
+        ),
+        BlocProvider(
+          create: (context) => MapScreenCubit()..getCurrentLocation(),
+        ),
+        BlocProvider(
+          create: (context) => ExpenseBloc(),
+        ),
+      ],
+      child: MaterialApp(
+        theme: context.theme.lightTheme(),
+        themeMode: ThemeMode.dark,
+        themeAnimationDuration: const Duration(milliseconds: 250),
+        themeAnimationCurve: Curves.slowMiddle,
+        darkTheme: context.theme.darkTheme(),
+        debugShowCheckedModeBanner: false,
+        useInheritedMediaQuery: true,
+        builder: DevicePreview.appBuilder,
+        onGenerateRoute: AppRoute.onGenerateRoute,
+        locale: const Locale.fromSubtags(languageCode: 'en'),
+        supportedLocales: AppLocalization.delegate.supportedLocales,
+        localizationsDelegates: const [
+          AppLocalization.delegate,
+          GlobalCupertinoLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+        ],
       ),
     );
   }
@@ -73,48 +108,3 @@ class MainApp extends StatelessWidget {
 
 
 
-// MultiBlocProvider(
-//   providers: [
-//     BlocProvider(
-//       create: (_) => AuthenticationBloc(),
-//     ),
-//     BlocProvider(
-//       create: (context) => CalendarTaskBloc(),
-//     ),
-//     BlocProvider(
-//       create: (context) => CalendarBloc(),
-//     ),
-//     BlocProvider(
-//       create: (context) => TaskBloc(
-//         response: TaskRepository(
-//           taskRemoteDataSource: TaskRemoteDataSource(),
-//         ),
-//       ),
-//     ),
-//     BlocProvider(
-//       create: (context) => MapScreenCubit()..getCurrentLocation(),
-//     ),
-//     BlocProvider(
-//       create: (context) => ExpenseBloc(),
-//     ),
-//   ],
-//   child: MaterialApp(
-//     theme: context.theme.lightTheme(),
-//     themeMode: ThemeMode.dark,
-//     themeAnimationDuration: const Duration(milliseconds: 250),
-//     themeAnimationCurve: Curves.slowMiddle,
-//     darkTheme: context.theme.darkTheme(),
-//     debugShowCheckedModeBanner: false,
-//     useInheritedMediaQuery: true,
-//     builder: DevicePreview.appBuilder,
-//     onGenerateRoute: AppRoute.onGenerateRoute,
-//     locale: const Locale.fromSubtags(languageCode: 'en'),
-//     supportedLocales: AppLocalization.delegate.supportedLocales,
-//     localizationsDelegates: const [
-//       AppLocalization.delegate,
-//       GlobalCupertinoLocalizations.delegate,
-//       GlobalMaterialLocalizations.delegate,
-//       GlobalWidgetsLocalizations.delegate,
-//     ],
-//   ),
-// ),
