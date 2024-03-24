@@ -13,9 +13,9 @@ mixin CreateIncomeMixin on State<CreateIncomeScreen> {
   String getSvg(IncomePriority priority) {
     switch (priority) {
       case IncomePriority.salary:
-        return AppIcons.moneyFirst;
+        return context.icons.moneyFirst;
       case IncomePriority.expense:
-        return AppIcons.moneySecond;
+        return context.icons.moneySecond;
     }
   }
 

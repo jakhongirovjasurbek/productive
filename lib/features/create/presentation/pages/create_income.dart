@@ -3,15 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:productive/core/mixin/create_income_mixin.dart';
 import 'package:productive/core/widgets/w_button.dart';
 import 'package:productive/core/widgets/w_textfield.dart';
 import 'package:productive/features/create/data/model/income_active_status.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/features/create/presentation/bloc/create_income/income_bloc.dart';
 import 'package:productive/features/create/presentation/widgets/show_snackbar.dart';
-
-import '../../../../assets/icons.dart';
-import '../../../../core/mixin/create_income_mixin.dart';
 
 class CreateIncomeScreen extends StatefulWidget {
   const CreateIncomeScreen({super.key});
@@ -58,7 +56,7 @@ class _CreateIncomeScreenState extends State<CreateIncomeScreen>
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 10, vertical: 17),
-                      child: SvgPicture.network(AppIcons.arrow),
+                      child: SvgPicture.network(context.icons.arrow),
                     ),
                   ),
                 ),
@@ -94,6 +92,7 @@ class _CreateIncomeScreenState extends State<CreateIncomeScreen>
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
                                 WTextField(
+                                  textInputAction: TextInputAction.next,
                                   autoFocus:
                                       titleController.text == "" ? true : false,
                                   fillColor: Colors.transparent,
@@ -158,6 +157,7 @@ class _CreateIncomeScreenState extends State<CreateIncomeScreen>
                             ),
                             Expanded(
                               child: WTextField(
+                                textInputAction: TextInputAction.next,
                                 hasBorderColor: false,
                                 focusNode: FocusNode(),
                                 onChanged: (value) {
@@ -184,6 +184,21 @@ class _CreateIncomeScreenState extends State<CreateIncomeScreen>
                       ),
                       const Gap(18),
                       WTextField(
+                        onEditCompleted: () {
+                          context.read<IncomeBloc>().add(
+                                AddIncome(
+                                  priority: state.priority,
+                                  title: titleController.text,
+                                  usd: usd,
+                                  note: noteController.text,
+                                  iconUrl: getSvg(state.priority),
+                                ),
+                              );
+                          titleController.text = "";
+                          noteController.text = "";
+                          usd = 0;
+                        },
+                        textInputAction: TextInputAction.done,
                         controller: noteController,
                         minLines: 7,
                         maxlines: 7,

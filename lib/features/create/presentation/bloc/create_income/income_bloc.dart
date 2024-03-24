@@ -28,7 +28,7 @@ class IncomeBloc extends Bloc<IncomeEvent, IncomeState> {
       emit(state.copyWith(activeStatus: IncomeActiveStatus.loading));
       try {
         final instance = FirebaseFirestore.instance.collection("expense");
-        final result = await instance.add({
+        await instance.add({
           "description": event.note,
           "icon": event.iconUrl,
           "index_color": event.priority == IncomePriority.expense ? 21 : 20,
@@ -39,8 +39,9 @@ class IncomeBloc extends Bloc<IncomeEvent, IncomeState> {
               event.priority == IncomePriority.expense ? "expense" : "salary",
         });
         emit(state.copyWith(
-            activeStatus: IncomeActiveStatus.success,
-            priority: IncomePriority.expense));
+          activeStatus: IncomeActiveStatus.success,
+          priority: IncomePriority.expense,
+        ));
       } catch (e) {
         emit(state.copyWith(activeStatus: IncomeActiveStatus.success));
       }
