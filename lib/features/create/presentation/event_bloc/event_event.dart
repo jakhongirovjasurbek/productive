@@ -63,4 +63,36 @@ class TopicIconPressed extends CreateEventEvent {
   List<Object> get props => [iconIndex];
 }
 
-class SaveButtonPressed extends CreateEventEvent {}
+class SaveButtonPressed extends CreateEventEvent {
+  final bool isAllDay;
+  final String repeatTime;
+  final DateTime? startDate;
+  final DateTime? endDate;
+  final DateTime? startTime;
+  final DateTime? endTime;
+  final int selectedIconIndex;
+  final VoidCallback onSuccess;
+  final ValueChanged<String> onFailure;
+  final String eventTitle;
+  final String addNote;
+
+  SaveButtonPressed( {
+    required this.isAllDay,
+    required this.repeatTime,
+    required this.startDate,
+    required this.endDate,
+    required this.startTime,
+    required this.endTime,
+    required this.selectedIconIndex,
+    required this.onSuccess,
+    required this.onFailure,
+    required this.addNote,
+    required this.eventTitle
+});
+  @override
+  List<Object> get props => [isAllDay,repeatTime,startDate!,startTime!,
+    endDate!,endTime!,selectedIconIndex,onFailure,onSuccess];
+}
+
+
+

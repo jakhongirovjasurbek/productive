@@ -3,49 +3,54 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class EventModel {
   final String id;
   final String eventTitle;
-  final String eventIcon;
   final String repeatTime;
-  final String iconEventColor;
+  final int selectedIconIndex;
   final String? addNote;
   final Timestamp startDate;
   final Timestamp endDate;
+  final Timestamp startTime;
+  final Timestamp endTime;
   final bool isAllDay;
 
   EventModel({
     required this.id,
     required this.eventTitle,
-    required this.eventIcon,
     required this.repeatTime,
-    required this.iconEventColor,
+    required this.selectedIconIndex,
     this.addNote,
     required this.startDate,
     required this.endDate,
     required this.isAllDay,
+    required this.startTime,
+    required this.endTime
   });
 
   factory EventModel.fromJson(Map<String, dynamic> json, String id) {
     return EventModel(
       id: id,
       eventTitle: json['eventTitle'],
-      eventIcon: json['eventIcon'],
       addNote: json['addNote'],
       repeatTime: json['repeatTime'],
-      iconEventColor: json['iconEventColor'],
+      selectedIconIndex: json['selectedIconIndex'],
       startDate: json['startDate'],
       endDate: json['endDate'],
       isAllDay: json['isAllDay'],
+      startTime: json['startTime'],
+      endTime: json['endTime'],
+
     );
   }
 
   Map<String, dynamic> toJson() {
     return {
       'eventTitle': eventTitle,
-      'eventIcon': eventIcon,
       'addNote': addNote,
       'repeatTime': repeatTime,
-      'iconEventColor': iconEventColor,
+      'selectedIconIndex': selectedIconIndex,
       'startDate': startDate,
       'endDate': endDate,
+      'startTime':startTime,
+      'endTime': endTime,
       'isAllDay': isAllDay,
     };
   }
@@ -53,30 +58,33 @@ class EventModel {
   EventModel copyWith({
     String? id,
     String? eventTitle,
-    String? eventIcon,
     String? repeatTime,
-    String? iconEventColor,
+    int? selectedIconIndex,
     String? addNote,
     Timestamp? startDate,
     Timestamp? endDate,
+    Timestamp? startTime,
+    Timestamp? endTime,
     bool? isAllDay,
   }) {
     return EventModel(
       id: id ?? this.id,
       eventTitle: eventTitle ?? this.eventTitle,
-      eventIcon: eventIcon ?? this.eventIcon,
       repeatTime: repeatTime ?? this.repeatTime,
-      iconEventColor: iconEventColor ?? this.iconEventColor,
+      selectedIconIndex: selectedIconIndex ?? this.selectedIconIndex,
       addNote: addNote ?? this.addNote,
       startDate: startDate ?? this.startDate,
       endDate: endDate ?? this.endDate,
       isAllDay: isAllDay ?? this.isAllDay,
+      startTime: startTime?? this.startTime,
+      endTime: endTime?? this.endTime,
+
     );
   }
 
   @override
   String toString() {
-    return 'EventModel(id: $id, eventTitle: $eventTitle, eventIcon: $eventIcon, repeatTime: $repeatTime, iconEventColor: $iconEventColor, addNote: $addNote, startDate: $startDate, endDate: $endDate, isAllDay: $isAllDay)';
+    return 'EventModel(id: $id, eventTitle: $eventTitle, repeatTime: $repeatTime, selectedIconIndex: $selectedIconIndex, addNote: $addNote, startDate: $startDate, endDate: $endDate, startTime : $startTime, endTime:$endTime ,isAllDay: $isAllDay)';
   }
 
   @override
@@ -85,12 +93,13 @@ class EventModel {
 
     return other.id == id &&
         other.eventTitle == eventTitle &&
-        other.eventIcon == eventIcon &&
         other.repeatTime == repeatTime &&
-        other.iconEventColor == iconEventColor &&
+        other.selectedIconIndex == selectedIconIndex &&
         other.addNote == addNote &&
         other.startDate == startDate &&
         other.endDate == endDate &&
+        other.startTime == startTime &&
+        other.endTime == endTime &&
         other.isAllDay == isAllDay;
   }
 
@@ -98,12 +107,13 @@ class EventModel {
   int get hashCode {
     return id.hashCode ^
     eventTitle.hashCode ^
-    eventIcon.hashCode ^
     repeatTime.hashCode ^
-    iconEventColor.hashCode ^
+    selectedIconIndex.hashCode ^
     addNote.hashCode ^
     startDate.hashCode ^
     endDate.hashCode ^
+    startTime.hashCode ^
+    endTime.hashCode ^
     isAllDay.hashCode;
   }
 }

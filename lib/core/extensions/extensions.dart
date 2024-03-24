@@ -10,7 +10,9 @@ import 'package:productive/features/tasks/data/models/moke_model.dart';
 import 'package:productive/features/tasks/domain/entities/notification_entities.dart';
 import 'package:productive/generated/l10n.dart';
 
+import '../../features/create/data/model/event_model.dart';
 import '../../features/create/data/model/expense_model.dart';
+import '../../features/create/domain/entity/event_entity.dart';
 import '../../features/create/domain/entity/expense_entity.dart';
 
 extension BuildContextGeneral on BuildContext {
@@ -55,13 +57,11 @@ extension NotificationToNotificationEntites on MockDataNotificationsModel {
   NotificationEntities get toEntitiesNotification {
     return NotificationEntities(
       dateTime: dateTime,
-      title: title ,
+      title: title,
       subTitle: subTitle,
     );
   }
 }
-
-
 
 extension ExpenseModelToEntities on ExpenseModel {
   ExpenseEntity get toExpenseEntities {
@@ -71,6 +71,20 @@ extension ExpenseModelToEntities on ExpenseModel {
       title: title,
       description: description,
       icon: icon,
+    );
+  }
+}
+
+extension EventModelToEntities on EventModel {
+  EventEntity get toEventEntities {
+    return EventEntity(
+      isAllDay: isAllDay,
+      repeatTime: repeatTime,
+      startDate: startDate,
+      endDate: endDate,
+      startTime: startTime,
+      endTime: endTime,
+      selectedIconIndex: selectedIconIndex,
     );
   }
 }

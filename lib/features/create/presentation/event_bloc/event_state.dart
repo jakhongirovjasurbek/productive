@@ -22,7 +22,7 @@ class CreateEventState extends Equatable {
   factory CreateEventState.initial() {
     return CreateEventState(
       isAllDay: false,
-      repeatTime: '',
+      repeatTime: 'Once',
       startDate: null,
       endDate: null,
       startTime: null,

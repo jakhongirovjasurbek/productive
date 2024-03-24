@@ -93,11 +93,9 @@ class _SelectDateBottomSheetState extends State<SelectDateBottomSheet> {
               mode: CupertinoDatePickerMode.date,
               initialDateTime: widget.initialDate ?? DateTime.now(),
               onDateTimeChanged: (DateTime newDateTime) {
-                setState(() {
                   _selectedDate = newDateTime;
                   _dateController.text =
                       DateFormat('dd-MM-yyyy').format(newDateTime);
-                });
               },
             ),
           ),
@@ -108,15 +106,12 @@ class _SelectDateBottomSheetState extends State<SelectDateBottomSheet> {
           SizedBox(height: 8),
           GestureDetector(
             onTap: () async {
-              DateTime? selectedTime = await showSelectTimeBottomSheet(context);
-              if (selectedTime != null) {
-                setState(() {
-                  _selectedTimeText = DateFormat('HH:mm').format(selectedTime);
-                });
-              }
+               await showSelectTimeBottomSheet(context);
+
             },
             child: Text(
-              _selectedTimeText ?? widget.selectedTimeText ?? context.localization.add_time,
+              // _selectedTimeText ?? widget.selectedTimeText ??
+              context.localization.add_time,
               style: context.style.fontSize16Weight400,
             ),
           ),
