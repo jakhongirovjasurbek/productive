@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
+import 'package:productive/assets/colors.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/functions/app_functions.dart';
 import 'package:productive/core/widgets/w_calendar.dart';
@@ -100,7 +101,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
     case 'pinkColor':
       return context.colors.studyColor;
     case 'orangeColor':
-      return context.colors.gymColor;
+      return AppColors.gymColor;
     case 'greenColor':
       return context.colors.meetingColor;
     case 'blueColor':

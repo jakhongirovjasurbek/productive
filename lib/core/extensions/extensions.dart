@@ -47,7 +47,6 @@ extension CalendarToCalendarEntities on CalendarModel {
       description: description ?? '',
       priority: priority,
       iconColor: iconColor,
-      description: description?? '',
       title: title,
       icon: icon,
       startTime: startTime.toDate(),
