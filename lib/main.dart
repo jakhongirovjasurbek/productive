@@ -10,6 +10,9 @@ import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/injector/injector.dart';
 import 'package:productive/core/routes/app_route.dart';
 import 'package:productive/features/authentication/presentation/bloc/auth_bloc.dart';
+import 'package:productive/features/create/data/data_source/remote_event.dart';
+import 'package:productive/features/create/data/repository/event_repository.dart';
+import 'package:productive/features/create/domain/repository/event_repository.dart';
 import 'package:productive/features/create/presentation/bloc/create_expense/create_expense_bloc.dart';
 import 'package:productive/features/calendar/presentation/bloc/task_bloc/calendar_bloc.dart';
 import 'package:productive/features/create/presentation/pages/create_event.dart';
@@ -34,12 +37,17 @@ Future<void> main() async {
   ]);
 
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  EventRepository eventRepository = EventRepositoryImpl(eventRemoteDataSource: EventRemoteDataSource());
+  CreateEventBloc createEventBloc = CreateEventBloc(eventRepository: eventRepository);
 
   runApp(
     DevicePreview(
       enabled: false,
       builder: (context) {
-        return const MainApp();
+        return BlocProvider<CreateEventBloc>(
+          create: (context) => createEventBloc,
+          child: const MainApp(),
+        );
       },
     ),
   );
@@ -50,13 +58,13 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(create: (context) => CreateEventBloc(),
-      child: MaterialApp(
-        theme: ThemeData.dark(),
-        home: CreateEvent(),
-      ),);
+    return MaterialApp(
+      theme: ThemeData.dark(),
+      home: CreateEvent(),
+    );
   }
 }
+
 //     MultiBlocProvider(
 //       providers: [
 //         BlocProvider(

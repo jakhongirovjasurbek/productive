@@ -1,12 +1,9 @@
-import 'package:productive/features/create/data/model/expense_model.dart';
-import 'package:productive/features/create/domain/entity/expense_entity.dart';
 import '../../../../core/either/either.dart';
 import '../../../../core/failure/failure.dart';
 import '../../../../core/usecase/usecase.dart';
 import '../../data/model/event_model.dart';
 import '../entity/event_entity.dart';
 import '../repository/event_repository.dart';
-import '../repository/expene_repo.dart';
 
 class GetEventUsecase implements UseCase<List<EventEntity>, NoParams>{
   final EventRepository _eventRepository;

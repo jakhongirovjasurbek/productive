@@ -4,10 +4,10 @@ import 'package:equatable/equatable.dart';
 class EventEntity extends Equatable {
   final bool isAllDay;
   final String repeatTime;
-  final Timestamp startDate;
-  final Timestamp endDate;
-  final Timestamp startTime;
-  final Timestamp endTime;
+  final Timestamp? startDate;
+  final Timestamp? endDate;
+  final Timestamp? startTime;
+  final Timestamp? endTime;
   final int selectedIconIndex;
 
   EventEntity({

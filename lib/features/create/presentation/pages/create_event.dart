@@ -1,16 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
-import 'package:productive/assets/icons.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/features/create/presentation/event_bloc/event_bloc.dart';
-import 'package:productive/features/create/presentation/widgets/all_day.dart';
-import 'package:productive/features/create/presentation/widgets/repeat.dart';
-import 'package:productive/features/create/presentation/widgets/save_button.dart';
 import 'package:productive/features/create/presentation/widgets/select_current_date_bottomsheet.dart';
-
+import 'package:cloud_firestore/cloud_firestore.dart';
+import '../../../../assets/icons.dart';
+import '../widgets/all_day.dart';
+import '../widgets/repeat.dart';
 import '../widgets/select_icon_events.dart';
 
 class CreateEvent extends StatefulWidget {
@@ -21,26 +19,10 @@ class CreateEvent extends StatefulWidget {
 }
 
 class _CreateEventState extends State<CreateEvent> {
-  @override
-  Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => CreateEventBloc(),
-      child: _CreateEventPage(),
-    );
-  }
-}
-
-class _CreateEventPage extends StatefulWidget {
-  @override
-  State<_CreateEventPage> createState() => _CreateEventPageState();
-}
-
-class _CreateEventPageState extends State<_CreateEventPage> {
   late CreateEventBloc _createEventBloc;
   DateTime? _startDate;
   DateTime? _endDate;
   int index = -1;
-
   TextEditingController titleController = TextEditingController();
   TextEditingController noteController = TextEditingController();
 
@@ -49,10 +31,40 @@ class _CreateEventPageState extends State<_CreateEventPage> {
     super.initState();
     _createEventBloc = BlocProvider.of<CreateEventBloc>(context);
   }
+
   void _saveEventToFirestore() async {
     String title = titleController.text.trim();
     String note = noteController.text.trim();
+    bool isAllDay = _createEventBloc.state.isAllDay;
+    String repeatTime = _createEventBloc.state.repeatTime;
+    int selectedIcon = _createEventBloc.state.selectedIconIndex;
+
+    try {
+      FirebaseFirestore firestore = FirebaseFirestore.instance;
+      await firestore.collection('event').add({
+        'selectedIconIndex':selectedIcon,
+        'eventTitle': title,
+        'start_date': _startDate,
+        'end_date': _endDate,
+        'isAllDay': isAllDay,
+        'repeatTime' : repeatTime,
+        'addNote': note,
+      });
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Event successfully created'),
+        ),
+      );
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Failed to create event: $e'),
+        ),
+      );
+    }
   }
+
   void _showTimePicker(BuildContext context, bool isStartDate) async {
     DateTime? selectedDate = await showSelectCurrentDateBottomSheet(context);
     if (selectedDate != null) {
@@ -100,7 +112,10 @@ class _CreateEventPageState extends State<_CreateEventPage> {
               index = state.selectedIconIndex;
               return Column(
                 children: [
-                  IconSelectionWidget(onIconTapped: _onIconTapped, selectedIndex: index,),
+                  IconSelectionWidget(
+                    onIconTapped: _onIconTapped,
+                    selectedIndex: index,
+                  ),
                   const SizedBox(height: 27),
                   Container(
                     decoration: BoxDecoration(
@@ -259,30 +274,7 @@ class _CreateEventPageState extends State<_CreateEventPage> {
           builder: (context, state) {
             return GestureDetector(
               onTap: () {
-                // context.read<CreateEventBloc>().add(SaveButtonPressed());
-                context.read<CreateEventBloc>().add(SaveButtonPressed(
-                  selectedIconIndex: state.selectedIconIndex,
-                  startDate: state.startDate,
-                  startTime: state.startTime,
-                  endDate: state.endDate,
-                  endTime: state.endTime,
-                  isAllDay: state.isAllDay,
-                  repeatTime: state.repeatTime,
-                  eventTitle: titleController.text,
-                  addNote: noteController.text,
-                  onSuccess: () {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text('Event successfully created'),
-                      ),
-                    );
-                  },
-                  onFailure: (errorMassage) {
-                    const SnackBar(
-                      content: Text('Unknown error occurred'),
-                    );
-                  },
-                ));
+                _saveEventToFirestore();
               },
               child: Container(
                 decoration: BoxDecoration(
@@ -306,7 +298,6 @@ class _CreateEventPageState extends State<_CreateEventPage> {
   }
 
   String _formatTime(DateTime dateTime) {
-
     return DateFormat('hh:mm a').format(dateTime);
   }
 }

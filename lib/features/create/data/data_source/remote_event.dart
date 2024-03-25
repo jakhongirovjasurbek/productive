@@ -1,7 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:productive/core/extensions/extensions.dart';
-import 'package:productive/features/create/data/model/expense_model.dart';
-import 'package:productive/features/create/domain/entity/expense_entity.dart';
 import '../../../../core/exception/exception.dart';
 import '../../domain/entity/event_entity.dart';
 import '../model/event_model.dart';
