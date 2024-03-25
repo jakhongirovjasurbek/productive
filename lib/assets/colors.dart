@@ -79,6 +79,8 @@ class AppColors {
   final orange = Colors.orange;
   final createIncomeInputLineColor = const Color(0xFF424450);
 
+  final searchLocationInp = const Color(0xFF303644);
+  final cordinateAddColor = const Color(0xFFAFC7EF);
   final btnBorderColor = const Color(0xFF28304B);
   final bottomSheetBgColor = const Color(0xFF272C38);
   final dividerBgColor = const Color(0xFF38414E);
@@ -151,7 +153,8 @@ class AppColors {
   static Color upComingBorderSolid = const Color.fromRGBO(255, 255, 255, 0.02);
   static Color studyIconColor = const Color(0xFFDD8491);
   static Color upComingLink = const Color(0xFF4B7FD6);
-
+  final Color cursorColor2 = const Color(0xFF4B7FD6);
+  final Color createSearch = const Color(0xFF303644);
   static Color allCreateNavigation = const Color(0xFF525298);
   final Color allPageTextColor = const Color(0xFFABABAB);
   static Color englishStudy = const Color(0xFFDD8491);

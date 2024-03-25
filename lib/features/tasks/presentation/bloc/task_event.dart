@@ -14,13 +14,13 @@ class CheckedTask extends TaskEvent {
 }
 
 class CreateStartDataTime extends TaskEvent {
-  final DateTime time;
+  final Timestamp time;
   CreateStartDataTime({
     required this.time,
   });
 
   CreateStartDataTime copyWith({
-    DateTime? time,
+    Timestamp? time,
   }) {
     return CreateStartDataTime(
       time: time ?? this.time,
@@ -42,13 +42,13 @@ class CreateStartDataTime extends TaskEvent {
 }
 
 class CreateEndDataTime extends TaskEvent {
-  final DateTime time;
+  final Timestamp time;
   CreateEndDataTime({
     required this.time,
   });
 
   CreateEndDataTime copyWith({
-    DateTime? time,
+    Timestamp? time,
   }) {
     return CreateEndDataTime(
       time: time ?? this.time,
@@ -74,6 +74,13 @@ class SelectIconButtonPressed extends TaskEvent {
   SelectIconButtonPressed({
     required this.index,
   });
+}
+
+class SelectIconTask extends TaskEvent {
+  final int index;
+  SelectIconTask({
+    required this.index,
+});
 }
 
 class SelectPriorityColor extends TaskEvent {
@@ -104,16 +111,26 @@ class SelectPriorityColor extends TaskEvent {
   int get hashCode => index.hashCode;
 }
 
+class AddLocation extends TaskEvent {
+  final double latitute;
+  final double lontitute;
+  AddLocation({
+    required this.latitute,
+    required this.lontitute,
+});
+}
+
 class CreateNewTaskButtonPressed extends TaskEvent {
 
   final String title;
   final String icon;
-  final Priority priority;
+  final String priority;
   final String? note;
-  final DateTime startDate;
-  final DateTime dueDate;
+  final Timestamp startDate;
+  final Timestamp dueDate;
   final bool isChecked;
-  final Color iconColor;
+  final String iconColor;
+  final GeoPoint? position;
   final VoidCallback onSuccess;
   final ValueChanged<String> onFailure;
 
@@ -128,17 +145,19 @@ class CreateNewTaskButtonPressed extends TaskEvent {
     required this.iconColor,
     required this.onSuccess,
     required this.onFailure,
+    this.position,
   });
 
   CreateNewTaskButtonPressed copyWith({
     String? title,
     String? icon,
-    Priority? priority,
+    String? priority,
     String? note,
-    DateTime? startDate,
-    DateTime? dueDate,
+    Timestamp? startDate,
+    Timestamp? dueDate,
     bool? isChecked,
-    Color? iconColor,
+    String? iconColor,
+    GeoPoint? position,
     VoidCallback? onSuccess,
     ValueChanged<String>? onFailure,
   }) {
@@ -153,6 +172,7 @@ class CreateNewTaskButtonPressed extends TaskEvent {
       iconColor: iconColor ?? this.iconColor,
       onSuccess: onSuccess ?? this.onSuccess,
       onFailure: onFailure ?? this.onFailure,
+      position: position ?? this.position,
     );
   }
 
@@ -170,7 +190,8 @@ class CreateNewTaskButtonPressed extends TaskEvent {
           other.isChecked == isChecked &&
           other.iconColor == iconColor &&
           other.onSuccess == onSuccess &&
-          other.onFailure == onFailure;
+          other.onFailure == onFailure &&
+          other.position == position;
   }
 
   @override
@@ -184,13 +205,25 @@ class CreateNewTaskButtonPressed extends TaskEvent {
       dueDate.hashCode ^
       isChecked.hashCode ^
       iconColor.hashCode ^
+      position.hashCode ^
       onSuccess.hashCode ^
       onFailure.hashCode;
   }
 
   @override
   String toString() {
-    return 'CreateNewTaskButtonPressed(title: $title, icon: $icon, priority: $priority, note: $note, startDate: $startDate, dueDate: $dueDate, isChecked: $isChecked, iconColor: $iconColor, onSuccess: $onSuccess, onFailure: $onFailure)';
+    return '''
+    CreateNewTaskButtonPressed
+    title: $title, 
+    icon: $icon, 
+    priority: $priority, 
+    note: $note, 
+    startDate: $startDate, 
+    dueDate: $dueDate, 
+    isChecked: $isChecked, 
+    iconColor: $iconColor,
+    position: $position, 
+    onSuccess: $onSuccess, onFailure: $onFailure)''';
   }
 }
 class Searching extends TaskEvent {

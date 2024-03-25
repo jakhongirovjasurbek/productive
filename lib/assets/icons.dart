@@ -37,6 +37,8 @@ class AppIcons {
   final redbook="${pathNotes}red_book.svg";
   final plusbook="${pathNotes}plus_book.svg";
 
+  static const divider2 = 'assets/icons/tasks/divider2.svg';
+  static const searchTask = "assets/icons/tasks/search.svg";
   static const tasks = "${_bnb}tasks.svg";
   static const expense = "${_bnb}expense.svg";
   static const create = "${_bnb}create.svg";
@@ -94,8 +96,9 @@ class AppIcons {
   final notesCreate = "assets/icons/create_task/notes.svg";
   final tasksCreate = "assets/icons/create_task/tasks.svg";
   final x = "assets/icons/create_task/x.svg";
-  final notification = "assets/icons/create_task/notification.svg";
-  final location = "assets/icons/create_task/location.svg";
+  static const notification = "assets/icons/create_task/notification.svg";
+  static const location = "assets/icons/create_task/location.svg";
+  static const cordinate = 'assets/icons/create_task/cordinate.svg';
   final exitBottomSheet = "assets/icons/create_task/exit.svg";
   final search = "assets/icons/create_task/search.svg";
   final bag = "assets/icons/create_task/bag.svg";
