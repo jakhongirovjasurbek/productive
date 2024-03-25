@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   final white = const Color(0xFFFFFFFF);
+  final gymColor = const Color(0xFFFF8700);
   final black = const Color(0xFF000000);
   final mainDark = const Color(0xFF131524);
   final border_textfield = Color.fromRGBO(0, 110, 233, 0.10);

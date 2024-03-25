@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:productive/core/extensions/data_time_extension.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/features/calendar/data/models/calendar_month.dart';
+import 'package:productive/features/calendar/domain/entities/entities.dart';
 import 'package:productive/features/calendar/presentation/widgets/row_item.dart';
 
 class Body extends StatelessWidget {
@@ -10,8 +11,9 @@ class Body extends StatelessWidget {
     required this.selectedMonth,
     required this.selectedDate,
     required this.selectDate,
+    required this.datas,
   });
-
+  final List<CalendarEntities> datas;
   final DateTime selectedMonth;
   final DateTime? selectedDate;
 
@@ -47,9 +49,13 @@ class Body extends StatelessWidget {
                 children: week.map((d) {
                   return Expanded(
                     child: RowItem(
+                      data: datas,
                       date: d.date,
                       isActiveMonth: d.isActiveMonth,
-                      onTap: () => selectDate(d.date),
+                      onTap: () {
+                        selectDate(d.date);
+                        
+                      },
                       isSelected: selectedDate != null &&
                           selectedDate!.isSameDate(d.date),
                     ),

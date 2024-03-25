@@ -45,10 +45,13 @@ extension CalendarToCalendarEntities on CalendarModel {
   CalendarEntities get toEntities {
     return CalendarEntities(
       description: description ?? '',
+      priority: priority,
+      iconColor: iconColor,
+      description: description?? '',
       title: title,
       icon: icon,
-      startTime: startTime,
-      endTime: endTime,
+      startTime: startTime.toDate(),
+      endTime: endTime.toDate(),
     );
   }
 }

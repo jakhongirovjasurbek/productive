@@ -3,7 +3,10 @@ extension DateTimeExt on DateTime {
   DateTime get dayStart => DateTime(year, month, day);
 
   DateTime addMonth(int count) {
-    return DateTime(year, month + count, day);
+
+  
+
+    return DateTime(year,  month + count, day);
   }
 
   bool isSameDate(DateTime date) {

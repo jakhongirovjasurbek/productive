@@ -21,9 +21,12 @@ class WCalendarWidget extends StatelessWidget {
   final TextStyle? descriptionStyle;
   final TextStyle? linkStyle;
   final double? linkWidth;
+  final Color iconColor;
+
 
   const WCalendarWidget({
     Key? key,
+    required this.iconColor,
     required this.title,
     this.description,
     this.link,
@@ -111,9 +114,10 @@ class WCalendarWidget extends StatelessWidget {
           const Gap(8),
           Row(
             children: [
-              SvgPicture.asset(
-                icon ?? AppIcons.calendarGymIcon,
-              ),
+              // SvgPicture.asset(
+              //   icon ?? AppIcons.calendarGymIcon,
+              // ),
+              SvgPicture.network(icon!, color: iconColor,),
               const Gap(7),
               Text(
                 "$startTime - $endTime",
