@@ -1,61 +1,47 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:geolocator/geolocator.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:productive/core/extensions/extensions.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:productive/assets/icons.dart';
 import 'package:yandex_mapkit/yandex_mapkit.dart';
+import 'package:productive/core/extensions/extensions.dart';
 
-import '../../../../../assets/icons.dart';
 import '../../../../../core/widgets/w_button.dart';
 import '../../../../tasks/presentation/bloc/task_bloc.dart';
 
 Future<dynamic> addLocation(BuildContext context) async {
   GeoPoint currentPosition = await _determinePosition();
+  GeoPoint updatedPosition = currentPosition; // Initialize updatedPosition with currentPosition
+  YandexMapController? controller;
   return showModalBottomSheet(
-      backgroundColor: context.colors.bottomSheetBgColor,
-      context: context,
-      builder: (context) {
-        return SizedBox(
-          height: MediaQuery.sizeOf(context).height /2,
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    margin: const EdgeInsets.only(top: 8),
-                    width: (MediaQuery.of(context).size.width / 100) * 21.5,
-                    height: 4,
-                    decoration: BoxDecoration(
-                        color: context.colors.white,
-                    ),
+    backgroundColor: context.colors.bottomSheetBgColor,
+    context: context,
+    builder: (context) {
+      return SizedBox(
+        height: MediaQuery.sizeOf(context).height / 2,
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(top: 8),
+                  width: (MediaQuery.of(context).size.width / 100) * 21.5,
+                  height: 4,
+                  decoration: BoxDecoration(
+                    color: context.colors.white,
                   ),
-                ],
-              ),
-              const Gap(24),
-              SizedBox(
-                height: MediaQuery.sizeOf(context).height /3,
-                child: YandexMap(
-                  mapObjects: [
-                    PlacemarkMapObject(
-                      mapId: const MapObjectId("placemark"),
-                      point: Point(
-                        latitude: currentPosition.latitude,
-                        longitude: currentPosition.longitude,
-                      ),
-                      icon: PlacemarkIcon.single(
-                        PlacemarkIconStyle(
-                          image: BitmapDescriptor.fromAssetImage(
-                            context.icons.locationpng,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
+                ),
+              ],
+            ),
+            const Gap(24),
+            SizedBox(
+              height: MediaQuery.sizeOf(context).height / 3,
+              child: Stack(
+                children:[
+                  YandexMap(
                   nightModeEnabled: true,
                   onMapCreated: (YandexMapController controller) {
                     controller.moveCamera(
@@ -69,36 +55,50 @@ Future<dynamic> addLocation(BuildContext context) async {
                         ),
                       ),
                     );
-                    print("----------- ${currentPosition.longitude}");
+                  },
+                  onCameraPositionChanged: (CameraPosition cameraPosition, CameraUpdateReason reason, bool animated) {
+                    updatedPosition = GeoPoint( // Update updatedPosition with the new latitude and longitude
+                      cameraPosition.target.latitude,
+                      cameraPosition.target.longitude,
+                    );
                   },
                 ),
+                  Center(child: Image.asset(context.icons.locationpng,height: 16,width: 16,)),
+              ],
               ),
-              const Gap(13.5),
-              const Gap(24),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: WButton(
-                  borderRadius: 8,
-                  height: 40,
-                  onTap: () {
-                    context.read<TaskBloc>().add(
-                        AddLocation(
-                            latitute: currentPosition.latitude,
-                            lontitute: currentPosition.longitude,
-                        ),);
-                    Navigator.pop(context);
-                  },
-                  child: Text(
-                    context.localization.save,
-                    style: context.style.fontSize16Weight500,
-                  ),
+            ),
+            const Gap(13.5),
+            const Gap(24),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: WButton(
+                borderRadius: 8,
+                height: 40,
+                onTap: () {
+                  context.read<TaskBloc>().add(
+                    AddLocation(
+                      latitute: updatedPosition.latitude,
+                      lontitute: updatedPosition.longitude,
+                    ),
+                  );
+                  Navigator.pop(context);
+                },
+                child: Text(
+                  context.localization.save,
+                  style: context.style.fontSize16Weight500,
                 ),
               ),
-            ],
-          ),
-        );
-      });
+            ),
+          ],
+        ),
+      );
+    },
+  );
 }
+
+void updatePlacemark(PlacemarkMapObject placemarkMapObject) {
+}
+
 Future<GeoPoint> _determinePosition() async {
   bool serviceEnabled;
   LocationPermission permission;
