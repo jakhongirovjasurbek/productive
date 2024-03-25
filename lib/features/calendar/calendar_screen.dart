@@ -40,26 +40,30 @@ class _CalendarScreenState extends State<CalendarScreen> {
                     child: CalendarWidget(),
                   ),
                   const SliverToBoxAdapter(
+                    child: Divider(),
+                  ),
+                  const SliverToBoxAdapter(
                     child: Gap(20),
                   ),
                   SliverList.builder(
-                    itemCount: state.datas.length,
+                    itemCount: state.dailyTask.length,
                     itemBuilder: (context, index) {
                       return Padding(
                         padding: const EdgeInsets.only(
                           bottom: 16,
                         ),
                         child: WCalendarWidget(
-                          icon: state.datas[index].icon,
-                          description: state.datas[index].description == ''
+                          iconColor: getIconColor(state.dailyTask[index].iconColor, context),
+                          icon: state.dailyTask[index].icon,
+                          description: state.dailyTask[index].description == ''
                               ? null
-                              : state.datas[index].description,
-                          title: state.datas[index].title,
+                              : state.dailyTask[index].description,
+                          title: state.dailyTask[index].title,
                           startTime: formatTime(
-                            state.datas[index].startTime,
+                            state.dailyTask[index].startTime,
                           ),
                           endTime: formatTime(
-                            state.datas[index].endTime,
+                            state.dailyTask[index].endTime,
                           ),
                         ),
                       );
@@ -78,10 +82,31 @@ class _CalendarScreenState extends State<CalendarScreen> {
               child: CupertinoActivityIndicator(),
             );
           } else {
-            return const SizedBox();
+            return Center(
+              child: SizedBox(
+                child: Text(
+                  "ERROR",
+                  style: context.style.fontSize18Weight700,
+                ),
+              ),
+            );
           }
         },
       ),
     );
   }
+  getIconColor(String iconColor, BuildContext context) {
+  switch (iconColor) {
+    case 'pinkColor':
+      return context.colors.studyColor;
+    case 'orangeColor':
+      return context.colors.gymColor;
+    case 'greenColor':
+      return context.colors.meetingColor;
+    case 'blueColor':
+      return context.colors.onBordingSkip;
+    default:
+      return context.colors.workColor;
+  }
+}
 }

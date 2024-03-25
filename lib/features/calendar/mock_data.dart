@@ -16,12 +16,12 @@ var data = <String, dynamic>{
       "start_time": DateTime.now(),
       "end_time": DateTime.now(),
     },
-    {
-      "title": "Create navigation bar",
-      "description": "I will design a navigation bar for the application I am working on, and choose it with suitable colors ",
-      "icon": AppIcons.calendarGymIcon,
-      "start_time": DateTime.now(),
-      "end_time": DateTime.now(),
-    },
+    // {
+    //   "title": "Create navigation bar",
+    //   "description": "I will design a navigation bar for the application I am working on, and choose it with suitable colors ",
+    //   "icon": AppIcons.calendarGymIcon,
+    //   "start_time": DateTime.now(),
+    //   "end_time": DateTime.now(),
+    // },
   ]
 };

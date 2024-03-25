@@ -28,17 +28,14 @@ class Header extends StatelessWidget {
           CalendarButton(
             onTap: () {
               onChange(
-
                 selectedMonth.addMonth(-1),
-                
+              
               );
             },
             assetName: AppIcons.leftButton,
           ),
           Text(
-            selectedDate == null
-                ? DateFormat('MMM yyyy').format(DateTime.now())
-                : DateFormat('MMM yyyy').format(selectedMonth),
+                 DateFormat('MMM yyyy').format(selectedMonth),
             style: context.style.fontSize20Weight500,
           ),
           CalendarButton(
