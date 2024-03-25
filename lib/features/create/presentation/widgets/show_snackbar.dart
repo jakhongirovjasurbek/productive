@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -6,8 +5,6 @@ import 'package:gap/gap.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/features/create/data/model/income_status.dart';
 import 'package:productive/features/create/presentation/bloc/create_income/income_bloc.dart';
-
-import '../../../../assets/icons.dart';
 
 void showBottomSheetWidget(BuildContext context) {
   showModalBottomSheet(
@@ -46,7 +43,7 @@ void showBottomSheetWidget(BuildContext context) {
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    child: SvgPicture.asset(context.icons.exit),
+                    child: SvgPicture.network(context.icons.create_income_exit),
                   ),
                 ],
               ),
@@ -73,9 +70,9 @@ void showBottomSheetWidget(BuildContext context) {
                         borderRadius: BorderRadius.circular(10),
                         color: context.colors.meetingColor,
                       ),
-                      padding: EdgeInsets.all(9),
-                      child: SvgPicture.asset(
-                        AppIcons.moneyFirst,
+                      padding: const EdgeInsets.all(9),
+                      child: SvgPicture.network(
+                        context.icons.moneyFirst,
                       ),
                     ),
                     const Gap(8),
@@ -112,9 +109,9 @@ void showBottomSheetWidget(BuildContext context) {
                               borderRadius: BorderRadius.circular(10),
                               color: context.colors.addButtonLinear1,
                             ),
-                            padding: EdgeInsets.all(12),
-                            child: SvgPicture.asset(
-                              AppIcons.plus,
+                            padding: const EdgeInsets.all(12),
+                            child: SvgPicture.network(
+                              context.icons.plus,
                             ),
                           ),
                           const Gap(8),
@@ -125,7 +122,7 @@ void showBottomSheetWidget(BuildContext context) {
                         ],
                       ),
                     ),
-                    SvgPicture.asset(AppIcons.premium),
+                    SvgPicture.network(context.icons.premium),
                   ],
                 ),
               ),

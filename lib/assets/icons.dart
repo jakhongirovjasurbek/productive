@@ -16,7 +16,6 @@ const calendar = "assets/icons/calendar/";
 
 const createhomeitem = "assets/icons/create_home_items/";
 
-
 class AppIcons {
   static const leftButton = "assets/icons/calendar/left_button.svg";
   static const rightButton = "assets/icons/calendar/right_button.svg";
@@ -27,15 +26,22 @@ class AppIcons {
   static const right = "assets/icons/right.svg";
   static const left = "assets/icons/left.svg";
   final back = "${path}back.svg";
-  static const arrow = "assets/icons/arrow.svg";
-  static const moneyFirst = "assets/icons/money_first.svg";
-  static const moneySecond = "assets/icons/money_second.svg";
-  static const plus = "assets/icons/plus.svg";
+  final arrow =
+      "https://firebasestorage.googleapis.com/v0/b/productive-6e5da.appspot.com/o/create_income%2Farrow.svg?alt=media&token=1b818727-f19c-45fe-bb9a-20ca254ec064";
+  final moneyFirst =
+      "https://firebasestorage.googleapis.com/v0/b/productive-6e5da.appspot.com/o/create_income%2Fmoney_first.svg?alt=media&token=f8b6f105-f353-4b3e-9ef1-d5a910cefbee";
+  final moneySecond =
+      "https://firebasestorage.googleapis.com/v0/b/productive-6e5da.appspot.com/o/create_income%2Fmoney_second.svg?alt=media&token=248a2e3d-6572-45f3-adbd-75fce9a6a21f";
+  final plus =
+      "https://firebasestorage.googleapis.com/v0/b/productive-6e5da.appspot.com/o/create_income%2Fplus.svg?alt=media&token=1d5638e2-d518-4519-ae76-51a9ae2871b4";
+  final premium =
+      "https://firebasestorage.googleapis.com/v0/b/productive-6e5da.appspot.com/o/create_income%2Fpremium.svg?alt=media&token=349a3b94-5f83-4a2f-b7a9-62bb8485af9c";
+  final create_income_exit =
+      "https://firebasestorage.googleapis.com/v0/b/productive-6e5da.appspot.com/o/create_income%2Fexit.svg?alt=media&token=684fb86d-b555-45af-98d0-f032af351ba3";
+  final greenbook = "${pathNotes}green_book.svg";
+  final redbook = "${pathNotes}red_book.svg";
+  final plusbook = "${pathNotes}plus_book.svg";
   final exit = "assets/icons/exit.svg";
-  static const premium = "assets/icons/premium.svg";
-  final greenbook="${pathNotes}green_book.svg";
-  final redbook="${pathNotes}red_book.svg";
-  final plusbook="${pathNotes}plus_book.svg";
 
   static const tasks = "${_bnb}tasks.svg";
   static const expense = "${_bnb}expense.svg";
@@ -78,9 +84,9 @@ class AppIcons {
   static const sportTask = "assets/icons/create_task/sport.svg";
 
   // single category
+  static const bag1 = '${single}bag.svg';
   final String imgArrowLeft = '${single}img_arrow_left.svg';
   final String imgBxRestaurant = '${single}img_bx_restaurant.svg';
-  static const bag1 = '${single}bag.svg';
   static const String imgChart = '${single}img_chart.svg';
   final String imgFrame = '${single}img_frame.svg';
   final String imgThumbsUpWhite = '${single}img_thumbs_up_white.svg';
@@ -118,6 +124,7 @@ class AppIcons {
   static const radio = "assets/icons/radio.svg";
   static const delete = "assets/icons/delete.svg";
   static const noNotification = "assets/svg/no_notification.svg";
+
   //tasks
 
   //drower
@@ -130,7 +137,6 @@ class AppIcons {
   final terms = "assets/icons/tasks/drawer/terms.svg";
 
   //else
-
   final expanse_categories_search_task = "assets/icons/expanse/search.svg";
   final beg = "assets/icons/tasks/beg.svg";
   final filter = "assets/icons/tasks/filter.svg";
@@ -182,7 +188,6 @@ class AppIcons {
   static const translate = '${_new_catalog_icon}translate.svg';
   static const umbrella = '${_new_catalog_icon}umbrella.svg';
 
-
   /// New Catalog Colors
 
   static const color1 = '${_new_catalog_color}color1.svg';
@@ -201,6 +206,11 @@ class AppIcons {
   static const color14 = '${_new_catalog_color}color14.svg';
   static const color15 = '${_new_catalog_color}color15.svg';
   static const color16 = '${_new_catalog_color}color16.svg';
+
+  final money = '${createhomeitem}money.svg';
+  final taskhome = '${createhomeitem}task_home.svg';
+  final closecreate = '${createhomeitem}close_create.svg';
+  final taskstar = '${createhomeitem}tasks_star.svg';
 
   static const logoL = "${pathLogin}logo.svg";
   static const eye_off = "${pathLogin}eye_off.svg";

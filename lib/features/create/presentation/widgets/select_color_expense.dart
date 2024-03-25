@@ -67,14 +67,10 @@ List colors = [
   Color(0xFF979797),
   Color(0xFF979797),
   Color(0xFF979797),
-
   Color(0xFFFF8700),
   Color(0xFFFF2752),
   Color(0xFF32A7E2),
   Color(0xFFB548C6),
   Color(0xFF22B07D),
+  Color(0xFF4B7FD6)
 ];
-
-
-
-
