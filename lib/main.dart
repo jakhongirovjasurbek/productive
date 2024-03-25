@@ -26,7 +26,6 @@ import 'features/create/presentation/bloc/location/location_cubit.dart';
 import 'features/tasks/presentation/bloc/task_bloc.dart';
 import 'features/tasks/data/data_source/task_remote.dart';
 import 'features/tasks/data/repository/task.dart';
-import 'features/create/presentation/bloc/task_bloc.dart';
 import 'features/create/presentation/event_bloc/event_bloc.dart';
 import 'generated/l10n.dart';
 

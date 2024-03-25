@@ -220,5 +220,4 @@ class AppIcons {
   static const meeting = "assets/icons/meeting.svg";
   static const communication = "assets/icons/communication.svg";
   static const starEvent = "assets/icons/star_event.svg";
-  static const birthday = "assets/icons/birthday.svg";
 }

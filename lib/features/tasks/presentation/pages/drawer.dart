@@ -57,7 +57,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
             onTap: () {
               Navigator.pop(context);
             },
-            icon: context.icons.premiumtask,
+            icon: context.icons.premiumTask,
             title: 'Premium',
 
           ),
@@ -68,7 +68,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
             onTap: () {
               Navigator.pop(context);
             },
-            icon: context.icons.settingstask,
+            icon: context.icons.settingsTask,
             title: 'Settings',
 
           ),
