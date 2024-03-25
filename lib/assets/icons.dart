@@ -118,20 +118,19 @@ class AppIcons {
   static const radio = "assets/icons/radio.svg";
   static const delete = "assets/icons/delete.svg";
   static const noNotification = "assets/svg/no_notification.svg";
-
-
   //tasks
 
   //drower
   final articles = "assets/icons/tasks/drawer/articles.svg";
   final faq = "assets/icons/tasks/drawer/faq.svg";
   final help = "assets/icons/tasks/drawer/help.svg";
-  final premiumtask = "assets/icons/tasks/drawer/premium.svg";
-  final settingstask = "assets/icons/tasks/drawer/settings.svg";
+  final premiumTask = "assets/icons/tasks/drawer/premium.svg";
+  final settingsTask = "assets/icons/tasks/drawer/settings.svg";
   final sun = "assets/icons/tasks/drawer/sun.svg";
   final terms = "assets/icons/tasks/drawer/terms.svg";
 
   //else
+
   final expanse_categories_search_task = "assets/icons/expanse/search.svg";
   final beg = "assets/icons/tasks/beg.svg";
   final filter = "assets/icons/tasks/filter.svg";
@@ -217,4 +216,9 @@ class AppIcons {
   final taskhome  = '${createhomeitem}task_home.svg';
 
   final taskstar  = '${createhomeitem}tasks_star.svg';
+  ///create_event icons
+  static const meeting = "assets/icons/meeting.svg";
+  static const communication = "assets/icons/communication.svg";
+  static const starEvent = "assets/icons/star_event.svg";
+  static const birthday = "assets/icons/birthday.svg";
 }

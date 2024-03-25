@@ -1,22 +1,22 @@
-// Import the necessary packages and widgets
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:productive/assets/icons.dart';
 import 'package:productive/core/extensions/extensions.dart';
-import 'package:productive/features/create/presentation/widgets/select_time_bottomsheet.dart'; // Import the SelectTimeBottomSheet widget
+import '../event_bloc/event_bloc.dart';
 
-// Define a function to show the time picker bottom sheet
 Future<DateTime?> showSelectTimeBottomSheet(BuildContext context) async {
   return showModalBottomSheet<DateTime>(
     context: context,
     builder: (BuildContext context) {
-      return SelectTimeBottomSheet();
+      return BlocProvider.value(
+        value: BlocProvider.of<CreateEventBloc>(context),
+        child: SelectTimeBottomSheet(),
+      );
     },
   );
 }
 
-// Your SelectTimeBottomSheet widget
 class SelectTimeBottomSheet extends StatefulWidget {
   final DateTime? initialTime;
 
@@ -72,13 +72,7 @@ class _SelectTimeBottomSheetState extends State<SelectTimeBottomSheet> {
               mode: CupertinoDatePickerMode.time,
               onDateTimeChanged: (DateTime newDateTime) {
                 setState(() {
-                  _selectedTime = DateTime(
-                    widget.initialTime!.year,
-                    widget.initialTime!.month,
-                    widget.initialTime!.day,
-                    newDateTime.hour,
-                    newDateTime.minute,
-                  );
+                  _selectedTime = newDateTime;
                 });
               },
             ),

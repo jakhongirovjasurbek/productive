@@ -1,17 +1,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
-import 'package:productive/assets/icons.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/features/create/presentation/widgets/select_time_bottomsheet.dart';
+import '../event_bloc/event_bloc.dart';
 
 Future<DateTime?> showSelectDateBottomSheet(
     BuildContext context, String? selectedTimeText) async {
   return showModalBottomSheet<DateTime?>(
     context: context,
     builder: (BuildContext context) {
-      return SelectDateBottomSheet(selectedTimeText: selectedTimeText);
+      return BlocProvider.value(
+        value: BlocProvider.of<CreateEventBloc>(context),
+        child: SelectDateBottomSheet(selectedTimeText: selectedTimeText),
+      );
     },
   );
 }
@@ -57,7 +61,7 @@ class _SelectDateBottomSheetState extends State<SelectDateBottomSheet> {
       width: 375,
       height: 368,
       decoration: BoxDecoration(
-        color: context.colors.backgroundColor,
+        color: context.colors.loginTextFieldBackgroundColor,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(16),
           topRight: Radius.circular(16),
@@ -89,11 +93,9 @@ class _SelectDateBottomSheetState extends State<SelectDateBottomSheet> {
               mode: CupertinoDatePickerMode.date,
               initialDateTime: widget.initialDate ?? DateTime.now(),
               onDateTimeChanged: (DateTime newDateTime) {
-                setState(() {
                   _selectedDate = newDateTime;
                   _dateController.text =
-                      DateFormat('yyyy-MM-dd').format(newDateTime);
-                });
+                      DateFormat('dd-MM-yyyy').format(newDateTime);
               },
             ),
           ),
@@ -104,15 +106,12 @@ class _SelectDateBottomSheetState extends State<SelectDateBottomSheet> {
           SizedBox(height: 8),
           GestureDetector(
             onTap: () async {
-              DateTime? selectedTime = await showSelectTimeBottomSheet(context);
-              if (selectedTime != null) {
-                setState(() {
-                  _selectedTimeText = DateFormat('HH:mm').format(selectedTime);
-                });
-              }
+               await showSelectTimeBottomSheet(context);
+
             },
             child: Text(
-              _selectedTimeText ?? widget.selectedTimeText ?? context.localization.add_time,
+              // _selectedTimeText ?? widget.selectedTimeText ??
+              context.localization.add_time,
               style: context.style.fontSize16Weight400,
             ),
           ),
@@ -139,7 +138,6 @@ class _SelectDateBottomSheetState extends State<SelectDateBottomSheet> {
               ),
             ),
           ),
-
         ],
       ),
     );

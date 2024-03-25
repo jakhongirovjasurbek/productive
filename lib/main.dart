@@ -11,16 +11,23 @@ import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/injector/injector.dart';
 import 'package:productive/core/routes/app_route.dart';
 import 'package:productive/features/authentication/presentation/bloc/auth_bloc.dart';
+import 'package:productive/features/create/data/data_source/remote_event.dart';
+import 'package:productive/features/create/data/repository/event_repository.dart';
+import 'package:productive/features/create/domain/repository/event_repository.dart';
 import 'package:productive/features/create/presentation/bloc/create_expense/create_expense_bloc.dart';
 import 'package:productive/features/calendar/presentation/bloc/task_bloc/calendar_bloc.dart';
 import 'package:productive/features/create/presentation/bloc/create_income/income_bloc.dart';
 import 'package:productive/features/tasks/presentation/bloc/notes_bloc.dart';
+import 'package:productive/features/create/presentation/pages/create_event.dart';
+import 'package:productive/features/create/presentation/pages/create_expense.dart';
 import 'package:productive/firebase_options.dart';
 import 'features/calendar/presentation/bloc/bloc/calendar_bloc.dart';
 import 'features/create/presentation/bloc/location/location_cubit.dart';
 import 'features/tasks/presentation/bloc/task_bloc.dart';
 import 'features/tasks/data/data_source/task_remote.dart';
 import 'features/tasks/data/repository/task.dart';
+import 'features/create/presentation/bloc/task_bloc.dart';
+import 'features/create/presentation/event_bloc/event_bloc.dart';
 import 'generated/l10n.dart';
 
 Future<void> main() async {
@@ -43,19 +50,25 @@ Future<void> main() async {
     DeviceOrientation.portraitDown,
   ]);
 
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  EventRepository eventRepository = EventRepositoryImpl(eventRemoteDataSource: EventRemoteDataSource());
+  CreateEventBloc createEventBloc = CreateEventBloc(eventRepository: eventRepository);
 
   runApp(
     DevicePreview(
       enabled: false,
       builder: (context) {
-        return const MainApp();
+        return BlocProvider<CreateEventBloc>(
+          create: (context) => createEventBloc,
+          child: const MainApp(),
+        );
       },
     ),
   );
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  const MainApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

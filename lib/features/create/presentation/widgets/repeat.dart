@@ -1,21 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:gap/gap.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:productive/core/extensions/extensions.dart';
-
-import '../../../../assets/colors.dart';
 import '../../../../assets/icons.dart';
+import '../event_bloc/event_bloc.dart';
 import 'bottom_sheet.dart';
 
-class RepeatWidget extends StatefulWidget {
+class RepeatWidget extends StatelessWidget {
   const RepeatWidget({Key? key}) : super(key: key);
-
-  @override
-  State<RepeatWidget> createState() => _RepeatWidgetState();
-}
-
-class _RepeatWidgetState extends State<RepeatWidget> {
-  String selectedRepeat = "Once";
 
   @override
   Widget build(BuildContext context) {
@@ -34,12 +26,20 @@ class _RepeatWidgetState extends State<RepeatWidget> {
           children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 11, 15, 12),
-              child: Text(context.localization.repeat,
-                  style: context.style.fontSize16Weight500Blue),
+              child: Text(
+                context.localization.repeat,
+                style: context.style.fontSize16Weight500Blue,
+              ),
             ),
             const SizedBox(width: 24),
-            Text(selectedRepeat,
-                style: context.style.fontSize16Weight500Grey),
+            BlocBuilder<CreateEventBloc, CreateEventState>(
+              builder: (context, state) {
+                return Text(
+                  state.repeatTime,
+                  style: context.style.fontSize16Weight500Grey,
+                );
+              },
+            ),
             const SizedBox(width: 8),
             SvgPicture.asset(AppIcons.down),
           ],
@@ -52,13 +52,7 @@ class _RepeatWidgetState extends State<RepeatWidget> {
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
-        return MyBottomSheet(
-          onSelected: (String selected) {
-            setState(() {
-              selectedRepeat = selected;
-            });
-          },
-        );
+        return MyBottomSheet();
       },
     );
   }

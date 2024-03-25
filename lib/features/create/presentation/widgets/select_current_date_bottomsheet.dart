@@ -1,27 +1,32 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
-import 'package:productive/assets/icons.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/features/create/presentation/widgets/select_date_bottomsheet.dart';
-import 'package:productive/features/create/presentation/widgets/select_time_bottomsheet.dart';
+import '../event_bloc/event_bloc.dart';
 
 Future<DateTime?> showSelectCurrentDateBottomSheet(BuildContext context) async {
-  return showModalBottomSheet<DateTime?>(
+  return await showModalBottomSheet<DateTime?>(
     context: context,
     builder: (BuildContext context) {
-      return SelectCurrentDateBottomSheet();
+      return BlocProvider.value(
+        value: BlocProvider.of<CreateEventBloc>(context),
+        child: SelectCurrentDateBottomSheet(),
+      );
     },
   );
 }
 
 class SelectCurrentDateBottomSheet extends StatefulWidget {
   @override
-  State<SelectCurrentDateBottomSheet> createState() => _SelectCurrentDateBottomSheetState();
+  State<SelectCurrentDateBottomSheet> createState() =>
+      _SelectCurrentDateBottomSheetState();
 }
 
-class _SelectCurrentDateBottomSheetState extends State<SelectCurrentDateBottomSheet> {
+class _SelectCurrentDateBottomSheetState
+    extends State<SelectCurrentDateBottomSheet> {
   DateTime? _startDate;
   DateTime? _endDate;
 
@@ -60,7 +65,7 @@ class _SelectCurrentDateBottomSheetState extends State<SelectCurrentDateBottomSh
           Align(
             alignment: Alignment.topCenter,
             child: Text(
-              DateFormat('dd/MM/yyyy').format(DateTime.now()),
+              DateFormat('dd/MM/yyyy').format(_startDate ?? DateTime.now()),
               style: context.style.fontSize20Weight500,
             ),
           ),
@@ -72,7 +77,8 @@ class _SelectCurrentDateBottomSheetState extends State<SelectCurrentDateBottomSh
           SizedBox(height: 8),
           GestureDetector(
             onTap: () async {
-              DateTime? selectedDate = await showSelectDateBottomSheet(context,null);
+              DateTime? selectedDate =
+              await showSelectDateBottomSheet(context, _startDate as String?);
               if (selectedDate != null) {
                 setState(() {
                   _startDate = selectedDate;
@@ -102,7 +108,7 @@ class _SelectCurrentDateBottomSheetState extends State<SelectCurrentDateBottomSh
               ),
               child: MaterialButton(
                 onPressed: () {
-                  Navigator.pop(context, DateTime.now());
+                  Navigator.pop(context, _startDate ?? DateTime.now());
                 },
                 child: Text(context.localization.confirm),
               ),
