@@ -13,7 +13,7 @@ void showBottomSheetWidget(BuildContext context) {
       return Container(
         padding: const EdgeInsets.only(top: 8, bottom: 16),
         width: double.maxFinite,
-        height: MediaQuery.sizeOf(context).height / 100 * 30,
+
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(24),

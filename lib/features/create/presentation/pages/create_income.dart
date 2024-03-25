@@ -42,6 +42,7 @@ class _CreateIncomeScreenState extends State<CreateIncomeScreen>
           case IncomeActiveStatus.success:
             return SafeArea(
               child: Scaffold(
+                resizeToAvoidBottomInset: true,
                 appBar: AppBar(
                   centerTitle: true,
                   backgroundColor: Colors.transparent,

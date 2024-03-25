@@ -5,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:productive/assets/icons.dart';
 import 'package:productive/core/extensions/extensions.dart';
+import 'package:productive/core/route_names/create_name.dart';
 
 class CreateItems extends StatefulWidget {
   const CreateItems({super.key});
@@ -29,7 +30,10 @@ class _CreateItemsState extends State<CreateItems> {
                     children: [
                       GestureDetector(
                         behavior: HitTestBehavior.opaque,
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context, rootNavigator: true)
+                              .pushNamed(CreateRouteNames.create_income);
+                        },
                         child: Column(
                           children: [
                             CircleAvatar(
@@ -48,7 +52,10 @@ class _CreateItemsState extends State<CreateItems> {
                       ),
                       GestureDetector(
                         behavior: HitTestBehavior.opaque,
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context, rootNavigator: true)
+                              .pushNamed(CreateRouteNames.create_expence);
+                        },
                         child: Column(
                           children: [
                             CircleAvatar(
@@ -56,16 +63,20 @@ class _CreateItemsState extends State<CreateItems> {
                               child: SvgPicture.asset(AppIcons.expense),
                             ),
                             const Gap(8),
-                            Text(context.localization.expense,
-                                style:
-                                    context.style.fontSize14Weight500.copyWith(
-                                  color: context.colors.createhomeitemwhite,
-                                )),
+                            Text(
+                              context.localization.expense,
+                              style: context.style.fontSize14Weight500.copyWith(
+                                color: context.colors.createhomeitemwhite,
+                              ),
+                            ),
                           ],
                         ),
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          // Navigator.of(context)
+                          //     .pushNamed(CreateRouteNames.create_expence);
+                        },
                         child: Column(
                           children: [
                             CircleAvatar(
@@ -73,11 +84,12 @@ class _CreateItemsState extends State<CreateItems> {
                               child: SvgPicture.asset(context.icons.taskhome),
                             ),
                             const Gap(8),
-                            Text(context.localization.tasks,
-                                style:
-                                    context.style.fontSize14Weight500.copyWith(
-                                  color: context.colors.createhomeitemwhite,
-                                )),
+                            Text(
+                              context.localization.tasks,
+                              style: context.style.fontSize14Weight500.copyWith(
+                                color: context.colors.createhomeitemwhite,
+                              ),
+                            ),
                           ],
                         ),
                       )
@@ -89,7 +101,10 @@ class _CreateItemsState extends State<CreateItems> {
                     children: [
                       GestureDetector(
                         behavior: HitTestBehavior.opaque,
-                        onTap: () {},
+                        onTap: () {
+                          // Navigator.of(context)
+                          //     .pushNamed(CreateRouteNames.create_expence);
+                        },
                         child: Column(
                           children: [
                             CircleAvatar(
@@ -97,11 +112,12 @@ class _CreateItemsState extends State<CreateItems> {
                               child: SvgPicture.asset(context.icons.note),
                             ),
                             const Gap(8),
-                            Text(context.localization.notes,
-                                style:
-                                    context.style.fontSize14Weight500.copyWith(
-                                  color: context.colors.createhomeitemwhite,
-                                )),
+                            Text(
+                              context.localization.notes,
+                              style: context.style.fontSize14Weight500.copyWith(
+                                color: context.colors.createhomeitemwhite,
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -112,15 +128,20 @@ class _CreateItemsState extends State<CreateItems> {
                                 context.colors.createhomeitem.withOpacity(0.0),
                           ),
                           const Gap(8),
-                          Text("",
-                              style: context.style.fontSize14Weight500.copyWith(
-                                color: context.colors.createhomeitemwhite,
-                              )),
+                          Text(
+                            "",
+                            style: context.style.fontSize14Weight500.copyWith(
+                              color: context.colors.createhomeitemwhite,
+                            ),
+                          ),
                         ],
                       ),
                       GestureDetector(
                         behavior: HitTestBehavior.opaque,
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context, rootNavigator: true)
+                              .pushNamed(CreateRouteNames.create_event);
+                        },
                         child: Column(
                           children: [
                             CircleAvatar(
@@ -130,11 +151,12 @@ class _CreateItemsState extends State<CreateItems> {
                               ),
                             ),
                             const Gap(8),
-                            Text(context.localization.event,
-                                style:
-                                    context.style.fontSize14Weight500.copyWith(
-                                  color: context.colors.createhomeitemwhite,
-                                )),
+                            Text(
+                              context.localization.event,
+                              style: context.style.fontSize14Weight500.copyWith(
+                                color: context.colors.createhomeitemwhite,
+                              ),
+                            ),
                           ],
                         ),
                       ),
