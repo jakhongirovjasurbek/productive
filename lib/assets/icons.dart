@@ -219,13 +219,9 @@ class AppIcons {
   static const facebook = "${pathLogin}facebook.svg";
   static const google = "${pathLogin}google.svg";
   // createhomeitem
-  final closecreate  = '${createhomeitem}close_create.svg';
   final expensess  = '${createhomeitem}expense.svg';
-  final money  = '${createhomeitem}money.svg';
   final notess  = '${createhomeitem}note.svg';
-  final taskhome  = '${createhomeitem}task_home.svg';
 
-  final taskstar  = '${createhomeitem}tasks_star.svg';
   ///create_event icons
   static const meeting = "assets/icons/meeting.svg";
   static const communication = "assets/icons/communication.svg";
