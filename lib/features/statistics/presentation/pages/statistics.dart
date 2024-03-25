@@ -34,10 +34,10 @@ class _StatisticsScreenState extends State<StatisticsScreen>
     pageController = PageController(initialPage: currentIndex);
     super.initState();
   }
+
   // @override
   void initState2() {
     super.initState();
-    
   }
 
   @override
@@ -54,7 +54,7 @@ class _StatisticsScreenState extends State<StatisticsScreen>
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only (left: 20,right: 20, top: 15,bottom: 0),
+        padding: const EdgeInsets.only(left: 20, right: 20, top: 15, bottom: 0),
         child: Column(
           children: [
             CustomOnboardingSlidingSegmentedControl(

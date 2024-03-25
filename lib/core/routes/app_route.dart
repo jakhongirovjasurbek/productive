@@ -56,7 +56,6 @@ class AppRoute {
       case ExpenseRouteNames.expense:
         return fade(const ExpenseScreen());
       case StatsRouteNames.stats:
-      
         return fade(const StatisticsScreen());
       // case TaskRouteNames.tasks:
       //   return fade(const TaskScreen());
@@ -65,7 +64,7 @@ class AppRoute {
       case AppRouteNames.notes:
         return fade(const NotesPage());
       default:
-        return fade(const  Scaffold());
+        return fade(const Scaffold());
     }
   }
 }
