@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
+  final create_search_color = const Color(0xFF303644);
   final white = const Color(0xFFFFFFFF);
   // final gymColor = const Color(0xFFFF8700);
   final black = const Color(0xFF000000);
