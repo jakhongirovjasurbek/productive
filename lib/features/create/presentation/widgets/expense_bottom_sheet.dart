@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gap/gap.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/features/create/presentation/bloc/create_expense/create_expense_bloc.dart';
 import 'package:productive/features/create/presentation/widgets/select_icon_expense.dart';
@@ -42,21 +43,26 @@ Future<dynamic> selectIcon(BuildContext context) {
                       onChanged: (value) {
                         context.read<ExpenseBloc>().add(Searching(query: value));
                       },
-                      cursorColor: Colors.blue,
+                      autofocus: false,
+                      style: context.style.fontSize14Weight400.copyWith(color: context.colors.whiteLabel),
                       decoration: InputDecoration(
-                        fillColor: context.colors.whiteLabel,
+                        fillColor: context.colors.create_search_color,
+                        filled: true,
                         hintText: context.localization.search_by_category,
-                        hintStyle: Theme.of(context)
-                            .textTheme
-                            .titleSmall!
-                            .copyWith(color: Colors.white),
+                        hintStyle: context.style.fontSize14Weight400,
                         prefixIcon: Container(
                           margin: const EdgeInsets.only(right: 10, left: 10),
                           height: 24,
                           width: 24,
                           child: SvgPicture.asset(AppIcons.createsearch),
                         ),
-                        border: OutlineInputBorder(
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: context.colors.create_search_color),
+                          borderRadius:
+                          BorderRadius.all(Radius.circular(24)),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: context.colors.create_search_color),
                           borderRadius: BorderRadius.circular(24),
                         ),
                       ),
@@ -64,6 +70,7 @@ Future<dynamic> selectIcon(BuildContext context) {
                   ],
                 ),
               ),
+              Gap(16),
               const Divider(),
               ...List.generate(5, (index) {
                 return Column(
@@ -113,7 +120,7 @@ Future<dynamic> selectIcon(BuildContext context) {
                   ),
                 ),
               ),
-              const Divider(),
+              Gap(10),
             ],
           ),
         );

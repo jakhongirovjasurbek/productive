@@ -153,6 +153,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "medium": MessageLookupByLibrary.simpleMessage("Medium"),
         "meet": MessageLookupByLibrary.simpleMessage("Meet"),
         "monthly": MessageLookupByLibrary.simpleMessage("Monthly"),
+        "name": MessageLookupByLibrary.simpleMessage("Name"),
         "new_category": MessageLookupByLibrary.simpleMessage("New Category"),
         "new_title": MessageLookupByLibrary.simpleMessage("New title"),
         "no_notifications":

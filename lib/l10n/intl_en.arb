@@ -161,5 +161,6 @@
   "dont_accaunt": "Don’t have an account?",
   "sign_up":"Sign up",
   "not_found": "Bunday user mavjud emas!",
-  "failure":"Failure"
+  "failure":"Failure",
+  "name" : "Name"
 }

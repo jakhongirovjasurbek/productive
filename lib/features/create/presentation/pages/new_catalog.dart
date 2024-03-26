@@ -74,9 +74,9 @@ class _NewCategoryState extends State<NewCategory> {
                             controller: titleController,
                             // cursorColor: ,
                             decoration: InputDecoration(
-                              hintText: context.localization.new_title,
+                              hintText: context.localization.name,
                               hintStyle:
-                              context.style.fontSize14Weight500.copyWith(
+                              context.style.fontSize20Weight500.copyWith(
                                 color: context.colors.createTaskTime,
                               ),
                             ),
@@ -105,28 +105,50 @@ class _NewCategoryState extends State<NewCategory> {
                   SizedBox(
                     height: 50,
                     child: TextField(
+                      keyboardType: TextInputType.number,
                       autofocus: false,
-                      style: context.style.fontSize16Weight500.copyWith(color: context.colors.notificationsClear, ),
+                      style: context.style.fontSize16Weight500.copyWith(
+                        color: context.colors.timeContainerOne,
+                      ),
                       controller: usdController,
                       decoration: InputDecoration(
-                        prefixIcon: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              context.localization.usd,
-                              style: context.style.fontSize14Weight500.copyWith(color: context.colors.whiteLabel, ),
-                            ),
-                          ],
+                        prefixIcon: Container(
+                          padding: EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+                          margin: EdgeInsets.only(right: 8),
+                          clipBehavior: Clip.antiAlias,
+                          decoration: BoxDecoration(
+                              border: Border.symmetric(horizontal: BorderSide(color: Colors.black)),
+                              color: context.colors.btnSecondColor,
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(8),
+                                  bottomLeft: Radius.circular(8))),
+                          child: Column(
+                            // mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                context.localization.usd,
+                                style: context.style.fontSize14Weight500
+                                    .copyWith(
+                                    color:
+                                    context.colors.tasksTimeColor),
+                              ),
+                            ],
+                          ),
                         ),
                         filled: true,
                         fillColor: context.colors.inpBackgroundColor,
                         hintText: context.localization.zero,
                         focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(8)),
+                          borderRadius:
+                          BorderRadius.all(Radius.circular(8)),
                         ),
-                        hintStyle: context.style.fontSize16Weight500.copyWith(color: context.colors.notificationsClear, ),
+                        hintStyle:
+                        context.style.fontSize16Weight500.copyWith(
+                          color: context.colors.notificationsClear,
+                        ),
                         enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(8)),
+                          borderRadius:
+                          BorderRadius.all(Radius.circular(8)),
                         ),
                         // focusColor: Colors.red
                       ),
@@ -137,7 +159,7 @@ class _NewCategoryState extends State<NewCategory> {
                     maxLines: 5,
                     autofocus: false,
                     style: context.style.fontSize14Weight500.copyWith(color: context.colors.whiteLabel, ),
-                    controller: usdController,
+                    controller: noteController,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: context.colors.inpBackgroundColor,

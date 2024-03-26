@@ -55,6 +55,8 @@ class _NewSelectIconState extends State<NewSelectIcon>
               child: GestureDetector(
                   onTap: () {
                     Navigator.of(context).pop();
+                    Navigator.of(context).pop();
+                    Navigator.of(context).pop();
                   },
                   child: SvgPicture.asset(
                     AppIcons.backPage,
@@ -95,12 +97,12 @@ class _NewSelectIconState extends State<NewSelectIcon>
                         const Gap(20),
                         Expanded(
                           child: TextField(
-                            style:  context.style.fontSize16Weight500.copyWith(color: context.colors.whiteLabel, ),
+                            style:  context.style.fontSize18Weight500.copyWith(color: context.colors.whiteLabel, ),
                             controller: titleController,
                             // cursorColor: ,
                             decoration:  InputDecoration(
-                              hintText: context.localization.new_title,
-                              hintStyle: context.style.fontSize14Weight500.copyWith(color: context.colors.createTaskTime, ),
+                              hintText: context.localization.name,
+                              hintStyle: context.style.fontSize18Weight500.copyWith(color: context.colors.createTaskTime, ),
                             ),
                           ),
                         ),

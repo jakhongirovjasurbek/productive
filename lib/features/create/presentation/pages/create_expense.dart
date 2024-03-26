@@ -88,16 +88,15 @@ class _CreateExpanseState extends State<CreateExpanse> {
                             Expanded(
                               child: TextField(
                                 style:
-                                context.style.fontSize16Weight500.copyWith(
+                                    context.style.fontSize18Weight500.copyWith(
                                   color: context.colors.whiteLabel,
                                 ),
                                 controller: titleController,
-                                // cursorColor: ,
                                 decoration: InputDecoration(
                                   hintText: context.localization.new_title,
-                                  hintStyle: context.style.fontSize14Weight500
+                                  hintStyle: context.style.fontSize18Weight500
                                       .copyWith(
-                                      color: context.colors.createTaskTime),
+                                          color: context.colors.createTaskTime),
                                 ),
                               ),
                             ),
@@ -115,31 +114,43 @@ class _CreateExpanseState extends State<CreateExpanse> {
                           ),
                           controller: usdController,
                           decoration: InputDecoration(
-                            prefixIcon: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  context.localization.usd,
-                                  style: context.style.fontSize14Weight500
-                                      .copyWith(
-                                      color: context.colors.tasksTimeColor),
-                                ),
-                              ],
+                            prefixIcon: Container(
+                              padding: EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+                              margin: EdgeInsets.only(right: 8),
+                              clipBehavior: Clip.antiAlias,
+                              decoration: BoxDecoration(
+                                border: Border.symmetric(horizontal: BorderSide(color: context.colors.black)),
+                                  color: context.colors.btnSecondColor,
+                                  borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(8),
+                                      bottomLeft: Radius.circular(8))),
+                              child: Column(
+                                // mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    context.localization.usd,
+                                    style: context.style.fontSize14Weight500
+                                        .copyWith(
+                                            color:
+                                                context.colors.tasksTimeColor),
+                                  ),
+                                ],
+                              ),
                             ),
                             filled: true,
                             fillColor: context.colors.inpBackgroundColor,
                             hintText: context.localization.zero,
                             focusedBorder: OutlineInputBorder(
                               borderRadius:
-                              BorderRadius.all(Radius.circular(8)),
+                                  BorderRadius.all(Radius.circular(8)),
                             ),
                             hintStyle:
-                            context.style.fontSize16Weight500.copyWith(
+                                context.style.fontSize16Weight500.copyWith(
                               color: context.colors.notificationsClear,
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderRadius:
-                              BorderRadius.all(Radius.circular(8)),
+                                  BorderRadius.all(Radius.circular(8)),
                             ),
                             // focusColor: Colors.red
                           ),
@@ -149,10 +160,7 @@ class _CreateExpanseState extends State<CreateExpanse> {
                       TextField(
                         maxLines: 5,
                         autofocus: false,
-                        style: TextStyle(
-                            color: context.colors.whiteLabel,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500),
+                        style: context.style.fontSize14Weight400,
                         controller: noteController,
                         decoration: InputDecoration(
                           filled: true,
@@ -191,26 +199,28 @@ class _CreateExpanseState extends State<CreateExpanse> {
               ),
               onPressed: () {
                 context.read<ExpenseBloc>().add(CreateNewExpense(
-                  indexColor: state.colorIndex,
-                  description: noteController.text,
-                  price: double.parse(usdController.text.isEmpty ? '0' : usdController.text),
-                  title: titleController.text,
-                  icon: state.selectIcon,
-                  onSuccess: () {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text('Expense successfully created'),
-                      ),
-                    );
-                  },
-                  onFailure: (errorMassage) {
-                    const SnackBar(
-                      content: Text('Unknown error occurred'),
-                    );
-                  },
-                ));
+                      indexColor: state.colorIndex,
+                      description: noteController.text,
+                      price: double.parse(usdController.text.isEmpty
+                          ? '0'
+                          : usdController.text),
+                      title: titleController.text,
+                      icon: state.selectIcon,
+                      onSuccess: () {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Expense successfully created'),
+                          ),
+                        );
+                      },
+                      onFailure: (errorMassage) {
+                        const SnackBar(
+                          content: Text('Unknown error occurred'),
+                        );
+                      },
+                    ));
               },
-              child: Text(context.localization.save),
+              child: Text(context.localization.save, style: context.style.fontSize16Weight500,),
             ),
           ),
         );
