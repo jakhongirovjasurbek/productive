@@ -18,6 +18,8 @@ import 'package:productive/features/create/domain/repository/event_repository.da
 import 'package:productive/features/create/presentation/bloc/create_expense/create_expense_bloc.dart';
 import 'package:productive/features/calendar/presentation/bloc/task_bloc/calendar_bloc.dart';
 import 'package:productive/features/create/presentation/bloc/create_income/income_bloc.dart';
+import 'package:productive/features/expense/presentation/bloc/get_expenses_bloc.dart';
+import 'package:productive/features/notes/presentation/bloc/notes_bloc.dart';
 import 'package:productive/features/tasks/presentation/bloc/notes_bloc.dart';
 import 'package:productive/features/create/presentation/pages/create_event.dart';
 import 'package:productive/features/create/presentation/pages/create_expense.dart';
@@ -68,7 +70,7 @@ Future<void> main() async {
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({Key? key}) : super(key: key);
+  const MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -76,6 +78,7 @@ class MainApp extends StatelessWidget {
       gestures: const [GestureType.onTap],
       child: MultiBlocProvider(
         providers: [
+          BlocProvider(create: (context) => GetExpensesBloc()),
           BlocProvider(create: (context) => AuthenticationBloc()),
           BlocProvider(
             create: (_) => AuthenticationBloc(),

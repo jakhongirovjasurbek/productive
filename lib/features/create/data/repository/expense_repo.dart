@@ -1,5 +1,4 @@
 import 'package:productive/features/create/data/model/expense_model.dart';
-import 'package:productive/features/create/domain/entity/expense_entity.dart';
 import '../../../../core/either/either.dart';
 import '../../../../core/failure/failure.dart';
 import '../../domain/repository/expene_repo.dart';
@@ -10,15 +9,7 @@ class ExpenseRepositoryImpl implements ExpenseRepository {
 
   ExpenseRepositoryImpl({required ExpenseRemoteDataSource expenseRemoteDataSource})
       : _expenseRemoteDataSource = expenseRemoteDataSource;
-  @override
-  Future<Either<Failure, List<ExpenseEntity>>> getExpenses() async {
-    try {
-      final result = await _expenseRemoteDataSource.getExpenses();
-      return Right(result);
-    } catch(error) {
-      return Left(const ServerFailure());
-    }
-  }
+ 
 
   @override
   Future<Either<Failure, bool>> createExpense(ExpenseModel expenseModel) async {
