@@ -3,16 +3,19 @@ part of 'task_bloc.dart';
 
 class TaskState {
   final LoadingStatus status;
-  final List<TaskModel> taskList;
-  final List<TaskModel> upcomingList;
-  final List<TaskModel> searchedTask;
-  final DateTime startDate;
-  final DateTime endDate;
+  final List<TaskEntity> taskList;
+  final List<TaskEntity> upcomingList;
+  final List<TaskEntity> searchedTask;
+  final Timestamp startDate;
+  final Timestamp endDate;
   final Color selectIconColor;
   final String selectIcon;
+  final String iconColor;
   final Color? priorityColor;
   final bool isSearching;
+  final GeoPoint position;
   TaskState({
+    required this.position,
     required this.status,
     required this.taskList,
     required this.upcomingList,
@@ -22,24 +25,28 @@ class TaskState {
     required this.selectIconColor,
     required this.selectIcon,
     this.priorityColor,
+    required this.iconColor,
     required this.isSearching,
   });
 
 
   TaskState copyWith({
     LoadingStatus? status,
-    List<TaskModel>? taskList,
-    List<TaskModel>? upcomingList,
-    List<TaskModel>? searchedTask,
-    DateTime? startDate,
-    DateTime? endDate,
+    List<TaskEntity>? taskList,
+    List<TaskEntity>? upcomingList,
+    List<TaskEntity>? searchedTask,
+    Timestamp? startDate,
+    Timestamp? endDate,
     Color? selectIconColor,
     String? selectIcon,
+    String? iconColor,
     Color? priorityColor,
     bool? isSearching,
+    GeoPoint? position,
   }) {
     return TaskState(
       status: status ?? this.status,
+      position: position ?? this.position,
       taskList: taskList ?? this.taskList,
       upcomingList: upcomingList ?? this.upcomingList,
       searchedTask: searchedTask ?? this.searchedTask,
@@ -49,6 +56,7 @@ class TaskState {
       selectIcon: selectIcon ?? this.selectIcon,
       priorityColor: priorityColor ?? this.priorityColor,
       isSearching: isSearching ?? this.isSearching,
+      iconColor:  iconColor ?? this.iconColor,
     );
   }
 
@@ -71,7 +79,9 @@ class TaskState {
           other.selectIconColor == selectIconColor &&
           other.selectIcon == selectIcon &&
           other.priorityColor == priorityColor &&
-          other.isSearching == isSearching;
+          other.isSearching == isSearching &&
+          other.iconColor == iconColor &&
+    other.position == position;
   }
 
   @override
@@ -85,6 +95,8 @@ class TaskState {
     selectIconColor.hashCode ^
     selectIcon.hashCode ^
     priorityColor.hashCode ^
+    iconColor.hashCode ^
+    position.hashCode ^
     isSearching.hashCode;
   }
 }

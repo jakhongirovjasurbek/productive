@@ -1,27 +1,44 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:productive/core/exception/exception.dart';
-import 'package:productive/features/tasks/data/models/task_models.dart';
+import 'package:productive/core/extensions/tasks_extension.dart';
+
+import '../../../../core/exception/exception.dart';
+import '../../domain/entities/task_entity.dart';
+import '../models/task_models.dart';
 
 abstract class TaskRemoteDataSource {
-  Future<List<TaskModel>> getTasks();
+  Future<List<TaskEntity>> getTask();
+  Future<bool> addTask(TaskModel taskModel);
 
-  factory TaskRemoteDataSource() => _TaskRemoteDataSourceImpl();
+  factory TaskRemoteDataSource() => _ToDoRemoteDataSource();
 }
 
-class _TaskRemoteDataSourceImpl implements TaskRemoteDataSource {
+class _ToDoRemoteDataSource implements TaskRemoteDataSource{
   @override
-  Future<List<TaskModel>> getTasks() async {
+  Future<List<TaskEntity>> getTask() async {
+    final firebase = FirebaseFirestore.instance;
+    final collection = await firebase.collection('tasks').get();
+    final task = collection.docs.map((e) => TaskModel.fromJson(e.data(),e.id)).toList();
+    if (task.isNotEmpty) {
+      return task.map((e) => e.toTaskEntities).toList();
+    }
+    else {
+      throw UnimplementedError();
+    }
+  }
+
+  @override
+  Future<bool> addTask(TaskModel taskModel) async {
+    final firebase = FirebaseFirestore.instance;
     try {
-      final collection =
-          await FirebaseFirestore.instance.collection('tasks').get();
-      final tasks = collection.docs
-          .map((item) => TaskModel.fromJson(item.data(), item.id))
-          .toList();
-      return tasks;
-    } catch (error) {
-      print(error);
+      await firebase.collection('tasks').add(
+        taskModel.toJson(),
+      );
+      return true;
+    } catch(e) {
       throw ServerException(
-          errorMessage: 'Xatolik yuz berdi!', errorCode: '500');
+          errorMessage: "Cannot add task",
+          errorCode: '666'
+      );
     }
   }
 }

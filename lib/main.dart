@@ -7,6 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:keyboard_dismisser/keyboard_dismisser.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/injector/injector.dart';
 import 'package:productive/core/routes/app_route.dart';
@@ -48,7 +49,7 @@ Future<void> main() async {
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
-
+  await Permission.location.request();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   EventRepository eventRepository = EventRepositoryImpl(eventRemoteDataSource: EventRemoteDataSource());
   CreateEventBloc createEventBloc = CreateEventBloc(eventRepository: eventRepository);
@@ -89,11 +90,7 @@ class MainApp extends StatelessWidget {
             create: (context) => NotesBloc()..add(GetNotes()),
           ),
           BlocProvider(
-            create: (context) => TaskBloc(
-              response: TaskRepository(
-                taskRemoteDataSource: TaskRemoteDataSource(),
-              ),
-            ),
+            create: (context) => TaskBloc(),
           ),
           BlocProvider(
             create: (context) => MapScreenCubit()..getCurrentLocation(),

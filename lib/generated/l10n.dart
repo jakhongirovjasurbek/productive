@@ -1444,6 +1444,36 @@ class AppLocalization {
     );
   }
 
+  /// `Add Coordinate`
+  String get add_cordinate {
+    return Intl.message(
+      'Add Coordinate',
+      name: 'add_cordinate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Coordinate .. `
+  String get add_cordinate2 {
+    return Intl.message(
+      'Add Coordinate .. ',
+      name: 'add_cordinate2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search for location `
+  String get search_for_location {
+    return Intl.message(
+      'Search for location ',
+      name: 'search_for_location',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Work`
   String get work {
     return Intl.message(

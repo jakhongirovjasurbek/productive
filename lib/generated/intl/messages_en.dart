@@ -25,6 +25,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "All": MessageLookupByLibrary.simpleMessage("All"),
         "PM": MessageLookupByLibrary.simpleMessage("PM"),
         "Upcoming": MessageLookupByLibrary.simpleMessage("Upcoming"),
+        "add_cordinate": MessageLookupByLibrary.simpleMessage("Add Coordinate"),
+        "add_cordinate2":
+            MessageLookupByLibrary.simpleMessage("Add Coordinate .. "),
         "add_location": MessageLookupByLibrary.simpleMessage("Add Location"),
         "add_note": MessageLookupByLibrary.simpleMessage("Add note ..."),
         "add_notification":
@@ -186,6 +189,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Saving transportation expenses"),
         "search_by_category":
             MessageLookupByLibrary.simpleMessage("Search By Category.."),
+        "search_for_location":
+            MessageLookupByLibrary.simpleMessage("Search for location "),
         "see_all": MessageLookupByLibrary.simpleMessage("see all"),
         "select_icon": MessageLookupByLibrary.simpleMessage("Select Icon"),
         "select_priority":
