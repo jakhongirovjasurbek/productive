@@ -34,9 +34,7 @@ class ExpenseScreen extends StatelessWidget {
           ),
         ],
         leading: IconButton(
-          icon: SvgPicture.asset(
-            AppIcons.arrow,
-          ),
+          icon: SvgPicture.asset(context.icons.arrowBack),
           onPressed: () {},
         ),
       ),

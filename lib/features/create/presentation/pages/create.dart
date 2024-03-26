@@ -74,8 +74,8 @@ class _CreateItemsState extends State<CreateItems> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          // Navigator.of(context)
-                          //     .pushNamed(CreateRouteNames.create_expence);
+                          Navigator.of(context, rootNavigator: true)
+                              .pushNamed(CreateRouteNames.create_task);
                         },
                         child: Column(
                           children: [

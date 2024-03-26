@@ -63,7 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '545386754009',
     projectId: 'productive-6e5da',
     storageBucket: 'productive-6e5da.appspot.com',
-    iosClientId: '545386754009-nq06j95d7p7gcajpp29u7ltg2fvr735t.apps.googleusercontent.com',
+    iosClientId:
+        '545386754009-nq06j95d7p7gcajpp29u7ltg2fvr735t.apps.googleusercontent.com',
     iosBundleId: 'org.cdevs.productiveapp',
   );
 }

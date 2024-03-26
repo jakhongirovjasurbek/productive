@@ -67,6 +67,8 @@ class AppRoute {
         return fade(const CreateExpanse());
       case CreateRouteNames.create_notes:
         return fade(const Scaffold());
+      case CreateRouteNames.create_task:
+        return fade(const CreateTask());
       default:
         return fade(const Scaffold());
     }

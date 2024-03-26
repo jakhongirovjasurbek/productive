@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   final white = const Color(0xFFFFFFFF);
-  // final gymColor = const Color(0xFFFF8700);
   final black = const Color(0xFF000000);
   final mainDark = const Color(0xFF131524);
-  final border_textfield = Color.fromRGBO(0, 110, 233, 0.10);
-  final linkColorBackground = Color(0xFF2B304A);
+  final border_textfield = const Color.fromRGBO(0, 110, 233, 0.10);
+  final linkColorBackground = const Color(0xFF2B304A);
   final bnbColor = const Color(0XFF1C1E2D);
   final whiteLabel = const Color(0xFFFEFEFE);
   final rgbInpBorder = const Color.fromRGBO(0, 110, 233, 0.10);
@@ -100,7 +99,7 @@ class AppColors {
   final lightBlueGradient = const Color.fromRGBO(91, 74, 209, 1);
   final statsTextColor = const Color.fromRGBO(163, 163, 163, 1);
   final statsTaskBackground = const Color.fromRGBO(61, 64, 85, 1);
-  final hintextcolor = Color(0xFFFEFEFE);
+  final hintextcolor = const Color(0xFFFEFEFE);
 
 // single container uchun
   final Color whiteA700 = const Color(0XFFFDFDFD);

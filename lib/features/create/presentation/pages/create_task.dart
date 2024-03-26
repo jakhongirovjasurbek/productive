@@ -1,13 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:geolocator/geolocator.dart';
 import 'package:productive/core/extensions/extensions.dart';
 import 'package:productive/core/widgets/w_button.dart';
-import 'package:productive/features/create/presentation/pages/map_screen.dart';
 import 'package:productive/features/create/presentation/widgets/task_widgets/add_location.dart';
 import 'package:productive/features/create/presentation/widgets/task_widgets/row_buttun.dart';
 import 'package:productive/features/create/presentation/widgets/task_widgets/select_icon_bottom_sheet.dart';
@@ -55,51 +51,51 @@ class CreateTask extends StatelessWidget {
               borderRadius: 8,
               height: 40,
               onTap: () {
-                if(title.isNotEmpty && priorityIndex! < 3)
-                    {
-                      if(state.startDate.microsecondsSinceEpoch < state.endDate.microsecondsSinceEpoch) {
-                        context.read<TaskBloc>().add(CreateNewTaskButtonPressed(
-                          title: title,
-                          icon: state.selectIcon,
-                          priority: getTextPriority(priorityIndex!).toLowerCase(),
-                          startDate: state.startDate,
-                          note: desc,
-                          dueDate: state.endDate,
-                          isChecked: false,
-                          iconColor: state.iconColor,
-                          position: state.position,
-                          onSuccess: () {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
-                                content: Text('Task successfully created'),
-                              ),
-                            );
-                          },
-                          onFailure: (error) {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
-                                content: Text('Unknown error occurred'),
-                              ),
-                            );
-                          },
-                        ),);
-                      } else {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text('End Date must be higher!'),
+                if (title.isNotEmpty && priorityIndex! < 3) {
+                  if (state.startDate.microsecondsSinceEpoch <
+                      state.endDate.microsecondsSinceEpoch) {
+                    context.read<TaskBloc>().add(
+                          CreateNewTaskButtonPressed(
+                            title: title,
+                            icon: state.selectIcon,
+                            priority:
+                                getTextPriority(priorityIndex!).toLowerCase(),
+                            startDate: state.startDate,
+                            note: desc,
+                            dueDate: state.endDate,
+                            isChecked: false,
+                            iconColor: state.iconColor,
+                            position: state.position,
+                            onSuccess: () {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                  content: Text('Task successfully created'),
+                                ),
+                              );
+                            },
+                            onFailure: (error) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                  content: Text('Unknown error occurred'),
+                                ),
+                              );
+                            },
                           ),
                         );
-                      }
-
-                    } else {
+                  } else {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text('End Date must be higher!'),
+                      ),
+                    );
+                  }
+                } else {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
                       content: Text('Title and priority must be initialized!'),
                     ),
                   );
-                          }
-
-
+                }
               },
               child: Text(
                 context.localization.save,

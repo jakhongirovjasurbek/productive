@@ -19,16 +19,11 @@ import 'package:productive/features/create/presentation/bloc/create_expense/crea
 import 'package:productive/features/calendar/presentation/bloc/task_bloc/calendar_bloc.dart';
 import 'package:productive/features/create/presentation/bloc/create_income/income_bloc.dart';
 import 'package:productive/features/expense/presentation/bloc/get_expenses_bloc.dart';
-import 'package:productive/features/notes/presentation/bloc/notes_bloc.dart';
 import 'package:productive/features/tasks/presentation/bloc/notes_bloc.dart';
-import 'package:productive/features/create/presentation/pages/create_event.dart';
-import 'package:productive/features/create/presentation/pages/create_expense.dart';
 import 'package:productive/firebase_options.dart';
 import 'features/calendar/presentation/bloc/bloc/calendar_bloc.dart';
 import 'features/create/presentation/bloc/location/location_cubit.dart';
 import 'features/tasks/presentation/bloc/task_bloc.dart';
-import 'features/tasks/data/data_source/task_remote.dart';
-import 'features/tasks/data/repository/task.dart';
 import 'features/create/presentation/event_bloc/event_bloc.dart';
 import 'generated/l10n.dart';
 
@@ -53,8 +48,10 @@ Future<void> main() async {
   ]);
   await Permission.location.request();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  EventRepository eventRepository = EventRepositoryImpl(eventRemoteDataSource: EventRemoteDataSource());
-  CreateEventBloc createEventBloc = CreateEventBloc(eventRepository: eventRepository);
+  EventRepository eventRepository =
+      EventRepositoryImpl(eventRemoteDataSource: EventRemoteDataSource());
+  CreateEventBloc createEventBloc =
+      CreateEventBloc(eventRepository: eventRepository);
 
   runApp(
     DevicePreview(
@@ -112,7 +109,6 @@ class MainApp extends StatelessWidget {
           themeAnimationCurve: Curves.slowMiddle,
           darkTheme: context.theme.darkTheme(),
           debugShowCheckedModeBanner: false,
-          useInheritedMediaQuery: true,
           builder: DevicePreview.appBuilder,
           onGenerateRoute: AppRoute.onGenerateRoute,
           locale: const Locale.fromSubtags(languageCode: 'en'),
