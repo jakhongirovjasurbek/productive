@@ -13,10 +13,11 @@ class IncomeBloc extends Bloc<IncomeEvent, IncomeState> {
       : super(
           IncomeState(
               incomeModel: IncomeModel(
+                title: '',
                 usd: 0,
                 note: "",
                 priority: IncomePriority.expense,
-                title: "",
+              
               ),
               activeStatus: IncomeActiveStatus.success,
               priority: IncomePriority.expense),

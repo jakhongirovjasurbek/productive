@@ -13,6 +13,7 @@ import 'package:productive/features/authentication/presentation/bloc/auth_bloc.d
 import 'package:productive/features/create/presentation/bloc/create_expense/create_expense_bloc.dart';
 import 'package:productive/features/calendar/presentation/bloc/task_bloc/calendar_bloc.dart';
 import 'package:productive/features/create/presentation/bloc/create_income/income_bloc.dart';
+import 'package:productive/features/expense/presentation/bloc/get_expenses_bloc.dart';
 import 'package:productive/features/notes/presentation/bloc/notes_bloc.dart';
 import 'package:productive/firebase_options.dart';
 import 'features/calendar/presentation/bloc/bloc/calendar_bloc.dart';
@@ -53,6 +54,7 @@ class MainApp extends StatelessWidget {
       gestures: const [GestureType.onTap],
       child: MultiBlocProvider(
         providers: [
+          BlocProvider(create: (context) => GetExpensesBloc()),
           BlocProvider(create: (context) => AuthenticationBloc()),
           BlocProvider(
             create: (_) => AuthenticationBloc(),

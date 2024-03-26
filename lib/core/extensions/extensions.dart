@@ -66,6 +66,8 @@ extension NotificationToNotificationEntites on MockDataNotificationsModel {
 extension ExpenseModelToEntities on ExpenseModel {
   ExpenseEntity get toExpenseEntities {
     return ExpenseEntity(
+      name: name,
+      isIncome: isIncome,
       price: price,
       indexColor: indexColor,
       title: title,

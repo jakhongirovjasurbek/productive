@@ -3,7 +3,7 @@ import 'package:productive/features/create/data/model/income_status.dart';
 class IncomeModel {
   final IncomePriority priority;
   final String title;
-  final int usd;
+  final double usd;
   final String note;
 
   IncomeModel({
